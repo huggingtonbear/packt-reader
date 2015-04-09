@@ -19,6 +19,13 @@
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/custom-sidebar.css" rel="stylesheet">
 
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,700|Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -28,7 +35,7 @@
 
 </head>
 
-<body>
+<body class="language-CPP">
   
 
     <div id="wrapper">
@@ -72,11 +79,11 @@
                     </div>
                 
                 <a href="index.html">
-                    <li class="list-group-item selected-tab"> Chapter 3. Looping</li> 
+                    <li class="list-group-item"> Chapter 3. Looping</li> 
                 </a>
 
                     <div class="collapse in" id="collapse-3">
-                        <a href="#"><li class="list-group-item section-sidebar active">The for loop</li></a>
+                        <a href="for-loop.html"><li class="list-group-item section-sidebar active">The for loop</li></a>
                         <a href="#"><li class="list-group-item section-sidebar">The for/while loop</li></a>
                         <a href="#"><li class="list-group-item section-sidebar">The 'if' loop</li></a>
                         <a href="#"><li class="list-group-item section-sidebar">Looping with Unreal Engine</li></a>
@@ -105,42 +112,60 @@
 
                         
 
-                        <div class="section" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h2 class="section-title" ><a id="ch04lvl1sec26" style="font-size: 24px !important;"></a>The for loop</h2></div></div><hr ></div><p >The <a id="id154" class="indexterm" ></a>
-<code class="literal" >for</code> loop has a slightly different anatomy than the <code class="literal" >while</code> loop, but both are very similar.</p><p >Let's examine the anatomy of a <code class="literal" >for</code> loop as compared to an equivalent <code class="literal" >while</code> loop. Take an example of the following code snippets:</p><div class="informaltable" ><table style="border-collapse: collapse; border-top-width: 0.5pt; border-top-style: solid; border-bottom-width: 0.5pt; border-bottom-style: solid; font-size: 16px !important;"><colgroup ><col align="left" ><col align="left" ></colgroup><thead ><tr ><th style="border-bottom-width: 0.5pt; border-bottom-style: solid; font-size: 16px !important;" align="left" valign="bottom">
-<p >The for loop</p>
-</th><th style="border-bottom-width: 0.5pt; border-bottom-style: solid; font-size: 16px !important;" align="left" valign="bottom">
-<p >An equivalent while loop</p>
-</th></tr></thead><tbody ><tr ><td  align="left" valign="top">
-<p >
-</p><div class="informalexample" ><pre class="programlisting" >for( int x = 1; x &lt;= 5; x++ )
+                        <div class="section language-cpp" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="section-title" style="clear: both"><a id="ch04lvl1sec26"></a>The for loop</h2></div></div><hr></div><p>The <a id="id154" class="indexterm"></a>
+<code>for</code> loop has a slightly different anatomy than the <code>while</code> loop, but both are very similar.</p><p>Let's examine the anatomy of a <code>for</code> loop as compared to an equivalent <code>while</code> loop. Take an example of the following code snippets:</p><div class="informaltable"><table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; "><colgroup><col align="left"><col align="left"></colgroup><thead><tr><th style="border-bottom: 0.5pt solid ; " align="left" valign="bottom">
+<p>The for loop</p>
+</th><th style="border-bottom: 0.5pt solid ; " align="left" valign="bottom">
+<p>An equivalent while loop</p>
+</th></tr></thead><tbody><tr><td style="" align="left" valign="top">
+<p>
+</p><div class="informalexample"><pre><code>for( int x = 1; x &lt;= 5; x++ )
 {
   cout &lt;&lt; x &lt;&lt; endl;
-}</pre></div><p >
+}</code></pre></div><p>
 </p>
-</td><td  align="left" valign="top">
-<p >
-</p><div class="informalexample" ><pre class="programlisting" >int x = 1;
+</td><td style="" align="left" valign="top">
+<p>
+</p><div class="informalexample"><pre><code>int x = 1;
 while( x &lt;= 5 )
 {
   cout &lt;&lt; x &lt;&lt; endl;
   x++;
-}</pre></div><p >
+}</code></pre></div><p>
 </p>
-</td></tr></tbody></table></div><p >The <code class="literal" >for</code> loop has three statements inside its brackets. Let's examine them in order.</p><p >The first statement of the <code class="literal" >for</code> loop (<code class="literal" >int x = 1</code>;) only gets executed once, when we first enter the body of the <code class="literal" >for</code> loop. It is typically used to initialize the value of the loop's counter variable (in this case, the variable <code class="literal" >x</code>). The second statement inside the <code class="literal" >for</code> loop (<code class="literal" >x &lt;= 5</code>;) is the loop's repeat condition. As long as <code class="literal" >x &lt;= 5</code>, we must continue to stay inside the body <a id="id155" class="indexterm" ></a>of the <code class="literal" >for</code> loop. The last statement inside the brackets of the <code class="literal" >for</code> loop (<code class="literal" >x++</code>;) gets executed after we complete the body of the <code class="literal" >for</code> loop each time.</p><p >The following sequence of diagrams explain the progression of the <code class="literal" >for</code> loop:</p><div class="mediaobject" ><img src="/graphics/9781784396572/graphics/6572OT_04_02.jpg" ></div><div class="section" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h3 class="title" style="font-size: 19px !important;"><a id="ch04lvl2sec44" style="font-size: 19px !important;"></a>Exercises</h3></div></div></div><div class="orderedlist" ><ol class="orderedlist arabic" type="1" ><li ><p >Write a <code class="literal" >for</code> loop <a id="id156" class="indexterm" ></a>that will gather the sum of the numbers from 1 to 10.</p></li><li ><p >Write a <code class="literal" >for</code> loop that will print the multiples of 6, from 6 to 30 (6, 12, 18, 24, and 30).</p></li><li ><p >Write a <code class="literal" >for</code> loop that will print numbers 2 to 100 in multiples of 2 (for example, 2, 4, 6, 8, and so on).</p></li><li ><p >Write a <code class="literal" >for</code> loop that will print numbers 1 to 16 and their squares beside them.</p></li></ol></div></div><div class="section" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h3 class="title" style="font-size: 19px !important;"><a id="ch04lvl2sec45" style="font-size: 19px !important;"></a>Solutions</h3></div></div></div><p >Here<a id="id157" class="indexterm" ></a> are the solutions for the preceding exercises:</p><div class="orderedlist" ><ol class="orderedlist arabic" type="1" ><li ><p >The solution for the <code class="literal" >for</code> loop for printing the sum of the numbers from 1 to 10 is as follows:</p><div class="informalexample" ><pre class="programlisting" >int sum = 0;
+</td></tr></tbody></table></div><p>The <code>for</code> loop has three statements inside its brackets. Let's examine them in order.</p><p>The first statement of the <code>for</code> loop (<code>int x = 1</code>;) only gets executed once, when we first enter the body of the <code>for</code> loop. It is typically used to initialize the value of the loop's counter variable (in this case, the variable <code>x</code>). The second statement inside the <code>for</code> loop (<code>x &lt;= 5</code>;) is the loop's repeat condition. As long as <code>x &lt;= 5</code>, we must continue to stay inside the body <a id="id155" class="indexterm"></a>of the <code>for</code> loop. The last statement inside the brackets of the <code>for</code> loop (<code>x++</code>;) gets executed after we complete the body of the <code>for</code> loop each time.</p><p>The following sequence of diagrams explain the progression of the <code>for</code> loop:</p><div class="mediaobject"><img src="/graphics/9781784396572/graphics/6572OT_04_02.jpg"></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch04lvl2sec44"></a>Exercises</h3></div></div></div><div class="orderedlist"><ol class="orderedlist arabic" type="1"><li><p>Write a <code>for</code> loop <a id="id156" class="indexterm"></a>that will gather the sum of the numbers from 1 to 10.</p></li><li><p>Write a <code>for</code> loop that will print the multiples of 6, from 6 to 30 (6, 12, 18, 24, and 30).</p></li><li><p>Write a <code>for</code> loop that will print numbers 2 to 100 in multiples of 2 (for example, 2, 4, 6, 8, and so on).</p></li><li><p>Write a <code>for</code> loop that will print numbers 1 to 16 and their squares beside them.</p></li></ol></div></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch04lvl2sec45"></a>Solutions</h3></div></div></div><p>Here<a id="id157" class="indexterm"></a> are the solutions for the preceding exercises:</p><div class="orderedlist"><ol class="orderedlist arabic" type="1"><li><p>The solution for the <code>for</code> loop for printing the sum of the numbers from 1 to 10 is as follows:</p><div class="informalexample"><pre><code>int sum = 0;
 for( int x = 1; x &lt;= 10; x++ )
 {
   sum += x;
   cout &lt;&lt; x &lt;&lt; endl;
-}</pre></div></li><li ><p >The solution for the <code class="literal" >for</code> loop for printing multiples of 6 from 30 is as follows:</p><div class="informalexample" ><pre class="programlisting" >for( int x = 6; x &lt;= 30; x += 6 )
+}</code></pre></div></li><li><p>The solution for the <code>for</code> loop for printing multiples of 6 from 30 is as follows:</p><div class="informalexample"><pre><code>for( int x = 6; x &lt;= 30; x += 6 )
 {
   cout &lt;&lt; x &lt;&lt; endl;
-}</pre></div></li><li ><p >The solution for the <code class="literal" >for</code> loop for printing numbers from 2 to 100 in multiples of 2 is as follows:</p><div class="informalexample" ><pre class="programlisting" >for( int x = 2; x &lt;= 100; x += 2 )
+}</code></pre></div></li><li><p>The solution for the <code>for</code> loop for printing numbers from 2 to 100 in multiples of 2 is as follows:</p><div class="informalexample"><pre><code>for( int x = 2; x &lt;= 100; x += 2 )
 {
   cout &lt;&lt; x &lt;&lt; endl;
-}</pre></div></li><li ><p >The solution for the <code class="literal" >for</code> loop that prints numbers from 1 to 16 and their squares is as follows:</p><div class="informalexample" ><pre class="programlisting" >for( int x = 1; x &lt;= 16; x++ )
+}</code></pre></div></li><li><p>The solution for the <code>for</code> loop that prints numbers from 1 to 16 and their squares is as follows:</p><div class="informalexample"><pre><code>for( int x = 1; x &lt;= 16; x++ )
 {
   cout &lt;&lt; x &lt;&lt; " " &lt;&lt; x*x &lt;&lt; endl;
-}</pre></div></li></ol></div></div></div>
+}</code></pre></div></li></ol></div></div></div>
+                <!-- End of Title Content -->
+                <!--Next Section -->
+                <div class="panel panel-default next-section ">
+                    <div class="panel-body">
+                        <span class="col-xs-12 col-sm-9 next-section-text"><strong>Up Next: </strong>The for/while Loop</span>
+                        <a class="btn btn-primary col-sm-3 col-xs-12 next-section-button">Next Section</a>
+                    </div>
+                </div>
+
+                <div class="isbn">
+                    <span>ISBN 139781783980246  © Packt Publishing Limited. All Rights Reserved </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
 
         <!-- Title Content Ends -->
         <!-- /#page-content-wrapper -->
@@ -150,6 +175,9 @@ for( int x = 1; x &lt;= 10; x++ )
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+
+    <!-- Prism -->
+    <script src="js/prism.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
