@@ -13,6 +13,31 @@
   margin-right: 0;
 }
 
+.next-section-text {
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+
+}
+
+.next-section-button {
+  margin-top: 5px;
+  border-radius: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+
+.isbn {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+}
+
+.next-section {
+  margin-top: 40px;
+}
+
 .navbar-text {
   white-space: nowrap;
   overflow: hidden;
