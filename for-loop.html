@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+  
+
+    <div id="wrapper">
+
+        <!-- Top Nav Bar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+
+            <div class="nav navbar-nav">
+              <a class="navbar-brand hidden-nav-icon pull-left" href="#"> <i class="fa fa-arrow-circle-o-left fa-lg nav-icon"></i> </a>
+              <a class="navbar-brand pull-right" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg nav-icon"></i> </a>
+              <p class="navbar-text navbar-title"> Learning C++ by Creating Games with UE4 </p>  
+            </div>
+
+            
+
+          </div>
+        </nav>
+
+
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav list-group ">
+                    <form class="sidebar-search">
+                        <input type="text" class="form-control" placeholder="Search this title and others...">
+                    </form>   
+                <a href="#"> <li class="list-group-item">Learning C++ by Creating Games with UE4</li></a>
+                <a href="#"> <li class="list-group-item">Preface</li></a>
+                <a href="#"> <li class="list-group-item">Chapter 1. Preparing your Data</li></a>
+
+                <a href="#collapse-2" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-2" aria-hidden="true">
+                    <li class="list-group-item"> Chapter 2. Driving Visual Analysis with Automated Automobiles</li> 
+                </a>
+
+                    <div class="collapse" id="collapse-2">
+                        <a href="#"><li class="list-group-item section-sidebar">The for loop</li></a>
+                        <a href="#"><li class="list-group-item section-sidebar">The for/while loop</li></a>
+                        <a href="#"><li class="list-group-item section-sidebar">The 'if' loop</li></a>
+                        <a href="#"><li class="list-group-item section-sidebar">Looping with Unreal Engine</li></a>
+                    </div>
+                
+                <a href="index.html">
+                    <li class="list-group-item selected-tab"> Chapter 3. Looping</li> 
+                </a>
+
+                    <div class="collapse in" id="collapse-3">
+                        <a href="#"><li class="list-group-item section-sidebar active">The for loop</li></a>
+                        <a href="#"><li class="list-group-item section-sidebar">The for/while loop</li></a>
+                        <a href="#"><li class="list-group-item section-sidebar">The 'if' loop</li></a>
+                        <a href="#"><li class="list-group-item section-sidebar">Looping with Unreal Engine</li></a>
+                    </div>
+
+                <a href="#"> <li class="list-group-item">Chapter 4. Forms and Entries</li></a>
+                <a href="#"> <li class="list-group-item">Chapter 5. Functions and Macros</li></a>
+                <a href="#"> <li class="list-group-item">Chapter 6. Dynamic Memory Allocation</li></a>
+                <a href="#"> <li class="list-group-item">Chapter 7. If, Else and Switch</li></a>
+                <a href="#"> <li class="list-group-item">Chapter 8. Actors and Roles</li></a>
+            </ul>
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid reader-container">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+
+
+<!-- Title Content -->
+
+                        
+
+                        <div class="section" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h2 class="section-title" ><a id="ch04lvl1sec26" style="font-size: 24px !important;"></a>The for loop</h2></div></div><hr ></div><p >The <a id="id154" class="indexterm" ></a>
+<code class="literal" >for</code> loop has a slightly different anatomy than the <code class="literal" >while</code> loop, but both are very similar.</p><p >Let's examine the anatomy of a <code class="literal" >for</code> loop as compared to an equivalent <code class="literal" >while</code> loop. Take an example of the following code snippets:</p><div class="informaltable" ><table style="border-collapse: collapse; border-top-width: 0.5pt; border-top-style: solid; border-bottom-width: 0.5pt; border-bottom-style: solid; font-size: 16px !important;"><colgroup ><col align="left" ><col align="left" ></colgroup><thead ><tr ><th style="border-bottom-width: 0.5pt; border-bottom-style: solid; font-size: 16px !important;" align="left" valign="bottom">
+<p >The for loop</p>
+</th><th style="border-bottom-width: 0.5pt; border-bottom-style: solid; font-size: 16px !important;" align="left" valign="bottom">
+<p >An equivalent while loop</p>
+</th></tr></thead><tbody ><tr ><td  align="left" valign="top">
+<p >
+</p><div class="informalexample" ><pre class="programlisting" >for( int x = 1; x &lt;= 5; x++ )
+{
+  cout &lt;&lt; x &lt;&lt; endl;
+}</pre></div><p >
+</p>
+</td><td  align="left" valign="top">
+<p >
+</p><div class="informalexample" ><pre class="programlisting" >int x = 1;
+while( x &lt;= 5 )
+{
+  cout &lt;&lt; x &lt;&lt; endl;
+  x++;
+}</pre></div><p >
+</p>
+</td></tr></tbody></table></div><p >The <code class="literal" >for</code> loop has three statements inside its brackets. Let's examine them in order.</p><p >The first statement of the <code class="literal" >for</code> loop (<code class="literal" >int x = 1</code>;) only gets executed once, when we first enter the body of the <code class="literal" >for</code> loop. It is typically used to initialize the value of the loop's counter variable (in this case, the variable <code class="literal" >x</code>). The second statement inside the <code class="literal" >for</code> loop (<code class="literal" >x &lt;= 5</code>;) is the loop's repeat condition. As long as <code class="literal" >x &lt;= 5</code>, we must continue to stay inside the body <a id="id155" class="indexterm" ></a>of the <code class="literal" >for</code> loop. The last statement inside the brackets of the <code class="literal" >for</code> loop (<code class="literal" >x++</code>;) gets executed after we complete the body of the <code class="literal" >for</code> loop each time.</p><p >The following sequence of diagrams explain the progression of the <code class="literal" >for</code> loop:</p><div class="mediaobject" ><img src="/graphics/9781784396572/graphics/6572OT_04_02.jpg" ></div><div class="section" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h3 class="title" style="font-size: 19px !important;"><a id="ch04lvl2sec44" style="font-size: 19px !important;"></a>Exercises</h3></div></div></div><div class="orderedlist" ><ol class="orderedlist arabic" type="1" ><li ><p >Write a <code class="literal" >for</code> loop <a id="id156" class="indexterm" ></a>that will gather the sum of the numbers from 1 to 10.</p></li><li ><p >Write a <code class="literal" >for</code> loop that will print the multiples of 6, from 6 to 30 (6, 12, 18, 24, and 30).</p></li><li ><p >Write a <code class="literal" >for</code> loop that will print numbers 2 to 100 in multiples of 2 (for example, 2, 4, 6, 8, and so on).</p></li><li ><p >Write a <code class="literal" >for</code> loop that will print numbers 1 to 16 and their squares beside them.</p></li></ol></div></div><div class="section" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h3 class="title" style="font-size: 19px !important;"><a id="ch04lvl2sec45" style="font-size: 19px !important;"></a>Solutions</h3></div></div></div><p >Here<a id="id157" class="indexterm" ></a> are the solutions for the preceding exercises:</p><div class="orderedlist" ><ol class="orderedlist arabic" type="1" ><li ><p >The solution for the <code class="literal" >for</code> loop for printing the sum of the numbers from 1 to 10 is as follows:</p><div class="informalexample" ><pre class="programlisting" >int sum = 0;
+for( int x = 1; x &lt;= 10; x++ )
+{
+  sum += x;
+  cout &lt;&lt; x &lt;&lt; endl;
+}</pre></div></li><li ><p >The solution for the <code class="literal" >for</code> loop for printing multiples of 6 from 30 is as follows:</p><div class="informalexample" ><pre class="programlisting" >for( int x = 6; x &lt;= 30; x += 6 )
+{
+  cout &lt;&lt; x &lt;&lt; endl;
+}</pre></div></li><li ><p >The solution for the <code class="literal" >for</code> loop for printing numbers from 2 to 100 in multiples of 2 is as follows:</p><div class="informalexample" ><pre class="programlisting" >for( int x = 2; x &lt;= 100; x += 2 )
+{
+  cout &lt;&lt; x &lt;&lt; endl;
+}</pre></div></li><li ><p >The solution for the <code class="literal" >for</code> loop that prints numbers from 1 to 16 and their squares is as follows:</p><div class="informalexample" ><pre class="programlisting" >for( int x = 1; x &lt;= 16; x++ )
+{
+  cout &lt;&lt; x &lt;&lt; " " &lt;&lt; x*x &lt;&lt; endl;
+}</pre></div></li></ol></div></div></div>
+
+        <!-- Title Content Ends -->
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    
+    </script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+
+</html>

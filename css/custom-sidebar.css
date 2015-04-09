@@ -1,0 +1,168 @@
+
+
+.sidebar-search {
+	margin-bottom: 30px;
+  	margin-top: 30px;
+  	margin-left: 5%;
+  	margin-right: 5%;
+  	border:	none;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.navbar-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.selected-tab {
+	background: rgba(255,255,255,0.1);
+}
+
+.list-group-item:last-child {
+   margin-bottom: -1px; 
+   border-bottom-right-radius: 0px; 
+   border-bottom-left-radius: 0px; 
+}
+.list-group-item:first-child {
+   border-top-left-radius: 0px; 
+   border-top-right-radius: 0px; 
+}
+
+.navbar-right {
+   float: none !important;
+}
+
+.section-sidebar {
+    color: #fff;
+    line-height: 20px !important;    
+    background-color: #333a40;
+    padding-left: 30px;
+}
+
+.sidebar-nav li a {
+  display: inline;
+  text-decoration: none;
+  color: #fff;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  margin-bottom: -1px;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #414549;
+  border-top: 1px solid #414549;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+.navbar-fixed-top {
+  position: fixed;
+  right: 0px;
+  left: 0;
+  z-index: 1030;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled .navbar-fixed-top {
+  position: fixed;
+  right: 250px;
+  left: 0;
+  z-index: 1030;
+}
+
+#wrapper.toggled .hidden-nav-icon {
+	display: none;
+}
+
+.nav-icon {
+	color: #fff;
+}
+
+.navbar-default {
+  background-color: #333a40;
+  border-color: #333a40;
+}
+
+.navbar-collapse-icon {
+  float: right;
+  display: block;
+  margin-top: -15px;
+  margin-right: -15px;
+}
+
+.navbar-title {
+	color: #FFF !important;
+	float: none;
+	text-align: center;
+}
+
+.reader-container {
+	margin-top: 70px;
+	max-width: 700px;
+}
+
+.section-title {
+	font-family: Ubuntu, sans-serif;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.section {
+	font-family: Merriweather, serif;
+	font-weight: 300;
+	max-width: 700px;
+	line-height: 2em;
+
+}
+
+
+
+@media(min-width:768px) {
+
+	.navbar-fixed-top {
+	  right: 250px;
+	}
+
+	#wrapper.toggled .navbar-fixed-top {
+	  right: 0;
+	}
+
+	#wrapper.toggled .navbar-brand {
+		display: block ;
+	}
+
+	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+	  margin-left: -10px;
+	  margin-right: -10px;
+	}
+
+
+}
+
+@media(min-width:992px) {
+
+	.navbar-fixed-top {
+	  right: 400px;
+	}
+
+}
