@@ -1,4 +1,32 @@
 
+body {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+}
+
+.title-page-title {
+  margin-top: 0;
+}
+
+.title-page-img {
+  margin-bottom: 20px;
+}
+
+.title-page-about {
+  margin-top: 20px;
+}
+
+.title-read-button {
+  font-size: 18px;
+  margin-top: 20px;
+  border-radius: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.title-container {
+  margin-top: 90px;
+  max-width: 700px;
+}
 
 .sidebar-search {
 	margin-bottom: 30px;
@@ -26,6 +54,11 @@
   padding-top: 15px;
   padding-bottom: 15px;
 
+}
+
+.navbar-nav {
+  float: none;
+  margin: 0;
 }
 
 .isbn {
@@ -83,6 +116,7 @@
   border-right: none;
   border-bottom: 1px solid #414549;
   border-top: 1px solid #414549;
+  background-color: #2c3033;
 }
 
 a:hover {
@@ -154,7 +188,7 @@ a:focus {
 
 .section {
 	font-family: Merriweather, serif;
-	font-weight: 300;
+	font-weight: 400;
 	max-width: 700px;
 	line-height: 2em;
 
