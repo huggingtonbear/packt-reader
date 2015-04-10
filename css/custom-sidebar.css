@@ -198,7 +198,6 @@ a:focus {
 .section {
 	font-family: Merriweather, serif;
 	font-weight: 400;
-	max-width: 500px;
 	line-height: 2em;
 
 }
@@ -226,10 +225,14 @@ a:focus {
 
   .reader-container {
   max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .title-container {
   max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 
