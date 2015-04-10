@@ -184,7 +184,7 @@ a:focus {
 
 .reader-container {
 	margin-top: 50px;
-	max-width: 700px;
+	max-width: 500px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -224,6 +224,13 @@ a:focus {
 	  margin-right: -10px;
 	}
 
+  .reader-container {
+  margin-top: 50px;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 
 }
 
@@ -232,5 +239,11 @@ a:focus {
 	.navbar-fixed-top {
 	  right: 400px;
 	}
+
+  .reader-container {
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 }
