@@ -25,7 +25,7 @@ body {
 
 .title-container {
   margin-top: 70px;
-  max-width: 700px;
+  max-width: 500px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -228,9 +228,9 @@ a:focus {
   max-width: 600px;
 }
 
-  .section {
+.title-container {
   max-width: 600px;
-  }
+}
 
 
 
