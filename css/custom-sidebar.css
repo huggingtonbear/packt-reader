@@ -21,10 +21,6 @@ body {
   font-size: 18px;
 }
 
-.welcome-sidebar {
-  margin-top: 90px;
-}
-
 .recently-viewed-empty {
   border-width:1px; 
   border-style:dashed;
