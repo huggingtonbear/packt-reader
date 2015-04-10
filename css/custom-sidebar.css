@@ -26,6 +26,8 @@ body {
 .title-container {
   margin-top: 90px;
   max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .sidebar-search {
@@ -114,14 +116,14 @@ body {
 }
 
 .section-sidebar {
-    color: #fff;
-    line-height: 15px !important;    
-    background-color: #333a40;
-    font-size: 13px;
-    text-indent: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  color: #fff;
+  line-height: 15px !important;    
+  background-color: #333a40;
+  font-size: 13px;
+  text-indent: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 a:hover {
@@ -183,6 +185,8 @@ a:focus {
 .reader-container {
 	margin-top: 70px;
 	max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .section-title {
