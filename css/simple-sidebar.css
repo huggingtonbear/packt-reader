@@ -113,23 +113,6 @@
         position: relative;
         margin-left: 0;
     }
-
-    .navbar-fixed-top {
-      right: 250px;
-    }
-
-    #wrapper.toggled .navbar-fixed-top {
-      right: 0;
-    }
-
-    #wrapper.toggled .navbar-brand {
-        display: block ;
-    }
-
-    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-      margin-left: -10px;
-      margin-right: -10px;
-    }
 }
 
 @media(min-width:1200px) {
@@ -166,7 +149,5 @@
     margin-right: -400px;
     }
 
-    .navbar-fixed-top {
-      right: 400px;
-    }
+    
 }
