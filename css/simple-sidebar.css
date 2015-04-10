@@ -65,8 +65,7 @@
 }
 
 .sidebar-nav li {
-    /* text-indent: 20px; */
-    line-height: 35px;
+    line-height: 25px;
     color: #fff;
 }
 

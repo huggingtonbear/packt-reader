@@ -95,12 +95,6 @@ body {
    float: none !important;
 }
 
-.section-sidebar {
-    color: #fff;
-    line-height: 20px !important;    
-    background-color: #333a40;
-    padding-left: 30px;
-}
 
 .sidebar-nav li a {
   display: inline;
@@ -112,11 +106,22 @@ body {
   position: relative;
   display: block;
   margin-bottom: -1px;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid #414549;
-  border-top: 1px solid #414549;
+  border: none;
   background-color: #2c3033;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.section-sidebar {
+    color: #fff;
+    line-height: 15px !important;    
+    background-color: #333a40;
+    font-size: 13px;
+    text-indent: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 a:hover {
