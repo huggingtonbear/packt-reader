@@ -142,6 +142,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 0;
+  border-top: none;
 }
 
 .navbar-text {
