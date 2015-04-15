@@ -257,6 +257,7 @@ a:focus {
   margin-right: auto;
   margin-left: auto;
 }
+
 .viewer-container {
   margin-right: -20px;
   margin-left: -20px;
@@ -279,7 +280,21 @@ a:focus {
   font-size: 30px;
   font-weight: 300;
 }
-
+@media (max-width:992px) {
+  .viewer {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;  
+  }
+  .viewer-container {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .video-next-pad {
+    padding-top: 0;
+  }
+}
 @media(min-width:768px) {
   .home-search {
     max-width: 60%;
