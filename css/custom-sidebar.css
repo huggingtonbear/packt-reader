@@ -188,7 +188,6 @@ a:focus {
   font-size: 13px;
   text-indent: 10px;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 
