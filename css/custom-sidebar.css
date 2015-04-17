@@ -260,7 +260,9 @@ a:focus {
 .viewer-container {
   margin-right: -20px;
   margin-left: -20px;
+  margin-top: 31px;
 }
+
 .home-container {
   margin-top: 50px;
   max-width: 1200px;
@@ -289,6 +291,7 @@ a:focus {
   .viewer-container {
     margin-right: -15px;
     margin-left: -15px;
+    margin-top: 36px;
   }
   .video-next-pad {
     padding-top: 0;
