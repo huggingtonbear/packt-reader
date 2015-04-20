@@ -61,6 +61,12 @@ a:focus {
   text-align: center;
   display: inherit;
 }
+.login-tagline-small {
+  font-size: 22px;
+  font-weight: 300;
+  text-align: center;
+  display: inherit;
+}
 .upsell-text {
   font-size: 14px;
   color: #fff;
