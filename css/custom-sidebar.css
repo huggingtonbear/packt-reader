@@ -366,9 +366,13 @@ a:focus {
     display: block;
   }
 }
+
 @media(max-width:768px) {
   .navbar-default .navbar-nav .open .dropdown-menu>li>a {
   color: #fff !important;
+  }
+  .logout-link {
+  float: right;
   }
 }
 
