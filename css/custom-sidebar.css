@@ -61,11 +61,9 @@ a:focus {
 }
 .login-link  {
   color: #fff;
-  text-decoration: underline;
 }
 .login-link:hover  {
-  color: #e78542;
-  text-decoration: underline;
+  color: #fff;
 }
 .login-link:active  {
   color: #fff;
@@ -74,7 +72,8 @@ a:focus {
 .locked-msg {
   color: #fff;
   padding: 15px;
-  background-color: #555;
+  background-color: #333a40;
+  border-color: #333a40;
   margin-left: auto;
   margin-right: auto;
 }
@@ -149,6 +148,29 @@ a:focus {
 }
 
 /*Sidebar*/
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  color: #FFF;
+  background-color: #333a40 !important;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  background-color: #333a40 !important;
+}
+.logout-nav {
+  float: right;
+  color: #FFF !important;
+}
+.logout-dropdown {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #fff;
+}
+.logout-link {
+  color: #333 !important; 
+  font-weight: 300 !important;
+}
+.logout-link:hover {
+  background-color: none !important;
+}
 .list-group-item:last-child {
    margin-bottom: -1px; 
    border-bottom-right-radius: 0px; 
