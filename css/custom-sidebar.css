@@ -66,6 +66,7 @@ a:focus {
   color: #fff;
 }
 
+
 /*Sidebar*/
 .packt-sb-logo-holder {
   position: absolute;
@@ -346,6 +347,8 @@ a:focus {
   .video-next-pad {
     padding-top: 0;
   }
+
+
 }
 @media(min-width:768px) {
   .home-search {
@@ -355,6 +358,11 @@ a:focus {
   }
   #wrapper.toggled .hidden-nav-icon {
     display: block;
+  }
+}
+@media(max-width:768px) {
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+  color: #fff !important;
   }
 }
 
