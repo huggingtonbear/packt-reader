@@ -339,6 +339,22 @@ a:focus {
   font-size: 30px;
   font-weight: 300;
 }
+
+/*Sidebar Search Results*/
+.search-heading {
+  background-color: #767272;
+}
+.search-result-title {
+  line-height: 20px !important;
+}
+.search-result-img {
+  float: left;
+  width: 50px;
+  margin-right: 15px;
+}
+.search-text {
+  font-size: 12px;
+}
 @media (max-width:992px) {
   .viewer {
     margin-right: 0;
