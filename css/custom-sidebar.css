@@ -44,6 +44,27 @@ a:focus {
   margin-left: auto;
   margin-right: auto;
 }
+/*Login Page*/
+.login-form-top {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: -1px;
+}
+.login-form-bottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: -1px;
+}
+.login-tagline {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  display: inherit;
+}
+.upsell-text {
+  font-size: 14px;
+  color: #fff;
+}
 
 /*Sidebar*/
 .packt-sb-logo-holder {
@@ -60,7 +81,7 @@ a:focus {
   width: 100px;
 }
 .login-link  {
-  color: #fff;
+  color: #fff !important;
 }
 .login-link:hover  {
   color: #fff;
@@ -146,7 +167,12 @@ a:focus {
   font-size: 12px;
   text-align: center;
 }
-
+.img-upsell {
+  max-height: 150px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
 /*Sidebar*/
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
   color: #FFF;
