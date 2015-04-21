@@ -20,11 +20,11 @@ a:focus {
 }
 /*Unlimited Home */
 .home-body {
-  background-color: #e5eaee;
+  background-image: url('bg/shattered.png')
 }
 .playlist-title {
   font-size: 20px;
-  color: #555;
+  color: #333;
   font-weight: 500;
   margin-bottom: 15px;
   margin-top: 15px;
@@ -32,11 +32,6 @@ a:focus {
 .welcome-text {
   color: #fff;
   font-size: 18px;
-}
-.recently-viewed-empty {
-  border-width:1px; 
-  border-style:dashed;
-  border-color: #888;
 }
 .home-search {
   max-width: 100%;
