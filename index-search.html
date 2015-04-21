@@ -80,10 +80,10 @@
                 <a href="#"> <li class="list-group-item search-result-title">Chapter 3. Looping <p class="search-text"> It's got <strong> looping</strong> in the title so it needs to be referenced</p></li></a>
                 <!-- References within other Titles -->
                 <li class="list-group-item search-heading">References in other Titles: <strong class="ml10">2</strong></li>
-                <a href="#"> <li class="list-group-item"><img class="img-responsive search-result-img" src="images/mean2.png"> <p class="mb0">Learning Mongo DB [Video]</p>
+                <a href="#"> <li class="list-group-item"><img class="img-responsive search-result-img lazy" data-original="images/mean2.png"> <p class="mb0">Learning Mongo DB [Video]</p>
                     <p class="search-text">A comprehensive guide to using MongoDB for ultra-fast, fault tolerant management of big data, including advanced data analysis</p>
                 </li></a>
-                <a href="#"> <li class="list-group-item"><img class="img-responsive search-result-img" src="images/mean4.png"> <p class="mb0">Angular JS UI Development</p>
+                <a href="#"> <li class="list-group-item"><img class="img-responsive search-result-img lazy" data-original="images/mean4.png"> <p class="mb0">Angular JS UI Development</p>
                     <p class="search-text">Follow this AngularJS tutorial and learn to create dynamic user interfaces with AngularJS and discover a modern front end web application development solution</p>
                 </li></a>
 
@@ -208,6 +208,17 @@ while( x &lt;= 16 )
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+
+    <!-- Lazy Load -->
+    <script src="js/jquery.lazyload.min.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+        $("img.lazy").lazyload({
+            effect : "fadeIn",
+            placeholder : "images/blank.gif"
+        });
+    });
+    </script>
 
 
     <!-- Prism -->

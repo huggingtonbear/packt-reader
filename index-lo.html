@@ -64,7 +64,7 @@
                 </div>
                 <!-- Login Container End-->
                 <div class="col-lg-6 col-xs-12 mt20">
-                    <img class="img-responsive" src="images/cpp.png"/>
+                    <img class="img-responsive lazy" data-original="images/cpp.png"/>
                 </div>
                 <div class="col-lg-6 col-xs-12 mt20 white" style="color: #fff;">
                     <h4 class="title-page-title">Learning C++ by Creating Games with UE4</h4>
@@ -191,8 +191,8 @@ while( x &lt;= 16 )
                     </div>
                     <div class="panel-body">
                         <div class="col-sm-12">
-                            <img class="img-responsive mb20" src="images/upsell-banner.png"/>
-                            <img class="img-responsive img-upsell" src="images/responsive-showcase.png"/>
+                            <img class="img-responsive mb20 lazy" data-original="images/upsell-banner.png"/>
+                            <img class="img-responsive img-upsell lazy" data-original="images/responsive-showcase.png"/>
 
                             <a href="#" class="btn btn-primary col-xs-12 btn-buy btn-lg"> Subscribe </a>
                         </div>
@@ -221,6 +221,17 @@ while( x &lt;= 16 )
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+
+    <!-- Lazy Load -->
+    <script src="js/jquery.lazyload.min.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+        $("img.lazy").lazyload({
+            effect : "fadeIn",
+            placeholder : "images/blank.gif"
+        });
+    });
+    </script>
 
     <!-- Prism -->
     <script src="js/prism.js"></script>
