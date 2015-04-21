@@ -10,7 +10,7 @@ function update_offsets(){
   });
 };
 
-function lazy() {
+function lazybg() {
   wscroll = $(window).scrollTop();
   for(i = 0; i < lh.length; i++){
     if(lh[i] <= wscroll + (wh - 200)){
@@ -21,8 +21,9 @@ function lazy() {
 
 // Page Load
 update_offsets();
-lazy();
+lazybg();
 
 $(window).on('scroll',function(){
-  lazy();
+  lazybg();
+$('.home-body').fadeIn(1000);
 });
