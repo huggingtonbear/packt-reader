@@ -15,7 +15,7 @@ function lazybg() {
   for(i = 0; i < lh.length; i++){
     if(lh[i] <= wscroll + (wh - 200)){
       $('.home-body').eq(i).addClass('loaded');
-      $('.home-body').fadeIn(1000);
+      $('.loaded').fadeIn(1000);
     };
   };
 };
