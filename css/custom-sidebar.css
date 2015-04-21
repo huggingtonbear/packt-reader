@@ -19,6 +19,11 @@ a:focus {
   color: #ffffff;
 }
 
+img {
+  opacity: 0;
+  transition: opacity .3s ease-in;
+} 
+
 /*Unlimited Home */
 .home-body {
   background-color: #e5eaee;
