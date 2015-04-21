@@ -20,12 +20,15 @@ a:focus {
 }
 /*Unlimited Home */
 .home-body {
+  background-color: #dbdcdc;)
+}
+.loaded {
   background-image: url('bg/shattered.png')
 }
 .playlist-title {
   font-size: 20px;
   color: #333;
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: 15px;
   margin-top: 15px;
 }
