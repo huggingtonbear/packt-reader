@@ -20,10 +20,11 @@ a:focus {
 }
 /*Unlimited Home */
 .home-body {
-  background-color: #dbdcdc;)
+  background-color: #dbdcdc;
 }
 .loaded {
-  background-image: url('bg/shattered.png')
+  background-image: url('bg/shattered.png');
+  background-attachment: fixed;
 }
 .playlist-title {
   font-size: 20px;
