@@ -143,46 +143,37 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
     <script src="js/jquery.js"></script>
-
-    <!-- Prism -->
+    <!-- Lazy Load Script-->
+    <script src="js/jquery.lazyload.min.js" type="text/javascript"></script>
+    <script src="js/lazyload-settings.js" type="text/javascript"></script>
+    <script src="js/lazybg.js"></script>
+    <!-- Syntax Highlighting Script -->
     <script src="js/prism.js"></script>
-
+    <!-- Real Shadows Script -->
+    <script src="js/realshadow-min.js"></script>
+    <script src="js/shadowbox-settings.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Lazy Load -->
-    <script src="js/jquery.lazyload.min.js" type="text/javascript"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+    <!-- Demo Search Filter -->
     <script>
-        $(function() {
-        $("img.lazy").lazyload({
-            threshold : 400,
-            effect : "fadeIn",
-            placeholder : "images/blank.gif",
-        });
+        $('#box').keyup(function(){
+       var valThis = $(this).val().toLowerCase();
+        if(valThis == ""){
+            $('.navList > a > li').show();           
+        } else {
+            $('.navList > a > li').each(function(){
+                var text = $(this).text().toLowerCase();
+                (text.indexOf(valThis) >= 0) ? $(this).show() : $(this).hide();
+            });
+       };
     });
     </script>
-
-    <!-- Menu Toggle Script -->
-    <script>
-
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    
-    </script>
-
-
-
-
-
-  
-
-
-
-
 
 </body>
 

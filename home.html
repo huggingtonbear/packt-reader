@@ -88,35 +88,15 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="text-center mb30"><h3>
-                            <span class="mr5">Hi <!-- Subscribers first name here -->Oli<!-- End Subscribers first name here -->, </span>
-                            <script language="JavaScript"> 
-                                var myDate = new Date(); 
-                                  
-                                  
-                                /* hour is before noon */
-                                if ( myDate.getHours() < 12 )  
-                                { 
-                                    document.write(" what's the plan for this morning? "); 
-                                } 
-                                else  /* Hour is from noon to 5pm (actually to 5:59 pm) */
-                                if ( myDate.getHours() >= 12 && myDate.getHours() <= 17 ) 
-                                { 
-                                    document.write(" what would you like to do this afternoon? "); 
-                                } 
-                                else  /* the hour is after 5pm, so it is between 6pm and midnight */
-                                if ( myDate.getHours() > 17 && myDate.getHours() <= 24 ) 
-                                { 
-                                    document.write(" what are you up to this evening?"); 
-                                } 
-                                else  /* the hour is not between 0 and 24, so something is wrong */
-                                { 
-                                    document.write(" what would you like to do today? "); 
-                                } 
-                                  
-                                </script>
-                         
-                         </h3> 
+                        <div class="text-center mb30">
+                            <h3>
+                                <span class="mr5">Hi <!-- Subscribers first name here -->Oli<!-- End Subscribers first name here -->, </span>
+
+                                <!-- Time-Block: This Block prints the time of day into the view -->
+                                <script src="js/displaytime.js" language="JavaScript"></script>
+                                <!-- End Time-Block -->
+
+                            </h3> 
                         </div>
                         <form class="home-search sidebar-search">
                         <input type="text" class="form-control input-lg" placeholder="Search for a keyword or title...">
@@ -189,52 +169,24 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
+
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
     <script src="js/jquery.js"></script>
-
-    <!-- Lazy Load -->
+    <!-- Lazy Load Script-->
     <script src="js/jquery.lazyload.min.js" type="text/javascript"></script>
-    <script>
-        $(function() {
-        $("img.lazy").lazyload({
-            threshold : 400,
-            effect : "fadeIn",
-            placeholder : "images/blank.gif",
-        });
-    });
-    </script>
+    <script src="js/lazyload-settings.js" type="text/javascript"></script>
     <script src="js/lazybg.js"></script>
-
-    <!-- Prism -->
+    <!-- Syntax Highlighting Script -->
     <script src="js/prism.js"></script>
-
-    <!-- Shadows -->
+    <!-- Real Shadows Script -->
     <script src="js/realshadow-min.js"></script>
-    <script>
-
-        $('.shadowbox').realshadow({
-
-            followMouse: false,
-            length: 6
-
-        });
-
-    </script>
-
+    <script src="js/shadowbox-settings.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-
-
-    <!-- Menu Toggle Script -->
-    <script>
-
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    
-    </script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
 
 </body>
 

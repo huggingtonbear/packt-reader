@@ -170,51 +170,23 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
     <script src="js/jquery.js"></script>
-
-    <!-- Prism -->
+    <!-- Lazy Load Script-->
+    <script src="js/jquery.lazyload.min.js" type="text/javascript"></script>
+    <script src="js/lazyload-settings.js" type="text/javascript"></script>
+    <script src="js/lazybg.js"></script>
+    <!-- Syntax Highlighting Script -->
     <script src="js/prism.js"></script>
-
-    <!-- Shadows -->
+    <!-- Real Shadows Script -->
     <script src="js/realshadow-min.js"></script>
-    <script>
-
-        $('.shadowbox').realshadow({
-
-            followMouse: false,
-            length: 6
-
-        });
-
-    </script>
-
+    <script src="js/shadowbox-settings.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Lazy Load -->
-    <script src="js/jquery.lazyload.min.js" type="text/javascript"></script>
-    <script>
-        $(function() {
-        $("img.lazy").lazyload({
-            threshold : 400,
-            effect : "fadeIn",
-            placeholder : "images/blank.gif",
-        });
-    });
-    </script>
-    <script src="js/lazybg.js"></script>
-
-
-    <!-- Menu Toggle Script -->
-    <script>
-
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    
-    </script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
 
 </body>
 
