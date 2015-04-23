@@ -18,6 +18,10 @@ a:focus {
 .white {
   color: #ffffff;
 }
+.main-icon {
+  height: 30px;
+  margin-top: -2px;
+}
 /*Unlimited Home */
 .home-body {
   background-color: #dbdcdc;
@@ -82,7 +86,7 @@ a:focus {
 .packt-sb-logo {
   margin-right: auto;
   margin-left: auto;
-  width: 100px;
+  width: 150px;
 }
 .login-link  {
   color: #fff !important;
@@ -422,7 +426,7 @@ a:focus {
     width: 400px;
   }
   .packt-sb-logo {
-    width: 150px;
+    width: 200px;
 
   }
   .reader-container {
