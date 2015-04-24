@@ -75,6 +75,11 @@ a:focus {
 }
 
 /*Sidebar*/
+#sidebar-wrapper > ul > nav {
+  border: none;
+  border-radius: 0;
+  border-bottom: solid #333a40 1px;
+}
 .packt-sb-logo-holder {
   position: absolute;
   background: #2c3033;
