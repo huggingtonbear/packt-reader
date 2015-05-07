@@ -17,6 +17,7 @@ a:focus {
 }
 .white {
   color: #ffffff;
+  font-weight: 300;
 }
 .main-icon {
   height: 30px;
@@ -75,6 +76,12 @@ a:focus {
 }
 
 /*Sidebar*/
+.nav-read-button {
+  font-size: 16px;
+  border-radius: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 #sidebar-wrapper > ul > nav {
   border: none;
   border-radius: 0;
