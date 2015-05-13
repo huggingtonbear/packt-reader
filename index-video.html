@@ -113,7 +113,7 @@
                     <div class="col-lg-12 viewer">
                 <!-- Video Content -->
 
-                <div id="myElement">Loading the player...</div>
+                <div id="myElement"></div>
                     <script type="text/javascript">
                         jwplayer("myElement").setup({
                             file: "videos/video.mp4",
@@ -132,6 +132,31 @@
                 <!-- End of Video Content -->          
 
                 <!--Next Section -->
+                <div class="clearfix"></div>
+
+                <div class="panel-group video-panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default video-panel-default">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                          <h4 class="panel-title text-center panel-title-video">
+                            Section Overview <i class="fa fa-caret-down ml5"></i>
+                          </h4>
+                        </div>
+                    </a>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-body video-panel-body">
+                        <div class="col-sm-12">
+                            <strong>Understand how to build a website using the MEAN stack.</strong><p/>
+                            <ul>
+                            <li>MEAN stands for Mongo, Express, Angular, Node</li>
+                            <li>Angular has modules (directives, services, and controllers) and tests (unit and e2e)</li>
+                            <li>Yeoman = Yo, Bower, Grunt. NPM = Node Package Manager</li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="panel panel-default next-section-video ">
                     <div class="panel-body video-next-pad">
