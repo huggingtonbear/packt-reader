@@ -190,7 +190,7 @@ a:focus {
 }
 .video-panel-default {
   border:none;
-  border-radius:0;
+  border-radius:0 !important;
   background: #333a40;
 }
 .panel-title-video {
