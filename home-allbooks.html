@@ -8,16 +8,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
     <title>PacktLib</title>
-
+    <!-- Add to Home Screen Feature for Mobile -->
+    <link rel="stylesheet" type="text/css" href="css/addtohomescreen.css">
+    <script src="js/addtohomescreen.min.js"></script>
+    <script>
+    addToHomescreen();
+    </script>
+    <!-- Mobile Home Screen Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icons/apple-icon-180x180.png" />
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/custom-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
 
     <!-- Prism -->
@@ -29,7 +41,6 @@
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,500,700|Merriweather:400,300,700' rel='stylesheet' type='text/css'>
-
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,8 +56,8 @@
         <!-- Top Nav Bar -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="nav navbar-nav">
-              <a class="navbar-brand hidden-nav-icon pull-left" href="home.html"><img class="main-icon lazy" data-original="images/pl-icon.png"/></a>
-              <a class="navbar-brand pull-right" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg nav-icon"></i> </a>
+              <a class="navbar-brand hidden-nav-icon pull-left" href="home.html"><img class="main-icon lazy" data-original="images/pl-icon3.png"/></a>
+              <a class="navbar-brand pull-right visible-sm visible-xs" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg nav-icon"></i> </a>
             </div>
         </nav>
         <!-- Sidebar -->
@@ -87,27 +98,6 @@
                       <option>Business</option>
                     </select>
             </div>
-            <div class=" col-xs-12 mt30 pl30 pr30">
-                <p class="welcome-text"> What would you like to browse?</p>
-                <div class="radio mt15">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                    <p class="white">Recommended Courses</p>
-                  </label>
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
-                    <p class="white">All Books</p>
-                  </label>
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                    <p class="white">All Videos</p>
-                  </label>
-                </div>
-            </div>
 
             </ul>
  <!--            <div class="packt-sb-logo-holder">
@@ -133,86 +123,142 @@
                         </div>
                         <form class="home-search sidebar-search">
                         <input type="text" class="form-control input-lg" placeholder="Search for a keyword or title...">
-                        <div class="text-center mt10"><a href="#" style="text-decoration: underline;">Take me back to the Store</a></div>
-                    </form>   
+                        </form>   
                     </div>
-                    <div class="col-sm-offset-1 col-sm-10 col-xs-12">
-                        <div class="playlist-title"> Web Development - All Books </div>
-                            <div class="col-xs-12 pl0 mr0">
 
-                                <div class="col-sm-2 col-xs-12 pl0 mr0">
+                    <div class="col-sm-offset-1 col-sm-10" style="
+                            margin-top: 0px;
+                        ">
+                                
+                                <div class="btn-group btn-navigation-group" role="group" aria-label="..." style="
+                            font-weight: 300 !important;
+                        ">
+                          <button type="button" class="btn btn-default btn-navigation"><i class="fa fa-th mr10"></i> <span class="hidden-xs">Playlists</span></button>
+                          <button type="button" class="btn btn-default btn-navigation"><i class="fa fa-plus mr10"></i> <span class="hidden-xs">Collection</span></button>
+                          <button type="button" class="btn btn-default active btn-navigation"><i class="fa fa-th-list mr10"></i> <span class="hidden-xs">Titles</span></button>
+                          <button type="button" class="btn btn-primary btn-navigation"><i class="fa fa-shopping-cart nav-icon mr10"></i> <span class="hidden-xs">Store</span></button>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-offset-1 col-sm-10 mt30">
+
+                            <form class="form-inline hidden-xs">
+                              <div class="form-group pull-left">
+                                <label class="mr15" style="font-weight: 300;">Category:</label>
+                                <select class="form-control">
+                                  <option>Web Development</option>
+                                  <option>Application Development</option>
+                                  <option>Big Data and Business intelligence</option>
+                                  <option>Hardware and Creative</option>
+                                  <option>Networking and Servers</option>
+                                  <option>Game Development</option>
+                                  <option>Virtulization and Cloud</option>
+                                  <option>Business</option>
+                                </select>
+                              </div><div class="form-group pull-right">
+                                <label class="mr15" style="font-weight: 300;">Sort by:</label>
+                                <select class="form-control">
+                                  <option>Relevance</option>
+                                  <option>Latest Releases</option>
+                                  <option>Oldest Releases</option>
+                                  <option>A-Z</option>
+                                  <option>Z-A</option>
+                                  <option>Most Popular</option>
+                                </select>
+                              </div>
+                            </form>
+                            <form class="form-inline visible-xs">
+                              <div class="form-group ">
+                                <label class="mr15" style="font-weight: 300;">Category:</label>
+                                <select class="form-control">
+                                  <option>Web Development</option>
+                                  <option>Application Development</option>
+                                  <option>Big Data and Business intelligence</option>
+                                  <option>Hardware and Creative</option>
+                                  <option>Networking and Servers</option>
+                                  <option>Game Development</option>
+                                  <option>Virtulization and Cloud</option>
+                                  <option>Business</option>
+                                </select>
+                              </div><div class="form-group">
+                                <label class="mr15" style="font-weight: 300;">Sort by:</label>
+                                <select class="form-control">
+                                  <option>Relevance</option>
+                                  <option>Latest Releases</option>
+                                  <option>Oldest Releases</option>
+                                  <option>A-Z</option>
+                                  <option>Z-A</option>
+                                  <option>Most Popular</option>
+                                </select>
+                              </div>
+                            </form>
+
+
+                    <div class="col-xs-12 pl0 mr0 mt20">
+                                <div class="col-sm-2 col-xs-3 pl0 mr0">
                                     <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/cpp.png"/></a>
                                 </div>
-                                <div class="col-sm-10 col-xs-12">
+                                <div class="col-sm-10 col-xs-9">
                                     <h4 class="">Learning C++ by Creating Games with UE4</h4>
                                     <p class="">Learn C++ programming with a fun, real-world application that allows you to create your own games!</p>
                                 </div>
                             </div>
                             <div class="col-xs-12 pl0 mr0">
-                                <div class="col-sm-2 col-xs-12 pl0 mr0 mt10">
+                                <div class="col-sm-2 col-xs-3 pl0 mr0">
                                     <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/mean1.png"/></a>
                                 </div>
-                                <div class="col-sm-10 col-xs-12">
+                                <div class="col-sm-10 col-xs-9">
                                     <h4 class="">MEAN Web Development</h4>
                                     <p class="">Master real-time MEAN web application development and learn how to construct a MEAN application using a combination of MongoDB, Express, AngularJS, and Node.js</p>
                                 </div>
                             </div>
                             <div class="col-xs-12 pl0 mr0">
-                                <div class="col-sm-2 col-xs-12 pl0 mr0 mt10">
+                                <div class="col-sm-2 col-xs-3 pl0 mr0">
+                                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/mean2.png"/></a>
+                                </div>
+                                <div class="col-sm-10 col-xs-9">
+                                    <h4 class="">Learning MongoDB [Video]</h4>
+                                    <p class="">A comprehensive guide to using MongoDB for ultra-fast, fault tolerant management of big data, icincluding advanced data analysis</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 pl0 mr0">
+                                <div class="col-sm-2 col-xs-3 pl0 mr0">
                                     <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/mean3.png"/></a>
                                 </div>
-                                <div class="col-sm-10 col-xs-12">
+                                <div class="col-sm-10 col-xs-9">
                                     <h4 class="">AngularJS Web Application Development Blueprints</h4>
                                     <p class="">Explore AngularJS development with this collection of practical project blueprints to unlock a powerful and efficient approach to web application development</p>
                                 </div>
                             </div>
-                            <div class="col-xs-12 pl0 mr0">
-                                <div class="col-sm-2 col-xs-12 pl0 mr0 mt10">
-                                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/mean1.png"/></a>
-                                </div>
-                                <div class="col-sm-10 col-xs-12">
-                                    <h4 class="">MEAN Web Development</h4>
-                                    <p class="">Master real-time MEAN web application development and learn how to construct a MEAN application using a combination of MongoDB, Express, AngularJS, and Node.js</p>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 pl0 mr0">
-                                <div class="col-sm-2 col-xs-12 pl0 mr0 mt10">
-                                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/mean3.png"/></a>
-                                </div>
-                                <div class="col-sm-10 col-xs-12">
-                                    <h4 class="">AngularJS Web Application Development Blueprints</h4>
-                                    <p class="">Explore AngularJS development with this collection of practical project blueprints to unlock a powerful and efficient approach to web application development</p>
-                                </div>
-                            </div>
-                            <div class="col-xs-12">
+                            <div class="">
                                 <nav>
                                   <ul class="pagination">
-                                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#">6</a></li>
-                                        <li><a href="#">7</a></li>
-                                        <li><a href="#">8</a></li>
-                                        <li><a href="#">9</a></li>
-                                        <li><a href="#">10</a></li>
-                                        <li><a href="#">11</a></li>
-                                        <li><a href="#">12</a></li>
-                                        <li><a href="#">13</a></li>
-                                        <li><a href="#">14</a></li>
-                                        <li><a href="#">15</a></li>
-                                        <li><a href="#">16</a></li>
-                                        <li><a href="#">17</a></li>
-                                        <li><a href="#">18</a></li>
-                                        <li><a href="#">19</a></li>
-                                        <li><a href="#">20</a></li>
-                                        <li><a href="#">21</a></li>
-                                        <li><a href="#">22</a></li>
-                                        <li>
+                                    <li class="disabled left-etc" style="display: inline;"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                    <li class="active page-away-0" style="display: inline;"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                        <li class="page-away-1" style="display: inline;"><a href="#">2</a></li>
+                                        <li class="page-away-2" style="display: inline;"><a href="#">3</a></li>
+                                        <li class="page-away-3" style="display: inline;"><a href="#">4</a></li>
+                                        <li class="page-away-4" style="display: inline;"><a href="#">5</a></li>
+                                        <li class="page-away-5" style="display: inline;"><a href="#">6</a></li>
+                                        <li class="page-away-6" style="display: inline;"><a href="#">7</a></li>
+                                        <li class="page-away-7" style="display: inline;"><a href="#">8</a></li>
+                                        <li class="page-away-8" style="display: inline;"><a href="#">9</a></li>
+                                        <li class="page-away-9" style="display: inline;"><a href="#">10</a></li>
+                                        <li class="page-away-10" style="display: inline;"><a href="#">11</a></li>
+                                        <li class="page-away-11" style="display: inline;"><a href="#">12</a></li>
+                                        <li class="page-away-12" style="display: inline;"><a href="#">13</a></li>
+                                        <li class="page-away-13" style="display: inline;"><a href="#">14</a></li>
+                                        <li class="page-away-14" style="display: inline;"><a href="#">15</a></li>
+                                        <li class="page-away-15" style="display: inline;"><a href="#">16</a></li>
+                                        <li class="page-away-16" style="display: inline;"><a href="#">17</a></li>
+                                        <li class="page-away-17" style="display: inline;"><a href="#">18</a></li>
+                                        <li class="page-away-18" style="display: inline;"><a href="#">19</a></li>
+                                        <li class="page-away-19" style="display: none;"><a href="#">20</a></li>
+                                        <li class="disabled removable"><span>...</span></li><li class="page-away-20" style="display: none;"><a href="#">21</a></li>
+                                        <li class="page-away-21" style="display: none;"><a href="#">22</a></li>
+                                        <li class="page-away-22" style="display: none;">
                                           <a href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
+                                            <span aria-hidden="true">»</span>
                                           </a>
                                         </li>
                                   </ul>
@@ -222,10 +268,12 @@
 
 
                 </div>
+                
         </div>
 
     </div>
     <!-- /#wrapper -->
+
 
     <!-- JAVASCRIPT BLOCKS -->
 
@@ -244,13 +292,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
-    <!-- Responsive Pagination -->
     <script src="js/responsive-paginate.js"></script>
-    <script>
-    $(document).ready(function () {
-    $(".pagination").rPage();
-    }); 
-    </script>
 
 </body>
 
