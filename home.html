@@ -131,7 +131,19 @@
                             </div><!-- /.navbar-collapse -->
                           </div><!-- /.container-fluid -->
                         </nav>
+
+                            <form class="form-inline pull-right hidden-xs">
+                                <div class="form-group">
+                                <span>Select a Category:</span>
+                                <select ng-change="changeCategory()" class="form-control ml15 ng-pristine ng-untouched ng-valid" name="category" data-ng-options="o.name for o in dropdown_options track by o.id" data-ng-model="dropdown_selectedOption"><option value="268" selected="selected" label="Web Development">Web Development</option><option value="273" label="Application Development">Application Development</option><option value="267" label="Big Data and Business intelligence">Big Data and Business intelligence</option><option value="270" label="Hardware and Creative">Hardware and Creative</option><option value="282" label="Networking and Servers">Networking and Servers</option><option value="275" label="Game Development">Game Development</option><option value="274" label="Virtualization and Cloud">Virtualization and Cloud</option><option value="290" label="Business">Business</option></select>
+                                </div>
+                            </form>
+                            <form class="col-xs-12 visible-xs">
+                                <select ng-change="changeCategory()" class="form-control mb15 ng-pristine ng-untouched ng-valid" name="category" data-ng-options="o.name for o in dropdown_options track by o.id" data-ng-model="dropdown_selectedOption"><option value="268" selected="selected" label="Web Development">Web Development</option><option value="273" label="Application Development">Application Development</option><option value="267" label="Big Data and Business intelligence">Big Data and Business intelligence</option><option value="270" label="Hardware and Creative">Hardware and Creative</option><option value="282" label="Networking and Servers">Networking and Servers</option><option value="275" label="Game Development">Game Development</option><option value="274" label="Virtualization and Cloud">Virtualization and Cloud</option><option value="290" label="Business">Business</option></select>
+                            </form>
                     </div>
+                    <div class="clearfix"></div>
+
 
                     <div class="col-sm-offset-1 col-sm-11 playlist-title"> How to master the art of being MEAN </div>
                     <div class="col-sm-1 hidden-xs"></div>
