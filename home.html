@@ -57,6 +57,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="nav navbar-nav">
               <a class="navbar-brand hidden-nav-icon pull-left" href="home.html"><img class="main-icon lazy" data-original="images/pl-icon3.png"/></a>
+              <a class="navbar-brand pull-right visible-xs visible-sm" id="menu-toggle"><i class="fa fa-bars fa-lg nav-icon"></i> </a>
             </div>
         </nav>
         <!-- Sidebar -->
@@ -96,55 +97,40 @@
         <div class="home-container">
 
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-center mb30">
-                            <h3>
-                                <span class="mr5">Hi <!-- Subscribers first name here -->Oli<!-- End Subscribers first name here -->, </span>
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <nav class="navbar sub-navbar navbar-default">
+                          <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                              <span class="navbar-brand" href="#"><i class="fa fa-th"></i></span>
+                            </div>
 
-                                <!-- Time-Block: This Block prints the time of day into the view -->
-                                <script src="js/displaytime.js" language="JavaScript"></script>
-                                <!-- End Time-Block -->
-
-                            </h3> 
-                        </div>
-                        <form class="home-search sidebar-search">
-                        <input type="text" class="form-control input-lg" placeholder="Search for a keyword or title...">
-                        </form>   
-                    </div>
-
-                    <div class="col-sm-offset-1 col-sm-10" style="
-                            margin-top: 0px;
-                        ">
-                                
-                                <div class="btn-group btn-navigation-group" role="group" aria-label="..." style="
-                            font-weight: 300 !important;
-                        ">
-                          <button type="button" class="btn btn-default active btn-navigation"><i class="fa fa-th mr10"></i> Playlists</button>
-                          <button type="button" class="btn btn-default btn-navigation"><i class="fa fa-plus mr10"></i> Collection</button>
-                          <button type="button" class="btn btn-default btn-navigation"><i class="fa fa-th-list mr10"></i> Titles</button>
-                          <button type="button" class="btn btn-primary btn-navigation"><i class="fa fa-shopping-cart nav-icon mr10"></i> Store</button>
-                        </div>
-                    </div>
-
-
-                    <div class="col-sm-offset-1 col-sm-10 mt20">
-
-                            <form class="form-inline">
-                              <div class="form-group">
-                                <label class="mr15" style="font-weight: 300;">Category:</label>
-                                <select class="form-control">
-                                  <option>Web Development</option>
-                                  <option>Application Development</option>
-                                  <option>Big Data and Business intelligence</option>
-                                  <option>Hardware and Creative</option>
-                                  <option>Networking and Servers</option>
-                                  <option>Game Development</option>
-                                  <option>Virtulization and Cloud</option>
-                                  <option>Business</option>
-                                </select>
-                              </div>
-                            </form>
-
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                              <ul class="nav navbar-nav sub-navbar-nav">
+                                <li class="active"><a href="#">Playlists <span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">Collection</a></li>
+                                <li><a href="#">Store</a></li>
+                              </ul>
+                              <form class="navbar-form navbar-right-main" role="search">
+                                  <div class="input-group">
+                                  <input type="text" style="font-family: FontAwesome, Ubuntu;" class="form-control" placeholder="   Search a Keyword...">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button" style="font-weight: 300;">Go</button>
+                                  </span>
+                                </div>
+                              </form>
+                                </li>
+                              </ul>
+                            </div><!-- /.navbar-collapse -->
+                          </div><!-- /.container-fluid -->
+                        </nav>
                     </div>
 
                     <div class="col-sm-offset-1 col-sm-11 playlist-title"> How to master the art of being MEAN </div>
