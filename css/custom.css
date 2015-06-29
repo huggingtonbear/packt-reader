@@ -21,7 +21,7 @@ a:hover {
 
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-  background-color: #D5D5D5;
+  background-color: rgba(0,0,0,0.1);
 }
 a:active {
   text-decoration: none;
