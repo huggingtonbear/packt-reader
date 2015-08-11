@@ -53,12 +53,68 @@ a:focus {
   background-image: url('bg/shattered.png');
   background-attachment: fixed;
 }
-.playlist-title {
-  font-size: 20px;
+.playlist-hide {
+  font-size: 14px;
   color: #333;
   font-weight: 300;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  text-align: center;
+}
+.playlist-title {
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.personal-growth-holder {
+    border-top: 1px solid rgba(0,0,0,0.5);
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    margin-bottom: -1px;
+}
+.personal-growth-icon {
+    color: white;
+    font-size: 32px;
+    float: left;
+    margin-right: 15px;
+    margin-top: 14px;
+}
+.personal-growth-metric {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+.personal-growth-label {
+    color: white;
+    font-size: 14px;
+}
+.personal-growth-target {
+    color: #bbb;
+    font-size: 12px;
+    float: right;
+    margin-top: 10px;
+}
+.panel-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.panel-default {
+  background-color: rgba(255,255,255,0.5);
+}
+.playlist-image {
+  float: left;
+  margin-right: 20px;
+  height: 125px;
+  width: auto;
+}
+.playlist-heading {
+  min-height: 148px;
+}
+.panel-group .panel-footer {
+  border-top: 1px solid #ddd;
 }
 .welcome-text {
   color: #fff;
