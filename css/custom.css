@@ -67,9 +67,10 @@ a:focus {
     margin-top: 15px;
 }
 .personal-growth-holder {
+    border-top: 1px solid rgba(0,0,0,0.5);
     padding-top: 10px;
     padding-bottom: 5px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
     margin-bottom: -1px;
 }
 .personal-growth-icon {
