@@ -67,11 +67,12 @@ a:focus {
     margin-top: 15px;
 }
 .personal-growth-holder {
-    border-top: 1px solid rgba(0,0,0,0.5);
+    border-top: 1px solid rgba(0,0,0,0.2);
     padding-top: 10px;
     padding-bottom: 5px;
-    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
     margin-bottom: -1px;
+    background-color: rgba(255,255,255,0.05);
 }
 .personal-growth-icon {
     color: white;
@@ -119,6 +120,12 @@ a:focus {
 .welcome-text {
   color: #fff;
   font-size: 18px;
+  background-color: rgba(255,255,255,0.1);
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.mt-20 {
+  margin-top: -20px;
 }
 .home-search {
   max-width: 100%;
