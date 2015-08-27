@@ -434,12 +434,21 @@ a:focus {
   margin-left: -20px;
   margin-top: 31px;
 }
-
+.searchawesome {
+  font-family: FontAwesome, Ubuntu;
+}
+.pull-right-sm {
+    float: right;
+}
+.navbar-form.navbar-right-main .input-group {
+    width: 100%;
+}
+.navbar-right-main {
+    float: right !important;
+    margin-right: -15px !important;
+}
 .home-container {
   margin-top: 50px;
-  max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 /* Sections */

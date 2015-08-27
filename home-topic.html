@@ -167,12 +167,12 @@
         <div class="col-xs-12 col-sm-3 col-md-4 col-lg-3">
             <div class="list-group">
                 <a href="#" class="list-group-item disabled"> My Library </a>
-                <a href="#" class="list-group-item active"><span class="badge">4</span>Collection</a>
+                <a href="home-collection.html" class="list-group-item"><span class="badge">4</span>Collection</a>
                 <a href="#" class="list-group-item"><span class="badge">7</span>Owned</a>
             </div>
             <div class="list-group">
                 <a href="#" class="list-group-item disabled"> Packt Library </a>
-                <a href="#" class="list-group-item"><span class="badge">864</span>Web Development</a>
+                <a href="#" class="list-group-item active"><span class="badge">864</span>Web Development</a>
                 <a href="#" class="list-group-item"><span class="badge">847</span>Application Development</a>
                 <a href="#" class="list-group-item"><span class="badge">409</span>Big Data and Business intelligence</a>
                 <a href="#" class="list-group-item"><span class="badge">334</span>Hardware and Creative</a>
@@ -192,6 +192,42 @@
                 </form>
                 <div class="clearfix mb15"></div>
                 <div class="col-sm-3 col-xs-4 col-xl-2">
+                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/web1.png"/></a>
+                </div>
+                <div class="col-sm-3 col-xs-4 col-xl-2">
+                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/web2.png"/></a>
+                </div>
+                <div class="col-sm-3 col-xs-4 col-xl-2">
+                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/web4.png"/></a>
+                </div>
+                <div class="col-sm-3 col-xs-4 col-xl-2">
+                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/web2.png"/></a>
+                </div>
+                <div class="col-sm-3 col-xs-4 col-xl-2">
+                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/cpp.png"/></a>
+                </div>
+                <div class="col-sm-3 col-xs-4 col-xl-2">
+                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/boot1.png"/></a>
+                </div>
+                <div class="col-sm-3 col-xs-4 col-xl-2">
+                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/boot2.png"/></a>
+                </div>
+                <div class="col-sm-3 col-xs-4 col-xl-2">
+                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/boot3.png"/></a>
+                </div>
+                <div class="col-sm-3 col-xs-4 col-xl-2">
+                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/boot4.png"/></a>
+                </div>
+                <div class="col-sm-3 col-xs-4 col-xl-2">
+                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/boot5.png"/></a>
+                </div>
+                <div class="col-sm-3 col-xs-4 col-xl-2">
+                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/mean2.png"/></a>
+                </div>
+                <div class="col-sm-3 col-xs-4 col-xl-2">
+                    <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/mean3.png"/></a>
+                </div>
+                <div class="col-sm-3 col-xs-4 col-xl-2">
                     <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/cpp.png"/></a>
                 </div>
                 <div class="col-sm-3 col-xs-4 col-xl-2">
@@ -203,6 +239,23 @@
                 <div class="col-sm-3 col-xs-4 col-xl-2">
                     <a href="index.html"><img class="img-responsive title-page-img shadowbox lazy" data-original="images/mean3.png"/></a>
                 </div>
+                <div class="col-xs-12">
+        <nav>
+            <ul class="pagination">
+                <li class="page-away-2" style="display: inline;">
+                    <a class="disabled pagination-prev" href="#" ng-click="$event.preventDefault();click_pagination(previousOffset);" aria-label="Previous">
+                        <span aria-hidden="true">«</span>
+                    </a>
+                </li>
+                <li class="page-away-1" style="display: inline;">
+                    <a class="disabled pagination-next pull-right" ng-click="$event.preventDefault();click_pagination(nextOffset);" href="/packtlib/search_results?query=test&amp;offset=10&amp;rows=10&amp;sort=undefined" aria-label="Next">
+                        <span aria-hidden="true">»</span>
+                    </a>
+                </li>
+                <!-- ngRepeat: page in searchPages --><li ng-repeat="page in searchPages" on-finish-render="searchPageFinished" class="active page-li  page-away-0" style="display: inline;"><a href="/packtlib/search_results?query=test&amp;offset=0&amp;rows=10&amp;sort=undefined" ng-click="$event.preventDefault();click_pagination(page.offset);" class="ng-binding">1</a></li><!-- end ngRepeat: page in searchPages --><li ng-repeat="page in searchPages" on-finish-render="searchPageFinished" class="page-away-1" style="display: inline;"><a href="/packtlib/search_results?query=test&amp;offset=10&amp;rows=10&amp;sort=undefined" ng-click="$event.preventDefault();click_pagination(page.offset);" class="ng-binding">2</a></li><!-- end ngRepeat: page in searchPages --><li ng-repeat="page in searchPages" on-finish-render="searchPageFinished" class="page-away-2" style="display: inline;"><a href="/packtlib/search_results?query=test&amp;offset=20&amp;rows=10&amp;sort=undefined" ng-click="$event.preventDefault();click_pagination(page.offset);" class="ng-binding">3</a></li><!-- end ngRepeat: page in searchPages --><li ng-repeat="page in searchPages" on-finish-render="searchPageFinished" class="page-away-3" style="display: inline;"><a href="/packtlib/search_results?query=test&amp;offset=30&amp;rows=10&amp;sort=undefined" ng-click="$event.preventDefault();click_pagination(page.offset);" class="ng-binding">4</a></li><!-- end ngRepeat: page in searchPages --><li ng-repeat="page in searchPages" on-finish-render="searchPageFinished" class="page-away-4" style="display: inline;"><a href="/packtlib/search_results?query=test&amp;offset=40&amp;rows=10&amp;sort=undefined" ng-click="$event.preventDefault();click_pagination(page.offset);" class="ng-binding">5</a></li><!-- end ngRepeat: page in searchPages --><li ng-repeat="page in searchPages" on-finish-render="searchPageFinished" class="page-away-5" style="display: inline;"><a href="/packtlib/search_results?query=test&amp;offset=50&amp;rows=10&amp;sort=undefined" ng-click="$event.preventDefault();click_pagination(page.offset);" class="ng-binding">6</a></li><!-- end ngRepeat: page in searchPages --><li ng-repeat="page in searchPages" on-finish-render="searchPageFinished" class="page-away-6" style="display: inline;"><a href="/packtlib/search_results?query=test&amp;offset=60&amp;rows=10&amp;sort=undefined" ng-click="$event.preventDefault();click_pagination(page.offset);" class="ng-binding">7</a></li><!-- end ngRepeat: page in searchPages --><li ng-repeat="page in searchPages" on-finish-render="searchPageFinished" class="page-away-7" style="display: inline;"><a href="/packtlib/search_results?query=test&amp;offset=70&amp;rows=10&amp;sort=undefined" ng-click="$event.preventDefault();click_pagination(page.offset);" class="ng-binding">8</a></li><!-- end ngRepeat: page in searchPages --><li ng-repeat="page in searchPages" on-finish-render="searchPageFinished" class="page-away-8" style="display: inline;"><a href="/packtlib/search_results?query=test&amp;offset=80&amp;rows=10&amp;sort=undefined" ng-click="$event.preventDefault();click_pagination(page.offset);" class="ng-binding">9</a></li><!-- end ngRepeat: page in searchPages --><li ng-repeat="page in searchPages" on-finish-render="searchPageFinished" class="page-away-9" style="display: inline;"><a href="/packtlib/search_results?query=test&amp;offset=90&amp;rows=10&amp;sort=undefined" ng-click="$event.preventDefault();click_pagination(page.offset);" class="ng-binding">10</a></li><!-- end ngRepeat: page in searchPages -->
+            </ul>
+        </nav>
+    </div>
         </div>
     </div>
 
