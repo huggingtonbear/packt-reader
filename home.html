@@ -30,6 +30,8 @@
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <link href="css/bootstrap-5grid.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
 
     <!-- Prism -->
@@ -126,111 +128,100 @@
 
         <!-- /#sidebar-wrapper -->
     <div id="page-content-wrapper" >
-        <div class="home-container">
-
-                <div class="row">
-                    <div class="col-sm-offset-1 col-sm-10">
-                        <nav class="navbar sub-navbar navbar-default">
-                          <div class="container-fluid">
-                            <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-header">
-                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                              </button>
-                              <span class="navbar-brand" href="#"></span>
-                            </div>
-
-                            <!-- Collect the nav links, forms, and other content for toggling -->
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                              <ul class="nav navbar-nav sub-navbar-nav">
-                                <li class="active"><a href="#">Featured <span class="sr-only">(current)</span></a></li>
-                                <li><a href="#">Collection</a></li>
-                                <li>
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Store </a>
-                            
-                                </li>
-                              </ul>
-                              <form class="navbar-form navbar-right-main" role="search">
-                                  <div class="input-group">
-                                  <input type="text" style="font-family: FontAwesome, Ubuntu;" class="form-control" placeholder="   Search a Keyword...">
-                                  <span class="input-group-btn">
-                                    <button class="btn btn-primary" type="button" style="font-weight: 300;">Go</button>
-                                  </span>
-                                </div>
-                              </form>
-                                </li>
-                              </ul>
-                            </div><!-- /.navbar-collapse -->
-                          </div><!-- /.container-fluid -->
-                        </nav>
-
-                            <form class="form-inline pull-right hidden-xs">
-                                <div class="form-group">
-                                <span>Select a Category:</span>
-                                <select ng-change="changeCategory()" class="form-control ml15 ng-pristine ng-untouched ng-valid" name="category" data-ng-options="o.name for o in dropdown_options track by o.id" data-ng-model="dropdown_selectedOption"><option value="268" selected="selected" label="Web Development">Web Development</option><option value="273" label="Application Development">Application Development</option><option value="267" label="Big Data and Business intelligence">Big Data and Business intelligence</option><option value="270" label="Hardware and Creative">Hardware and Creative</option><option value="282" label="Networking and Servers">Networking and Servers</option><option value="275" label="Game Development">Game Development</option><option value="274" label="Virtualization and Cloud">Virtualization and Cloud</option><option value="290" label="Business">Business</option></select>
-                                </div>
-                            </form>
-                            <form class="col-xs-12 visible-xs">
-                                <select ng-change="changeCategory()" class="form-control mb15 ng-pristine ng-untouched ng-valid" name="category" data-ng-options="o.name for o in dropdown_options track by o.id" data-ng-model="dropdown_selectedOption"><option value="268" selected="selected" label="Web Development">Web Development</option><option value="273" label="Application Development">Application Development</option><option value="267" label="Big Data and Business intelligence">Big Data and Business intelligence</option><option value="270" label="Hardware and Creative">Hardware and Creative</option><option value="282" label="Networking and Servers">Networking and Servers</option><option value="275" label="Game Development">Game Development</option><option value="274" label="Virtualization and Cloud">Virtualization and Cloud</option><option value="290" label="Business">Business</option></select>
-                            </form>
+        <div class="home-container col-xs-12">
+            <nav class="navbar sub-navbar navbar-default">
+                  <div class="container-fluid" style="padding-left: 0px;">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <span class="navbar-brand visible-xs" href="#"><i class="fa fa-th"></i></span>
                     </div>
-                    <div class="clearfix"></div>
 
-                    <div class="col-sm-offset-1 col-sm-11 playlist-title"> How to master the art of being MEAN </div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean1.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="front-page-video.html"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean2.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean3.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean4.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean5.png"/></a></div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="clearfix"></div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-left: 0px;">
+                      <ul class="nav navbar-nav sub-navbar-nav" id="home-navigation">
+                        <li id="home-navigation-playlist" ng-click="on_navigation_click('playlist')" class=""><a href="#">My Library <span class="sr-only">(current)</span></a></li>
+                        <li id="home-navigation-collection" ng-click="on_navigation_click('collection')" class="active"><a href="#">Featured</a></li>
+                        <li ng-click="on_navigation_click('home')"><a href="#">Store</a></li>
+                      </ul>
 
-                    <div class="col-sm-offset-1 col-sm-11 playlist-title"> 5 tools every Web Developer should know </div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web1.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web2.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean1.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web3.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="index-lo.html"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web4.png"/></a></div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="clearfix"></div>
+                                          <form ng-submit="on_submit_search_homepage()" novalidate="" class="navbar-form navbar-right-main ng-pristine ng-untouched ng-invalid ng-invalid-required" id="home_search_form" name="home_search_form" ng-model="query" role="search" _lpchecked="1">
+                          <div class="input-group">
+                          <input ng-keyup="on_change_search_homepage()" type="text" name="search_query" ng-model="search.query" required="" class="form-control searchawesome packtlibsearch ng-pristine ng-untouched ng-invalid ng-invalid-required" placeholder="   Search the library...">
+                          <span class="input-group-btn">
+                            <button id="home_search_submit_button" class="btn btn-primary" type="submit" style="font-weight: 300;">Go</button>
+                          </span>
+                        </div>
+                      </form>     
+                                    </div>
 
-                    <div class="col-sm-offset-1 col-sm-11 playlist-title"> Strap up your Boots! </div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot1.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot2.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot3.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot4.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot5.png"/></a></div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="clearfix"></div>
+            </div>
 
-                    <div class="col-sm-offset-1 col-sm-11 playlist-title"> 5 tools every Web Developer should know </div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web1.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web2.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean1.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web3.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="index-lo.html"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web4.png"/></a></div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="clearfix"></div>
+        </nav>
 
-                    <div class="col-sm-offset-1 col-sm-11 playlist-title"> Strap up your Boots! </div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot1.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot2.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot3.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot4.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot5.png"/></a></div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="clearfix"></div>
-
-                </div>
         </div>
+        <div class="col-xs-12 col-sm-3 col-md-4 col-lg-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item disabled"> Featured Bundles </a>
+                <a href="home-topic.html" class="list-group-item active">Web Development</a>
+                <a href="#" class="list-group-item">Application Development</a>
+                <a href="#" class="list-group-item">Big Data and Business intelligence</a>
+                <a href="#" class="list-group-item">Hardware and Creative</a>
+                <a href="#" class="list-group-item">Networking and Servers</a>
+                <a href="#" class="list-group-item">Game Development</a>
+                <a href="#" class="list-group-item">Virtualization and Cloud</a>
+                <a href="#" class="list-group-item">Business</a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-8 col-lg-9">
+            <div class="">
+                <div class="col-sm-12 playlist-title"> How to master the art of being MEAN </div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean1.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="front-page-video.html"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean2.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean3.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean4.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean5.png"/></a></div>
+                    <div class="clearfix"></div>
+
+                    <div class="col-sm-12 playlist-title"> 5 tools every Web Developer should know </div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web1.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web2.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean1.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web3.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="index-lo.html"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web4.png"/></a></div>
+                    <div class="clearfix"></div>
+
+                    <div class="col-sm-12 playlist-title"> Strap up your Boots! </div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot1.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot2.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot3.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot4.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot5.png"/></a></div>
+                    <div class="col-sm-1 hidden-xs"></div>
+                    <div class="clearfix"></div>
+
+                    <div class="col-sm-12 playlist-title"> 5 tools every Web Developer should know </div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web1.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web2.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean1.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web3.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="index-lo.html"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web4.png"/></a></div>
+                    <div class="clearfix"></div>
+
+                    <div class="col-sm-12 playlist-title"> Strap up your Boots! </div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot1.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot2.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot3.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot4.png"/></a></div>
+                    <div class="col-sm-15 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot5.png"/></a></div>
+                    <div class="clearfix"></div>
+        </div>
+    </div>
 
     </div>
     <!-- /#wrapper -->
