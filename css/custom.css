@@ -553,6 +553,9 @@ a:focus {
   margin: 0 !important;
 
 }
+.modal-sm {
+    width: 450px;
+}
 
 }
 

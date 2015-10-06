@@ -348,10 +348,16 @@ a:focus {
 /* Containers */
 .reader-container {
 	margin-top: 50px;
+	max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
 }
+   .section {
+    font-size: 1em;
+  }
 
 .section p {
-    padding: 10px 0;
+    margin-bottom: 1.6em;
   }
 
 .viewer-container {
@@ -369,14 +375,9 @@ a:focus {
 
 /* Sections */
 .section {
-	font-family: 'PT Serif', serif;
-	font-size: 17px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-stretch: normal;
-  line-height: 27px;
-  color: #4c4c4c;
+	font-family: Merriweather, serif;
+	font-weight: 400;
+	line-height: 2em;
 }
 .section-title {
   font-family: Ubuntu, sans-serif;
@@ -423,8 +424,7 @@ a:focus {
     margin-right: auto;
   }
   .section {
-    font-size: 20px;
-    line-height: 1.6;
+    font-size: 1.2em;
   }
   #wrapper.toggled .hidden-nav-icon {
     display: block;
@@ -455,10 +455,16 @@ a:focus {
 	  margin-right: -10px;
 	}
   .reader-container {
+    max-width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+   .section {
+    font-size: 1.1em;
   }
 
   .section p {
-    padding: 10px 0;
+    margin-bottom: 1.6em;
   }
   .title-container {
     margin-right: auto;
@@ -479,14 +485,16 @@ a:focus {
   }
 
   .section {
-    font-size: 20px;
-    line-height: 1.6;
+    font-size: 1.2em;
   }
 
   .section p {
-    padding: 10px 0;
+    margin-bottom: 1.6em;
   }
   .reader-container {
+  max-width: 750px;
   margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
   }
 }
