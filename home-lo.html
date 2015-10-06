@@ -8,16 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
     <title>PacktLib</title>
-
+    <!-- Add to Home Screen Feature for Mobile -->
+    <!-- Mobile Home Screen Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icons/apple-icon-180x180.png" />
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/custom-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <link href="css/bootstrap-5grid.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
 
     <!-- Prism -->
@@ -29,7 +38,6 @@
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,500,700|Merriweather:400,300,700' rel='stylesheet' type='text/css'>
-
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,54 +53,34 @@
         <!-- Top Nav Bar -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="nav navbar-nav">
-              <a class="navbar-brand hidden-nav-icon pull-left" href="home.html"><img class="main-icon lazy" data-original="images/pl-icon.png"/></a>
-              <a class="navbar-brand pull-right" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg nav-icon"></i> </a>
+              <a class="navbar-brand hidden-nav-icon pull-left" href="home.html"><img class="main-icon lazy" data-original="images/pl-icon3.png"/></a>
+              <a class="navbar-brand pull-right" id="menu-toggle"><i class="fa fa-bars fa-lg nav-icon"></i> </a>
             </div>
         </nav>
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="container-fluid sidebar-nav list-group ">
                 <!-- Login Container -->
-                <div class="locked-msg">
-                    <i class="fa fa-lock fa-lg mr5"> </i> Limited Access <a href="login.html" class="pull-right login-link">Login</a>
-                </div>
+                <nav class="navbar navbar-default">
+                    <div class="nav navbar-nav">
+                        <ul class="nav navbar-nav navbar-right">
+                          <a href="#" style="color:#FFF" class="navbar-text pull-right mr25" data-toggle="modal" data-target=".bs-example-modal-sm">Sign in </a>
+                        </ul> 
+                    </div>
+                </nav>
                 <!-- Login Container End-->
-                <div class=" col-xs-12 mt30 pl30 pr30">
-                    <p class="welcome-text"> Which titles are you interested in?</p>
-                    <select class="form-control mt15">
-                      <option>Web Development</option>
-                      <option>Application Development</option>
-                      <option>Big Data and Business intelligence</option>
-                      <option>Hardware and Creative</option>
-                      <option>Networking and Servers</option>
-                      <option>Game Development</option>
-                      <option>Virtulization and Cloud</option>
-                      <option>Business</option>
-                    </select>
-            </div>
-            <div class=" col-xs-12 mt30 pl30 pr30">
-                <p class="welcome-text"> What would you like to browse?</p>
-                <div class="radio mt15">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
-                    <p class="white">Recommended Courses</p>
-                  </label>
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                    <p class="white">All Books</p>
-                  </label>
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                    <p class="white">All Videos</p>
-                  </label>
-                </div>
-            </div>
 
-            </ul>
+                <!-- Personal Growth Begins -->
+                <div class=" col-xs-12 toc-scroll" style="margin-top: -20px;">
+            <p class="mt20 text-center" style="color:#fff; font-size:20px; ">
+                <b>Unlock FREE valuable knowledge</b>
+            </p>
+            <img class="img-responsive lazy" data-original="images/FreeLearning.png" src="images/FreeLearning.png" style="display: block;" align="middle">
+            <p class="upsell-text mb10" style="padding:10px;">
+                Develop new skills and unlock valuable knowledge with a daily FREE eBook and FREE access to our best titles
+            </p>
+            <a href="/books/subscription/packtlib" target="_self" style="font-weight:500; font-size:16px;" class="btn btn-primary col-xs-12 btn-buy btn-lg" data-toggle="modal" data-target=".bs-example-modal-sm"> Start Learning Today</a>
+        </div>
  <!--            <div class="packt-sb-logo-holder">
             <img class="img-responsive packt-sb-logo lazy" data-original="images/pu-logo.png"/>
             </div> -->
@@ -100,61 +88,170 @@
 
         <!-- /#sidebar-wrapper -->
     <div id="page-content-wrapper" >
-        <div class="home-container">
+        <!-- Small modal -->
+                            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                              <div class="modal-dialog modal-sm">
+                                <div class="modal-content" style="">  
+                                      <div class="modal-header" style="background-color: #2C3033; border-top-left-radius: 4px; border-top-right-radius: 4px;">
+                                        <h4 class="modal-title" id="myModalLabel" style="font-weight:300; text-align:center; color:#fff;">Sign in using</h4>
+                                      </div>
+                                      <div class="modal-body">
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-center mb30">
-                            <h3>
-                                <span class="mr5">Hi<!-- Subscribers first name here --><!-- End Subscribers first name here -->, </span>
+                                        <div class="mt10 mb10">
+                                            <div class="col-xs-3">
+                                                <button type="button" style="margin-left:-10px;" class="btn btn-primary btn-circle btn-lg"><i class="fa fa-facebook "></i></button>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <button type="button" style="margin-left:-10px; background-color:#555 !important; border-color:#555;" class="btn btn-primary btn-circle btn-lg"><i class="fa fa-github "></i></button>
+                                            </div>
+                                            <div class="col-xs-3 ">
+                                                <button type="button" style="margin-left:-5px;" class="btn btn-info btn-circle btn-lg"><i class="fa fa-twitter"></i></button>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <button type="button" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-google-plus"></i></button>
+                                            </div>
+                                        </div>
 
-                                <!-- Time-Block: This Block prints the time of day into the view -->
-                                <script src="js/displaytime.js" language="JavaScript"></script>
-                                <!-- End Time-Block -->
+                                        <div class="clearfix"></div>
+                                        <div class="mt10 mb15">
+                                            <span style="width:40%; padding: 10px; border-bottom: 1px solid #e5e5e5; display: inline-block;">
+                                            </span>
+                                            <span style="width:17%; text-align:center; display: inline-block; color: #ccc;"> OR </span>
+                                            <span style="width:40%; padding: 10px; border-bottom: 1px solid #e5e5e5; display: inline-block;"></span>
+                                        </div>
+                                                                                    <div class="col-xs-12">
+                                                <div class="form-group mb0">
+                                                    <div class="">
+                                                        <input type="email" name="email" class="form-control login-form-top input-lg" id="inputEmail3" placeholder="Email" autocomplete="off" style="cursor: auto;">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="">
+                                                        <input type="password" class="form-control login-form-bottom input-lg" id="inputPassword3" name="password" placeholder="Password" autocomplete="off" style="cursor: auto;">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="">
+                                                        <button type="submit" class="btn btn-primary mb10 btn-lg col-xs-12 next-section-button">Login</button>
+                                                    </div>
+                                                </div>
+                                                 <p class="text-center">
+                                                    <a class="login-forgot-password" href="/account/password" target="_self"> Forgotten Password?</a>
+                                                </p>
+                                            </div>
+                                        <div class="clearfix"></div>
 
-                            </h3> 
-                        </div>
-                        <form class="home-search sidebar-search">
-                        <input type="text" class="form-control input-lg" placeholder="Search for a keyword or title...">
-                        <div class="text-center mt10"><a href="#" style="text-decoration: underline;">Take me back to the Store</a></div>
-                    </form>   
+
+
+
+                                      </div>
+                                        <div class="modal-footer">
+                                            <p class="text-center" style="font-size: 15px;">
+                                                <strong><a class="login-forgot-password" href="/account/password" target="_self"> Create an Account</a></strong>
+                                        </div>
+                                </div>
+                              </div>
+                            </div>
+        <div class="home-container col-xs-12">
+            <!-- Search bar only visible on mobile -->
+            <form ng-submit="on_submit_search_homepage()" novalidate="" class="visible-xs mb20 ng-pristine ng-untouched ng-invalid ng-invalid-required" id="home_search_form" name="home_search_form" ng-model="query" role="search" _lpchecked="1">
+                  <div class="input-group">
+                  <input ng-keyup="on_change_search_homepage()" type="text" name="search_query" ng-model="search.query" required="" class="form-control searchawesome packtlibsearch ng-pristine ng-invalid ng-invalid-required ng-touched" placeholder="   Search the library...">
+                  <span class="input-group-btn">
+                    <button id="home_search_submit_button" class="btn btn-primary" type="submit" style="font-weight: 300;">Go</button>
+                  </span>
+                </div>
+            </form>
+            <!-- Mobile search bar end -->   
+            <nav class="navbar sub-navbar navbar-default hidden-xs">
+                  <div class="container-fluid" style="padding-left: 0px;">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <span class="navbar-brand visible-xs" href="#"><i class="fa fa-th"></i></span>
                     </div>
 
-                    <div class="col-sm-offset-1 col-sm-11 playlist-title"> How to master the art of being MEAN </div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="col-sm-2 col-xs-6"><a href="index-lo.html"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean1.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="front-page-video.html"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean2.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean3.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean4.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean5.png"/></a></div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="clearfix"></div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-left: 0px;">
+                      <ul class="nav navbar-nav sub-navbar-nav" id="home-navigation">
+                        <li id="home-navigation-playlist" ng-click="on_navigation_click('playlist')" class="active"><a href="#">Library <span class="sr-only">(current)</span></a></li>
+                        <li ng-click="on_navigation_click('home')"><a href="#">Store</a></li>
+                      </ul>
+                        <form ng-submit="on_submit_search_homepage()" novalidate="" style="min-width: 50%;"class="navbar-form navbar-right-main ng-pristine ng-untouched ng-invalid ng-invalid-required" id="home_search_form" name="home_search_form" ng-model="query" role="search" _lpchecked="1">
+                          <div class="input-group">
+                          <input ng-keyup="on_change_search_homepage()" type="text" name="search_query" ng-model="search.query" required="" class="form-control searchawesome packtlibsearch ng-pristine ng-invalid ng-invalid-required ng-touched" placeholder="   Search the library...">
+                          <span class="input-group-btn" style="width: 15px;">
+                            <button id="home_search_submit_button" class="btn btn-primary" type="submit" style="font-weight: 300;">Go</button>
+                          </span>
+                        </div>
+                      </form>        
+                    </div>
 
-                    <div class="col-sm-offset-1 col-sm-11 playlist-title"> 5 tools every Web Developer should know </div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web1.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web2.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean1.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web3.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="index-lo.html"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web4.png"/></a></div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="clearfix"></div>
+            </div>
 
-                    <div class="col-sm-offset-1 col-sm-11 playlist-title"> Strap up your Boots! </div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot1.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot2.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot3.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot4.png"/></a></div>
-                    <div class="col-sm-2 col-xs-6"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/boot5.png"/></a></div>
-                    <div class="col-sm-1 hidden-xs"></div>
-                    <div class="clearfix"></div>
+        </nav>
 
-                </div>
         </div>
+        <div class="col-xs-12 col-sm-3 col-md-4 col-lg-3 hidden-xs">
+            <div class="list-group">
+                <a href="#" class="list-group-item disabled"> My Library </a>
+                <a href="home-topic.html" class="list-group-item active">Collection</a>
+                <a href="#" class="list-group-item">Owned</a>
+            </div>
+            <div class="list-group">
+                <a href="#" class="list-group-item disabled"> Featured Bundles </a>
+                <a href="home-topic.html" class="list-group-item">Web Development</a>
+                <a href="#" class="list-group-item">Application Development</a>
+                <a href="#" class="list-group-item">Big Data and Business intelligence</a>
+                <a href="#" class="list-group-item">Hardware and Creative</a>
+                <a href="#" class="list-group-item">Networking and Servers</a>
+                <a href="#" class="list-group-item">Game Development</a>
+                <a href="#" class="list-group-item">Virtualization and Cloud</a>
+                <a href="#" class="list-group-item">Business</a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-8 col-lg-9">
+            <div class="">
+                <div class="">
+                    <div class="form-group pull-right-sm mb30">
+                <!-- ngIf: currentPage=='search' -->
+                <!-- ngIf: currentPage=='collection' --><form ng-if="currentPage=='collection'" class="form-inline ng-pristine ng-valid ng-scope">
+                    <div class="form-group pull-right-sm mb30">
+                    <span class="hidden-xs mr15">Sort by:</span>
+                        <select ng-change="on_sort_collection()" class="form-control ng-pristine ng-valid ng-touched" name="sorted_books2" data-ng-options="o.name for o in dropdown_options_sort track by o.id" data-ng-model="dropdown_selectedOption_sort"><option value="" selected="selected" label="Relevance">Relevance</option><option value="ss_cck_field_date_of_publication asc" label="Date of Publication (Older - Newer)">Date of Publication (Older - Newer)</option><option value="ss_cck_field_date_of_publication desc" label="Date of Publication (Newer - Older)">Date of Publication (Newer - Older)</option><option value="sort_title asc" label="Title (A - Z)">Title (A - Z)</option><option value="sort_title desc" label="Title (Z - A)">Title (Z - A)</option><option value="fs_cck_field_norm_sales_rank desc" label="Most Popular">Most Popular</option></select>
+                    </div>
+                </form><!-- end ngIf: currentPage=='collection' -->   
+                <!-- ngIf: currentPage=='owned' -->   
+            </div>
+                </div>
+                <div class="clearfix"></div>
+                    <div class=" col-sm-3 col-xs-6 col-xl-2"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean1.png"/></a></div>
+                    <div class=" col-sm-3 col-xs-6 col-xl-2"><a href="front-page-video.html"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean2.png"/></a></div>
+                    <div class=" col-sm-3 col-xs-6 col-xl-2"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean3.png"/></a></div>
+                    <div class=" col-sm-3 col-xs-6 col-xl-2"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean4.png"/></a></div>
+                    <div class=" col-sm-3 col-xs-6 col-xl-2"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/mean5.png"/></a></div>
+                    <div class=" col-sm-3 col-xs-6 col-xl-2"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web1.png"/></a></div>
+                    <div class=" col-sm-3 col-xs-6 col-xl-2"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web2.png"/></a></div>
+                    <div class=" col-sm-3 col-xs-6 col-xl-2"><a href="#"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web3.png"/></a></div>
+                    <div class=" col-sm-3 col-xs-6 col-xl-2"><a href="index-lo.html"><img class="img-responsive center-block title-page-img shadowbox lazy" data-original="images/web4.png"/></a></div>
 
+        </div>
     </div>
+    </div>
+    <footer class="footer visible-xs">
+        <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+          <a href="#" class="btn btn-default footer-btn active" role="button">Collection</a>
+          <a href="#" class="btn btn-default footer-btn" role="button">Owned</a>
+          <a href="#" class="btn btn-default footer-btn" role="button">Bundles</a>
+        </div>
+    </footer>
     <!-- /#wrapper -->
+
 
     <!-- JAVASCRIPT BLOCKS -->
 
