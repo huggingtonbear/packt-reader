@@ -28,6 +28,7 @@
     <link href="css/bootstrap-xl.css" rel="stylesheet">
     <link href="css/bootstrap-5grid.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Prism -->
     <link rel="stylesheet" href="css/prism.css">
@@ -143,7 +144,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="">
-                                                        <button type="submit" class="btn btn-primary mb10 btn-lg col-xs-12 next-section-button">Login</button>
+                                                        <a href="home.html" class="btn btn-primary mb10 btn-lg col-xs-12 next-section-button">Login</a>
                                                     </div>
                                                 </div>
                                                  <p class="text-center">
@@ -159,7 +160,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="modal fade bs-example-modal-sm1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                            <div class="modal bs-example-modal-sm1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
                               <div class="modal-dialog modal-sm">
                                 <div class="modal-content" style="">  
                                       <div class="modal-header" style="background-color: #2C3033; border-top-left-radius: 4px; border-top-right-radius: 4px;">
@@ -174,14 +175,6 @@
                                                         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
                                                       </div>
                                                       <div class="form-group">
-                                                        <label for="exampleInputPassword1">First Name</label>
-                                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
-                                                      </div>
-                                                      <div class="form-group">
-                                                        <label for="exampleInputPassword1">Last Name</label>
-                                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
-                                                      </div>
-                                                      <div class="form-group">
                                                         <label for="exampleInputPassword1">Choose a Password</label>
                                                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
                                                       </div>
@@ -190,8 +183,9 @@
                                                         <label style="font-weight:300">
                                                         <p>By clicking REGISTER, you are agreeing to our <a href="#">Policy</a> and <a href="#">Terms & Conditions</a></p>
                                                         </label>
+                                                        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
                                                       </div>
-                                                      <button type="submit" class="btn btn-primary mb10 btn-lg col-xs-12 next-section-button">Register</button>
+                                                      <a type="submit" class="btn btn-primary mt20 mb10 btn-lg col-xs-12 next-section-button" data-toggle="modal" data-target=".bs-example-modal-sm2">Register</a>
                                                 </form>
                                             </div>
                                             <div class="clearfix"></div>
@@ -200,6 +194,74 @@
                                             <p class="text-center">
                                             <strong><a href="#" type="button" data-dismiss="modal" aria-label="Close">Already have an account?</a></button>
                                         </a></strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade bs-example-modal-sm2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                              <div class="modal-dialog modal-sm">
+                                <div class="modal-content" style="">  
+                                      <div class="modal-header" style="background-color: #5CB85C; border-top-left-radius: 4px; border-top-right-radius: 4px;">
+                                        <h4 class="modal-title" id="myModalLabel" style="font-weight:300; text-align:center; color:#fff;">Success! Just a few more steps...</h4>
+                                      </div>
+                                      <div class="modal-body">
+
+                                            <div class="col-xs-12">
+                                                <form>
+                                                    <h4 class="mb30">Providing the following details will help us optimise your experience... </h4>
+                                                      <div class="form-group">
+                                                        <label for="exampleInputPassword1">First Name</label>
+                                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+                                                      </div>
+                                                      <div class="form-group">
+                                                        <label for="exampleInputPassword1">Last Name</label>
+                                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+                                                      </div>
+                                                      <div class="">
+                                                        <h4 class="mb20 mt20">Be the first to get our latest deals </h4>
+                                                        <p>Select your preferred mail preferences so we can contact you about the latest deals and offers:</p> 
+                                                        <div class="checkbox">
+                                                          <label>
+                                                            <input type="checkbox" checked>
+                                                            Video Deal of the Week
+                                                          </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                          <label>
+                                                            <input type="checkbox" checked>
+                                                            Offers & Alerts
+                                                          </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                          <label>
+                                                            <input type="checkbox" checked>
+                                                            Deal of the Day
+                                                          </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                          <label>
+                                                            <input type="checkbox" checked>
+                                                            The Create Dispatch
+                                                          </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                          <label>
+                                                            <input type="checkbox" checked>
+                                                            The Data Dispatch
+                                                          </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                          <label>
+                                                            <input type="checkbox" checked>
+                                                            The Dev Dispatch
+                                                          </label>
+                                                        </div>
+                                                        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                                                      </div>
+                                                      <a href="home.html" class="btn btn-primary mt20 mb10 btn-lg col-xs-12 next-section-button">Save Changes</a>
+                                                </form>
+                                            </div>
+                                            <div class="clearfix"></div>
                                     </div>
                                 </div>
                             </div>
