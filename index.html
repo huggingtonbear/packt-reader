@@ -9,7 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Learning C++ by Creating Games with UE4 - Chapter 3. Looping</title>
+    <title>Polymer designer tool - Learning Web Component Development
+
+</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,6 +20,7 @@
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/custom-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
 
     <!-- Prism -->
@@ -46,9 +49,20 @@
         <nav class="navbar navbar-default navbar-fixed-top">
 
             <div class="nav navbar-nav">
-              <a class="navbar-brand hidden-nav-icon pull-left" href="home.html"><img class="main-icon lazy" data-original="images/pl-icon.png"/></a>
+              <a class="navbar-brand hidden-nav-icon pull-left" href="home.html"><img class="main-icon lazy" data-original="images/pl-icon.png" src="images/pl-icon.png" style="display: block;"></a>
               <a class="navbar-brand pull-right" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg nav-icon"></i> </a>
-              <p class="navbar-text navbar-title"> Learning C++ by Creating Games with UE4 </p>  
+
+
+              <ul class="nav navbar-nav pull-right">
+                  <a href="#" class="dropdown-toggle navbar-text logout-nav" data-toggle="dropdown" role="button" aria-expanded="true"><span class="hidden-xs hidden-sm">Signed in as Oli Huggins <span class="caret"></span></span><span class="visible-xs visible-sm"><i class="fa fa-user fa-lg nav-icon"></i></span></a>
+                  <ul class="dropdown-menu logout-dropdown" role="menu">
+                    <li><a href="index-lo.html" class="logout-link"><i class="fa fa-sign-out mr20"></i>Logout</a></li>
+                  </ul>
+                </ul>
+
+              <p class="navbar-text navbar-title"> Polymer designer tool - Learning Web Component Development
+
+ </p>  
             </div>
 
         </nav>
@@ -56,158 +70,146 @@
 
 
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav list-group navList">
-                <!-- Login Container -->
-                <nav class="navbar navbar-default">
-                    <div class="nav navbar-nav">
-                        <ul class="nav navbar-nav navbar-right">
-                          <a href="#" class="dropdown-toggle navbar-text logout-nav" data-toggle="dropdown" role="button" aria-expanded="false">Signed in as Oli Huggins <span class="caret"></span></a>
-                          <ul class="dropdown-menu logout-dropdown" role="menu">
-                            <li><a href="index-lo.html" class="logout-link"><i class="fa fa-sign-out mr20"></i>Logout</a></li>
-                          </ul>
-                        </ul> 
-                    </div>
-                </nav>
-                <!-- Login Container End-->
-                    <form class="sidebar-search">
-                        <input type="text" class="form-control" placeholder="Search this title and others..." id="box">
-                    </form>   
-                <a href="front-page.html"> <li class="list-group-item">Learning C++ by Creating Games with UE4</li></a>
-                <a href="#"> <li class="list-group-item">Preface</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 1. Preparing your Data</li></a>
+        <div id="sidebar-wrapper" ng-include="" src="views.sidebar" class="ng-scope"><ul class="sidebar-nav list-group navList ng-scope">
+    <!-- Login Container -->
+    
+    <!-- Login Container End-->
+    <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+      <a href="#" class="btn btn-default" role="button" style="
+    border-radius: 0;
+    color: white;
+    background-color: #43494E;
+    border: 1px solid rgba(0,0,0,0.2);
+">Contents</a>
+      
+      <a href="#" class="btn btn-default" role="button" style="
+    border-radius: 0;
+    color: white;
+    background-color: #333A40;
+    border: 1px solid rgba(0,0,0,0.2);
+">Bookmarks</a>
+    </div>
 
-                <a href="#">
-                    <li class="list-group-item"> Chapter 2. Driving Visual Analysis with Automated Automobiles</li> 
-                </a>
-                
-                <a href="#">
-                    <li class="list-group-item active"> Chapter 3. Looping</li> 
-                </a>
+        <form ng-show="show_content_search_input" ng-submit="$parent.on_submit_sidebar_search()" novalidate="" class="sidebar-search ng-pristine ng-invalid ng-invalid-required" id="formholder.sidebar_search_form" name="formholder.sidebar_search_form">
+        <input type="text" ng-keyup="$parent.on_change_sidebar_search()" name="sidebar_search_query" ng-model="$parent.sidebar.query" required="" class="form-control searchawesome ng-pristine ng-untouched ng-invalid ng-invalid-required" placeholder="    Search this Title..." id="box">
+        <input id="book_search_submit_button" class="hidden-button" type="submit">
+        </form>
 
-                <!-- Chapter 3 Sub-sections -->
-
-                        <a href="for-loop.html"><li class="list-group-item section-sidebar">The for loop</li></a>
-                        <a href="#"><li class="list-group-item section-sidebar">The for/while loop</li></a>
-                        <a href="#"><li class="list-group-item section-sidebar">The 'if' loop</li></a>
-                        <a href="#"><li class="list-group-item section-sidebar">Looping with Unreal Engine</li></a>
-                
-                <!-- End Chapter 3 Sub-sections -->
-
-                <a href="#"> <li class="list-group-item">Chapter 4. Forms and Entries</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 5. Functions and Macros</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 6. Dynamic Memory Allocation</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 7. If, Else and Switch</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 8. Actors and Roles</li></a>
-            </ul>
+    <div class="toc-scroll">
+        <div id="bookNavigation" class="">
+            </a><a href="#" class="">
+                <li class="list-group-item ng-binding" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="" data-section-id="9781784393649" data-url="isbn=9781784393649" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}">Learning Web Component Development</li>
+            </a><a href="#" class="">
+                <li class="list-group-item ng-binding" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="pref05" data-section-id="pref05" data-url="isbn=9781784393649&amp;chapter=pref05" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}">Preface</li>
+            </a><a href="#" class="">
+                <li class="list-group-item ng-binding" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="1" data-section-id="1" data-url="isbn=9781784393649&amp;chapter=1" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}"> 1: Introducing Web Components</li>
+            </a><a href="#" class="section-read">
+                <li class="list-group-item ng-binding" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="2" data-section-id="2" data-url="isbn=9781784393649&amp;chapter=2" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}"> 2: Introducing Polymer</li>
+            </a><a href="#" class="section-read">
+                <li class="list-group-item ng-binding sectionsidebar" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="" data-section-id="ch02lvl1sec21" data-url="isbn=9781784393649&amp;chapter=2&amp;section=ch02lvl1sec21&amp;section_name=What is Polymer?" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}">What is Polymer?</li>
+            </a><a href="#" class="section-read">
+                <li class="list-group-item ng-binding sectionsidebar" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="" data-section-id="ch02lvl1sec22" data-url="isbn=9781784393649&amp;chapter=2&amp;section=ch02lvl1sec22&amp;section_name=Installing and configuring Polymer" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}">Installing and configuring Polymer</li>
+            </a><a href="#" class="section-read">
+                <li class="list-group-item ng-binding sectionsidebar" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="" data-section-id="ch02lvl1sec23" data-url="isbn=9781784393649&amp;chapter=2&amp;section=ch02lvl1sec23&amp;section_name=Architecture of PolymerJS" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}">Architecture of PolymerJS</li>
+            </a><a href="#" class="section-read">
+                <li class="list-group-item ng-binding active sectionsidebar" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="" data-section-id="ch02lvl1sec24" data-url="isbn=9781784393649&amp;chapter=2&amp;section=ch02lvl1sec24&amp;section_name=Polymer designer tool" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}">Polymer designer tool</li>
+            </a><a href="#" class="section-read">
+                <li class="list-group-item ng-binding sectionsidebar" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="" data-section-id="ch02lvl1sec25" data-url="isbn=9781784393649&amp;chapter=2&amp;section=ch02lvl1sec25&amp;section_name=Yeoman Polymer generator" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}">Yeoman Polymer generator</li>
+            </a><a href="#" class="section-read">
+                <li class="list-group-item ng-binding sectionsidebar" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="" data-section-id="ch02lvl1sec26" data-url="isbn=9781784393649&amp;chapter=2&amp;section=ch02lvl1sec26&amp;section_name=Summary" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}">Summary</li>
+            </a><a href="#" class="">
+                <li class="list-group-item ng-binding" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="3" data-section-id="3" data-url="isbn=9781784393649&amp;chapter=3" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}"> 3: Developing Web Components Using Polymer</li>
+           </a><a href="#" class="">
+                <li class="list-group-item ng-binding" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="4" data-section-id="4" data-url="isbn=9781784393649&amp;chapter=4" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}"> 4: Exploring Bosonic Tools for Web Component Development</li>
+            </a><a href="#" class="">
+                <li class="list-group-item ng-binding" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="5" data-section-id="5" data-url="isbn=9781784393649&amp;chapter=5" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}"> 5: Developing Web Components Using Mozilla Brick</li>
+            </a><a href="#" class="">
+                <li class="list-group-item ng-binding" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="6" data-section-id="6" data-url="isbn=9781784393649&amp;chapter=6" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}"> 6: Building Web Components with ReactJS</li>
+            </a><a href="#" class="">
+                <li class="list-group-item ng-binding" ng-show="currentChapter == item.chapter || !item.chapter" data-chapter="backindex" data-section-id="backindex" data-url="isbn=9781784393649&amp;chapter=backindex" ng-bind-html=" item.text " ng-class="{active: item.active, sectionsidebar:item.child}">Appendix B: Index</li>
+            </a><!-- end ngRepeat: item in book_navigation -->
         </div>
+        
+    </div>
+</ul></div>
 
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="reader-container">
+        <div id="page-content-wrapper" class="book-page ng-scope">
 
-                <div class="row">
-                    <div class="col-lg-12">
+    <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope">               <div class="reader-container col-xs-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8 ng-scope">
+                    <div class="row">
+                            <div style="position:relative;" class="book-content" ng-non-bindable="">
+                                <div class="packtlib-version v2"><!--?xml version="1.0" encoding="UTF-8"?-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Polymer designer tool</title><meta name="generator" content="DocBook XSL Stylesheets V1.74.0">
 
 
-<!-- Title Content -->
+<div class="section" lang="en" xml:lang="en"><div class="btn-group pull-right" role="group" aria-label="Large button group">
+      <button type="button" class="btn btn-default"><i class="fa fa-bookmark-o fa-lg"></i></button><button type="button" class="btn btn-default"><i class="fa fa-shopping-cart fa-lg"></i></button>
+      <button type="button" class="btn btn-default"><i class="fa fa-moon-o fa-lg"></i></button> 
+      <button type="button" class="btn btn-default"><i class="fa fa-font fa-lg"></i></button>
+  </div>
 
-                        
 
-                        <div class="section language-markup" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h2 class="section-title"><a id="ch04lvl1sec24" ></a>Chapter 3. Looping</h2></div></div><hr ></div><p >The <code class="" style="">while</code> loop<a id="id147" class="indexterm" ></a> is used to run a section of the code repeatedly. This is useful if you have a set of actions that must be done repeatedly to accomplish some goal. For example, the <code class="" style="">while</code> loop in the following code repeatedly prints the value of the variable <code class="" style="">x</code> as it is incremented from 1 to 5:</p><div class="informalexample" ><pre><code>int x = 1;
-while( x &lt;= 5 ) // may only enter the body of the while when x&lt;=5
-{
-  cout &lt;&lt; "x is " &lt;&lt; x &lt;&lt; endl;
-  x++;
-}
-cout &lt;&lt; "Finished" &lt;&lt; endl;</code></code></pre></div><p >This is the output of the preceding program:</p><div class="informalexample" ><pre><code>x is 1
-x is 2
-x is 3
-x is 4
-x is 5
-Finished</code></pre></div><p >In the first line<a id="id148" class="indexterm" ></a> of code, an integer variable <code class="" style="">x</code> is created and set to 1. Then, we go the <code class="" style="">while</code> condition. The <code class="" style="">while</code> condition says that while <code class="" style="">x</code> is less than or equal to 5, you must stay in the block of code that follows.</p><p >Each iteration of the loop (an iteration means going once around the loop) gets a little more done from the task (of printing the numbers 1 to 5). We program the loop to automatically exit once the task is done (when <code class="" style="">x &lt;= 5</code> is no longer true).</p><p >Similar to the <code class="" style="">if</code> statement of the previous chapter, entry into the block below the <code class="" style="">while</code> loop is only allowed if you meet the condition within the brackets of the <code class="" style="">while</code> loop (in the preceding example, <code class="" style="">x &lt;= 5</code>). You can try mentally subbing an <code class="" style="">if</code> loop in the place of the <code class="" style="">while</code> loop, as shown in the following code:</p><div class="informalexample" ><pre><code>int x = 1;
-if( x &lt;= 5 ) // you may only enter the block below when x&lt;=5
-{
-  cout &lt;&lt; "x is " &lt;&lt; x &lt;&lt; endl;
-  x++;
-}
-cout &lt;&lt; "End of program" &lt;&lt; endl;</code></pre></div><p >The preceding code sample will only print <code class="" style="">x is 1</code>. So, a <code class="" style="">while</code> loop is exactly like an <code class="" style="">if</code> statement, only it has this special property of automatically repeating itself until the condition between the brackets of the <code class="" style="">while</code> loop becomes <code class="" style="">false</code>.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in; font-size: 12px !important;"><h3 class="title" style="font-size: 14px !important;"><a id="note09" style="font-size: 14px !important;"></a>Note</h3><p >I'd like to explain the repetition of the <code class="" style="">while</code> loop using a video game. If you don't know Valve's <span class="emphasis" ><em >Portal</em></span>, you should play it, if only to understand loops. Check out <a class="ulink" href="https://www.youtube.com/watch?v=TluRVBhmf8w" target="_blank" >https://www.youtube.com/watch?v=TluRVBhmf8w</a> for a demo video.</p></div><p >The <code class="" style="">while</code> loops have a kind of magic <span class="emphasis" ><em >portal</em></span> at the bottom, which cause the loop to repeat. The following screenshot illustrates what I mean:</p><div class="mediaobject" ><img class="img-responsive" src="http://packtpub.com/graphics/9781784396572/graphics/6572OT_04_01.jpg" ><div class="caption" ><p >There is a portal at the end of the while loop that takes you back to the beginning</p></div></div><p >In the preceding <a id="id149" class="indexterm" ></a>screenshot, we loop back from the orange portal (marked <span class="strong" ><strong >O</strong></span>) to the blue portal (marked <span class="strong" ><strong >B</strong></span>). This is our first time of being able to go back in the code. It is like time travel, only for the code. How exciting!</p><p >The only way past a <code class="" style="">while</code> loop block is to not meet the entry condition. In the preceding example, once the value of <code class="" style="">x</code> becomes 6 (so, <code class="" style="">x &lt;= 5</code> becomes false), we will not enter the <code class="" style="">while</code> loop again. Since the orange portal is inside the loop, we'll be able to get to finished once <code class="" style="">x</code> becomes 6.</p><div class="section" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h3 class="title" style="font-size: 14px !important;"><a id="ch04lvl2sec41" style="font-size: 14px !important;"></a>Infinite loops</h3></div></div></div><p >You can <a id="id150" class="indexterm" ></a>get stuck inside the same loop forever. Consider the modified program in the following block of code (what do you think will be the output?):</p><div class="informalexample" ><pre><code>int x = 1;
-while( x &lt;= 5 ) // may only enter the body of the while when x&lt;=5
-{
-  cout &lt;&lt; "x is " &lt;&lt; x &lt;&lt; endl;
-}
-cout &lt;&lt; "End of program" &lt;&lt; endl;</code></pre></div><p >This is how the output will look:</p><div class="informalexample" ><pre><code>x is 1
-x is 1
-x is 1
-.
-.
-.
-(repeats forever)</code></pre></div><p >The loop repeats forever because we removed the line of code that changed the value of <code class="" style="">x</code>. If the value of <code class="" style="">x</code> stays the same and is not allowed to increase, we will be stuck inside the body of the <code class="" style="">while</code> loop. This is because the loop's exit condition (the value of <code class="" style="">x</code> becomes 6) cannot be met if <code class="" style="">x</code> does not change inside the loop body.</p><p >The following exercises will use all the concepts from the previous chapters, such as the <code class="" style="">+=</code> and decrement operations. If you've forgotten something, go back and reread the previous sections.</p></div><div class="section" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h3 class="title" style="font-size: 14px !important;"><a id="ch04lvl2sec42" style="font-size: 14px !important;"></a>Exercises</h3></div></div></div><div class="orderedlist" ><ol class="orderedlist arabic" type="1" ><li ><p >Write<a id="id151" class="indexterm" ></a> a <code class="" style="">while</code> loop that will print the numbers from 1 to 10.</p></li><li ><p >Write a <code class="" style="">while</code> loop that will print the numbers from 10 to 1 (backwards).</p></li><li ><p >Write a <code class="" style="">while</code> loop that will print numbers 2 to 20, incrementing by 2 (for example 2, 4, 6, and 8).</p></li><li ><p >Write a <code class="" style="">while</code> loop that will print the numbers 1 to 16 and their squares beside them.</p></li></ol></div><p >The following is an example program output of the exercise 4:</p><div class="informaltable" ><table style="border-collapse: collapse; border-top-width: 0.5pt; border-top-style: solid; border-bottom-width: 0.5pt; border-bottom-style: solid; font-size: 12px !important;"><colgroup ><col align="left" ><col align="left" ></colgroup><tbody ><tr ><td  align="left" valign="top">
-<p >1</p>
-</td><td  align="left" valign="top">
-<p >1</p>
-</td></tr><tr ><td  align="left" valign="top">
-<p >2</p>
-</td><td  align="left" valign="top">
-<p >4</p>
-</td></tr><tr ><td  align="left" valign="top">
-<p >3</p>
-</td><td  align="left" valign="top">
-<p >9</p>
-</td></tr><tr ><td  align="left" valign="top">
-<p >4</p>
-</td><td  align="left" valign="top">
-<p >16</p>
-</td></tr><tr ><td  align="left" valign="top">
-<p >5</p>
-</td><td  align="left" valign="top">
-<p >25</p>
-</td></tr></tbody></table></div></div><div class="section" lang="en" xml:lang="en" ><div class="titlepage" ><div ><div ><h3 class="title" style="font-size: 14px !important;"><a id="ch04lvl2sec43" style="font-size: 14px !important;"></a>Solutions</h3></div></div></div><p >The code solutions of the<a id="id152" class="indexterm" ></a> preceding exercises are as follows:</p><div class="orderedlist" ><ol class="orderedlist arabic" type="1" ><li ><p >The solution of the <code class="" style="">while</code> loop that prints the numbers from 1 to 10 is as follows:</p><div class="informalexample" ><pre><code>int x = 1;
-while( x &lt;= 10 )
-{
-  cout &lt;&lt; x &lt;&lt; endl;
-  x++;
-}</code></pre></div></li><li ><p >The solution of the <code class="" style="">while</code> loop that prints the numbers from 10 to 1 in backwards is as follows:</p><div class="informalexample" ><pre><code>int x = 10; // start x high
-while( x &gt;= 1 ) // go until x becomes 0 or less
-{
-  cout &lt;&lt; x &lt;&lt; endl;
-  x--; // take x down by 1
-}</code></pre></div></li><li ><p >The solution of the <code class="" style="">while</code> loop that prints the numbers from 2 to 20 incrementing by 2 is as follows:</p><div class="informalexample" ><pre><code>int x = 2;
-while( x &lt;= 20 )
-{
-  cout &lt;&lt; x &lt;&lt; endl;
-  x+=2; // increase x by 2's
-}</code></pre></div></li><li ><p >The solution of the <code class="" style="">while</code> loop that prints the numbers from 1 to 16 with their squares is as follows:</p><div class="informalexample" ><pre><code>int x = 1;
-while( x &lt;= 16 )
-{
-  cout &lt;&lt; x &lt;&lt; "   " &lt;&lt; x*x &lt;&lt; endl; // print x and it's  square
-  x++;
-}</code></pre></div></li></ol></div></div></div>
+  <div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch02lvl1sec24"></a>Polymer designer tool</h2></div></div><hr></div><p>The Polymer designer tool is an online tool for creating Polymer elements visually. It provides a drag and drop<a id="id247" class="indexterm"></a> environment for a developer to create web application pages. You can find this tool at <a class="ulink" href="https://www.polymer-project.org/tools/designer/" target="_blank">https://www.polymer-project.org/tools/designer/</a>. The source code for the designer tool can be found at <a class="ulink" href="https://github.com/polymer/designer" target="_blank">https://github.com/polymer/designer</a>.</p><p>The following screenshot<a id="id248" class="indexterm"></a> shows the home page of the designer tool:</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781784393649/graphics/B03762_02_24.jpg" class="img-responsive"></div><p>The designer tool has the following three different main sections:</p><div class="itemizedlist"><ul type="bullet"><li style="list-style-type: disc"><p>
+<span class="strong"><strong>Header menu toolbar</strong></span>: This toolbar is present at the top of the designer tool. It contains the following seven different options for developers:</p><div class="itemizedlist"><ul type="bullet"><li style="list-style-type: disc"><p>
+<span class="strong"><strong>Toggle code/design</strong></span>—Using this option, we can toggle the view between design and code.</p></li><li style="list-style-type: disc"><p>
+<span class="strong"><strong>Save</strong></span>—Using this option, we can save the progress of the development.</p></li><li style="list-style-type: disc"><p>
+<span class="strong"><strong>Share Gist</strong></span>—Using this option, we can share the code with GitHub gist.</p></li><li style="list-style-type: disc"><p>
+<span class="strong"><strong>Launch preview</strong></span>—Using this option, we can preview the developed page in a new window.</p></li><li style="list-style-type: disc"><p>
+<span class="strong"><strong>Undo</strong></span>—Using this option, we can restore the last changed state.</p></li><li style="list-style-type: disc"><p>
+<span class="strong"><strong>Redo</strong></span>—Using this option, we can restore the next changed state.</p></li><li style="list-style-type: disc"><p>
+<span class="strong"><strong>Toggle full width</strong></span>—Using this option, we can make the design area to full width window.</p></li></ul></div></li><li style="list-style-type: disc"><p>
+<span class="strong"><strong>Main design area</strong></span>: This is the drop target of the element. In this area, we can drop any element that needs to be present in the page. The design area is filled with horizontal and vertical grid lines.</p></li><li style="list-style-type: disc"><p>
+<span class="strong"><strong>Right menu bar</strong></span>: This bar is used to show the details of the currently selected element in the<a id="id249" class="indexterm"></a> design. It is again divided into two subsections:</p><div class="itemizedlist"><ul type="bullet"><li style="list-style-type: disc"><p>
+<span class="strong"><strong>Properties and styles</strong></span>: This subsection shows all the properties and style attributes of the currently selected element in the design area. We can change the value of any attribute or style for the selected element.</p></li><li style="list-style-type: disc"><p>
+<span class="strong"><strong>Palette and trees</strong></span>: The palette view contains the entire set of draggable elements that can be dropped into the designer area. The tree section shows the current document tree of the page in parent–child relationship.</p></li></ul></div></li></ul></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch02lvl2sec35"></a>Developing with the designer tool</h3></div></div></div><p>In this section, we will develop an e-mail subscription form using the Polymer designer tool. We have to <a id="id250" class="indexterm"></a>follow these steps to work with the designer tool:</p><div class="itemizedlist"><ul type="bullet"><li style="list-style-type: disc"><p>Getting a GitHub token</p></li><li style="list-style-type: disc"><p>Developing the e-mail subscription form</p></li><li style="list-style-type: disc"><p>Previewing the design</p></li></ul></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch02lvl3sec10"></a>Getting a GitHub token</h4></div></div></div><p>We need to get a <a id="id251" class="indexterm"></a>GitHub token to save the work of the designer tool as a gist. When you click on the <span class="strong"><strong>Save</strong></span> option, it asks for a GitHub token. You can get a <a id="id252" class="indexterm"></a>new GitHub token from <a class="ulink" href="https://github.com/settings/tokens/new" target="_blank">https://github.com/settings/tokens/new</a>. The following screenshot shows the form for creating a GitHub token:</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781784393649/graphics/B03762_02_25.jpg" class="img-responsive"></div><p>The GitHub token <a id="id253" class="indexterm"></a>created for this example is <code class="literal">designerapp</code>. Now we can use this token in the designer tool. The following screenshot shows the popup window asking for a GitHub token when the <span class="strong"><strong>Save</strong></span> option is clicked:</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781784393649/graphics/B03762_02_26.jpg" class="img-responsive"></div><p>In the popup window, we can input the created GitHub token and we are ready for the next step—developing<a id="id254" class="indexterm"></a> an e-mail subscription form.</p><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h5 class="title"><a id="ch02lvl4sec08"></a>Developing an e-mail subscription form</h5></div></div></div><p>To develop an e-mail <a id="id255" class="indexterm"></a>subscription form, we have dragged the following items from the <span class="strong"><strong>PALETTE</strong></span> section to the designer drop area:</p><div class="itemizedlist"><ul type="bullet"><li style="list-style-type: disc"><p>The core-card element</p></li><li style="list-style-type: disc"><p>The core-item element</p></li><li style="list-style-type: disc"><p>The paper-input element</p></li><li style="list-style-type: disc"><p>The paper-button element</p></li></ul></div><p>After dropping and aligning these elements inside the card, we have made some changes to the styles and attribute of these elements. The following screenshot shows the style and attribute section for paper-button only. Similarly, we can change other elements:</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781784393649/graphics/B03762_02_27.jpg" class="img-responsive"></div><p>After the changes<a id="id256" class="indexterm"></a> are made to styles and attributes, we can see the generated code by using the <span class="strong"><strong>Toggle Code/Design</strong></span> option. The generated code is shown in the following screenshot:</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781784393649/graphics/B03762_02_28.jpg" class="img-responsive"></div><p>The preview <a id="id257" class="indexterm"></a>of the design can be seen by using the <span class="strong"><strong>Launch Preview</strong></span> option. The following screenshot shows the live preview of the developed design in a new window:</p><div class="mediaobject"><img src="https://www.packtpub.com/graphics/9781784393649/graphics/B03762_02_29.jpg" class="img-responsive"></div></div></div></div></div>
+</div>                                                          </div>
+                                                </div>
+                                        <!-- ngIf: nextsectionshow && !entitled || entitled --><div ng-if="nextsectionshow &amp;&amp; !entitled || entitled" class="panel panel-default next-section  ng-scope">
+                        <div class="panel-body">
+                            <span class="col-xs-12 col-sm-9 next-section-text ng-binding"><strong>Up Next: </strong>Yeoman Polymer generator</span>
+                            <a ng-show="!entitled" ng-click="changePage($event);" data-url="isbn=9781784393649&amp;chapter=2&amp;section=ch02lvl1sec25&amp;section_name=Yeoman Polymer generator" class="btn btn-primary col-sm-3 col-xs-12 next-section-button ng-hide">Next Section</a>
+                        </div>
+                    </div><!-- end ngIf: nextsectionshow && !entitled || entitled -->
+                    <!-- ngInclude:  --><div id="related_products-wrapper" ng-include="" src="views.related_products" class="ng-scope"><div class="col-lg-12 ng-scope">
+    <div class="col-lg-12 mt20 mb15">
+        <h4>Other titles you might be interested in:</h4>
+    </div>
+    <!-- ngRepeat: item in related_products --><div class="col-sm-2 col-xs-6 ng-scope" ng-repeat="item in related_products" on-finish-render="playlistsFinished">
+        <a href="/packtlib/book/Web Development/9781783284474">
+            <img class="img-responsive center-block title-page-img shadowbox playlazy shadowboxfading" alt="Web Application Development with R Using Shiny" data-original="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/4474OS_cov.jpg" src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/4474OS_cov.jpg" style="display: block;">
+        </a>
+    </div><!-- end ngRepeat: item in related_products --><div class="col-sm-2 col-xs-6 ng-scope" ng-repeat="item in related_products" on-finish-render="playlistsFinished">
+        <a href="/packtlib/book/Web Development/9781782161820">
+            <img class="img-responsive center-block title-page-img shadowbox playlazy shadowboxfading" alt="Mastering Web Application Development with AngularJS" data-original="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/1820OS.jpg" src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/1820OS.jpg" style="display: block;">
+        </a>
+    </div><!-- end ngRepeat: item in related_products --><div class="col-sm-2 col-xs-6 ng-scope" ng-repeat="item in related_products" on-finish-render="playlistsFinished">
+        <a href="/packtlib/book/Web Development/9781785287626">
+            <img class="img-responsive center-block title-page-img shadowbox playlazy shadowboxfading" alt="Learning Dart - Second Edition" data-original="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/B04292_MockupCover_Normal_.jpg" src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/B04292_MockupCover_Normal_.jpg" style="display: block;">
+        </a>
+    </div><!-- end ngRepeat: item in related_products --><div class="col-sm-2 col-xs-6 ng-scope" ng-repeat="item in related_products" on-finish-render="playlistsFinished">
+        <a href="/packtlib/book/Application Development/9781784395711">
+            <img class="img-responsive center-block title-page-img shadowbox playlazy shadowboxfading" alt="Node.js By Example" data-original="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/9607OS.jpg" src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/9607OS.jpg" style="display: block;">
+        </a>
+    </div><!-- end ngRepeat: item in related_products --><div class="col-sm-2 col-xs-6 ng-scope" ng-repeat="item in related_products" on-finish-render="playlistsFinished">
+        <a href="/packtlib/book/Web Development/9781849693189">
+            <img class="img-responsive center-block title-page-img shadowbox playlazy shadowboxfading" alt="Responsive Web Design with HTML5 and CSS3" data-original="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3189OT_Responsive web design with HTML5 and CSS3.jpg" src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3189OT_Responsive web design with HTML5 and CSS3.jpg" style="display: block;">
+        </a>
+    </div><!-- end ngRepeat: item in related_products --><div class="col-sm-2 col-xs-6 ng-scope" ng-repeat="item in related_products" on-finish-render="playlistsFinished">
+        <a href="/packtlib/book/Web Development/9781785280863">
+            <img class="img-responsive center-block title-page-img shadowbox playlazy shadowboxfading" alt="NW.js Essentials" data-original="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/0863OS.jpg" src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/0863OS.jpg" style="display: block;">
+        </a>
+    </div><!-- end ngRepeat: item in related_products -->
+</div></div>
+                                        <div class="isbn">
+                        <span>ISBN 9781784393649 © Packt Publishing Limited. All Rights Reserved </span>
                     </div>
                 </div>
-                <!-- End of Title Content -->
-                <!--Next Section -->
-                <div class="panel panel-default next-section ">
-                    <div class="panel-body">
-                        <span class="col-xs-12 col-sm-9 next-section-text"><strong>Up Next: </strong>The for Loop</span>
-                        <a href="for-loop.html" class="btn btn-primary col-sm-3 col-xs-12 next-section-button">Next Section</a>
-                    </div>
-                </div>
-
-                <div class="isbn">
-                    <span>ISBN 139781783980246  © Packt Publishing Limited. All Rights Reserved </span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- Title Content Ends -->
-        <!-- /#page-content-wrapper -->
+</div>
+</div>
 
     </div>
     <!-- /#wrapper -->
