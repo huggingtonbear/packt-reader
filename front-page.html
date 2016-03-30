@@ -5,11 +5,11 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Learning C++ by Creating Games with UE4</title>
+    <title>Learning C++ by Creating Games with UE4 - Chapter 3. Looping</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,14 +17,15 @@
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/custom-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
 
     <!-- Prism -->
     <link rel="stylesheet" href="css/prism.css">
 
     <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,700|Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -36,149 +37,250 @@
 
 </head>
 
-<body class="language-CPP">
+<body class="language-markup">
+
   
 
     <div id="wrapper">
 
         <!-- Top Nav Bar -->
         <nav class="navbar navbar-default navbar-fixed-top">
-
-            <div class="nav navbar-nav">
-              <a class="navbar-brand hidden-nav-icon pull-left" href="home.html"><img class="main-icon lazy" data-original="images/pl-icon3.png"/></a>
-              <p class="navbar-text navbar-title"> Learning C++ by Creating Games with UE4 </p>  
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="library.html"><img class="brand-logo" src="images/white-packt.png"/></a>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="library.html">Library</a></li>
+                        <li><a href="https://www.packtpub.com">Store</a></li>
+                        <li class="dropdown"> 
+                        <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
+                        </a>
+                        <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li> <a href="#">View Account</a></li> 
+                            <li><a href="#">View Subscriptions</a></li> 
+                            <li><a href="#">View Licences</a></li> 
+                            <li role="separator" class="divider"></li> 
+                            <li><a href="index-lo.html">Logout</a></li> 
+                        </ul> 
+                    </li>
+                    </ul>
+                    <form class="navbar-form navbar-right search-nav-collapse">
+                        <div class="form-group pull-right" style="display:inline;">
+                            <div class="input-group">
+                              <input class="form-control" type="text" placeholder="Search the library...">
+                              <span class="input-group-btn"><a href="search.html" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></a></span>
+                            </div>
+                        </div>
+                    </form>
+                </div><!--/.nav-collapse -->
             </div>
-            
         </nav>
-
-
-
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-            <ul class="sidebar-nav list-group ">
-                <!-- Login Container -->
-                <nav class="navbar navbar-default">
-                    <div class="nav navbar-nav">
-                        <ul class="nav navbar-nav navbar-right">
-                          <a href="#" class="dropdown-toggle navbar-text logout-nav" data-toggle="dropdown" role="button" aria-expanded="false">Signed in as Oli Huggins <span class="caret"></span></a>
-                          <ul class="dropdown-menu logout-dropdown" role="menu">
-                            <li><a href="#" class="logout-link"><i class="fa fa-sign-out mr20"></i>Logout</a></li>
-                          </ul>
-                        </ul> 
+
+            <ul class="sidebar-nav">
+                <ul id="toc" class="nav nav-tabs mt15" role="tablist">
+                    <li class="active ml15" style="text-indent: 0px;">
+                        <a href="#contents" id="contents-tab" role="tab" data-toggle="tab" aria-controls="contents" aria-expanded="true">Contents</a>
+                    </li>
+                    <li style="text-indent: 0px;">
+                        <a href="#bookmark" role="tab" id="bookmark-tab" data-toggle="tab" aria-controls="bookmark" aria-expanded="false">Bookmarks (2)</a>
+                    </li>
+                </ul>
+                <div id="TocContent" class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
+                        <form class="col-sm-12 mt15 mb15">
+                            <input type="text" class="form-control" placeholder="Search this title..." id="box">
+                        </form>
+                        <div class="clearfix"></div>
+                        <li class="active"><a href="front-page.html">Learning C++ by Creating Games with UE4</a></li>
+                        <li><a href="#" class="completed-section">Preface</a></li>
+                        <li><a href="#" class="completed-section">1. Preparing your Data</a></li>
+                        <li><a class="completed-section" href="#">2. Driving Visual Analysis with Automated Automobiles</a></li>
+                        <li ><a href="index.html">3. Looping</a></li> <!-- 
+                        <li class="sub-nav"><a href="for-loop.html">The for loop</a></li>
+                        <li class="sub-nav"><a href="#" class="completed-section">The for/while loop</a></li>
+                        <li class="sub-nav"><a href="#">The 'if' loop</a></li>
+                        <li class="sub-nav"><a href="#">Looping with Unreal Engine</a></li> -->
+                        <li><a href="#">4. Forms and Entries</a></li>
+                        <li><a href="#">5. Functions and Macros</a></li>
+                        <li><a href="#">6. Dynamic Memory Allocation</a></li>
+                        <li><a href="#">7. If, Else and Switch</a></li>
+                        <li><a href="#">8. Actors and Roles</a></li>
                     </div>
-                </nav>
-                <!-- Login Container End-->
-                    <form class="sidebar-search">
-                        <input type="text" class="form-control" placeholder="Search this title and others...">
-                    </form>   
-                <a href="#"> <li class="list-group-item active">Learning C++ by Creating Games with UE4</li></a>
-                <a href="#"> <li class="list-group-item">Preface</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 1. Preparing your Data</li></a>
-
-                <a href="#">
-                    <li class="list-group-item">Chapter 2. Driving Visual Analysis with Automated Automobiles </li> 
-                </a>
-
-                <a href="index.html">
-                    <li class="list-group-item"> Chapter 3. Looping</li> 
-                </a>
-
-                <a href="#"> <li class="list-group-item">Chapter 4. Forms and Entries</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 5. Functions and Macros</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 6. Dynamic Memory Allocation</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 7. If, Else and Switch</li></a>
-                <a href="#"> <li class="list-group-item">Chapter 8. Actors and Roles</li></a>
+                    <div role="tabpanel" class="tab-pane fade pt15" id="bookmark" aria-labelledby="bookmark-tab"> 
+                        <li><a href="#" class="completed-section">Preface</a></li>
+                        <li><a href="#" class="completed-section">1. Preparing your Data</a></li> 
+                    </div>
+                </div>
             </ul>
         </div>
 
         <!-- /#sidebar-wrapper -->
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="title-container">
+        <div id="page-content-wrapper" class="book-page ng-scope">
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        
-                        <div class="col-md-3 col-sm-4 col-xs-12">
-                            <img class="img-responsive center-block title-page-img lazy" data-original="images/cpp.png"/>
-                            <a href="#" class="btn btn-warning col-xs-12 title-read-button mt0 mb15 pt10 pb10"><i class="fa fa-download nav-icon mr10"></i> Code Files</a>
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
+                <div class="col-sm-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8">
+                    
+                    <div class="row">
+                        <div class="col-sm-3 hidden-xs">
+                            <div class="row">
+                            <img src="https://www.staging.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/0896OS_jQuery%202.0%20Developer.jpg" class="img-responsive mt20 mb20"/>
+                            </div>
                         </div>
-                        <div class="col-md-9 col-sm-8 col-xs-12">
-                            <h2 class="title-page-title">Learning C++ by Creating Games with UE4</h2>
-                            <small> William Sherif </small>
-                            <p/>
-                            <small> February 2015 </small>
-                            <p/>
-                            <p class="title-page-tagline"> Learn C++ programming with a fun, real-world application that allows you to create your own games! </p><p/>
+                        <div class="col-sm-9 hidden-xs">
+                            <h2>Learning C++ by Creating Games with UE4</h2>
+                            <small>01/02/2015</small>
+                            <p>William Sherif</p>
+                            
+                            <div class="clearfix"></div>
+                            <div class="btn-group btn-group-justified mb15 hidden-xs mt15" role="group">                                 
+                                <a href="#" class="btn btn-default "><i class="fa fa-plus mr5"></i>Add to My List</a>      
+                                <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-default dropdown-toggle hidden-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <i class="fa fa-download fa-lg mr5"></i> Download eBook
+                                          <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                          <li><a href="#">Download ePub</a></li>
+                                          <li><a href="#">Download PDF</a></li>
+                                          <li><a href="#">Download Mobi</a></li>
+                                        </ul>
+                                </div>
+                                <a href="#" class="btn btn-default "><i class="fa fa-download mr5"></i> Code Files</a>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fa fa-share fa-lg mr5"></i><span class="hidden-xs"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#">Facebook </a></li>
+                                      <li><a href="#">Email</a></li>
+                                      
+                                      <li><a href="#">Tweet</a></li>
+                                      <li><a href="#">Reddit</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>Learn C++ programming with a fun, real-world application that allows you to create your own games!</p>
+                            <a href="for-loop.html" class="btn btn-primary btn-lg pl45 pr45 mt25 pull-right">Continue</a>
 
-                            <div class="title-page-about">
+                        </div>
 
-                                <li>Be a top programmer by being able to visualize programming concepts; how data is saved in computer memory, and how a program flows</li> <p/>
-                                <li>Keep track of player inventory, create monsters, and keep those monsters at bay with basic spell casting by using your C++ programming skills within Unreal Engine 4</li><p/>
-                                <li>Understand the C++ programming concepts to create your own games</li><p/>
+                        <div class="titlepage visible-xs">
+                            <h4 class="title" style="clear: both"><a id="ch03lvl1sec27"></a>Learning C++ by Creating Games with UE4</h4>
+                            <hr>
+                            <small>01/02/2015</small>
+                            <p>William Sherif</p>
+                            <p>Learn C++ programming with a fun, real-world application that allows you to create your own games!</p>
+                            <a href="#" class="btn btn-default btn-block btn-lg"><i class="fa fa-plus mr5"></i> My List</a>      
+                            <a href="for-loop.html" class="btn btn-primary btn-lg btn-block mb20">Continue</a>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <ul id="myTabs" class="nav nav-tabs nav-justified hidden-xs mt25    " role="tablist">
+                                    <li class="active">
+                                        <a href="#about" id="about-tab" role="tab" data-toggle="tab" aria-controls="about" aria-expanded="true">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn">Learn</a>
+                                    </li>
+                                    <li>
+                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail">Detail</a>
+                                    </li>
+                                    <li>
+                                        <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author">Author</a>
+                                    </li>
+                                </ul>
 
+                                <div id="myTabContent" class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active pt30" id="about" aria-labelledby="about-tab">
+                                    <div class="visible-xs">
+                                        <h4 class="mobile-title">About</h4>
+                                        <hr>
+                                    </div>
+                                        <ul>
+                                            <li>Be a top programmer by being able to visualize programming concepts; how data is saved in computer memory, and how a program flows</li>
+                                            <li>Keep track of player inventory, create monsters, and keep those monsters at bay with basic spell casting by using your C++ programming skills within Unreal Engine 4</li>
+                                            <li>Understand the C++ programming concepts to create your own games</li>
+                                        </ul>
+                                        <p>If you are really passionate about games and have always wanted to write your own, this book is perfect for you. It will help you get started with programming in C++ and explore the immense functionalities of UE4.</p>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade pt30" id="learn" aria-labelledby="learn-tab">
+                                    <div class="visible-xs">
+                                        <h4 class="mobile-title">Learn</h4>
+                                        <hr>
+                                    </div>
+                                        <ul>
+                                            <li>Visualize and truly understand C++ programming concepts, such as how data is saved in computer memory and how program flow works</li>
+                                            <li>Write reusable code by grouping lines of code into functions</li>
+                                            <li>Learn how inheritance works-how traits of a base class are passed on to derived classes</li>
+                                            <li>Learn about dynamic allocation of new memory for your program</li>
+                                            <li>Design your own world using the UE4 editor</li>
+                                            <li>Practice programming by coding behaviors into your game world, including player inventory tracking, monsters, and NPCs</li>
+                                            </ul> 
+                                    </div> 
+                                    <div role="tabpanel" class="tab-pane fade pt30" id="detail" aria-labelledby="detail-tab">
+                                        <div class="visible-xs">
+                                            <h4 class="mobile-title">Detail</h4>
+                                            <hr>
+                                        </div>
+                                        <p>Unreal Engine 4 is used to create top notch, exciting games by AAA studios, and learning to program in C++ needs some serious motivation.</p>
+                                        <p>Learning C++ by Creating Games With UE4 will start with the basics of C++: installing a code editor so you can begin to write C++ code. You will then learn how to write small, self-contained C++ programs that show you how to use the C++ language, without overwhelming you with too much code at the beginning. As we dig into more advanced C++ concepts, you will start to explore the functionality the UE4 engine has to offer. You will use the UE4 editor to create your own world, and then program in some seriously fun gameplay. By the end of this book, you should have a good grasp of how to program in C++.</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade pt30" id="author" aria-labelledby="author-tab">
+                                        <div class="visible-xs">
+                                            <h4 class="mobile-title">Author</h4>
+                                            <hr>
+                                        </div>
+                                        <p><strong>William Sherif</strong></p>
+                                        <p>William Sherif is a C++ programmer with more than 8 years' programming experience. He has a wide range of experience in the programming world, from game programming to web programming. He has also worked as a university course instructor (sessional) for 7 years.</p>
+                                        <p>He has released several apps on to the iTunes store, including strum and MARSHALL OF THE ELITE SQUADRON.</p>
+                                        <p>In the past, he has won acclaim for delivering course material in an easy-to-understand manner.</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="text-center col-sm-12 mb20">
+                                    <small>ISBN 9781783983704 © Packt Publishing Limited. All Rights Reserved </small>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12">
-                        <div class="col-md-3 col-sm-4 col-xs-12">
-                            <a href="index.html" class="btn btn-default col-xs-12 title-read-button mt0"><i class="fa fa-minus mr20"></i>Collection</a>
-                        </div>
-                        <div class="col-md-9 col-sm-8 col-xs-12">
-                        <a href="index.html" class="btn btn-primary col-xs-12 title-read-button mt0">Read</a>
-                        </div>
-                    </div>
-
                 </div>
             </div>
+        <div id="footer" class="visible-xs">
+          <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
+              <div class="row" id="bottomNav" role="tablist">
+                <div class="col-xs-3 text-center"><a href="#about" id="about-tab" role="tab" data-toggle="tab" aria-controls="about" aria-expanded="true"><i class="fa fa-book mobile-nav-icon fa-2x"></i></a></div>
+                <div class="col-xs-3 text-center"><a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn"><i class="fa fa-institution mobile-nav-icon fa-2x"></i></a></div>
+                <div class="col-xs-3 text-center"><a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail"><i class="fa fa-info-circle mobile-nav-icon fa-2x"></i></a></div>
+                <div class="col-xs-3 text-center"><a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="detail"><i class="fa fa-user mobile-nav-icon fa-2x"></i></a></div>
+              </div>
+          </div>
         </div>
-
-<!-- Title Content -->
-
-
-
-                        
-
-
-
-        <!-- Title Content Ends -->
-        <!-- /#page-content-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
 
     <!-- JAVASCRIPT BLOCKS -->
 
     <!-- jQuery Script-->
     <script src="js/jquery.js"></script>
-    <!-- Lazy Load Script-->
-    <script src="js/jquery.lazyload.min.js" type="text/javascript"></script>
-    <script src="js/lazyload-settings.js" type="text/javascript"></script>
-    <script src="js/lazybg.js"></script>
     <!-- Syntax Highlighting Script -->
     <script src="js/prism.js"></script>
-    <!-- Real Shadows Script -->
-    <script src="js/realshadow-min.js"></script>
-    <script src="js/shadowbox-settings.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
-    <!-- Demo Search Filter -->
-    <script>
-        $('#box').keyup(function(){
-       var valThis = $(this).val().toLowerCase();
-        if(valThis == ""){
-            $('.navList > a > li').show();           
-        } else {
-            $('.navList > a > li').each(function(){
-                var text = $(this).text().toLowerCase();
-                (text.indexOf(valThis) >= 0) ? $(this).show() : $(this).hide();
-            });
-       };
-    });
-    </script>
 
 </body>
 

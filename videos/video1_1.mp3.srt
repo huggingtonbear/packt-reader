@@ -1,0 +1,376 @@
+1
+00:00:00,711 --> 00:00:11,451
+[MUSIC].
+
+2
+00:00:11,452 --> 00:00:14,448
+Welcome to the Mastering Python Video Course,
+
+3
+00:00:14,449 --> 00:00:15,291
+in this video course
+
+4
+00:00:15,292 --> 00:00:17,368
+we are going to start with the fundamentals and then work our way
+
+5
+00:00:17,369 --> 00:00:19,907
+up to talk about more powerful and advanced techniques of python
+
+6
+00:00:19,908 --> 00:00:23,522
+programming. I'm Daniel Arbuckle and I'll be your presenter for
+
+7
+00:00:23,523 --> 00:00:26,808
+this course, I began using python approximately 20 years ago and
+
+8
+00:00:26,809 --> 00:00:29,954
+I've used it ever since for both research and professional work,
+
+9
+00:00:29,955 --> 00:00:32,472
+this first video is a quick sneak peek of the course as a whole
+
+10
+00:00:32,473 --> 00:00:34,846
+but we'll discuss the topics that we'll be covering throughout
+
+11
+00:00:34,847 --> 00:00:38,214
+the course, in the first section we'll look at how to get started
+
+12
+00:00:38,215 --> 00:00:40,719
+with python, we'll first walk through downloading and installing
+
+13
+00:00:40,720 --> 00:00:43,427
+the python interpreter in standard library,
+
+14
+00:00:43,428 --> 00:00:43,868
+then we'll take a look
+
+15
+00:00:43,869 --> 00:00:46,526
+at the python interactive shell and running python programs from
+
+16
+00:00:46,527 --> 00:00:49,780
+the command line, next we'll take a look at pip,
+
+17
+00:00:49,781 --> 00:00:50,244
+python's tool
+
+18
+00:00:50,245 --> 00:00:52,750
+for installing third party libraries and see how to find those
+
+19
+00:00:52,751 --> 00:00:56,399
+third part libraries using the python package index,
+
+20
+00:00:56,400 --> 00:00:56,686
+in section
+
+21
+00:00:56,687 --> 00:01:00,442
+two we'll talk through creating an empty python code package
+
+22
+00:01:00,443 --> 00:01:03,450
+and then extend that by adding code modules to the package,
+
+23
+00:01:03,451 --> 00:01:03,554
+will
+
+24
+00:01:03,555 --> 00:01:06,160
+then take a short detour to talk about how to import package modules
+
+25
+00:01:06,161 --> 00:01:10,257
+into each other and see how to add data files to the package,
+
+26
+00:01:10,258 --> 00:01:10,714
+in
+
+27
+00:01:10,715 --> 00:01:13,841
+section three we'll talk about best practices for python programmers,
+
+28
+00:01:13,842 --> 00:01:15,764
+these are the things that you don't have to do but the way they've
+
+29
+00:01:15,765 --> 00:01:18,265
+experienced it is a good idea,
+
+30
+00:01:18,266 --> 00:01:19,792
+here we'll talk about python's widely
+
+31
+00:01:19,793 --> 00:01:21,520
+accepted code formatting standard.
+
+32
+00:01:21,521 --> 00:01:23,593
+We'll see about using version control,
+
+33
+00:01:23,594 --> 00:01:24,535
+virtual environments for
+
+34
+00:01:24,536 --> 00:01:27,761
+developing code and how to format inland documentation,
+
+35
+00:01:27,762 --> 00:01:28,148
+and integrate
+
+36
+00:01:28,149 --> 00:01:31,066
+that documentation with testing.
+
+37
+00:01:31,067 --> 00:01:33,687
+In section four we'll put the theory on the back runner and cover
+
+38
+00:01:33,688 --> 00:01:36,471
+the practicalities of creating a command line program.
+
+39
+00:01:36,472 --> 00:01:39,207
+Here we'll talk about turning a package into a program,
+
+40
+00:01:39,208 --> 00:01:39,706
+handling
+
+41
+00:01:39,707 --> 00:01:42,816
+command line arguments and interacting with the programs user,
+
+42
+00:01:42,817 --> 00:01:42,910
+how
+
+43
+00:01:42,911 --> 00:01:46,107
+to start other programs from within our python codes and finally
+
+44
+00:01:46,108 --> 00:01:49,411
+how to start our program from a graphical user interface.
+
+45
+00:01:49,412 --> 00:01:49,736
+In
+
+46
+00:01:49,737 --> 00:01:52,731
+section five we move on to more advanced topics,
+
+47
+00:01:52,732 --> 00:01:52,989
+we're going to
+
+48
+00:01:52,990 --> 00:01:56,014
+take a look at how to run our code across multiple CPU's in CPU
+
+49
+00:01:56,015 --> 00:01:59,461
+course, we'll examine the concurrent.futures package in the python's
+
+50
+00:01:59,462 --> 00:02:00,730
+sender library,
+
+51
+00:02:00,731 --> 00:02:01,671
+which provides a simplified,
+
+52
+00:02:01,672 --> 00:02:03,004
+high level interface for launching
+
+53
+00:02:03,005 --> 00:02:05,480
+and working with background worker processes.
+
+54
+00:02:05,481 --> 00:02:07,871
+And then we'll look at the multiprocessing package which provides
+
+55
+00:02:07,872 --> 00:02:11,240
+a lower level interface to multiprocess programming.
+
+56
+00:02:11,241 --> 00:02:14,524
+In section 6, we're talking about asynchronous I/O and cooperative
+
+57
+00:02:14,525 --> 00:02:16,339
+threading with core routines.
+
+58
+00:02:16,340 --> 00:02:18,691
+We'll explain the difference between cooperative multithreading
+
+59
+00:02:18,692 --> 00:02:20,822
+and multiprocess programming.
+
+60
+00:02:20,823 --> 00:02:23,711
+And look at Python's built in asyncio package,
+
+61
+00:02:23,712 --> 00:02:24,199
+asyncio features
+
+62
+00:02:24,200 --> 00:02:27,454
+class specifically how the first synchronization back into existence
+
+63
+00:02:27,455 --> 00:02:29,988
+and those places where it's really needed and finally we will look
+
+64
+00:02:29,989 --> 00:02:33,194
+at using the tools we've covered in the prior videos to communicate
+
+65
+00:02:33,195 --> 00:02:35,699
+across the network.
+
+66
+00:02:35,700 --> 00:02:38,426
+In section 7 we will look at several ways in which Python code can
+
+67
+00:02:38,427 --> 00:02:41,662
+rewrite or change the meaning of other Python Code we will look
+
+68
+00:02:41,663 --> 00:02:42,775
+at function decorators,
+
+69
+00:02:42,776 --> 00:02:45,223
+function annotations, class decorators,
+
+70
+00:02:45,224 --> 00:02:45,981
+middle classes,
+
+71
+00:02:45,982 --> 00:02:50,042
+context managers and the descriptors.
+
+72
+00:02:50,043 --> 00:02:52,547
+We will wrap up with section 8 in which we'll be looking at how to
+
+73
+00:02:52,548 --> 00:02:55,543
+construct a slated view and test for a software.
+
+74
+00:02:55,544 --> 00:02:57,328
+We'll talk about the principles of unit testing,
+
+75
+00:02:57,329 --> 00:02:58,874
+using Python's built in unit
+
+76
+00:02:58,875 --> 00:03:00,560
+test package and using it
+
+77
+00:03:00,561 --> 00:03:04,305
+to smoke module to help control our test environment. Then we'll talk
+
+78
+00:03:04,306 --> 00:03:07,792
+about Unit test's discovery tool and wrap up with a discussion
+
+79
+00:03:07,793 --> 00:03:10,394
+of nodes a third party tool that has a range of useful testing
+
+80
+00:03:10,395 --> 00:03:11,418
+utilities.
+
+81
+00:03:11,419 --> 00:03:13,882
+The videos in this course are organized more or less in order from
+
+82
+00:03:13,883 --> 00:03:15,930
+fundamental to complex,
+
+83
+00:03:15,931 --> 00:03:17,283
+you are not tightly bound to that order
+
+84
+00:03:17,284 --> 00:03:19,874
+though so fell free to skip around if you wish.
+
+85
+00:03:19,875 --> 00:03:22,402
+This course is divided into two major parts,
+
+86
+00:03:22,403 --> 00:03:22,931
+for the first several
+
+87
+00:03:22,932 --> 00:03:25,907
+sections there's nothing you need except an interest for the topic,
+
+88
+00:03:25,908 --> 00:03:28,499
+we'll cover basics that will help you get started.
+
+89
+00:03:28,500 --> 00:03:31,934
+The later sections are more advanced at the minimum you should be
+
+90
+00:03:31,935 --> 00:03:34,323
+comfortable with the content of the basic sections before tackling
+
+91
+00:03:34,324 --> 00:03:37,565
+the advanced ones and even so practice and experience with Python
+
+92
+00:03:37,566 --> 00:03:38,493
+will be helpful.
+
+93
+00:03:38,494 --> 00:03:40,989
+Join me in the next video where we will be downloading and installing
+
+94
+00:03:41,140 --> 00:03:41,000
+Python.
+

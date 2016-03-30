@@ -1,0 +1,102 @@
+body,h1,h2,h3,h4,h5,p {
+	background:#1B1C1E;
+	color:#fff;
+}
+.reader-container h3.title {
+	color: #fff;
+}
+.orderedlist {
+	background: #333;
+	border-left: 15px solid #555;
+}
+.informaltable table thead tr p{
+    background: #456F9E;
+}
+.informaltable table tbody tr{
+	background: #1B1C1E;
+}
+.informaltable table tbody td {
+    border: 1px solid #3E3E3E;
+}
+.itemizedlist {
+	background: #333;
+	border-left: solid 15px #456F9E;
+}
+.itemizedlist p, .itemizedlist a {
+	background: #333;
+}
+.orderedlist p,.orderedlist a {
+	background: #333;
+}
+
+.navbar-default {
+	background-color: #1B1C1E;
+    border-color: rgba(255,255,255,0.2);
+}
+
+#sidebar-wrapper {
+	background-color: #2C2E31;
+}
+
+.sidebar-nav>.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+   	background-color: #2C2E31;
+   	color: white;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+
+.sidebar-nav li a {
+	color: #fff;
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #1B1C1E;
+    border-color: rgba(255,255,255,0.5);
+}
+
+.nightmode .reader-container .home-body,  #page-content-wrapper.nightmode.book-page {
+	background:#1B1C1E;
+	color:#fff !important;
+}
+.nightmode .reader-container .panel {
+   background: #1B1C1E ;
+}
+
+.nightmode .reader-container code {
+    background-color: #333333;
+    border: 1px solid #CCCCCC;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.nightmode .reader-container code[class*="language-"],
+.nightmode .reader-container pre[class*="language-"] {
+	color: #f8f8f2;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+}
+​
+/* Code blocks */
+.nightmode .reader-container pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+​
+.nightmode .reader-container :not(pre) > code[class*="language-"],
+.nightmode pre[class*="language-"] {
+	background: #272822;
+}
+​
+/* Inline code */
+.nightmode .reader-container :not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+​

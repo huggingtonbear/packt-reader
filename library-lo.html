@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Learning C++ by Creating Games with UE4 - Chapter 3. Looping</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <link href="css/gsdk-base.css" rel="stylesheet" />
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body class="language-markup">
+
+  
+
+    <div id="">
+
+        <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog login-modal" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <h2 class="text-center" id="myModalLabel">Sign In</h2>
+                    <form class="form-signin">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <div class="form-group">
+                        <a href="#" class="small">Forgotten Password?</a>
+                      </div>
+                      
+                      <a href="library.html" type="submit" class="btn btn-primary btn-block btn-lg">Submit</a>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#">Create a New Account</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <!-- Top Nav Bar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="library.html"><img class="brand-logo" src="images/white-packt.png"/></a>
+                  <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-info navbar-btn pull-right mr15 visible-xs">Sign in</button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://www.packtpub.com">Store</a></li>
+                        <li class="hidden-xs"><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-info navbar-btn mr5">Sign in</button></li>
+                    </ul>
+                    <form class="navbar-form navbar-right search-nav-collapse">
+                        <div class="form-group pull-right" style="display:inline;">
+                            <div class="input-group">
+                              <input class="form-control" type="text" placeholder="Search the library...">
+                              <span class="input-group-btn"><a href="search.html" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></a></span>
+                            </div>
+                        </div>
+                    </form>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!-- Sidebar not visible on logged out library view-->
+        <!-- <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+                <h4 class="ml15 mt20"> Browse Categories:</h4>
+                <hr>
+                <li>    <a href="tech-page.html">    Android </a>    </li>
+                <li>    <a href="tech-page.html">    AngularJS   </a>    </li>
+                <li>    <a href="tech-page.html">    Arduino </a>    </li>
+                <li>    <a href="tech-page.html">    Blender </a>    </li>
+                <li>    <a href="tech-page.html">    Bootstrap   </a>    </li>
+                <li>    <a href="tech-page.html">    Django  </a>    </li>
+                <li>    <a href="tech-page.html">    Docker  </a>    </li>
+                <li>    <a href="tech-page.html">    Drupal  </a>    </li>
+                <li>    <a href="tech-page.html">    Hadoop  </a>    </li>
+                <li>    <a href="tech-page.html">    iOS </a>    </li>
+                <li>    <a href="tech-page.html">    Java    </a>    </li>
+                <li>    <a href="tech-page.html">    JavaScript  </a>    </li>
+                <li>    <a href="tech-page.html">    jQuery  </a>    </li>
+                <li>    <a href="tech-page.html">    Laravel </a>    </li>
+                <li>    <a href="tech-page.html">    Linux   </a>    </li>
+                <li>    <a href="tech-page.html">    Machine Learning    </a>    </li>
+                <li>    <a href="tech-page.html">    Node.js </a>    </li>
+                <li>    <a href="tech-page.html">    OpenCV  </a>    </li>
+                <li>    <a href="tech-page.html">    OpenStack   </a>    </li>
+                <li>    <a href="tech-page.html">    Oracle  </a>    </li>
+                <li>    <a href="tech-page.html">    PHP </a>    </li>
+                <li>    <a href="tech-page.html">    Python  </a>    </li>
+                <li>    <a href="tech-page.html">    QlikView    </a>    </li>
+                <li>    <a href="tech-page.html">    R   </a>    </li>
+                <li>    <a href="tech-page.html">    Spark   </a>    </li>
+                <li>    <a href="tech-page.html">    Spring  </a>    </li>
+                <li>    <a href="tech-page.html">    Swift   </a>    </li>
+                <li>    <a href="tech-page.html">    Unity   </a>    </li>
+                <li>    <a href="tech-page.html">    WordPress   </a>    </li>
+            </ul>
+        </div> -->
+
+        <!-- /#sidebar-wrapper -->
+
+        <div id="logout-wrapper" class="book-page ng-scope">
+
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope">               
+                <div class="">
+                    <div class="container">
+
+                            <div class="col-sm-offset-4 col-sm-4 col-xl-offset-5 col-xl-2 mt80">
+                            <img src="images/packtlib.png" class="img-responsive"/>
+                            </div>
+                            <div class="row">
+                            <!--      Wizard container        -->
+                            <div class="wizard-container col-sm-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8">
+
+                                
+                                <div class="mt30 jumbotron card wizard-card ct-wizard-orange" id="wizardProfile">
+                                    <form action="" method="">
+                                <!--        You can switch "ct-wizard-orange"  with one of the next bright colors: "ct-wizard-blue", "ct-wizard-green", "ct-wizard-orange", "ct-wizard-red"             -->
+                                
+
+                                        
+                                        <div class="col-sm-12 text-center mb20 hidden-xs">
+                                            <h2 class="mt0">Continuously improve your skills and career</h2>
+                                        </div>   
+                                        <h3 class="text-center visible-xs"> Continuously improve your skills and career</h3> 
+                                        <ul class="hidden-xs">
+                                            <li><a href="#about" data-toggle="tab">1. About</a></li>
+                                            <li><a href="#category" data-toggle="tab">2. Skills</a></li>
+                                            <li><a href="#language" data-toggle="tab">3. Languages</a></li>
+                                            <li><a href="#account" data-toggle="tab">4. Finalize</a></li>
+                                        </ul>
+                                        
+                                        <div class="tab-content">
+                                            <div class="tab-pane" id="about">
+                                              <div class="row">
+                                                  <h4 class="info-text hidden-xs">To get started we need to ask a few questions about you... </h4>
+                                                  <h5 class="info-text visible-xs">To get started we need to ask a few questions about you... </h5>
+                                                  <div class="col-sm-5 col-sm-offset-1">
+                                                        <div class="form-group">
+                                                            
+                                                            <input name="firstname" type="text" class="form-control input-lg" placeholder="First Name">
+                                                        </div>
+                                                  </div>
+                                                  <div class="col-sm-5">
+                                                        <div class="form-group">
+                                                              
+                                                              <input name="email" type="email" class="form-control input-lg" placeholder="Email Address">
+                                                        </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="tab-pane" id="category">
+                                                <h4 class="info-text"> What skills do you want to develop? </h4>
+                                                <div class="row">
+                                                   
+                                                    
+                                                    
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="jobb" value="Design">
+                                                                <div class="icon">
+                                                                    <i class="fa fa-file-code-o"></i>
+                                                                </div>
+                                                                <h5>Web Development</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="jobb" value="Code">
+                                                                <div class="icon">
+                                                                    <i class="fa fa-tablet"></i>
+                                                                </div>
+                                                                <h5>App Development</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="jobb" value="Develop">
+                                                                <div class="icon">
+                                                                    <i class="fa fa-gamepad"></i>
+                                                                </div>
+                                                                <h5>Game Development</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="jobb" value="Design">
+                                                                <div class="icon">
+                                                                    <i class="fa fa-cloud"></i>
+                                                                </div>
+                                                                <h5>Cloud + Virtualization</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="jobb" value="Code">
+                                                                <div class="icon">
+                                                                    <i class="fa fa-sitemap"></i>
+                                                                </div>
+                                                                <h5>Networking</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="jobb" value="Develop">
+                                                                <div class="icon">
+                                                                    <i class="fa fa-flask"></i>
+                                                                </div>
+                                                                <h5>Data Science</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="jobb" value="Develop">
+                                                                <div class="icon">
+                                                                    <i class="fa fa-wrench"></i>
+                                                                </div>
+                                                                <h5>Maker</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="jobb" value="Develop">
+                                                                <div class="icon">
+                                                                    <i class="fa fa-cog"></i>
+                                                                </div>
+                                                                <h5>DevOps</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="language">
+                                                <h4 class="info-text"> Which languages are you familiar with? </h4>
+                                                <div class="row">
+
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="java" value="Design">
+                                                                <div class="icon">
+                                                                    <i class="devicon-java-plain"></i>
+                                                                </div>
+                                                                <h5>Java</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="cplusplus" value="Code">
+                                                                <div class="icon">
+                                                                    <i class="devicon-cplusplus-line"></i>
+                                                                </div>
+                                                                <h5>C/C++</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="python" value="Develop">
+                                                                <div class="icon">
+                                                                    <i class="devicon-python-plain"></i>
+                                                                </div>
+                                                                <h5>Python</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="csharp" value="Design">
+                                                                <div class="icon">
+                                                                    <i class="devicon-csharp-line"></i>
+                                                                </div>
+                                                                <h5>C#</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="javascript" value="Code">
+                                                                <div class="icon">
+                                                                    <i class="devicon-javascript-plain"></i>
+                                                                </div>
+                                                                <h5>JavaScript</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="ruby" value="Develop">
+                                                                <div class="icon">
+                                                                    <i class="devicon-ruby-plain"></i>
+                                                                </div>
+                                                                <h5>Ruby</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="php" value="Design">
+                                                                <div class="icon">
+                                                                    <i class="devicon-php-plain"></i>
+                                                                </div>
+                                                                <h5>PHP</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="html5" value="Code">
+                                                                <div class="icon">
+                                                                    <i class="devicon-html5-plain"></i>
+                                                                </div>
+                                                                <h5>HTML5</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="dotnet" value="Develop">
+                                                                <div class="icon">
+                                                                     <i class="devicon-dot-net-plain"></i>
+                                                                </div>
+                                                                <h5>.NET</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="swift" value="Design">
+                                                                <div class="icon">
+                                                                    <i class="devicon-apple-original"></i>
+                                                                </div>
+                                                                <h5>Swift</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="coffeescript" value="Code">
+                                                                <div class="icon">
+                                                                    <i class="devicon-coffeescript-original"></i>
+                                                                </div>
+                                                                <h5>CoffeeScript</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="choice" data-toggle="wizard-checkbox">
+                                                                <input type="checkbox" name="go" value="Develop">
+                                                                <div class="icon">
+                                                                     <i class="devicon-go-plain"></i>
+                                                                </div>
+                                                                <h5>Go</h5>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="account">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h4 class="info-text"> Please finalize your account details</h4>
+                                                    </div>
+                                                    <div class="col-sm-10 col-sm-offset-1">
+                                                         <div class="form-group">
+                                                            <label>Choose a Password <small>(required)</small></label>
+                                                            <input name="firstname" type="password" class="form-control input-lg" placeholder="Please use more than 6 characters...">
+                                                        </div>
+                                                        <div class="form-group">
+                                                        <label>Terms &amp; Conditions</label><br/> 
+                                                        <label><small>By clicking CREATE ACCOUNT, you are agreeing to our <a href="books/info/packt/privacy">Policy</a> and <a href="books/info/packt/terms-and-conditions">Terms &amp; Conditions</a></small></label> 
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-sm-offset-1 col-sm-5">
+                                                        <div class="checkbox">
+                                                            <label class="pl10">
+                                                                <input type="checkbox" value="" checked>
+                                                            </label>Untick this box if you don't want to receive news and promotions
+                                                        </div>
+                                                        
+                                                        
+                                                    </div>
+                                                    <div class="col-sm-5 mb20">
+                                                        <div class="g-recaptcha" data-sitekey="6Lc9ZRITAAAAAB3_JIdLV2juRqjDxoN9PZMsTq52"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wizard-footer">
+                                            <div class="pull-right">
+                                                <input type='button' class='btn btn-next btn-fill btn-primary btn-wd' name='next' value='Next' />
+                                                <a href="library-li-ns.html" type='button' class='btn btn-finish btn-fill btn-primary btn-wd'>Create Account</a>
+                        
+                                            </div>
+                                            
+                                            <div class="pull-left">
+                                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>  
+                                    </form>
+                                </div>
+                            </div> <!-- wizard container -->
+                        </div>
+                             
+                    </div>      
+                </div>
+                <!-- <div class="">
+                    <div class="col-sm-6">
+                        <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Fresh New Courses</h3>
+                                        </div>
+                                        <ul class="list-group">
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <strong>Building a Lightsaber with Raspberry Pi and a Stick</strong>
+                                                        <table class="table course-listing table-condensed"><tbody> <tr><td class="pl0"><small>By Luke Skywalker</small></td> <td><span class="badge-learn badge">Learn</span><small class="r-date">10/2015</small></td> </tr></tbody> </table>
+
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <strong>Death Star Development with Civil 3D</strong>
+                                                        <table class="table course-listing table-condensed"><tbody> <tr><td class="pl0"><small>By Sarah Connors</small></td> <td><span class="badge-master badge">Master</span><small class="r-date">11/2015</small></td> </tr></tbody> </table>
+
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <strong>Beginning Pod Racing</strong>
+                                                        <table class="table course-listing table-condensed"><tbody> <tr><td class="pl0"><small>By Jon Snow</small></td> <td><span class="badge-learn badge">Learn</span><small class="r-date">07/2015</small></td> </tr></tbody> </table>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <strong>Mastering the Dark Side</strong>
+                                                        <table class="table course-listing table-condensed"><tbody> <tr><td class="pl0"><small>By Han Solo + Leia Organa</small></td> <td><span class="badge-build badge">Build</span><small class="r-date">11/2015</small></td> </tr></tbody> </table>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <strong>Freezing people in Carbonite for Beginners</strong>
+                                                        <table class="table course-listing table-condensed"><tbody> <tr><td class="pl0"><small>By Obi Wan Kenobi</small></td> <td><span class="badge-learn badge">Learn</span><small class="r-date">06/2015</small></td> </tr></tbody> </table>
+                                                    </a>
+                                                </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Most Popular Courses</h3>
+                                        </div>
+                                        <ul class="list-group">
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <strong>Building a Lightsaber with Raspberry Pi and a Stick</strong>
+                                                        <table class="table course-listing table-condensed"><tbody> <tr><td class="pl0"><small>By Luke Skywalker</small></td> <td><span class="badge-learn badge">Learn</span><small class="r-date">10/2015</small></td> </tr></tbody> </table>
+
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <strong>Death Star Development with Civil 3D</strong>
+                                                        <table class="table course-listing table-condensed"><tbody> <tr><td class="pl0"><small>By Sarah Connors</small></td> <td><span class="badge-master badge">Master</span><small class="r-date">11/2015</small></td> </tr></tbody> </table>
+
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <strong>Beginning Pod Racing</strong>
+                                                        <table class="table course-listing table-condensed"><tbody> <tr><td class="pl0"><small>By Jon Snow</small></td> <td><span class="badge-learn badge">Learn</span><small class="r-date">07/2015</small></td> </tr></tbody> </table>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <strong>Mastering the Dark Side</strong>
+                                                        <table class="table course-listing table-condensed"><tbody> <tr><td class="pl0"><small>By Han Solo + Leia Organa</small></td> <td><span class="badge-build badge">Build</span><small class="r-date">11/2015</small></td> </tr></tbody> </table>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <strong>Freezing people in Carbonite for Beginners</strong>
+                                                        <table class="table course-listing table-condensed"><tbody> <tr><td class="pl0"><small>By Obi Wan Kenobi</small></td> <td><span class="badge-learn badge">Learn</span><small class="r-date">06/2015</small></td> </tr></tbody> </table>
+                                                    </a>
+                                                </ul>
+                                    </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
+    <script src="js/jquery.js"></script>
+    <!-- Syntax Highlighting Script -->
+    <script src="js/prism.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+    <!--   plugins   -->
+    <script src="js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+    <!--  More information about jquery.validate here: http://jqueryvalidation.org/  -->
+    <script src="js/jquery.validate.min.js"></script>
+    <!--  methods for manipulating the wizard and the validation -->
+    <script src="js/wizard.js"></script>
+</body>
+
+</html>

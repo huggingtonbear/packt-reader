@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Learning C++ by Creating Games with UE4 - Chapter 3. Looping</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="language-markup">
+
+  
+
+    <div id="wrapper">
+
+        <!-- Top Nav Bar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="library.html"><img class="brand-logo" src="images/white-packt.png"/></a>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="library.html">Library</a></li>
+                        <li><a href="https://www.packtpub.com">Store</a></li>
+                        <li class="dropdown"> 
+                        <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
+                        </a>
+                        <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li> <a href="#">View Account</a></li> 
+                            <li><a href="#">View Subscriptions</a></li> 
+                            <li><a href="#">View Licences</a></li> 
+                            <li role="separator" class="divider"></li> 
+                            <li><a href="index-lo.html">Logout</a></li> 
+                        </ul> 
+                    </li>
+                    </ul>
+                    <form class="navbar-form navbar-right search-nav-collapse">
+                        <div class="form-group pull-right" style="display:inline;">
+                            <div class="input-group">
+                              <input class="form-control" type="text" placeholder="Search the library...">
+                              <span class="input-group-btn"><a href="search.html" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></a></span>
+                            </div>
+                        </div>
+                    </form>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+                <h4 class="ml15 mt20"> Browse Categories:</h4>
+                <hr>
+                <li>    <a href="#">    Android </a>    </li>
+                <li>    <a href="#">    AngularJS   </a>    </li>
+                <li>    <a href="#">    Arduino </a>    </li>
+                <li>    <a href="#">    Blender </a>    </li>
+                <li>    <a href="#">    Bootstrap   </a>    </li>
+                <li>    <a href="#">    Django  </a>    </li>
+                <li>    <a href="#">    Docker  </a>    </li>
+                <li>    <a href="#">    Drupal  </a>    </li>
+                <li>    <a href="#">    Hadoop  </a>    </li>
+                <li>    <a href="#">    iOS </a>    </li>
+                <li>    <a href="#">    Java    </a>    </li>
+                <li class="active">    <a href="#">    JavaScript  </a>    </li>
+                <li>    <a href="#">    jQuery  </a>    </li>
+                <li>    <a href="#">    Laravel </a>    </li>
+                <li>    <a href="#">    Linux   </a>    </li>
+                <li>    <a href="#">    Machine Learning    </a>    </li>
+                <li>    <a href="#">    Node.js </a>    </li>
+                <li>    <a href="#">    OpenCV  </a>    </li>
+                <li>    <a href="#">    OpenStack   </a>    </li>
+                <li>    <a href="#">    Oracle  </a>    </li>
+                <li>    <a href="#">    PHP </a>    </li>
+                <li>    <a href="#">    Python  </a>    </li>
+                <li>    <a href="#">    QlikView    </a>    </li>
+                <li>    <a href="#">    R   </a>    </li>
+                <li>    <a href="#">    Spark   </a>    </li>
+                <li>    <a href="#">    Spring  </a>    </li>
+                <li>    <a href="#">    Swift   </a>    </li>
+                <li>    <a href="#">    Unity   </a>    </li>
+                <li>    <a href="#">    WordPress   </a>    </li>
+            </ul>
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
+        <div id="page-content-wrapper" class="book-page ng-scope">
+
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
+                <div class="col-sm-12">
+                    <div class="row">
+                        <h2>JavaScript</h2>
+                        <h5 class="hidden-xs">It's one of the cornerstones of the internet and we rely on it every day. Isn't it time you took full advantage of what JavaScript offers?</h5>
+                        <hr>
+                        <div class="panel panel-default panel-dashboard-nav hidden-xs">
+                           <ul id="myTabs" class="nav nav-pills nav-justified dashboard-nav" role="tablist">
+                                <li class="active">
+                                    <a href="#dashboard" id="dashboard-tab" role="tab" data-toggle="tab" aria-controls="about" aria-expanded="true">Featured Courses</a>
+                                </li>
+                                <li>
+                                    <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn">Video Courses</a>
+                                </li>
+                                <li>
+                                    <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail">Learning Plans (2)</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div id="myTabContent" class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="dashboard" aria-labelledby="dashboard-tab">
+                                    <div class="panel panel-default mt15">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Latest JavaScript Courses</h3>
+                                        </div>
+                                        <ul class="list-group">
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3145OS_cov.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Building a Lightsaber with Raspberry Pi and a Stick</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Luke Skywalker</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 5hrs 30min</small><small class="pull-right mr10">Jan 2015</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3602OS_0.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Death Star Development with Civil 3D</strong><span class="badge-master badge hidden-xs">Master</span><br/>
+                                                        <small class="pull-left">By Sarah Connors</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 4hrs 10min</small><small class="pull-right mr10">Feb 2011</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/2209OS_jQuery%20UI%201.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Beginning Pod Racing</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Jon Snow</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 2hrs 6min</small><small class="pull-right mr10">Mar 2013</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/0896OS_jQuery%202.0%20Developer.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Mastering the Dark Side</strong><span class="badge-build badge hidden-xs pull-right">Build</span><br/>
+                                                        <small class="pull-left">By Han Solo + Leia Organa</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 10hrs 46min</small><small class="pull-right mr10">Aug 2015</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/6709_jQuery%20for%20Designers_cov.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Freezing people in Carbonite for Beginners [Video]</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Obi Wan Kenobi</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 3hrs 5min</small><small class="pull-right mr10">Dec 2010</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                </ul>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Most Popular JavaScript Courses</h3>
+                                        </div>
+                                        <ul class="list-group">
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3145OS_cov.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Building a Lightsaber with Raspberry Pi and a Stick</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Luke Skywalker</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 5hrs 30min</small><small class="pull-right mr10">Jan 2015</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3602OS_0.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Death Star Development with Civil 3D</strong><span class="badge-master badge hidden-xs">Master</span><br/>
+                                                        <small class="pull-left">By Sarah Connors</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 4hrs 10min</small><small class="pull-right mr10">Feb 2011</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/2209OS_jQuery%20UI%201.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Beginning Pod Racing</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Jon Snow</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 2hrs 6min</small><small class="pull-right mr10">Mar 2013</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/0896OS_jQuery%202.0%20Developer.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Mastering the Dark Side</strong><span class="badge-build badge hidden-xs pull-right">Build</span><br/>
+                                                        <small class="pull-left">By Han Solo + Leia Organa</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 10hrs 46min</small><small class="pull-right mr10">Aug 2015</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/6709_jQuery%20for%20Designers_cov.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Freezing people in Carbonite for Beginners [Video]</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Obi Wan Kenobi</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 3hrs 5min</small><small class="pull-right mr10">Dec 2010</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                </ul>
+                                    </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="learn" aria-labelledby="learn-tab">
+                                
+                                    <div class="panel panel-default mt15">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Top JavaScript Videos</h3>
+                                        </div>
+                                        <ul class="list-group">
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3145OS_cov.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Building a Lightsaber with Raspberry Pi and a Stick</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Luke Skywalker</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 5hrs 30min</small><small class="pull-right mr10">Jan 2015</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3602OS_0.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Death Star Development with Civil 3D</strong><span class="badge-master badge hidden-xs">Master</span><br/>
+                                                        <small class="pull-left">By Sarah Connors</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 4hrs 10min</small><small class="pull-right mr10">Feb 2011</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/2209OS_jQuery%20UI%201.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Beginning Pod Racing</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Jon Snow</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 2hrs 6min</small><small class="pull-right mr10">Mar 2013</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/0896OS_jQuery%202.0%20Developer.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Mastering the Dark Side</strong><span class="badge-build badge hidden-xs pull-right">Build</span><br/>
+                                                        <small class="pull-left">By Han Solo + Leia Organa</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 10hrs 46min</small><small class="pull-right mr10">Aug 2015</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/6709_jQuery%20for%20Designers_cov.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Freezing people in Carbonite for Beginners [Video]</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Obi Wan Kenobi</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 3hrs 5min</small><small class="pull-right mr10">Dec 2010</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                </ul>
+                                    </div>
+                                
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="detail" aria-labelledby="detail-tab">
+                                <div class="panel panel-default mt15">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Learn the Pillars of JavaScript</h3>
+                                        </div>
+                                        <ul class="list-group">
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3145OS_cov.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Building a Lightsaber with Raspberry Pi and a Stick</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Luke Skywalker</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 5hrs 30min</small><small class="pull-right mr10">Jan 2015</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3602OS_0.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Death Star Development with Civil 3D</strong><span class="badge-master badge hidden-xs">Master</span><br/>
+                                                        <small class="pull-left">By Sarah Connors</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 4hrs 10min</small><small class="pull-right mr10">Feb 2011</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/2209OS_jQuery%20UI%201.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Beginning Pod Racing</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Jon Snow</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 2hrs 6min</small><small class="pull-right mr10">Mar 2013</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/0896OS_jQuery%202.0%20Developer.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Mastering the Dark Side</strong><span class="badge-build badge hidden-xs pull-right">Build</span><br/>
+                                                        <small class="pull-left">By Han Solo + Leia Organa</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 10hrs 46min</small><small class="pull-right mr10">Aug 2015</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/6709_jQuery%20for%20Designers_cov.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Freezing people in Carbonite for Beginners [Video]</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Obi Wan Kenobi</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 3hrs 5min</small><small class="pull-right mr10">Dec 2010</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                </ul>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Tools for every JavaScript Developer</h3>
+                                        </div>
+                                        <ul class="list-group">
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3145OS_cov.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Building a Lightsaber with Raspberry Pi and a Stick</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Luke Skywalker</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 5hrs 30min</small><small class="pull-right mr10">Jan 2015</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/3602OS_0.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Death Star Development with Civil 3D</strong><span class="badge-master badge hidden-xs">Master</span><br/>
+                                                        <small class="pull-left">By Sarah Connors</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 4hrs 10min</small><small class="pull-right mr10">Feb 2011</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/2209OS_jQuery%20UI%201.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Beginning Pod Racing</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Jon Snow</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 2hrs 6min</small><small class="pull-right mr10">Mar 2013</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/0896OS_jQuery%202.0%20Developer.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Mastering the Dark Side</strong><span class="badge-build badge hidden-xs pull-right">Build</span><br/>
+                                                        <small class="pull-left">By Han Solo + Leia Organa</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 10hrs 46min</small><small class="pull-right mr10">Aug 2015</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                    <a href="front-page.html" class="list-group-item list-name">
+                                                        <!--<img src="https://www.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/6709_jQuery%20for%20Designers_cov.jpg" class="cover-image-thumb"/>-->
+                                                        <strong>Freezing people in Carbonite for Beginners [Video]</strong><span class="badge-learn badge hidden-xs pull-right">Learn</span><br/>
+                                                        <small class="pull-left">By Obi Wan Kenobi</small>
+                                                        <br/>
+                                                        <small class="pull-left title-duration"><i class="fa fa-clock-o mr5"></i> 3hrs 5min</small><small class="pull-right mr10">Dec 2010</small>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </a>
+                                                </ul>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div id="footer" class="visible-xs">
+      <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
+      <div class="row" id="bottomNav" role="tablist">
+        <div class="col-xs-4 text-center"><a href="#dashboard" id="dashboard-tab" role="tab" data-toggle="tab" aria-controls="about" aria-expanded="true"><i class="fa fa-star mobile-nav-icon fa-2x"></i></a></div>
+        <div class="col-xs-4 text-center"><a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn"><i class="fa fa-play-circle mobile-nav-icon fa-2x"></i></a></div>
+        <div class="col-xs-4 text-center"><a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail"><i class="fa fa-list-ul mobile-nav-icon fa-2x"></i></a></div>
+      </div>
+      </div>
+    </div
+>>
+    <!-- /#wrapper -->
+
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
+    <script src="js/jquery.js"></script>
+    <!-- Syntax Highlighting Script -->
+    <script src="js/prism.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+
+</body>
+
+</html>
