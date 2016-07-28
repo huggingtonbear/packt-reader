@@ -13,19 +13,24 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
     <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
     <!-- Prism -->
     <link rel="stylesheet" href="css/prism.css">
 
     <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -38,13 +43,46 @@
 </head>
 
 <body class="language-markup">
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header python">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <img class="tech-icon img-thumbnail" src="images/tech/python.png"> 
+                                    <h1 class="card-heading">Python Fundamentals </h1>
+      </div>
+      <div class="modal-body python">
+        <div class="panel-body">
+            <div class="col-sm-12">
+              <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
+              <hr>
+            </div>
 
+            <div class="col-sm-12 left-skillcard mb20">
+                  <ul class="learning-points">
+                    <li>Install and set up Python on Mac, Windows or Linux</li>
+                    <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                    <li>Use Git to manage your Python code</li>
+                    <li>Write Python scripts to automate daily tasks, and other software</li>
+                    <li>Use unit tests to write better code, faster</li>
+                  </ul>
+              <a href="dashboard2.html" class="btn btn-success ml55 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer python">
+        <a href="dashboard.html" class="btn btn-primary">Add to In Progress<i class="fa fa-refresh ml10"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
   
 
     <div id="wrapper">
 
         <!-- Top Nav Bar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -53,13 +91,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="library.html"><img class="brand-logo" src="images/white-packt.png"/></a>
-                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>                </div>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                  <a class="brand-logo" href="dashboard.html"><img src="images/logo.png"></a>
+                </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class=""><a href="library.html">Library</a></li>
-                        <li><a href="https://www.packtpub.com">Store</a></li>
-                        <li class="dropdown"> 
+                        <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
                         <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -77,8 +114,8 @@
                     <form class="navbar-form navbar-right search-nav-collapse">
                         <div class="form-group pull-right" style="display:inline;">
                             <div class="input-group">
-                              <input class="form-control" type="text" placeholder="Search the library...">
-                              <span class="input-group-btn"><a href="search.html" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></a></span>
+                              <input class="form-control" type="text" placeholder="&#xf002;  Search the library...">
+                              
                             </div>
                         </div>
                     </form>
@@ -89,69 +126,88 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                <h4 class="ml15 mt20"> Browse Categories:</h4>
-                <hr>
-                <li>    <a href="tech-page.html">    Android </a>    </li>
-                <li>    <a href="tech-page.html">    AngularJS   </a>    </li>
-                <li>    <a href="tech-page.html">    Arduino </a>    </li>
-                <li>    <a href="tech-page.html">    Blender </a>    </li>
-                <li>    <a href="tech-page.html">    Bootstrap   </a>    </li>
-                <li>    <a href="tech-page.html">    Django  </a>    </li>
-                <li>    <a href="tech-page.html">    Docker  </a>    </li>
-                <li>    <a href="tech-page.html">    Drupal  </a>    </li>
-                <li>    <a href="tech-page.html">    Hadoop  </a>    </li>
-                <li>    <a href="tech-page.html">    iOS </a>    </li>
-                <li>    <a href="tech-page.html">    Java    </a>    </li>
-                <li>    <a href="tech-page.html">    JavaScript  </a>    </li>
-                <li>    <a href="tech-page.html">    jQuery  </a>    </li>
-                <li>    <a href="tech-page.html">    Laravel </a>    </li>
-                <li>    <a href="tech-page.html">    Linux   </a>    </li>
-                <li>    <a href="tech-page.html">    Machine Learning    </a>    </li>
-                <li>    <a href="tech-page.html">    Node.js </a>    </li>
-                <li>    <a href="tech-page.html">    OpenCV  </a>    </li>
-                <li>    <a href="tech-page.html">    OpenStack   </a>    </li>
-                <li>    <a href="tech-page.html">    Oracle  </a>    </li>
-                <li>    <a href="tech-page.html">    PHP </a>    </li>
-                <li>    <a href="tech-page.html">    Python  </a>    </li>
-                <li>    <a href="tech-page.html">    QlikView    </a>    </li>
-                <li>    <a href="tech-page.html">    R   </a>    </li>
-                <li>    <a href="tech-page.html">    Spark   </a>    </li>
-                <li>    <a href="tech-page.html">    Spring  </a>    </li>
-                <li>    <a href="tech-page.html">    Swift   </a>    </li>
-                <li>    <a href="tech-page.html">    Unity   </a>    </li>
-                <li>    <a href="tech-page.html">    WordPress   </a>    </li>
+              <li><a href="index.html" class="sidenav-menu-holder"><span class="sidenav-menu">Resume Course </span><span class="pull-right mr5"></span></a></li>
+                    <li class=""><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Map</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
+                    <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-right mr5"><i class="fa fa-caret-down fa-lg"></i></span></a>    </li>
+                    <li class="sub-nav active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library</span><span class="pull-right mr5"></span></a>    </li>
+                    <li class="sub-nav"><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">Bookmarks </span><span class="pull-right mr5">6</span></a>    </li>
+                    <li class="sub-nav"><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">Saved </span><span class="pull-right mr5">12</span></a>    </li>
+                    <li class="sub-nav"><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchased  </span><span class="pull-right mr5">7</span></a>    </li>
             </ul>
+
         </div>
 
         <!-- /#sidebar-wrapper -->
 
-        <div id="page-content-wrapper" class="book-page ng-scope">
-
-    <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="col-sm-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8 ">
-                    
-                    <div class="row">
-                        <h2>404 - Page not found</h2>
-                        <hr>
-                        <h4 class="mb20"> We're not sure what happened there, but one of the following may have happened...</h4>
-                        <ul>
-                            <li> The page you are trying to find no longer exists</li>
-                            <li> The content you are trying to access hasn't been published yet </li>
-                            <li> You entered the URL incorrectly </li>
-                            <li> We accidentally linked you to something that doesn't exist (our bad) </li>
-                        </ul>
-                        <br>
-                        <span class="hidden-xs"><a href="library.html" class="btn btn-primary pull-right">Take me back to the Dashboard</a></span>
-                        <span class="visible-xs"><a href="library.html" class="btn btn-primary btn-block btn-lg">Back to Dashboard</a></span>
-                    </div>
-
-</div></div>
+        <div id="page-content-wrapper" class="">
+            <div class="jumbotron heading">
+                <div class="container-fluid">
+                  <div class="col-sm-12">
+                    <h1>404</h1>
+                    <ol class="breadcrumb row mt0">
+                      <li class="active mt5">Page not found</li>
+                    </ol>
+                  </div>
                 </div>
-</div>
-</div>
+            </div>
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
+                <div class="row">
+                  <div class="">
+                      <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
 
-    </div>
-    <!-- /#wrapper -->
+                        <div class="panel panel-default">
+                          <!-- Default panel contents -->
+                          <div class="panel-heading"><h4 class="panel-title">Browse Topics</h4></div>
+                          <ul class="list-group">
+                            <a class="list-group-item" href="tech-page.html">    Android </a>    
+                            <a class="list-group-item" href="tech-page.html">    AngularJS   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Arduino </a>    
+                            <a class="list-group-item" href="tech-page.html">    Blender </a>    
+                            <a class="list-group-item" href="tech-page.html">    Bootstrap   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Django  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Docker  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Drupal  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Hadoop  </a>    
+                            <a class="list-group-item" href="tech-page.html">    iOS </a>    
+                            <a class="list-group-item" href="tech-page.html">    Java    </a>    
+                            <a class="list-group-item" href="tech-page.html">    JavaScript  </a>    
+                            <a class="list-group-item" href="tech-page.html">    jQuery  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Laravel </a>    
+                            <a class="list-group-item" href="tech-page.html">    Linux   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Machine Learning    </a>    
+                            <a class="list-group-item" href="tech-page.html">    Node.js </a>    
+                            <a class="list-group-item" href="tech-page.html">    OpenCV  </a>    
+                            <a class="list-group-item" href="tech-page.html">    OpenStack   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Oracle  </a>    
+                            <a class="list-group-item" href="tech-page.html">    PHP </a>    
+                            <a class="list-group-item" href="tech-page.html">    Python  </a>    
+                            <a class="list-group-item" href="tech-page.html">    QlikView    </a>    
+                            <a class="list-group-item" href="tech-page.html">    R   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Spark   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Spring  </a>    
+                            <a class="list-group-item" href="tech-page.html">    Swift   </a>    
+                            <a class="list-group-item" href="tech-page.html">    Unity   </a>    
+                            <a class="list-group-item" href="tech-page.html">    WordPress   </a>    
+                          </ul>
+                        </div> 
+                      </div>
+                      <div class="col-sm-9 col-lg-7 col-xl-8">
+                          <h5>We're not sure what happened there, but one of the following may have happened...</h5>
+                          <ul>
+                                <li> The page you are trying to find no longer exists</li>
+                                <li> The content you are trying to access hasn't been published yet </li>
+                                <li> You entered the URL incorrectly </li>
+                                <li> We accidentally linked you to something that doesn't exist (our bad) </li>
+                            </ul>
+                            <a href="library.html" class="btn btn-info mt30 pull-right btn-lg">Take me back to the Library</a>
+                      </div>
+                    </div>
+                </div><!-- row -->
+      </div>
+            </div><!-- /#book-wrapper -->
+        </div><!-- /#page-content-wrapper -->
+    </div><!-- /#wrapper -->
+    
 
     <!-- JAVASCRIPT BLOCKS -->
 

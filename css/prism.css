@@ -1,4 +1,4 @@
-/* http://prismjs.com/download.html?themes=prism-coy&languages=markup+css+clike+javascript+abap+actionscript+apacheconf+apl+applescript+asciidoc+aspnet+autoit+autohotkey+bash+basic+batch+c+brainfuck+bison+csharp+cpp+coffeescript+ruby+css-extras+d+dart+diff+docker+eiffel+elixir+erlang+fsharp+fortran+gherkin+git+glsl+go+groovy+haml+handlebars+haskell+haxe+http+icon+inform7+ini+j+jade+java+json+julia+keyman+kotlin+latex+less+lolcode+lua+makefile+markdown+matlab+mel+mizar+monkey+nasm+nginx+nim+nix+nsis+objectivec+ocaml+oz+parigp+parser+pascal+perl+php+php-extras+powershell+processing+prolog+puppet+pure+python+q+qore+r+jsx+rest+rip+roboconf+crystal+rust+sas+sass+scss+scala+scheme+smalltalk+smarty+sql+stylus+swift+tcl+textile+twig+typescript+verilog+vhdl+vim+wiki+yaml */
+/* http://prismjs.com/download.html?themes=prism-coy&languages=markup+css+clike+javascript+c+cpp+objectivec+php+yaml */
 /**
  * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
@@ -8,13 +8,12 @@
 code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
-	background: none;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	direction: ltr;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
-	word-wrap: normal;
 	line-height: 1.5;
 
 	-moz-tab-size: 4;
@@ -31,9 +30,6 @@ pre[class*="language-"] {
 pre[class*="language-"] {
 	position: relative;
 	margin: .5em 0;
-	-webkit-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
-	-moz-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
-	box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
 	border-left: 10px solid #358ccb;
 	background-color: #fdfdfd;
 	background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
@@ -43,15 +39,15 @@ pre[class*="language-"] {
 	background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
 	background-size: 3em 3em;
 	background-origin: content-box;
-	overflow: visible;
-	padding: 0;
+	overflow: auto;
+	overflow-x: hidden;
+	max-height: 30em;
 }
 
 code[class*="language"] {
 	max-height: inherit;
 	height: 100%;
-	padding: 0 1em;
-	display: block;
+	display: inline;
 	overflow: auto;
 }
 
@@ -76,8 +72,6 @@ pre[class*="language-"] {
 	border-radius: 0.3em;
 	color: #c92c2c;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	display: inline;
-	white-space: normal;
 }
 
 pre[class*="language-"]:before,
@@ -90,10 +84,6 @@ pre[class*="language-"]:after {
 	left: 0.18em;
 	width: 40%;
 	height: 20%;
-	max-height: 13em;
-	-webkit-box-shadow: 0px 13px 8px #979797;
-	-moz-box-shadow: 0px 13px 8px #979797;
-	box-shadow: 0px 13px 8px #979797;
 	-webkit-transform: rotate(-2deg);
 	-moz-transform: rotate(-2deg);
 	-ms-transform: rotate(-2deg);
@@ -234,6 +224,3 @@ pre[data-line] code {
 pre .line-highlight {
 	margin-top: 0;
 }
-
-DOWNLOAD CSS
-Handcrafted with ♥, by Lea Verou, Golmote & all these awes

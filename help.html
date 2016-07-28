@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+    <link rel="apple-touch-icon" sizes="57x57" href="/packtlib-nv/images/apple-icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/packtlib-nv/images/apple-icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/packtlib-nv/images/apple-icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/packtlib-nv/images/apple-icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/packtlib-nv/images/apple-icons/apple-icon-180x180.png">
+
+    <title>Mapt - Developer Skills Delivered</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="language-markup">
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4>Add to Completed Skills</h4>
+      </div>
+      <div class="modal-body">
+              <p>Are you sure you want to mark this Skill as complete and remove it from your Plan</p>
+      </div>
+      <div class="modal-footer">
+        <button id="myButton" href="#myDiv" type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <div id="wrapper">
+
+        <!-- Top Nav Bar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                  <a class="brand-logo" href="dashboard.html"><img src="images/logo.png"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
+                        </a>
+                        <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li> <a href="#">View Account</a></li> 
+                            <li><a href="#">View Subscriptions</a></li> 
+                            <li><a href="#">View Licences</a></li> 
+                            <li role="separator" class="divider"></li> 
+                            <li><a href="dashboard-lo.html">Logout</a></li> 
+                        </ul> 
+                    </li>
+                    </ul>
+                    <form class="navbar-form navbar-right search-nav-collapse">
+                        <div class="form-group pull-right" style="display:inline;">
+                            <div class="input-group">
+                              <input class="form-control" type="text" placeholder="&#xf002;  Search the library...">
+                              
+                            </div>
+                        </div>
+                    </form>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+              <li><a href="index.html" class="sidenav-menu-holder"><span class="sidenav-menu">Resume Course </span><span class="pull-right mr5"></span></a></li>
+                    <li class=""><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Map</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
+                    <li class=""><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
+                    <li class=""><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Account</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
+                    <li class="active"><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-right mr5"><i class="fa fa-caret-down fa-lg"></i></span></a>    </li>
+                    <li class="sub-nav active"><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">FAQs </span></a>    </li>
+                    
+            </ul>
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
+        <div id="page-content-wrapper" class="">
+            <div class="jumbotron heading mb0">
+                <div class="container-fluid">
+                  <div class="col-sm-12">
+                    <h1 >FAQs</h1>
+
+                    <ol class="breadcrumb row mt0">
+                      <li class="mt5">Stuck on a problem? Our FAQs answer the most frequent questions that people have</li>
+                    </ol>
+                    <!-- <div class="progress mb0">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                        <span class="sr-only">40% Complete</span>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+            </div>
+            <div id="book-wrapper" class="container-fluid">               
+                <div class="row">
+                  <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt30">
+                    <h4>What is a Skill Plan?</h5>
+                    <p>Skill Plans are made up of Skill Cards that have been curated based on real-world data from over 20,000 surveyed developers and extensive research. Chances are that you're already a professional developer and know the basics, but Skill Plans show you the most important things you need to know in your field to keep up with the market and stay ahead of the competiton, providing the best possible resources to get you up to speed fast.</p>
+                    <hr>
+                    <h4>What is a Skill Card?</h5>
+                    <p>A skill card is a unit of focused content which represents a specific real world skill, and contains a curated selection of learning materials designed to deliver the best possible route towards acquiring a new skill. Skill cards help you put your skills in context, and combined with skill plans give you a clear visual roadmap on how to continue progressing for professional development, or simply to grow your individual skills. Completing a skill card contributes towards your overall progression which you can view via the dashboard progress tracker, allowing you to see exactly where your skills are, and where to go next.</p>
+                    <hr>
+                    <h4>Can I change my Skill Plan?</h5>
+                    <p>Once you have selected a Skill Plan, you are free to browse the other Skill Plans we have available by accessing 'Skill Plans' in the main navigation. We know as well as you do that the developer market is always changing and that most skills have multiple applications. As a result, if you've already completed certain Skills you may find that you inadvertantly increase your competancy in a different role. The skills you've completed are saved, so you don't need to worry about losing any progress. </p>
+                    <hr>
+                    <h4>How do I use my Free Course Token?</h5>
+                    <p>Mapt Subscribers receive a Free Course token every month and can unlock further tokens by using their Monthly Progress Tracker. They can be redeemed in the Courses Library by selecting the 'Buy eBook' or 'Buy Video' buttons within courses. Simply select 'Claim using Token' from the drop menu and the Course will be automatically added to your 'Purchases' within Courses.</p>
+                    <hr>
+                    <h4>What's included within a paid subscription to Mapt?</h5>
+                    <p>Paid Subscribers to Mapt can access over 3,500 eBook and video courses on demand. With content from industry leading authors, our content is trusted and practical, giving you exactly what you need to get the job done. Subscribers will also receive a FREE monthly Course Token that they can redeem for any Course in the library, enabling them to download and keep a Course forever. They will also be able to unlock further Tokens by using the Monthly Progress Tracker.</p>
+                    <hr>
+                    <h4>What is the Monthly Progress Tracker?</h5>
+                    <p>Our tracker empowers you to make time for learning, letting you visualize your progress - and motivating you to hit your monthly goal to unlock an additional free eBook or video to download. Simply complete 25 sections of Courses and spend longer than 4hrs learning in a month to unlock your bonus Token.</p>
+                    <hr>
+                    <p>If you have any comments about Mapt then please contact our support team at <a href="mailto:maptsupport@packtpub.com">maptsupport@packtpub.com</a>
+                  </div>
+                          
+
+                  </div><!-- row -->
+      </div><!-- /#book-wrapper -->
+    </div><!-- /#page-content-wrapper -->
+  </div><!-- /#wrapper -->
+    
+
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
+    <script src="js/jquery.js"></script>
+    <!-- Syntax Highlighting Script -->
+    <script src="js/prism.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+    <script type="text/javascript">
+    $("#myButton").click(function() {
+         $("#myDiv").fadeTo("slow", 0.01, function(){ //fade
+             $(this).slideUp("slow", function() { //slide up
+                 $(this).remove(); //then remove from the DOM
+                });
+             });
+    });
+    </script>
+</body>
+
+</html>

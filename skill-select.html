@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+    <link rel="apple-touch-icon" sizes="57x57" href="/packtlib-nv/images/apple-icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/packtlib-nv/images/apple-icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/packtlib-nv/images/apple-icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/packtlib-nv/images/apple-icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/packtlib-nv/images/apple-icons/apple-icon-180x180.png">
+
+    <title>Mapt - Developer Skills Delivered</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="language-markup">
+  <!-- Modal -->
+<div class="modal fade" id="completeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4>Add to Completed Skill Cards</h4>
+      </div>
+      <div class="modal-body">
+              <p>Are you sure you want to mark this Skill Card as complete</p>
+      </div>
+      <div class="modal-footer">
+        <button id="myButton" href="#myDiv" type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4>Remove from Completed</h4>
+      </div>
+      <div class="modal-body">
+              <p>Are you sure you want to remove this Skill Card</p>
+      </div>
+      <div class="modal-footer">
+        <button id="myButton" href="#myDiv" type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <div id="wrapper">
+
+        <!-- Top Nav Bar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                  <a class="brand-logo" href="dashboard.html"><img src="images/logo.png"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
+                        </a>
+                        <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li> <a href="#">View Account</a></li> 
+                            <li><a href="#">View Subscriptions</a></li> 
+                            <li><a href="#">View Licences</a></li> 
+                            <li role="separator" class="divider"></li> 
+                            <li><a href="library-lo.html">Logout</a></li> 
+                        </ul> 
+                    </li>
+                    </ul>
+                    <form class="navbar-form navbar-right search-nav-collapse">
+                        <div class="form-group pull-right" style="display:inline;">
+                            <div class="input-group">
+                              <input class="form-control" type="text" placeholder="&#xf002;  Search the library...">
+                              
+                            </div>
+                        </div>
+                    </form>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+              <li><a href="index.html" class="sidenav-menu-holder"><span class="sidenav-menu">Resume Course </span><span class="pull-right mr5"></span></a></li>
+                    <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Map</span><span class="pull-right mr5"><i class="fa fa-caret-down fa-lg"></i></span></a>    </li>
+                    <li class="sub-nav"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Skill Plan</span><span class="pull-right mr5">3</span></a>    </li>
+                    <li class="sub-nav active"><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Cards </span><span class="pull-right mr5">6</span></a>    </li>
+                    <li class="sub-nav"><a href="usage.html" class="sidenav-menu-holder"><span class="sidenav-menu">Progress </span><span class="pull-right mr5"></span></a>    </li>
+                    <li class="sub-nav"><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Plans </span></a>    </li>
+                    <li class=""><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
+                    <li class=""><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Account</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
+                    <li class=""><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
+
+                    
+            </ul>
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
+        <div id="page-content-wrapper" class="">
+            <div class="jumbotron heading mb0">
+                <div class="container-fluid">
+                  <div class="col-sm-12">
+                    <h1 >Skill Cards</h1>
+
+                    <ol class="breadcrumb row mt0">
+                      <li class="mt5">Keep track of the skills you have learned</li>
+                    </ol>
+                    <!-- <div class="progress mb0">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                        <span class="sr-only">40% Complete</span>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+            </div>
+            <div id="book-wrapper" class="container-fluid">               
+                <div class="row">
+                            <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
+                              <div class="panel panel-default mt30">
+                                <!-- Default panel contents -->
+                                <div class="panel-heading"><h4 class="panel-title">Filters</h4></div>
+                                <ul class="list-group">
+                                 <a class="list-group-item" href="dashboard-profile.html">    Complete </a>  
+                                  <a class="list-group-item active" href="skill-select.html">    Incomplete </a>             
+                                </ul>
+                              </div> 
+                              <div class="panel panel-default mt30">
+                                <!-- Default panel contents -->
+                                <div class="panel-heading"><h4 class="panel-title">Categories</h4></div>
+                                <ul class="list-group">
+                                  <a class="list-group-item active" href="roles-2.html">    Python </a>
+                                  <a class="list-group-item" href="roles-2.html">    Django </a>   
+                                  <a class="list-group-item" href="roles-2.html">    Data Science </a> 
+                                  <a class="list-group-item" href="roles-2.html">    Java </a>   
+                                  <a class="list-group-item" href="roles-2.html">    Android </a>  
+                                  <a class="list-group-item" href="roles-2.html">    Git </a>     
+                                  <a class="list-group-item" href="roles-2.html">    Jira </a> 
+                                  <a class="list-group-item" href="roles-2.html">    Swift </a> 
+                                  <a class="list-group-item" href="roles-2.html">    iOS </a>  
+                                  <a class="list-group-item" href="roles-2.html">    Big Data </a>      
+                                  <a class="list-group-item" href="roles-2.html">    Machine Learning </a>   
+                                  <a class="list-group-item" href="roles-2.html">    Web Design </a>  
+                                  <a class="list-group-item" href="roles-2.html">    AngularJS </a>    
+                                  <a class="list-group-item" href="roles-2.html">    JavaScript </a>    
+                                  <a class="list-group-item" href="roles-2.html">    TypeScript </a>      
+                                  <a class="list-group-item" href="roles-2.html">    NodeJS </a>        
+                                  <a class="list-group-item" href="roles-2.html">    Mongo DB </a>   
+                                  <a class="list-group-item" href="roles-2.html">    MEAN </a>
+                                  <a class="list-group-item" href="roles-2.html">    DevOps </a>  
+                                  <a class="list-group-item" href="roles-2.html">    Linux </a>
+                                  <a class="list-group-item" href="roles-2.html">    Docker </a>  
+                                  <a class="list-group-item" href="roles-2.html">    Mesos </a>     
+                                  <a class="list-group-item" href="roles-2.html">    Ansible </a> 
+                                  <a class="list-group-item" href="roles-2.html">    Puppet </a> 
+                                  <a class="list-group-item" href="roles-2.html">    Chef </a>
+                                  <a class="list-group-item" href="roles-2.html">    AWS </a> 
+                                  <a class="list-group-item" href="roles-2.html">    Hadoop </a>   
+                                  <a class="list-group-item" href="roles-2.html">    Cassandra </a> 
+                                  <a class="list-group-item" href="roles-2.html">    Solr </a> 
+                                  <a class="list-group-item" href="roles-2.html">    Spark </a> 
+                                  <a class="list-group-item" href="roles-2.html">    Storm </a>  
+                                  <a class="list-group-item" href="roles-2.html">    C# </a>    
+                                  <a class="list-group-item" href="roles-2.html">    Xamarin </a>  
+                                  <a class="list-group-item" href="roles-2.html">    Unity </a>  
+                                  <a class="list-group-item" href="roles-2.html">    Powershell </a>   
+                                  <a class="list-group-item" href="roles-2.html">    Ethical Hacking </a>                              
+                                </ul>
+                              </div> 
+                            </div>
+                            <div class="col-sm-9 col-lg-7 col-xl-8">
+
+                                    <div class="mt30">
+                                      <input type="text" class="form-control mb30 input-lg" placeholder="&#xf002; Search Skill Cards">
+                                      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default" id="myDiv">
+                                          <div class="panel-heading clickable card-header" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                              <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/>
+                                              <span class="card-heading mb5 mt0">Python Fundamentals</span>
+                                          </div>
+                                          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                              <div class="panel-body">
+                                                <div class="card-desc">
+                                                  <p><i class="fa fa-info-circle mr5" aria-hidden="true"></i>Gaining insight from your data is one of the most important tasks for any Python developer. There will never be a scenario or situation you find yourself in when it’s not useful to make data-driven decisions in the interests or your clients or users. From web developers to Machine Learning Engineers, you can achieve a lot with some simple data analysis skills</p>
+                                                </div>
+                                                <hr>
+                                                <div class="dashboard-skillcard">
+                                                  <h5 class="ml15">You know how to...</h5>
+                                                  <ul class="learning-points mt20">
+                                                      <li>Analyze and visualize data with pandas, NumPy, matplotlib, and seaborn through iPython and the Jupyter notebook</li>
+                                                      <li>Perform highly-efficient numerical computations with Numba, Cython, and ipyparallel</li>
+                                                      <li>Use the basics of data exploration and analysis to extract insight from your data</li>
+                                                  </ul>
+                                                  <div class="ml15 mb30 mt20">
+                                                      
+                                                      <div class="text-center">
+                                                        <a href="#" data-toggle="modal" data-target="#completeModal" class="btn btn-primary pull-left">I know all of this<i class="fa fa-check ml10"></i></a>
+                                                        <a data-toggle="modal" data-target="#myModal" class="btn btn-info pull-right mb5 pl25 pr25 disabled"><i class="fa fa-refresh mr10"></i>In Skill Plan</a>
+                                                      </div>
+                                                    </div>
+                                                  <div class="clearfix"></div>
+                                                </div>
+                                              </div>
+                                          </div>  
+                                          <div class="panel-footer card-footer">
+                                          </div>
+                                        </div>
+                                        <!-- Panel -->
+                                        <div class="panel panel-default" id="myDiv">
+                                          <div class="panel-heading clickable card-header" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                              <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/>
+                                              <span class="card-heading mb5 mt0">Python High Performance Programming</span>
+                                          </div>
+                                          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                              <div class="panel-body">
+                                                <div class="card-desc">
+                                                  <p><i class="fa fa-info-circle mr5" aria-hidden="true"></i>Object-oriented programming is a powerful design paradigm that allows you to manipulate data and behavior together by creating objects. Understanding how to write Object-Oriented code is an important part of Python programming, as it allows you to stop writing simple scripts, and start creating more complex programs.</p>
+                                                </div>
+                                                <hr>
+                                                <div class="dashboard-skillcard">
+                                                  <h5 class="ml15">You know how to...</h5>
+                                                  <ul class="learning-points mt20">
+                                                      <li>Implement objects in Python by creating classes and defining methods</li>
+                                                      <li>Write concurrent Python code with asyncio</li>
+                                                      <li>Utilize different design patterns for the _init_() method</li>
+                                                      <li>Map Python objects to a SQL database using the built-in SQLite module</li>
+                                                      <li>Perform object serialization in formats such as JSON, YAML, Pickle, CSV, and XML</li>
+                                                  </ul>
+                                                  <div class="ml15 mb30 mt20">
+                                                     
+                                                       <div class="text-center">
+                                                        <a href="#" data-toggle="modal" data-target="#completeModal" class="btn btn-primary pull-left">I know all of this<i class="fa fa-check ml10"></i></a>
+                                                        <a data-toggle="modal" data-target="#myModal" class="btn btn-info pull-right mb5 pl25 pr25 disabled"><i class="fa fa-refresh mr10"></i>In Skill Plan</a>
+                                                      </div>
+                                                    </div>
+                                                  <div class="clearfix"></div>
+                                                </div>
+                                              </div>
+                                          </div>  
+                                          <div class="panel-footer card-footer">
+                                          </div>
+                                        </div>
+                                        <!-- Panel -->
+                                        <div class="panel panel-default" id="myDiv">
+                                          <div class="panel-heading clickable card-header" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                              <img class="tech-icon drop hidden-xs" src="images/tech/python.png"/>
+                                              <span class="card-heading mb5 mt0">Experimental Python</span>
+                                          </div>
+                                          <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                              <div class="panel-body">
+                                                <div class="card-desc">
+                                                  <p><i class="fa fa-info-circle mr5" aria-hidden="true"></i>Testing is vital to the smooth-running of any application. Python code is no different. Creating Test-Driven applications puts testing at the heart of your development process, making sure you applications are ready to deploy more efficiently.</p>
+                                                </div>
+                                                <hr>
+                                                <div class="dashboard-skillcard">
+                                                  <h5 class="ml15">You know how to...</h5>
+                                                  <ul class="learning-points mt20">
+                                                      <li>Understand and implement the test-driven development process in your Python applications</li>
+                                                      <li>Effectively add features to your existing Python projects that don’t have unit tests</li>
+                                                      <li>Integrate unit testing into the overall software delivery process</li>
+                                                  </ul>
+                                                       <div class="text-center">
+                                                      <a href="#" data-toggle="modal" data-target="#completeModal" class="btn btn-primary pull-left">I know all of this<i class="fa fa-check ml10"></i></a>
+                                                        <a data-toggle="modal" data-target="#myModal" class="btn btn-info pull-right mb5 pl25 pr25 disabled"><i class="fa fa-refresh mr10"></i>In Skill Plan</a>
+                                                      </div>
+                                                  <div class="clearfix"></div>
+                                                </div>
+                                              </div>
+                                          </div>  
+                                          <div class="panel-footer card-footer">
+                                          </div>
+                                        </div><!-- Panel -->
+                                      </div><!-- Panel group -->
+                                    </div> <!-- col-sm-12 -->
+
+
+                              </div>
+                          </div>
+                          
+
+                  </div><!-- row -->
+      </div><!-- /#book-wrapper -->
+    </div><!-- /#page-content-wrapper -->
+  </div><!-- /#wrapper -->
+    
+
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
+    <script src="js/jquery.js"></script>
+    <!-- Syntax Highlighting Script -->
+    <script src="js/prism.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+    <script type="text/javascript">
+    $("#myButton").click(function() {
+         $("#myDiv").fadeTo("slow", 0.01, function(){ //fade
+             $(this).slideUp("slow", function() { //slide up
+                 $(this).remove(); //then remove from the DOM
+                });
+             });
+    });
+    </script>
+</body>
+
+</html>

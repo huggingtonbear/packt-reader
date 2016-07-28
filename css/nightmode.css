@@ -1,102 +1,106 @@
-body,h1,h2,h3,h4,h5,p {
-	background:#1B1C1E;
-	color:#fff;
-}
-.reader-container h3.title {
-	color: #fff;
-}
-.orderedlist {
-	background: #333;
-	border-left: 15px solid #555;
-}
-.informaltable table thead tr p{
-    background: #456F9E;
-}
-.informaltable table tbody tr{
-	background: #1B1C1E;
-}
-.informaltable table tbody td {
-    border: 1px solid #3E3E3E;
-}
-.itemizedlist {
-	background: #333;
-	border-left: solid 15px #456F9E;
-}
-.itemizedlist p, .itemizedlist a {
-	background: #333;
-}
-.orderedlist p,.orderedlist a {
-	background: #333;
-}
 
-.navbar-default {
-	background-color: #1B1C1E;
+body.nightmode .spinner-overlay.bookpage {
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    filter: invert(100%);
+}
+body.nightmode, body.nightmode h1, body.nightmode h2, body.nightmode h3, body.nightmode h4, body.nightmode h5 {
+    background:#1B1C1E;
+    color:#fff;
+}
+body.nightmode .navbar-default {
+    background-color: #1B1C1E;
     border-color: rgba(255,255,255,0.2);
 }
 
-#sidebar-wrapper {
-	background-color: #2C2E31;
-}
-
-.sidebar-nav>.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
-   	background-color: #2C2E31;
-   	color: white;
-}
-
-.navbar-default .navbar-toggle {
+body.nightmode .navbar-default .navbar-toggle {
     border-color: #fff;
 }
-
-.sidebar-nav li a {
-	color: #fff;
-}
-
-.btn-default {
+body.nightmode .btn-default {
     color: #fff;
     background-color: #1B1C1E;
     border-color: rgba(255,255,255,0.5);
 }
-
-.nightmode .reader-container .home-body,  #page-content-wrapper.nightmode.book-page {
-	background:#1B1C1E;
-	color:#fff !important;
+body.nightmode .nightmode .reader-container .home-body, body.nightmode .book-page {
+    background:#1B1C1E !important;
+    color:#fff;
 }
-.nightmode .reader-container .panel {
-   background: #1B1C1E ;
+body.nightmode .jumbotron.heading, body.nightmode .jumbotron.heading h1 {
+    background:#1B1C1E !important;
+    color:#fff;
 }
-
-.nightmode .reader-container code {
+body.nightmode .reader-container .panel {
+   background: #1B1C1E;
+}
+body.nightmode .reader-container code {
     background-color: #333333;
     border: 1px solid #CCCCCC;
+    color: #45b29d;
     padding-left: 5px;
     padding-right: 5px;
+} 
+body.nightmode .reader-container code[class*="language-"],
+body.nightmode .reader-container pre[class*="language-"] {
+    color: #f8f8f2;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+body.nightmode .modal-content {
+    background-color: #1B1C1E;
 }
 
-.nightmode .reader-container code[class*="language-"],
-.nightmode .reader-container pre[class*="language-"] {
-	color: #f8f8f2;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-
+body.nightmode .reader-container h3.title {
+    color: #fff;
 }
-​
+body.nightmode .orderedlist {
+    background: #333;
+    border-left: 15px solid #555;
+}
+body.nightmode .informaltable table thead tr p {
+    background: #456F9E;
+}
+body.nightmode .informaltable table tbody tr {
+    background: #1B1C1E;
+}
+body.nightmode .informaltable table tbody td {
+    border: 1px solid #3E3E3E;
+}
+body.nightmode .itemizedlist {
+    background: #333;
+    border-left: solid 15px #456F9E;
+}
+body.nightmode .itemizedlist p, body.nightmode .itemizedlist a {
+    background: #333;
+}
+body.nightmode .orderedlist p, body.nightmode .orderedlist a {
+    background: #333;
+}
 /* Code blocks */
-.nightmode .reader-container pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
-	border-radius: 0.3em;
+body.nightmode .reader-container pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    border-radius: 0.3em;
 }
-​
-.nightmode .reader-container :not(pre) > code[class*="language-"],
-.nightmode pre[class*="language-"] {
-	background: #272822;
+body.nightmode .reader-container :not(pre) > code[class*="language-"],
+body.nightmode pre[class*="language-"] {
+    background: #272822;
 }
-​
 /* Inline code */
-.nightmode .reader-container :not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
-	white-space: normal;
+body.nightmode .reader-container :not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
 }
-​
+/* Fade out block */
+body.nightmode .fade-out {
+    background: -webkit-linear-gradient( rgba(27, 28, 30, 0) 0%, rgba(27, 28, 30, 1) 100% );
+    background-image: -moz-linear-gradient( rgba(27, 28, 30, 0) 0%, rgba(27, 28, 30, 1) 100% );
+    background-image: -o-linear-gradient( rgba(27, 28, 30, 0) 0%, rgba(27, 28, 30, 1) 100% );
+    background-image: linear-gradient( rgba(27, 28, 30, 0) 0%, rgba(27, 28, 30, 1) 100% );
+    background-image: -ms-linear-gradient( rgba(27, 28, 30, 0) 0%, rgba(27, 28, 30, 1) 100% );
+}
+body.nightmode .well {
+    background-color: #1B1C1E;
+    border: 1px solid #57585A;
+}

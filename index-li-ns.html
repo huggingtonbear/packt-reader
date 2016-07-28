@@ -25,9 +25,9 @@
     <link rel="stylesheet" href="css/prism.css">
 
     <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
-    
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
 
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,123 +44,68 @@
 
     <div id="wrapper">
 
-         <!-- Modal -->
+          <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog free-trial-modal" role="document">
+              <div class="modal-dialog login-modal" role="document">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Start your FREE Month</h4>
-                  </div>
                   <div class="modal-body">
-                        <p><b>No Commitment, you can cancel online at any point during the trial</b></p>
-                        <ul class="mb20">
-                            <li>You will not be charged until your free trial ends</li>
-                            <li>We'll notify you 3 days before your free month is due to end</li>
-                        </ul>
-                        <div class="list-group">
-                          <a href="#" class="list-group-item">
-                            <i class="fa fa-chevron-right mr5"></i> <img class="pull-right" src="https://assets.nflxext.com/en_us/layout/ecweb/payment/icons/paypal.png"/> PayPal
-                          </a>
-                          <a role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="list-group-item"><i class="fa fa-chevron-right mr5"></i> Credit Card 
-                            
-                            
-                            <img class="pull-right mr5" src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/10_18_2014_icon_amex_37x25.png"/>
-                            <img class="pull-right mr5" src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/10_18_2014_icon_master_37x25.png"/>
-                            <img class="pull-right mr5" src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/12_11_2014_icon_visa_37x25.png"/>
-                          </a>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                          <div class="panel panel-default credit-card-box">
-                            <div class="panel-heading display-table" >
-                                <div class="row display-tr" >
-                                    <h3 class="panel-title display-td" >Payment Details</h3>
-                                    <div class="display-td" >                            
-                                    
-                                    </div>
-                                </div>                    
+
+                        <h2 class="text-center" id="myModalLabel">Sign In</h2>
+                        <form ng-submit="login()" class="form-signin ng-pristine ng-valid">
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <div class="form-group">
+                                <a href="/account/password" target="_self" class="small">Forgotten Password?</a>
                             </div>
-                            <div class="panel-body">
-                                <form role="form" id="payment-form" method="POST" action="javascript:void(0);">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="form-group">
-                                                <label for="cardNumber">CARD NUMBER</label>
-                                                <div class="input-group">
-                                                    <input 
-                                                        type="tel"
-                                                        class="form-control"
-                                                        name="cardNumber"
-                                                        placeholder="Valid Card Number"
-                                                        autocomplete="cc-number"
-                                                        required autofocus 
-                                                    />
-                                                    <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
-                                                </div>
-                                            </div>                            
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-7 col-md-7">
-                                            <div class="form-group">
-                                                <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
-                                                <input 
-                                                    type="tel" 
-                                                    class="form-control" 
-                                                    name="cardExpiry"
-                                                    placeholder="MM / YY"
-                                                    autocomplete="cc-exp"
-                                                    required 
-                                                />
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-5 col-md-5 pull-right">
-                                            <div class="form-group">
-                                                <label for="cardCVC">CV CODE</label>
-                                                <input 
-                                                    type="tel" 
-                                                    class="form-control"
-                                                    name="cardCVC"
-                                                    placeholder="CVC"
-                                                    autocomplete="cc-csc"
-                                                    required
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="form-group">
-                                                <label for="couponCode">COUPON CODE</label>
-                                                <input type="text" class="form-control" name="couponCode" />
-                                            </div>
-                                        </div>                        
-                                    </div> -->
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <button class="subscribe btn btn-primary btn-lg btn-block" type="button">Start Subscription</button>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="display:none;">
-                                        <div class="col-xs-12">
-                                            <p class="payment-errors"></p>
-                                        </div>
-                                    </div>
-                                </form>
+                            <div class="alert alert-danger login-error ng-binding" role="alert" style="display: none;">
+                                Sorry, you entered an invalid email address and password combination. <a href="/account/password" target="_self">Have you forgotten your password?</a>
                             </div>
-                        </div> 
-                        </div>
-
-
-
-                                   
+                            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Submit">
+                        </form>
+                        
                   </div>
+                    <div class="modal-footer">
+                        <a role="button" href="#"  data-toggle="modal" data-target="#accountModal">Create a New Account</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog account-modal" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+
+                        <h2 class="text-center" id="myModalLabel">Create Account</h2>
+                        <form ng-submit="login()" class="form-signin ng-pristine ng-valid">
+                            <input name="name" type="name" class="form-control mb20" id="firstName" placeholder="First Name">
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email">
+                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Choose Password">
+                            <div class="form-group">
+                                <div class="checkbox ml10">
+                                    <label class="pl10">
+                                        <input type="checkbox" value="" checked>
+                                    </label><small>Untick this box if you don't want to receive news and promotions</small>
+                                </div>
+                                <div class="g-recaptcha" data-sitekey="6Lc9ZRITAAAAAB3_JIdLV2juRqjDxoN9PZMsTq52"></div>
+                                <p class="mt15"><small>By clicking 'Create Account', you are agreeing to our <a href="books/info/packt/privacy">Policy</a> and <a href="books/info/packt/terms-and-conditions">Terms &amp; Conditions</a></small></p> 
+                            </div>
+                            <div class="alert alert-danger login-error ng-binding" role="alert" style="display: none;">
+                                Sorry, you entered an invalid email address and password combination. <a href="/account/password" target="_self">Have you forgotten your password?</a>
+                            </div>
+                            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Create Account">
+                        </form>
+                        
+                  </div>
+                    <div class="modal-footer">
+                        <a role="button" href="#"  data-toggle="modal" data-target="#myModal">Back to Login</a>
+                    </div>
                 </div>
               </div>
             </div>
 
         <!-- Top Nav Bar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -169,13 +114,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="library.html"><img class="brand-logo" src="images/white-packt.png"/></a>
-                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>                </div>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                  <a href="dashboard.html" type="button" class="btn btn-default navbar-btn mr15 ml15 dashboard-back-btn lg hidden-xs">
+                    <i class="fa fa-chevron-left fa-lg mr5">
+                    </i>Back to Mapt</a>
+                    <a href="dashboard.html" type="button" class="btn btn-default dashboard-back-btn navbar-btn visible-xs">
+                    <i class="fa fa-chevron-left fa-lg mr5">
+                    </i>Back
+                  </a>
+                </div>
                 <div id="navbar" class="navbar-collapse collapse">
+                    
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="library.html">Library</a></li>
-                        <li><a href="https://www.packtpub.com">Store</a></li>
-                        <li class="dropdown"> 
+                        <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
                         <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -186,18 +137,21 @@
                             <li><a href="#">View Subscriptions</a></li> 
                             <li><a href="#">View Licences</a></li> 
                             <li role="separator" class="divider"></li> 
-                            <li><a href="index-lo.html">Logout</a></li> 
+                            <li><a href="library-lo.html">Logout</a></li> 
                         </ul> 
                     </li>
                     </ul>
+                    <form class="navbar-form navbar-right" role="search">
+                        <button href="https://www.packtpub.com/books/subscription/packtlib" class="btn btn-primary">Subscribe Now</button>
+                    </form>
                     <form class="navbar-form navbar-right search-nav-collapse">
                         <div class="form-group pull-right" style="display:inline;">
                             <div class="input-group">
-                              <input class="form-control" type="text" placeholder="Search the library...">
-                              <span class="input-group-btn"><a href="search.html" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></a></span>
+                              <input class="form-control" type="text" placeholder="&#xf002;  Search the library...">
                             </div>
                         </div>
                     </form>
+
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
@@ -205,7 +159,7 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                <ul id="toc" class="nav nav-tabs mt15" role="tablist">
+                <ul id="toc" class="nav nav-pills nav-justified" role="tablist">
                     <li class="active ml15" style="text-indent: 0px;">
                         <a href="#contents" id="contents-tab" role="tab" data-toggle="tab" aria-controls="contents" aria-expanded="true">Contents</a>
                     </li>
@@ -215,24 +169,25 @@
                 </ul>
                 <div id="TocContent" class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
-                        <form class="col-sm-12 mt15 mb15">
-                            <input type="text" class="form-control" placeholder="Search this title..." id="box">
+                        <form class="col-sm-12 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
+                               <input type="text" class="form-control book_search_query" ng-keyup="sidebarSearchChange()" placeholder="&#xf002;  Search this course...">
                         </form>
                         <div class="clearfix"></div>
-                        <li><a href="front-page.html">Learning C++ by Creating Games with UE4</a></li>
-                        <li><a href="#" class="completed-section">Preface</a></li>
-                        <li><a href="#" class="completed-section">1. Preparing your Data</a></li>
-                        <li><a class="completed-section" href="#">2. Driving Visual Analysis with Automated Automobiles</a></li>
-                        <li class="active"><a href="index.html">3. Looping</a></li> 
-                        <li class="sub-nav"><a href="for-loop.html">The for loop</a></li>
-                        <li class="sub-nav"><a href="#" class="completed-section">The for/while loop</a></li>
-                        <li class="sub-nav"><a href="#">The 'if' loop</a></li>
-                        <li class="sub-nav"><a href="#">Looping with Unreal Engine</a></li>
-                        <li><a href="#">4. Forms and Entries</a></li>
-                        <li><a href="#">5. Functions and Macros</a></li>
-                        <li><a href="#">6. Dynamic Memory Allocation</a></li>
-                        <li><a href="#">7. If, Else and Switch</a></li>
-                        <li><a href="#">8. Actors and Roles</a></li>
+                        <li></li>
+                        <li><a href="front-page.html" class="incomplete-section">Mastering JavaScript</a></li>
+                        <li><a href="#"><div class="section-name">Preface</div></a></li>
+                        <li><a href="#"><div class="section-name">1. Preparing your Data</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li><a href="#"><div class="section-name">2. Driving Visual Analysis with Automated Automobiles</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="active"><a href="index.html"><div class="section-name">3. Looping</div></a></li> 
+                        <li class="sub-nav active"><a href="for-loop.html"><div class="section-name">The for loop</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-name">The for/while loop</div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-name">The 'if' loop</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-name">Looping with Unreal Engine</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li><a href="#"><div class="section-name">4. Forms and Entries and other content that makes it</div></a></li>
+                        <li><a href="#"><div class="section-name">5. Functions and Macros</div></a></li>
+                        <li><a href="#"><div class="section-name">6. Dynamic Memory Allocation</div></a></li>
+                        <li><a href="#"><div class="section-name">7. If, Else and Switch and everything else that's inbetween</div></a></li>
+                        <li><a href="#"><div class="section-name">8. Actors and Roles</div></a></li>
                     </div>
                     <div role="tabpanel" class="tab-pane fade pt15" id="bookmark" aria-labelledby="bookmark-tab"> 
                         <li><a href="#" class="completed-section">Preface</a></li>
@@ -245,53 +200,92 @@
         <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper" class="book-page ng-scope">
+          <div class="jumbotron heading">
+                <div class="container-fluid">
+                  <div class="col-sm-12">
+                    <h1>The for loop</h1>
+                    
+                    <div class="btn-group mb10 mt10" role="group">
+                        <button class="btn btn-default">
+                        <i class="fa fa-bookmark-o fa-lg"></i>
+                        <span class="hidden-xs ml5">Bookmark</span></button>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-shopping-cart fa-lg"></i>
+                                <span class="hidden-xs ml5"> Buy eBook for $21.99</span>
+                                <span class="hidden-xs caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li class="disabled">
+                                    <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-default hidden-xs">
+                        <i class="fa fa-file fa-lg"></i>
+                        <span class="hidden-xs ml5">Code Files</span></button>
+                        <button class="btn nightmode-toggle btn-default"><i class="fa fa-moon-o fa-lg no-text-padding"></i></button>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-font fa-lg no-text-padding"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="disabled"><a class="disabled text-center"><b>Font size (rem)</b></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="" target="_self">1.5</a></li>
+                                <li><a href="" target="_self">1.6</a></li>
+                                <li><a href="" target="_self">1.7</a></li>
+                                <li><a href="" target="_self">1.8</a></li>
+                                <li><a href="" target="_self">1.9</a></li>
+                                <li><a href="" target="_self">2.0</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-share fa-lg no-text-padding"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="disabled"><a href="#" class="disabled text-center"><b>Share</b></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" ng-click="facebookShare();">Facebook</a></li>
+                                <li><a href="mailto:?Subject=Packt Book: Python Machine Learning&amp;body=Packt Book link: https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781783555130" target="_top" ng-click="emailShare();">Email</a></li>
+                                <li><a href="#" ng-click="twitterShare();">Twitter</a></li>
+                                <li><a href="#" ng-click="redditShare();">Reddit</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                  </div>
 
-    <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
+                </div>
+            </div>
+
+    <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">             
                 <div class="reader-container col-sm-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8 ng-scope">
                     
                     <div class="row">
-                        <div class="btn-group mb10" role="group">
-                                <button href="#" class="btn btn-default"><i class="fa fa-bookmark-o fa-lg mr5"></i> <span class="hidden-xs">Bookmark</span></button>
-                                 <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      <i class="fa fa-download fa-lg mr5"></i><span class="hidden-xs"> Download eBook</span>
-                                      <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li><a href="#">Download ePub</a></li>
-                                      <li><a href="#">Download PDF</a></li>
-                                      <li><a href="#">Download Mobi</a></li>
-                                    </ul>
-                                  </div>
-                                <a href="index-li-ns-nm.html" class="btn nightmode-toggle btn-default"><i class="fa fa-moon-o fa-lg  mr5"></i><span class="hidden-xs"> Nightmode</span></a> 
-                                <button type="button" class="btn btn-default"><i class="fa fa-font fa-lg mr5"></i><span class="hidden-xs"> Font Size</span></button>
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      <i class="fa fa-share fa-lg mr5"></i><span class="hidden-xs"> Share</span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li><a href="#"><i class="fa fa-facebook fa-lg mr15"></i> Share to Facebook </a></li>
-                                      <li><a href="#"><i class="fa fa-envelope fa-lg mr10"></i> Email</a></li>
-                                      
-                                      <li><a href="#"><i class="fa fa-twitter fa-lg mr15"></i>Tweet</a></li>
-                                      <li><a href="#"><i class="fa fa-reddit fa-lg mr10"></i>Post to Reddit</a></li>
-                                    </ul>
-                                  </div>
-                            </div>
+                    
                         <div style="position:relative;" class="book-content" ng-non-bindable="">
                                 <div class="packtlib-version v2"><!--?xml version="1.0" encoding="UTF-8"?-->
-                                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Creating our first view</title><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch03lvl1sec27"></a>Creating our first view</h2></div></div><hr></div><p>Now that <a id="id89" class="indexterm"></a>we have created our URL and interpreted by the routing system, we must ensure that a view (which is a controller in the MVC pattern) meets the customer's demand.</p><p>This is the function of the second parameter of the URLs present in <code class="literal">urls.py</code>. This parameter will define the method that will play the role of a view. Take, for example, our first URL: </p><div class="informalexample"><pre class="programlisting  language-markup">url (r'^$', 'TasksManager.views.index.page'), </pre></div><p>Firstly, as we have seen when studying regular expressions, this URL will be valid only if we browse the <code class="literal">http://localhost:8000</code> URL. The second parameter in the URL means that in the <code class="literal">index.py</code> file, there is a method called <code class="literal">page</code> that will process the request. In our <code class="literal">index.py</code> file, we will create a method called <code class="literal">page()</code>. This method will return an HTML page<a id="id91" class="indexterm"></a> to the client. The page is being returned by the HTTP protocol, so we will use the <code class="literal">HttpResponse()</code> function and its importation. The argument of this <code class="literal">HttpResponse()</code> function returns the HTML content that we will return<a id="id92" class="indexterm"></a> to the browser. To simplify reading this example, we do not use a proper HTML structure, because we just return <code class="literal">Hello world!</code> to the client, as shown in the following code:</p>    </div>
-                                    </div><div class="fade_out"></div>                                                          </div>
+                                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div></div></div></div><p>Now that <a id="id89" class="indexterm"></a>we have created our URL and interpreted by the routing system, we must ensure that a view (which is a controller in the MVC pattern) meets the customer's demand.</p><p>This is the function of the second parameter of the URLs present in <code class="literal">urls.py</code>. This parameter will define the method that will play the role of a view. Take, for example, our first URL: </p><div class="informalexample"><pre class="programlisting  language-markup">url (r'^$', 'TasksManager.views.index.page'), </pre></div><p>Firstly, as we have seen when studying regular expressions, this URL will be valid only if we browse the <code class="literal">http://localhost:8000</code> URL. The second parameter in the URL means that in the <code class="literal">index.py</code> file, there is a method called <code class="literal">page</code> that will process the request. In our <code class="literal">index.py</code> file, we will create a method called <code class="literal">page()</code>. This method will return an HTML page<a id="id91" class="indexterm"></a> to the client. The page is being returned by the HTTP protocol, so we will use the <code class="literal">HttpResponse()</code> function and its importation. The argument of this <code class="literal">HttpResponse()</code> function returns the HTML content that we will return<a id="id92" class="indexterm"></a> to the browser. To simplify reading this example, we do not use a proper HTML structure, because we just return <code class="literal">Hello world!</code> to the client, as shown in the following code:</p>    </div>
+                                    </div><div class="fade-out"></div>                                                          </div>
                                     <div class="panel panel-default clearfix">
                                         <div class="panel-body">
                                             <div class="col-sm-6 col-lg-8">
-                                                <h4>Sorry! You've used up your free access to premium content</h4>
-                                            <h5><b>Don't worry! Subscribe today and access the entire library for just $12.99 a month</b>
-                                            </h5>
+                                                <h5>Sorry! You've used up your free access to premium content</h5>
+                                            <h6><b>Don't worry! Subscribe today and access over 3,500 titles for just $12.99 a month</b>
+                                            </h6>
                                             
                                             </div>
                                             <div class="col-sm-6 col-lg-4">
-                                                <a class="btn btn-success btn-lg btn-block mt10" href="/books/subscription/packtlib" data-toggle="modal" data-target="#myModal">Start your FREE month</a>
+                                                <a class="btn btn-info btn-lg btn-block mt20" href="https://www.packtpub.com/add_to_cart/23569">Start your FREE 10 Day Trial</a>
                                             </div>
                                             
                                         </div>
@@ -300,8 +294,8 @@
                     <div class="row"> 
                         <hr>      
                     
-                            <span class="hidden-xs"><h4 class="pull-left"><strong>Up Next: </strong>Routing in Django</h4><a href="for-loop.html" class="btn btn-primary pull-right">Next Section</a></span>
-                            <span class="visible-xs"><a href="for-loop.html" class="btn btn-primary btn-block btn-lg" >Next Section</a></span>
+                            <span class="hidden-xs"><h4 class="pull-left"><strong>Up Next: </strong>Routing in Django</h4><a href="for-loop.html" class="btn btn-primary pull-right btn-lg">Next Section</a></span>
+                            <span class="visible-xs"><a href="for-loop.html" class="btn btn-primary btn-block btn-lg">Next Section</a></span>
                     </div>
                     <div class="row"> 
                         <hr>
@@ -327,157 +321,6 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
-    <script type="text/javascript">
-    /*
-The MIT License (MIT)
-
-Copyright (c) 2015 William Hilton
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-*/
-var $form = $('#payment-form');
-$form.find('.subscribe').on('click', payWithStripe);
-
-/* If you're using Stripe for payments */
-function payWithStripe(e) {
-    e.preventDefault();
-    
-    /* Abort if invalid form data */
-    if (!validator.form()) {
-        return;
-    }
-
-    /* Visual feedback */
-    $form.find('.subscribe').html('Validating <i class="fa fa-spinner fa-pulse"></i>').prop('disabled', true);
-
-    var PublishableKey = 'pk_test_6pRNASCoBOKtIshFeQd4XMUh'; // Replace with your API publishable key
-    Stripe.setPublishableKey(PublishableKey);
-    
-    /* Create token */
-    var expiry = $form.find('[name=cardExpiry]').payment('cardExpiryVal');
-    var ccData = {
-        number: $form.find('[name=cardNumber]').val().replace(/\s/g,''),
-        cvc: $form.find('[name=cardCVC]').val(),
-        exp_month: expiry.month, 
-        exp_year: expiry.year
-    };
-    
-    Stripe.card.createToken(ccData, function stripeResponseHandler(status, response) {
-        if (response.error) {
-            /* Visual feedback */
-            $form.find('.subscribe').html('Try again').prop('disabled', false);
-            /* Show Stripe errors on the form */
-            $form.find('.payment-errors').text(response.error.message);
-            $form.find('.payment-errors').closest('.row').show();
-        } else {
-            /* Visual feedback */
-            $form.find('.subscribe').html('Processing <i class="fa fa-spinner fa-pulse"></i>');
-            /* Hide Stripe errors on the form */
-            $form.find('.payment-errors').closest('.row').hide();
-            $form.find('.payment-errors').text("");
-            // response contains id and card, which contains additional card details            
-            console.log(response.id);
-            console.log(response.card);
-            var token = response.id;
-            // AJAX - you would send 'token' to your server here.
-            $.post('/account/stripe_card_token', {
-                    token: token
-                })
-                // Assign handlers immediately after making the request,
-                .done(function(data, textStatus, jqXHR) {
-                    $form.find('.subscribe').html('Payment successful <i class="fa fa-check"></i>');
-                })
-                .fail(function(jqXHR, textStatus, errorThrown) {
-                    $form.find('.subscribe').html('There was a problem').removeClass('success').addClass('error');
-                    /* Show Stripe errors on the form */
-                    $form.find('.payment-errors').text('Try refreshing the page and trying again.');
-                    $form.find('.payment-errors').closest('.row').show();
-                });
-        }
-    });
-}
-/* Fancy restrictive input formatting via jQuery.payment library*/
-$('input[name=cardNumber]').payment('formatCardNumber');
-$('input[name=cardCVC]').payment('formatCardCVC');
-$('input[name=cardExpiry').payment('formatCardExpiry');
-
-/* Form validation using Stripe client-side validation helpers */
-jQuery.validator.addMethod("cardNumber", function(value, element) {
-    return this.optional(element) || Stripe.card.validateCardNumber(value);
-}, "Please specify a valid credit card number.");
-
-jQuery.validator.addMethod("cardExpiry", function(value, element) {    
-    /* Parsing month/year uses jQuery.payment library */
-    value = $.payment.cardExpiryVal(value);
-    return this.optional(element) || Stripe.card.validateExpiry(value.month, value.year);
-}, "Invalid expiration date.");
-
-jQuery.validator.addMethod("cardCVC", function(value, element) {
-    return this.optional(element) || Stripe.card.validateCVC(value);
-}, "Invalid CVC.");
-
-validator = $form.validate({
-    rules: {
-        cardNumber: {
-            required: true,
-            cardNumber: true            
-        },
-        cardExpiry: {
-            required: true,
-            cardExpiry: true
-        },
-        cardCVC: {
-            required: true,
-            cardCVC: true
-        }
-    },
-    highlight: function(element) {
-        $(element).closest('.form-control').removeClass('success').addClass('error');
-    },
-    unhighlight: function(element) {
-        $(element).closest('.form-control').removeClass('error').addClass('success');
-    },
-    errorPlacement: function(error, element) {
-        $(element).closest('.form-group').append(error);
-    }
-});
-
-paymentFormReady = function() {
-    if ($form.find('[name=cardNumber]').hasClass("success") &&
-        $form.find('[name=cardExpiry]').hasClass("success") &&
-        $form.find('[name=cardCVC]').val().length > 1) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-$form.find('.subscribe').prop('disabled', true);
-var readyInterval = setInterval(function() {
-    if (paymentFormReady()) {
-        $form.find('.subscribe').prop('disabled', false);
-        clearInterval(readyInterval);
-    }
-}, 250);
-</script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/1.2.3/jquery.payment.min.js"></script>
 
 </body>
 

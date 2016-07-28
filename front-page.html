@@ -13,7 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/prism.css">
 
     <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -44,7 +44,7 @@
     <div id="wrapper">
 
         <!-- Top Nav Bar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -53,13 +53,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="library.html"><img class="brand-logo" src="images/white-packt.png"/></a>
-                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>                </div>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                  <a href="dashboard.html" type="button" class="btn btn-default navbar-btn mr15 ml15 dashboard-back-btn lg hidden-xs">
+                    <i class="fa fa-chevron-left fa-lg mr5">
+                    </i>Back to Mapt</a>
+                    <a href="dashboard.html" type="button" class="btn btn-default dashboard-back-btn navbar-btn visible-xs">
+                    <i class="fa fa-chevron-left fa-lg mr5">
+                    </i>Back
+                  </a>
+                </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="library.html">Library</a></li>
-                        <li><a href="https://www.packtpub.com">Store</a></li>
-                        <li class="dropdown"> 
+                        <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
                         <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -70,15 +75,15 @@
                             <li><a href="#">View Subscriptions</a></li> 
                             <li><a href="#">View Licences</a></li> 
                             <li role="separator" class="divider"></li> 
-                            <li><a href="index-lo.html">Logout</a></li> 
+                            <li><a href="library-lo.html">Logout</a></li> 
                         </ul> 
                     </li>
                     </ul>
                     <form class="navbar-form navbar-right search-nav-collapse">
                         <div class="form-group pull-right" style="display:inline;">
                             <div class="input-group">
-                              <input class="form-control" type="text" placeholder="Search the library...">
-                              <span class="input-group-btn"><a href="search.html" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></a></span>
+                              <input class="form-control" type="text" placeholder="&#xf002;  Search the library...">
+                              
                             </div>
                         </div>
                     </form>
@@ -89,7 +94,7 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                <ul id="toc" class="nav nav-tabs mt15" role="tablist">
+                <ul id="toc" class="nav nav-pills nav-justified" role="tablist">
                     <li class="active ml15" style="text-indent: 0px;">
                         <a href="#contents" id="contents-tab" role="tab" data-toggle="tab" aria-controls="contents" aria-expanded="true">Contents</a>
                     </li>
@@ -99,11 +104,11 @@
                 </ul>
                 <div id="TocContent" class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
-                        <form class="col-sm-12 mt15 mb15">
-                            <input type="text" class="form-control" placeholder="Search this title..." id="box">
+                        <form class="col-sm-12 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
+                               <input type="text" class="form-control book_search_query" ng-keyup="sidebarSearchChange()" placeholder="&#xf002;  Search this course...">
                         </form>
                         <div class="clearfix"></div>
-                        <li class="active"><a href="front-page.html">Learning C++ by Creating Games with UE4</a></li>
+                        <li class="active"><a href="front-page.html">Mastering JavaScript</a></li>
                         <li><a href="#" class="completed-section">Preface</a></li>
                         <li><a href="#" class="completed-section">1. Preparing your Data</a></li>
                         <li><a class="completed-section" href="#">2. Driving Visual Analysis with Automated Automobiles</a></li>
@@ -129,146 +134,170 @@
         <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper" class="book-page ng-scope">
-
-            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="col-sm-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8">
+            <div class="jumbotron heading">
+                <div class="container-fluid">
+                  <div class="col-sm-12">
                     
-                    <div class="row">
-                        <div class="col-sm-3 hidden-xs">
-                            <div class="row">
-                            <img src="https://www.staging.packtpub.com/sites/default/files/imagecache/ppv4_main_book_cover/0896OS_jQuery%202.0%20Developer.jpg" class="img-responsive mt20 mb20"/>
-                            </div>
-                        </div>
-                        <div class="col-sm-9 hidden-xs">
-                            <h2>Learning C++ by Creating Games with UE4</h2>
-                            <small>01/02/2015</small>
-                            <p>William Sherif</p>
-                            
-                            <div class="clearfix"></div>
-                            <div class="btn-group btn-group-justified mb15 hidden-xs mt15" role="group">                                 
-                                <a href="#" class="btn btn-default "><i class="fa fa-plus mr5"></i>Add to My List</a>      
+                    <h1>Mastering JavaScript</h1>
+                    
+
+                    <div class="btn-group btn-block mb10 mt10" role="group">
                                 <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-default dropdown-toggle hidden-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          <i class="fa fa-download fa-lg mr5"></i> Download eBook
-                                          <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                          <li><a href="#">Download ePub</a></li>
-                                          <li><a href="#">Download PDF</a></li>
-                                          <li><a href="#">Download Mobi</a></li>
-                                        </ul>
-                                </div>
-                                <a href="#" class="btn btn-default "><i class="fa fa-download mr5"></i> Code Files</a>
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      <i class="fa fa-share fa-lg mr5"></i><span class="hidden-xs"></span>
+                                    <button type="button" class="btn btn-default dropdown-toggle pull-" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                        <i class="fa fa-shopping-cart fa-lg"></i>
+                                        <span class="hidden-xs ml15"> Buy eBook for $21.99</span>
                                     </button>
                                     <ul class="dropdown-menu">
-                                      <li><a href="#">Facebook </a></li>
-                                      <li><a href="#">Email</a></li>
-                                      
-                                      <li><a href="#">Tweet</a></li>
-                                      <li><a href="#">Reddit</a></li>
+                                        <li>
+                                            <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
+                                        </li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="disabled">
+                                            <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="btn btn-default">
+                                <i class="fa fa-folder-open-o fa-lg"></i>
+                                <span class="hidden-xs ml5">Save for Later</span></button>
+                                
+                                <button class="btn btn-default hidden-xs">
+                                <i class="fa fa-file fa-lg"></i>
+                                <span class="hidden-xs ml5">Code Files</span></button>                        
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-share fa-lg no-text-padding"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="disabled"><a href="#" class="disabled text-center"><b>Share</b></a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#" ng-click="facebookShare();">Facebook</a></li>
+                                        <li><a href="mailto:?Subject=Packt Book: Python Machine Learning&amp;body=Packt Book link: https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781783555130" target="_top" ng-click="emailShare();">Email</a></li>
+                                        <li><a href="#" ng-click="twitterShare();">Twitter</a></li>
+                                        <li><a href="#" ng-click="redditShare();">Reddit</a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <p>Learn C++ programming with a fun, real-world application that allows you to create your own games!</p>
-                            <a href="for-loop.html" class="btn btn-primary btn-lg pl45 pr45 mt25 pull-right">Continue</a>
+                  </div>
 
-                        </div>
+                </div>
+            </div>
 
-                        <div class="titlepage visible-xs">
-                            <h4 class="title" style="clear: both"><a id="ch03lvl1sec27"></a>Learning C++ by Creating Games with UE4</h4>
-                            <hr>
-                            <small>01/02/2015</small>
-                            <p>William Sherif</p>
-                            <p>Learn C++ programming with a fun, real-world application that allows you to create your own games!</p>
-                            <a href="#" class="btn btn-default btn-block btn-lg"><i class="fa fa-plus mr5"></i> My List</a>      
-                            <a href="for-loop.html" class="btn btn-primary btn-lg btn-block mb20">Continue</a>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="row">
-                                <ul id="myTabs" class="nav nav-tabs nav-justified hidden-xs mt25    " role="tablist">
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
+                <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
+                    <div class="row">
+
+                    <div class="col-sm-12">
+                        
+                        <div class="">
+                             <div class="col-sm-3">
+                                <a href="front-page.html"><img src="images/book1.jpg" class="img-responsive hidden-xs"></a>
+                            </div>
+                            <div class="col-sm-9">
+                                
+
+                            <p class="mt20 mb20"><b>Learn the hot new front-end web framework from Facebook: ReactJS, an easy way of developing the V in MVC and a better approach to software engineering in functional JavaScript</b></p>
+                            <a href="index.html" class="btn btn-info btn-lg pull-right hidden-xs">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                            <a href="index.html" class="btn btn-info btn-lg btn-block mt20 mb20 visible-xs">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                            <div class="clearfix"></div>
+
+                            </div>
+                            <div class="col-sm-12">
+                                
+                                <ul id="myTabs" class="nav nav-tabs nav-justified hidden-xs mt20" role="tablist">
                                     <li class="active">
-                                        <a href="#about" id="about-tab" role="tab" data-toggle="tab" aria-controls="about" aria-expanded="true">About</a>
+                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true"><h5>Features</h5></a>
                                     </li>
                                     <li>
-                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn">Learn</a>
+                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Learning</h5></a>
                                     </li>
                                     <li>
-                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail">Detail</a>
+                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail" ng-click="$event.preventDefault();" aria-expanded="false"><h5>About</h5></a>
                                     </li>
                                     <li>
-                                        <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author">Author</a>
+                                        <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Author</h5></a>
+                                    </li>
+                                </ul>
+                                <ul id="myTabs" class="nav nav-pills text-center nav-stacked visible-xs mb60" role="tablist">
+                                    <li class="active">
+                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true">Features</a>
+                                    </li>
+                                    <li>
+                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false">Learning</a>
+                                    </li>
+                                    <li>
+                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail" ng-click="$event.preventDefault();" aria-expanded="false">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="$event.preventDefault();" aria-expanded="false">Author</a>
                                     </li>
                                 </ul>
 
-                                <div id="myTabContent" class="tab-content">
-                                    <div role="tabpanel" class="tab-pane fade in active pt30" id="about" aria-labelledby="about-tab">
-                                    <div class="visible-xs">
-                                        <h4 class="mobile-title">About</h4>
-                                        <hr>
-                                    </div>
-                                        <ul>
-                                            <li>Be a top programmer by being able to visualize programming concepts; how data is saved in computer memory, and how a program flows</li>
-                                            <li>Keep track of player inventory, create monsters, and keep those monsters at bay with basic spell casting by using your C++ programming skills within Unreal Engine 4</li>
-                                            <li>Understand the C++ programming concepts to create your own games</li>
-                                        </ul>
-                                        <p>If you are really passionate about games and have always wanted to write your own, this book is perfect for you. It will help you get started with programming in C++ and explore the immense functionalities of UE4.</p>
-
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane fade pt30" id="learn" aria-labelledby="learn-tab">
-                                    <div class="visible-xs">
-                                        <h4 class="mobile-title">Learn</h4>
-                                        <hr>
-                                    </div>
-                                        <ul>
-                                            <li>Visualize and truly understand C++ programming concepts, such as how data is saved in computer memory and how program flow works</li>
-                                            <li>Write reusable code by grouping lines of code into functions</li>
-                                            <li>Learn how inheritance works-how traits of a base class are passed on to derived classes</li>
-                                            <li>Learn about dynamic allocation of new memory for your program</li>
-                                            <li>Design your own world using the UE4 editor</li>
-                                            <li>Practice programming by coding behaviors into your game world, including player inventory tracking, monsters, and NPCs</li>
-                                            </ul> 
+                                <div id="myTabContent" class="tab-content pt30">
+                                    
+                                    <div role="tabpanel" class="tab-pane fade in active" id="about" aria-labelledby="about-tab">
+                                       
+                                        <div class="">
+                                            <div class="visible-xs">
+                                                <h4 class="mobile-title">Course Features</h4>
+                                                <hr>
+                                            </div>
+                                            <div ng-bind-html="book_data.about" class="ng-binding">
+                                                <ul>
+                                                <li>Harness the ability to build algorithms for unsupervised data using deep learning concepts with R</li>
+                                                <li>Master the common problems faced such as overfitting of data, anomalous datasets, image recognition, and performance tuning while building the models</li>
+                                                <li>Build models relating to neural networks, prediction and deep prediction</li>
+                                                </ul>
+                                        </div>
+                                            </div>
+                                        </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="learn" aria-labelledby="learn-tab">
+                                        <div class="visible-xs">
+                                            <h4 class="mobile-title">What you'll learn</h4>
+                                            <hr>
+                                        </div>
+                                        <div ng-bind-html="book_data.learn" class="ng-binding"><ul>
+                <li>Set up the R package H2O to train deep learning models</li>
+                <li>Understand the core concepts behind deep learning models</li>
+                <li>Use Autoencoders to identify anomalous data or outliers</li>
+                <li>Predict or classify data automatically using deep neural networks</li>
+                <li>Build generalizable models using regularization to avoid overfitting the training data</li>
+                </ul></div>
                                     </div> 
-                                    <div role="tabpanel" class="tab-pane fade pt30" id="detail" aria-labelledby="detail-tab">
+                                    <div role="tabpanel" class="tab-pane fade" id="detail" aria-labelledby="detail-tab">
                                         <div class="visible-xs">
-                                            <h4 class="mobile-title">Detail</h4>
+                                            <h4 class="mobile-title">Find out more</h4>
                                             <hr>
                                         </div>
-                                        <p>Unreal Engine 4 is used to create top notch, exciting games by AAA studios, and learning to program in C++ needs some serious motivation.</p>
-                                        <p>Learning C++ by Creating Games With UE4 will start with the basics of C++: installing a code editor so you can begin to write C++ code. You will then learn how to write small, self-contained C++ programs that show you how to use the C++ language, without overwhelming you with too much code at the beginning. As we dig into more advanced C++ concepts, you will start to explore the functionality the UE4 engine has to offer. You will use the UE4 editor to create your own world, and then program in some seriously fun gameplay. By the end of this book, you should have a good grasp of how to program in C++.</p>
+                                        <div ng-bind-html="book_data.detail" class="ng-binding"><p>Deep learning is a branch of machine learning based on a set of algorithms that attempt to model high-level abstractions in data by using model architectures. With the superb memory management and the full integration with multi-node big data platforms, the H2O engine has become more and more popular among data scientists in the field of deep learning.</p>
+                <p>This book will introduce you to the deep learning package H2O with R and help you understand the concepts of deep learning. We will start by setting up important deep learning packages available in R and then move towards building models related to neural networks, prediction, and deep prediction, all of this with the help of real-life examples.</p>
+                <p>After installing the H2O package, you will learn about prediction algorithms. Moving ahead, concepts such as overfitting data, anomalous data, and deep prediction models are explained. Finally, the book will cover concepts relating to tuning and optimizing models.</p></div>
                                     </div>
-                                    <div role="tabpanel" class="tab-pane fade pt30" id="author" aria-labelledby="author-tab">
+                                    <div role="tabpanel" class="tab-pane fade" id="author" aria-labelledby="author-tab">
                                         <div class="visible-xs">
-                                            <h4 class="mobile-title">Author</h4>
+                                            <h4 class="mobile-title">About the Author</h4>
                                             <hr>
                                         </div>
-                                        <p><strong>William Sherif</strong></p>
-                                        <p>William Sherif is a C++ programmer with more than 8 years' programming experience. He has a wide range of experience in the programming world, from game programming to web programming. He has also worked as a university course instructor (sessional) for 7 years.</p>
-                                        <p>He has released several apps on to the iTunes store, including strum and MARSHALL OF THE ELITE SQUADRON.</p>
-                                        <p>In the past, he has won acclaim for delivering course material in an easy-to-understand manner.</p>
+                                        <p><strong class="ng-binding">Dr. Joshua F. Wiley</strong></p>
+                                        <div ng-bind-html="book_data.author_description" class="ng-binding"><p>Dr. Joshua F. Wiley is a lecturer at Monash University and a senior partner at Elkhart Group Limited, a statistical consultancy. He earned his PhD from the University of California, Los Angeles. His research focuses on using advanced quantitative methods to understand the complex interplays of psychological, social, and physiological processes in relation to psychological and physical health. In statistics and data science, Joshua focuses on biostatistics and is interested in reproducible research and graphical displays of data and statistical models. Through consulting at Elkhart Group Limited and his former work at the UCLA Statistical Consulting Group, Joshua has helped a wide array of clients, ranging from experienced researchers to biotechnology companies. He develops or codevelops a number of R packages including varian, a package to conduct Bayesian scale-location structural equation models, and MplusAutomation, a popular package that links R to the commercial Mplus software.</p></div>
                                     </div>
                                 </div>
-                                <hr>
-                                <div class="text-center col-sm-12 mb20">
-                                    <small>ISBN 9781783983704 © Packt Publishing Limited. All Rights Reserved </small>
+                                
+                                
+                            </div>
+                                
+                                <div class="text-center col-sm-12 mb35 mt40">
+                                    <hr>
+                                    <small class="ng-binding">ISBN 9781785280580 © Packt Publishing Limited. All Rights Reserved </small>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </div>
-        <div id="footer" class="visible-xs">
-          <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
-              <div class="row" id="bottomNav" role="tablist">
-                <div class="col-xs-3 text-center"><a href="#about" id="about-tab" role="tab" data-toggle="tab" aria-controls="about" aria-expanded="true"><i class="fa fa-book mobile-nav-icon fa-2x"></i></a></div>
-                <div class="col-xs-3 text-center"><a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn"><i class="fa fa-institution mobile-nav-icon fa-2x"></i></a></div>
-                <div class="col-xs-3 text-center"><a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail"><i class="fa fa-info-circle mobile-nav-icon fa-2x"></i></a></div>
-                <div class="col-xs-3 text-center"><a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="detail"><i class="fa fa-user mobile-nav-icon fa-2x"></i></a></div>
-              </div>
-          </div>
-        </div>
     </div>
 
     <!-- JAVASCRIPT BLOCKS -->

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Learning C++ by Creating Games with UE4 - Chapter 3. Looping</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="language-markup">
+
+  
+
+    <div id="wrapper">
+
+        <!-- Top Nav Bar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                  <a class="brand-logo" href="dashboard.html"><img src="images/logo.png"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
+                        </a>
+                        <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li> <a href="#">View Account</a></li> 
+                            <li><a href="#">View Subscriptions</a></li> 
+                            <li><a href="#">View Licences</a></li> 
+                            <li role="separator" class="divider"></li> 
+                            <li><a href="library-lo.html">Logout</a></li> 
+                        </ul> 
+                    </li>
+                    </ul>
+                    <form class="navbar-form navbar-right search-nav-collapse">
+                        <div class="form-group pull-right" style="display:inline;">
+                            <div class="input-group">
+                              <input class="form-control" type="text" placeholder="&#xf002;  Search the library...">
+                              
+                            </div>
+                        </div>
+                    </form>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+              <li><a href="index.html" class="sidenav-menu-holder"><span class="sidenav-menu">Resume Course </span><span class="pull-right mr5"></span></a></li>
+                    <li class=""><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Map</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
+                    <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-right mr5"><i class="fa fa-caret-down fa-lg"></i></span></a>    </li>
+                    <li class="sub-nav"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library</span><span class="pull-right mr5"></span></a>    </li>
+                    <li class="sub-nav"><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">Bookmarks </span><span class="pull-right mr5">6</span></a>    </li>
+                    <li class="sub-nav"><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">Saved </span><span class="pull-right mr5">12</span></a>    </li>
+                    <li class="sub-nav active"><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchased  </span><span class="pull-right mr5">7</span></a>    </li>
+                    <li class=""><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Account</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
+                    <li class=""><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
+            </ul>
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
+        <div id="page-content-wrapper" class="">
+            <div class="jumbotron heading">
+                <div class="container-fluid">
+                  <div class="col-sm-12">
+                    <h1>Purchased</h1>
+                    <ol class="breadcrumb row mt0">
+                      <li class="active mt5">All the courses you have purchased or claimed</li>
+                    </ol>
+                  </div>
+                </div>
+            </div>
+            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
+                <div class="row">
+                        <div class="col-lg-offset-1 col-lg-10">
+                          <div class="row">
+                            <div ng-show="myList[0]" class="col-sm-offset-6 col-md-offset-8 col-lg-offset-9 col-sm-6 col-md-4 col-lg-3 mb20">
+                                <select ng-change="sort_myList($event)" class="form-control ng-pristine ng-untouched ng-valid" name="sorted_myList" data-ng-options="o.name for o in dropdown_options_sort track by o.id" data-ng-model="dropdown_selectedOption_sort"><option value="mostRecent" selected="selected" label="Sort by Most Recent">Sort by Most Recent</option><option value="mostPopular" label="Sort by Most Popular">Sort by Most Popular</option><option value="oldest" label="Sort by Oldest">Sort by Oldest</option><option value="sortAZ" label="Sort A-Z">Sort A-Z</option><option value="sortZA" label="Sort Z-A">Sort Z-A</option></select>
+                            </div>
+                          </div>
+                          <div class="clearfix"></div>
+                          <div class="">
+                            <div ng-show="dashboard_counts.owned > 0" class="panel panel-default">
+                                <ul class="list-group">
+                                    <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                          <a href="index.html"><img src="images/book1.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Practical Machine Learning</h1>
+                                              <p class="mb5">By Sunila Gollapudi</p>
+                                                <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
+                                              <br>
+                                              <div class="mt20 btn-group pull-right">
+                                                <div class="btn-group dropup hidden-xs" role="group">
+                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                                      <i class="fa fa-download fa-lg"></i>
+                                                      <span class="hidden-xs ml5"> Download eBook</span>
+                                                      <span class="hidden-xs caret"></span>
+                                                  </button>
+                                                  <ul class="dropdown-menu">
+                                                      <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+                                                      <li role="separator" class="divider"></li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download PDF</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download ePub</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download Mobi</a>
+                                                      </li>
+                                                      
+                                                  </ul>
+                                                </div>
+                                                <button class="btn btn-default hidden-xs">
+                                                  <i class="fa fa-folder-open-o fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Save for Later</span>
+                                                </button>
+                                                <a href="index.html" class="btn btn-info ">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book2.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Drupal 8</h1>
+                                              <p class="mb5">By Nick Abbott</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                               
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class="title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>9 hours 50 minutes</small>
+                                              <br>
+                                              
+                                              <div class="mt20 btn-group pull-right">
+                                                <div class="btn-group dropup hidden-xs" role="group">
+                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                                      <i class="fa fa-download fa-lg"></i>
+                                                      <span class="hidden-xs ml5"> Download eBook</span>
+                                                      <span class="hidden-xs caret"></span>
+                                                  </button>
+                                                  <ul class="dropdown-menu">
+                                                      <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+                                                      <li role="separator" class="divider"></li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download PDF</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download ePub</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download Mobi</a>
+                                                      </li>
+                                                      
+                                                  </ul>
+                                                </div>
+                                                <button class="btn btn-default hidden-xs">
+                                                  <i class="fa fa-folder fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Saved</span>
+                                                </button>
+                                                <a href="index.html" class="btn btn-info ">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="/packtlib/book/Web-Development/9781785281341" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book3.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering JavaScript</h1>
+                                              <p class="mb5">By Ved Antani</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>7 hours 30 minutes</small>
+                                              <br>
+                                              
+                                              <div class="mt20 btn-group pull-right">
+                                                <div class="btn-group dropup hidden-xs" role="group">
+                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                                      <i class="fa fa-download fa-lg"></i>
+                                                      <span class="hidden-xs ml5"> Download eBook</span>
+                                                      <span class="hidden-xs caret"></span>
+                                                  </button>
+                                                  <ul class="dropdown-menu">
+                                                      <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+                                                      <li role="separator" class="divider"></li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download PDF</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download ePub</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download Mobi</a>
+                                                      </li>
+                                                      
+                                                  </ul>
+                                                </div>
+                                                <button class="btn btn-default hidden-xs">
+                                                  <i class="fa fa-folder fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Saved</span>
+                                                </button>
+                                                <a href="front-page.html" class="btn btn-info ">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book4.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Predictive Analytics with Python</h1>
+                                              <p class="mb5">By Ashish Kumar</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Feb 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small>
+                                              <br>
+                                              
+                                              <div class="mt20 btn-group pull-right">
+                                                <div class="btn-group dropup hidden-xs" role="group">
+                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                                      <i class="fa fa-download fa-lg"></i>
+                                                      <span class="hidden-xs ml5"> Download eBook</span>
+                                                      <span class="hidden-xs caret"></span>
+                                                  </button>
+                                                  <ul class="dropdown-menu">
+                                                      <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+                                                      <li role="separator" class="divider"></li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download PDF</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download ePub</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download Mobi</a>
+                                                      </li>
+                                                      
+                                                  </ul>
+                                                </div>
+                                                <button class="btn btn-default hidden-xs">
+                                                  <i class="fa fa-folder-open-o fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Save for Later</span>
+                                                </button>
+                                                <a href="front-page.html" class="btn btn-info ">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering Django Web Development [Video]</h1>
+                                              <p class="mb5">By Kevin Veroneau </p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small>
+                                              
+                                              <div class="mt20 btn-group pull-right">
+                                                <div class="btn-group dropup hidden-xs" role="group">
+                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                                      <i class="fa fa-download fa-lg"></i>
+                                                      <span class="hidden-xs ml5"> Download eBook</span>
+                                                      <span class="hidden-xs caret"></span>
+                                                  </button>
+                                                  <ul class="dropdown-menu">
+                                                      <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+                                                      <li role="separator" class="divider"></li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download PDF</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download ePub</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download Mobi</a>
+                                                      </li>
+                                                      
+                                                  </ul>
+                                                </div>
+                                                <button class="btn btn-default hidden-xs">
+                                                  <i class="fa fa-folder-open-o fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Save for Later</span>
+                                                </button>
+                                                <a href="index.html" class="btn btn-info ">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="front-page.html"><img src="images/book4.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Learning Predictive Analytics with Python</h1>
+                                              <p class="mb5">By Ashish Kumar</p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class="mr10 ng-binding ng-scope mt10">Feb 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>10 hours 37 minutes</small>
+                                              <br>
+                                              
+                                              <div class="mt20 btn-group pull-right">
+                                                <div class="btn-group dropup hidden-xs" role="group">
+                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                                      <i class="fa fa-download fa-lg"></i>
+                                                      <span class="hidden-xs ml5"> Download eBook</span>
+                                                      <span class="hidden-xs caret"></span>
+                                                  </button>
+                                                  <ul class="dropdown-menu">
+                                                      <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+                                                      <li role="separator" class="divider"></li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download PDF</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download ePub</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download Mobi</a>
+                                                      </li>
+                                                      
+                                                  </ul>
+                                                </div>
+                                                <button class="btn btn-default hidden-xs">
+                                                  <i class="fa fa-folder-open-o fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Save for Later</span>
+                                                </button>
+                                                <a href="front-page.html" class="btn btn-info ">View Course <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li><li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book5.jpg" class="img-product-list hidden-xs"></a>
+                                              <h1>Mastering Django Web Development [Video]</h1>
+                                              <p class="mb5">By Kevin Veroneau </p>
+                                              <p class="mb5"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              
+                                              
+                                              <small ng-if="fivePopular.field_date_of_publication[0].value" class=" mr10 ng-binding ng-scope mt10">Jan 2016</small>
+                                              <small class=" title-duration ng-binding mt10"><i class="fa fa-clock-o mr5"></i>1 hour</small>
+                                              
+                                              <div class="mt20 btn-group pull-right">
+                                                <div class="btn-group dropup hidden-xs" role="group">
+                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                                      <i class="fa fa-download fa-lg"></i>
+                                                      <span class="hidden-xs ml5"> Download eBook</span>
+                                                      <span class="hidden-xs caret"></span>
+                                                  </button>
+                                                  <ul class="dropdown-menu">
+                                                      <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+                                                      <li role="separator" class="divider"></li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download PDF</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download ePub</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download Mobi</a>
+                                                      </li>
+                                                      
+                                                  </ul>
+                                                </div>
+                                                <button class="btn btn-default hidden-xs">
+                                                  <i class="fa fa-folder-open-o fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Save for Later</span>
+                                                </button>
+                                                <a href="index.html" class="btn btn-info ">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <div class="clearfix">
+                                              </div>
+                                          </li>
+                                </ul>
+                                <div class="panel-footer text-right ng-hide" ng-show="myOwned.pagination > 1">
+                                    <nav>
+                                        <ul class="pagination">
+                                            <li id="paginationNumber" data-page="owned" ng-click="$event.preventDefault();click_pagination($event, myOwned.previous, 'owned');" class="disabled">
+                                                <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">«</span>
+                                                </a>
+                                            </li>
+                                            <!-- ngRepeat: i in getNumber(myOwned.pagination) track by $index --><li ng-repeat="i in getNumber(myOwned.pagination) track by $index" id="paginationNumber" ng-class="{active: myOwned.offset == $index}" data-page="owned" ng-click="$event.preventDefault();click_pagination($event, $index, 'owned');" class="ng-scope active">
+                                                    <a href="#" class="ng-binding">1</a>
+                                            </li><!-- end ngRepeat: i in getNumber(myOwned.pagination) track by $index -->
+                                            <li id="paginationNumber" data-page="owned" ng-click="$event.preventDefault();click_pagination($event, myOwned.next, 'owned');" class="disabled"> 
+                                                <a href="#" aria-label="Next">
+                                                    <span aria-hidden="true">»</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        </div>
+                  </div><!-- row -->
+			</div><!-- /#book-wrapper -->
+		</div><!-- /#page-content-wrapper -->
+	</div><!-- /#wrapper -->
+    
+
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
+    <script src="js/jquery.js"></script>
+    <!-- Syntax Highlighting Script -->
+    <script src="js/prism.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+
+</body>
+
+</html>

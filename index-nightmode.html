@@ -13,6 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/annotator.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
@@ -26,7 +27,7 @@
     <link rel="stylesheet" href="css/prism.css">
 
     <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -38,14 +39,14 @@
 
 </head>
 
-<body class="nightmode language-markup">
+<body class="language-markup nightmode">
 
   
 
     <div id="wrapper">
 
         <!-- Top Nav Bar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -54,13 +55,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="library.html"><img class="brand-logo" src="images/white-packt.png"/></a>
-                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>                </div>
+                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+                  <a href="dashboard.html" type="button" class="btn btn-default navbar-btn mr15 ml15 dashboard-back-btn lg hidden-xs">
+                    <i class="fa fa-chevron-left fa-lg mr5">
+                    </i>Back to Mapt</a>
+                    <a href="dashboard.html" type="button" class="btn btn-default dashboard-back-btn navbar-btn visible-xs">
+                    <i class="fa fa-chevron-left fa-lg mr5">
+                    </i>Back
+                  </a>
+                </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="library.html">Library</a></li>
-                        <li><a href="https://www.packtpub.com">Store</a></li>
-                        <li class="dropdown"> 
+                        <li class="dropdown">
                         <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
                         </a>
                         <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -71,15 +77,15 @@
                             <li><a href="#">View Subscriptions</a></li> 
                             <li><a href="#">View Licences</a></li> 
                             <li role="separator" class="divider"></li> 
-                            <li><a href="index-lo.html">Logout</a></li> 
+                            <li><a href="library-lo.html">Logout</a></li> 
                         </ul> 
                     </li>
                     </ul>
                     <form class="navbar-form navbar-right search-nav-collapse">
                         <div class="form-group pull-right" style="display:inline;">
                             <div class="input-group">
-                              <input class="form-control" type="text" placeholder="Search the library...">
-                              <span class="input-group-btn"><a href="search.html" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></a></span>
+                              <input class="form-control" type="text" placeholder="&#xf002;  Search the library...">
+                              
                             </div>
                         </div>
                     </form>
@@ -90,7 +96,7 @@
         <div id="sidebar-wrapper">
 
             <ul class="sidebar-nav">
-                <ul id="toc" class="nav nav-tabs mt15" role="tablist">
+                <ul id="toc" class="nav nav-pills nav-justified" role="tablist">
                     <li class="active ml15" style="text-indent: 0px;">
                         <a href="#contents" id="contents-tab" role="tab" data-toggle="tab" aria-controls="contents" aria-expanded="true">Contents</a>
                     </li>
@@ -100,24 +106,25 @@
                 </ul>
                 <div id="TocContent" class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
-                        <form class="col-sm-12 mt15 mb15">
-                            <input type="text" class="form-control" placeholder="Search this title..." id="box">
+                        <form class="col-sm-12 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
+                               <input type="text" class="form-control book_search_query" ng-keyup="sidebarSearchChange()" placeholder="&#xf002;  Search this course...">
                         </form>
                         <div class="clearfix"></div>
-                        <li><a href="front-page.html">Learning C++ by Creating Games with UE4</a></li>
-                        <li><a href="#" class="completed-section">Preface</a></li>
-                        <li><a href="#" class="completed-section">1. Preparing your Data</a></li>
-                        <li><a class="completed-section" href="#">2. Driving Visual Analysis with Automated Automobiles</a></li>
-                        <li class="active"><a href="index.html">3. Looping</a></li> 
-                        <li class="sub-nav"><a href="for-loop.html">The for loop</a></li>
-                        <li class="sub-nav"><a href="#" class="completed-section">The for/while loop</a></li>
-                        <li class="sub-nav"><a href="#">The 'if' loop</a></li>
-                        <li class="sub-nav"><a href="#">Looping with Unreal Engine</a></li>
-                        <li><a href="#">4. Forms and Entries</a></li>
-                        <li><a href="#">5. Functions and Macros</a></li>
-                        <li><a href="#">6. Dynamic Memory Allocation</a></li>
-                        <li><a href="#">7. If, Else and Switch</a></li>
-                        <li><a href="#">8. Actors and Roles</a></li>
+                        <li></li>
+                        <li><a href="front-page.html" class="incomplete-section">Mastering JavaScript</a></li>
+                        <li><a href="#"><div class="section-name">Preface</div></a></li>
+                        <li><a href="#"><div class="section-name">1. Preparing your Data</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li><a href="#"><div class="section-name">2. Driving Visual Analysis with Automated Automobiles</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="active"><a href="index.html"><div class="section-name">3. Looping</div></a></li> 
+                        <li class="sub-nav active"><a href="for-loop.html"><div class="section-name">The for loop</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-name">The for/while loop</div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-name">The 'if' loop</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-name">Looping with Unreal Engine</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li><a href="#"><div class="section-name">4. Forms and Entries and other content that makes it</div></a></li>
+                        <li><a href="#"><div class="section-name">5. Functions and Macros</div></a></li>
+                        <li><a href="#"><div class="section-name">6. Dynamic Memory Allocation</div></a></li>
+                        <li><a href="#"><div class="section-name">7. If, Else and Switch and everything else that's inbetween</div></a></li>
+                        <li><a href="#"><div class="section-name">8. Actors and Roles</div></a></li>
                     </div>
                     <div role="tabpanel" class="tab-pane fade pt15" id="bookmark" aria-labelledby="bookmark-tab"> 
                         <li><a href="#" class="completed-section">Preface</a></li>
@@ -130,69 +137,81 @@
         <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper" class="book-page ng-scope">
+          <div class="jumbotron heading">
+                <div class="container-fluid">
+                  <div class="col-sm-12">
+                    <h1>The for loop</h1>
+                    
+                    <div class="btn-group mb10 mt10" role="group">
+                        <button class="btn btn-default">
+                        <i class="fa fa-bookmark-o fa-lg"></i>
+                        <span class="hidden-xs ml5">Bookmark</span></button>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-shopping-cart fa-lg"></i>
+                                <span class="hidden-xs ml5"> Buy eBook for $21.99</span>
+                                <span class="hidden-xs caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li class="disabled">
+                                    <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-default hidden-xs">
+                        <i class="fa fa-file fa-lg"></i>
+                        <span class="hidden-xs ml5">Code Files</span></button>
+                        <button class="btn nightmode-toggle btn-default"><i class="fa fa-moon-o fa-lg no-text-padding"></i></button>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-font fa-lg no-text-padding"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="disabled"><a class="disabled text-center"><b>Font size (rem)</b></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="" target="_self">1.5</a></li>
+                                <li><a href="" target="_self">1.6</a></li>
+                                <li><a href="" target="_self">1.7</a></li>
+                                <li><a href="" target="_self">1.8</a></li>
+                                <li><a href="" target="_self">1.9</a></li>
+                                <li><a href="" target="_self">2.0</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-share fa-lg no-text-padding"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="disabled"><a href="#" class="disabled text-center"><b>Share</b></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" ng-click="facebookShare();">Facebook</a></li>
+                                <li><a href="mailto:?Subject=Packt Book: Python Machine Learning&amp;body=Packt Book link: https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781783555130" target="_top" ng-click="emailShare();">Email</a></li>
+                                <li><a href="#" ng-click="twitterShare();">Twitter</a></li>
+                                <li><a href="#" ng-click="redditShare();">Reddit</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                  </div>
+
+                </div>
+            </div>
 
     <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="nightmode reader-container col-sm-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8 ng-scope">
+                <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
                     
-                    <div class="row">
-                            <div class="btn-group mb10" role="group">
-                                <button href="#" class="btn btn-default"><i class="fa fa-bookmark-o fa-lg"></i> <span class="hidden-xs ml5"> Bookmark</span></button>
-                                 <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      <i class="fa fa-download fa-lg"></i><span class="hidden-xs ml5"> Download eBook</span>
-                                      <span class="caret hidden-xs"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li><a href="#">Download ePub</a></li>
-                                      <li><a href="#">Download PDF</a></li>
-                                      <li><a href="#">Download Mobi</a></li>
-                                    </ul>
-                                  </div>
-                                <a href="index.html" class="btn nightmode-toggle btn-default"><i class="fa fa-sun-o fa-lg"></i></a> 
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      <i class="fa fa-font fa-lg"></i>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li class="disabled"><a href="#" class="disabled text-center"><b>Font Size (rem)</b></a></li>
-                                      <li role="separator" class="divider"></li>
-                                      <li><a href="#">1.5 </a></li>
-                                      <li><a href="#">1.6 </a></li>
-                                      <li><a href="#">1.7 </a></li>
-                                      <li><a href="#">1.8 </a></li>
-                                      <li><a href="#">1.9 </a></li>
-                                      <li><a href="#">2.0 </a></li>
-                                    </ul>
-                                  </div>
-                                  <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      <i class="fa fa-pencil-square-o fa-lg"></i>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li class="disabled"><a href="#" class="disabled text-center"><b>Annotations</b></a></li>
-                                      <li role="separator" class="divider"></li>
-                                      <li><a href="#">Hide Personal </a></li>
-                                      <li><a href="#">Show Public </a></li>
-                                    </ul>
-                                  </div>
-                                  <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      <i class="fa fa-share fa-lg"></i>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li class="disabled"><a href="#" class="disabled text-center"><b>Share</b></a></li>
-                                      <li role="separator" class="divider"></li>
-                                      <li><a href="#">Facebook</a></li>
-                                      <li><a href="#">Email</a></li>
-                                      
-                                      <li><a href="#">Twitter</a></li>
-                                      <li><a href="#">Reddit</a></li>
-                                    </ul>
-                                  </div>
-                            </div>
+                    <div class="">
+                            
                         <div style="position:relative;" class="book-content" ng-non-bindable="">
                                 <div class="packtlib-version v2">
-                                  <div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch02lvl1sec17"></a>This is the Title of a Section</h2></div></div><hr></div>
+                                  <div class="titlepage"><div><div></div></div></div>
 <p>
 <span class="emphasis"><em>We might have wondered numerous times if there is a way we could travel back in time to change what had happened in life. Well, as fictional as it sounds, you are going to learn a method to perform this travel when it comes to digitized files! Yes, you read that right; this chapter is going to introduce you to a system that makes this possible. We will begin by giving you a solid conceptual understanding about version control with Git.</em></span>
 </p><p>It's time to <a id="id127" class="indexterm"></a>code the tastiest part of our restaurant<a id="id128" class="indexterm"></a> website (sorry, that was a terrible pun). For our menu page, we'll use a three-column layout combined with some additional modal popups for our featured dishes. The following is a preview of what the page will look like:</p>
@@ -502,7 +521,7 @@ Elapsed time: <span class="token tag"><span class="token tag"><span class="token
                     <div class="row"> 
                         <hr>      
                     
-                            <span class="hidden-xs"><h4 class="pull-left"><strong>Up Next: </strong>Routing in Django</h4><a href="for-loop.html" class="btn btn-primary pull-right">Next Section</a></span>
+                            <span class="hidden-xs"><h4 class="pull-left"><strong>Up Next: </strong>Routing in Django</h4><a href="#" class="btn btn-primary pull-right btn-lg">Next Section</a></span>
                             <span class="visible-xs"><a href="for-loop.html" class="btn btn-primary btn-block btn-lg">Next Section</a></span>
                     </div>
                     <div class="row"> 
@@ -527,6 +546,12 @@ Elapsed time: <span class="token tag"><span class="token tag"><span class="token
     <script src="js/prism.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Annotator Script -->
+    <script src="js/annotator.min.js"></script>
+    <script type="text/javascript">
+    var app = new annotator.App();
+    app.start();
+    </script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
 
