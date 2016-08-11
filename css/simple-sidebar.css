@@ -22,13 +22,12 @@
     z-index: 1000;
     position: fixed;
     left: 250px;
-    top: 64px;
     width: 0;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
     overflow-x: hidden;
-    background: #222;
+    background: #212121;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -37,6 +36,7 @@
 
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
+
 }
 
 #page-content-wrapper {
@@ -59,23 +59,28 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    text-transform: uppercase;
 }
 .sidebar-nav li {
     text-indent: 25px;
     line-height: 45px;
+    border-top: 1px solid #272727;
 }
 li.sub-nav {
-    border-bottom: none;
+    border-top: none;
 }
 .sub-nav a {
     font-size: 12px !important;
     line-height: 1.8em;
     background: rgba(0,0,0,0.4);
-    border-bottom: none;
+    border-top: none;
     text-indent: 35px;
+    text-transform: capitalize;
+    text-align: right;
+    
 }
 .active.sub-nav a {
-    background: #F9953D;
+    background: #464646;
 }
 .sidebar-nav h4 {
     color: #FFF;
@@ -90,13 +95,16 @@ li.sub-nav {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #BBBBBB;
+    color: #aaa;
     font-size: 14px;
     padding: 8px;
     font-weight: 500;
     white-space: nowrap;
+    text-align: right;
     overflow: hidden;
     text-overflow: ellipsis;
+    -webkit-transition: all .15s;
+    transition: all .15s;
 }
 .sidebar-nav li a .section-name {
     width: 200px;
@@ -116,6 +124,9 @@ li.sub-nav {
     text-indent: 0px;
     margin-top: -21px;
 }
+.sub-nav a .sidenav-menu {
+  font-size: 14px;
+}
 .active a#contents-tab, .active a#bookmark-tab {
     background: #222;
 }
@@ -126,9 +137,9 @@ a#bookmark-tab, a#contents-tab {
     color:white;
 }
 .sidenav-menu {
-  font-weight: 500;
-  font-size: 14px;
-  float: left;
+      font-weight: 500;
+      font-size: 15px;
+      padding-right: 25px;
 }
 .sidenav-menu i {
     text-indent: 0;
@@ -148,7 +159,7 @@ a#bookmark-tab, a#contents-tab {
 }
 
 .sidebar-nav .active {
-    background: #505050;
+    background: #2a2a2a;
 }
 
 .sidebar-nav > .sidebar-brand {
@@ -165,6 +176,16 @@ a#bookmark-tab, a#contents-tab {
     color: #fff;
     background: none;
 }
+.nav-logo {
+  text-indent: 0px !important;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.sidebar-nav .nav-logo a:hover {
+    text-decoration: none;
+    background: none;
+}
+
 
 /* TOC Styling */
 #bookmark,#contents {
@@ -195,8 +216,9 @@ a#bookmark-tab, a#contents-tab {
     }
 
     #wrapper.toggled #page-content-wrapper {
-        position: relative;
+        position: absolute;
         margin-right: 0;
+        margin-left: 0px;
     }
 }
 
@@ -227,7 +249,7 @@ a#bookmark-tab, a#contents-tab {
     }
     .sidebar-nav li a .section-name {
     width: 250px;
-}
+    }
 }
 
 
