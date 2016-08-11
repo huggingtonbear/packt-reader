@@ -142,7 +142,7 @@
                 <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
                     
                     <div class="">
-                    <div class="btn-group mb30 mt40" role="group">
+                    <div class="btn-group mb30 pull-right mt15" role="group">
                         <button class="btn btn-default">
                         <i class="fa fa-bookmark-o fa-lg"></i>
                         <span class="hidden-xs ml5">Bookmark</span></button>
@@ -168,12 +168,15 @@
                         <button class="btn btn-default hidden-xs">
                         <i class="fa fa-file fa-lg"></i>
                         <span class="hidden-xs ml5">Code Files</span></button>
-                        <button class="btn nightmode-toggle btn-default"><i class="fa fa-moon-o fa-lg no-text-padding"></i></button>
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-font fa-lg no-text-padding"></i>
+                                <i class="fa fa-cog fa-lg no-text-padding"></i>
                             </button>
                             <ul class="dropdown-menu">
+                                <li class="disabled"><a class="disabled text-center"><b>Nightmode</b></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="" target="_self">Enable</a></li>
+                                <li role="separator" class="divider"></li>
                                 <li class="disabled"><a class="disabled text-center"><b>Font size (rem)</b></a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="" target="_self">1.5</a></li>
@@ -182,17 +185,6 @@
                                 <li><a href="" target="_self">1.8</a></li>
                                 <li><a href="" target="_self">1.9</a></li>
                                 <li><a href="" target="_self">2.0</a></li>
-                            </ul>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-pencil-square-o fa-lg no-text-padding"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li class="disabled"><a class="disabled text-center"><b>Annotations</b></a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="" target="_self">Show Public Annotations</a></li>
-                                <li><a href="" target="_self">Hide Personal Annotations</a></li>
                             </ul>
                         </div>
                         <div class="btn-group" role="group">
@@ -209,7 +201,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
+                    <div class="clearfix">
+                    </div>
                             
                         <div style="position:relative;" class="book-content" id="content" ng-non-bindable="">
                                 <div class="packtlib-version v2">
