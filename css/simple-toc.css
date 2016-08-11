@@ -6,39 +6,21 @@
 
 /* Toggle Styles */
 
-#wrapper {
-    padding-left: 0;
+#wrapper2 {
+    padding-right: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
-#wrapper.toggled {
-    padding-left: 250px;
-}
-#wrapper.toggletoc {
+#wrapper2.toggled {
     padding-right: 250px;
 }
 
 a.sidenav-menu-holder.back-btn {
     background: #333333;
     color: white;
-}
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background: #212121;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
 }
 #sidebar-wrapper2 {
     z-index: 1000;
@@ -56,26 +38,18 @@ a.sidenav-menu-holder.back-btn {
     transition: all 0.5s ease;
 }
 
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-
-}
-#wrapper.toggletoc #sidebar-wrapper2 {
+#wrapper2.toggled #sidebar-wrapper2 {
     width: 250px;
 
 }
 
-#page-content-wrapper {
+#page-content-wrapper2 {
     width: 100%;
     position: absolute;
     padding: 0px;
 }
 
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}
-#wrapper.toggletoc #page-content-wrapper {
+#wrapper2.toggled #page-content-wrapper2 {
     position: absolute;
     margin-left: -250px;
 }
@@ -106,7 +80,7 @@ li.sub-nav {
     border-top: none;
     text-indent: 35px;
     text-transform: capitalize;
-    text-align: right;
+    text-align: left;
     
 }
 .search-form {
@@ -134,7 +108,7 @@ li.sub-nav {
     padding: 8px;
     font-weight: 500;
     white-space: nowrap;
-    text-align: right;
+    text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-transition: all .15s;
@@ -142,19 +116,19 @@ li.sub-nav {
 }
 .sidebar-nav li a .section-name {
     width: 200px;
-    padding-right: 10px;
+    padding-left: 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 .section-complete {
-    float: right;
+    float: left;
     width: 15px;
     text-indent: 0px;
     margin-top: -45px;
 }
 .sub-nav a .section-complete {
-    float: right;
+    float: left;
     width: 15px;
     text-indent: 0px;
     margin-top: -21px;
@@ -177,7 +151,7 @@ a#bookmark-tab, a#contents-tab {
 .sidenav-menu {
       font-weight: 500;
       font-size: 15px;
-      padding-right: 25px;
+      padding-left: 25px;
 }
 .sidenav-menu i {
     text-indent: 0;
@@ -231,81 +205,57 @@ a#bookmark-tab, a#contents-tab {
 }
 
 @media(min-width:992px) {
-    #wrapper {
-        padding-left: 250px;
+    #wrapper2 {
+        padding-right: 250px;
     }
 
-    #wrapper.toggled {
-        padding-left: 0;
-    }
-    #wrapper.toggletoc {
+    #wrapper2.toggled {
         padding-right: 0;
     }
 
-    #sidebar-wrapper {
-        width: 250px;
-    }
     #sidebar-wrapper2 {
         width: 250px;
     }
 
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
-    #wrapper.toggletoc #sidebar-wrapper2 {
+    #wrapper2.toggled #sidebar-wrapper2 {
         width: 0;
     }
 
-    #page-content-wrapper {
+    #page-content-wrapper2 {
         /*padding: 20px; removed for SP*/
         padding: 0px;
         position: relative;
     }
 
-    #wrapper.toggled #page-content-wrapper {
+    #wrapper2.toggled #page-content-wrapper2 {
         position: absolute;
-        margin-right: 0;
-        margin-left: 0px;
-    }
-    #wrapper.toggletoc #page-content-wrapper {
-        position: absolute;
-        margin-right: 0;
+        margin-left: 0;
         margin-right: 0px;
     }
 }
 
 @media(min-width:1400px) {
-    #wrapper {
-        padding-left: 300px;
+    #wrapper2 {
+        padding-right: 300px;
     }
 
-    #sidebar-wrapper{
-        width: 300px;
-    }
     #sidebar-wrapper2{
         width: 300px;
     }
-    #wrapper.toggled #sidebar-wrapper {
-        left: 300px;
-        margin-left: -300px;
-    }
-    #wrapper.toggletoc #sidebar-wrapper2 {
+    #wrapper2.toggled #sidebar-wrapper2 {
         right: 300px;
         margin-right: -300px;
     }
 
-    #wrapper.toggled #page-content-wrapper {
-        margin-left: -300px;
-    }
-    #wrapper.toggletoc #page-content-wrapper {
+    #wrapper2.toggled #page-content-wrapper2 {
         margin-right: -300px;
     }
 
-    #wrapper.toggled #page-content-wrapper {
-        position: absolute;
-        margin-left: 0px;
-    }
-    #wrapper.toggletoc #page-content-wrapper {
+    .sidebar-nav {
+/*        width: 300px;
+*/    }
+
+    #wrapper2.toggled #page-content-wrapper2 {
         position: absolute;
         margin-right: 0px;
     }
