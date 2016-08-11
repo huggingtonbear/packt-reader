@@ -17,9 +17,6 @@
 #wrapper.toggled {
     padding-left: 250px;
 }
-#wrapper.toggletoc {
-    padding-right: 250px;
-}
 
 a.sidenav-menu-holder.back-btn {
     background: #333333;
@@ -40,27 +37,8 @@ a.sidenav-menu-holder.back-btn {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-#sidebar-wrapper2 {
-    z-index: 1000;
-    position: fixed;
-    right: 250px;
-    width: 0;
-    height: 100%;
-    margin-right: -250px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background: #212121;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-
-}
-#wrapper.toggletoc #sidebar-wrapper2 {
     width: 250px;
 
 }
@@ -74,10 +52,6 @@ a.sidenav-menu-holder.back-btn {
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -250px;
-}
-#wrapper.toggletoc #page-content-wrapper {
-    position: absolute;
-    margin-left: -250px;
 }
 
 /* Sidebar Styles */
@@ -238,21 +212,12 @@ a#bookmark-tab, a#contents-tab {
     #wrapper.toggled {
         padding-left: 0;
     }
-    #wrapper.toggletoc {
-        padding-right: 0;
-    }
 
     #sidebar-wrapper {
         width: 250px;
     }
-    #sidebar-wrapper2 {
-        width: 250px;
-    }
 
     #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
-    #wrapper.toggletoc #sidebar-wrapper2 {
         width: 0;
     }
 
@@ -267,11 +232,6 @@ a#bookmark-tab, a#contents-tab {
         margin-right: 0;
         margin-left: 0px;
     }
-    #wrapper.toggletoc #page-content-wrapper {
-        position: absolute;
-        margin-right: 0;
-        margin-right: 0px;
-    }
 }
 
 @media(min-width:1400px) {
@@ -282,32 +242,22 @@ a#bookmark-tab, a#contents-tab {
     #sidebar-wrapper{
         width: 300px;
     }
-    #sidebar-wrapper2{
-        width: 300px;
-    }
     #wrapper.toggled #sidebar-wrapper {
         left: 300px;
         margin-left: -300px;
     }
-    #wrapper.toggletoc #sidebar-wrapper2 {
-        right: 300px;
-        margin-right: -300px;
-    }
 
     #wrapper.toggled #page-content-wrapper {
         margin-left: -300px;
     }
-    #wrapper.toggletoc #page-content-wrapper {
-        margin-right: -300px;
-    }
+
+    .sidebar-nav {
+/*        width: 300px;
+*/    }
 
     #wrapper.toggled #page-content-wrapper {
         position: absolute;
         margin-left: 0px;
-    }
-    #wrapper.toggletoc #page-content-wrapper {
-        position: absolute;
-        margin-right: 0px;
     }
     .sidebar-nav li a .section-name {
     width: 250px;
