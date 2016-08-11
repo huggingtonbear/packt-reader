@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+    <link rel="apple-touch-icon" sizes="57x57" href="/packtlib-nv/images/apple-icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/packtlib-nv/images/apple-icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/packtlib-nv/images/apple-icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/packtlib-nv/images/apple-icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/packtlib-nv/images/apple-icons/apple-icon-180x180.png">
+
+    <title>Mapt - Developer Skills Delivered</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="language-markup">
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4>Add to Completed Skill Cards</h4>
+      </div>
+      <div class="modal-body">
+              <p>Are you sure you want to mark this Skill Card as complete and remove it from your Plan</p>
+      </div>
+      <div class="modal-footer">
+        <button id="myButton" href="#myDiv" type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+            <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
+              <li class="nav-logo"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu"><img src="images/mapt-logo.png" class=""></span><span class="pull-left mr5"></span></a>    </li>
+              <form class="col-sm-12 mb15 pl25 pr25">
+                <input type="text" class="form-control" placeholder="&#xf002;  Search for a course...">
+              </form>
+              <div class="clearfix"></div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="sidenav-menu-holder"><span class="sidenav-menu">Skills</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <li class="sub-nav"><a href="dashboard-test.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Skill Plan</span><span class="pull-left mr5">3</span></a>    </li>
+                <li class="sub-nav"><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Cards </span><span class="pull-left mr5">6</span></a>    </li>
+                <li class="sub-nav"><a href="usage.html" class="sidenav-menu-holder"><span class="sidenav-menu">Progress</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Plans </span></a>    </li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <li class="sub-nav"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">Bookmarks</span><span class="pull-left mr5">8</span></a>    </li>
+                <li class="sub-nav"><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">Saved</span><span class="pull-left mr5">3</span></a>    </li>
+                <li class="sub-nav"><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchased </span><span class="pull-left mr5">6</span></a>    </li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><span class="sidenav-menu">My Account</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">Account Details</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="account-subscription.html" class="sidenav-menu-holder"><span class="sidenav-menu">Subscriptions</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="account-licences.html" class="sidenav-menu-holder"><span class="sidenav-menu">Licenses </span></a>    </li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">FAQs</span><span class="pull-left mr5"></span></a></li>
+              </div>
+              <li class=""><a href="dashboard-lo.html" class="sidenav-menu-holder"><span class="sidenav-menu">Logout</span><span class="pull-left mr5"></span></a> </li>
+            </div>
+          </ul>
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
+        <div id="page-content-wrapper" class="">
+          <a class="navbar-brand toggle-nav visible-sm visible-xs" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+          <div class="jumbotron heading">
+            <div class="container-fluid">
+                <div class="col-sm-12">
+                    <h1 class="ng-binding">AngularJS by Example</h1>
+                    <a href="#collapseListGroup1" class="" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseListGroup1"> View Contents </a>
+                    <div class="panel-group" role="tablist">
+
+                        <div class="panel-collapse collapse" role="tabpanel" id="collapseListGroup1" aria-labelledby="collapseListGroupHeading1" aria-expanded="true">
+                          <ul>
+                            <li><a href="#">
+                            AngularJS by Example
+                            </a></li>
+                            <li><a href="#">
+                            Preface
+                            </a></li>
+                            <li><a href="#">
+                            1: Getting Started
+                            </a></li>
+                            <ul>
+                                  <li><a href="#">
+                                  The basics of Model View Controller
+                                  </a></li>
+                                  <li><a href="#">
+                                  The customary Hello Angular app (Guess the Number!)
+                                  </a></li>
+                                  <li><a href="#">
+                                  Setting up a development server
+                                  </a></li>
+                                  <li><a href="#">
+                                  Building Guess the Number!
+                                  </a></li>
+                                  <li><a href="#">
+                                  The app model
+                                  </a></li>
+                                  <li><a href="#">
+                                  The controller
+                                  </a></li>
+                                  <li><a href="#">
+                                  The app view
+                                  </a></li>
+                                  <li><a href="#">
+                                  Revisiting the controller
+                                  </a></li>
+                                  <li><a href="#">
+                                  Scope
+                                  </a></li>
+                                  <li><a href="#">
+                                  App bootstrapping
+                                  </a></li>
+                                  <li><a href="#">
+                                  Tools
+                                  </a></li>
+                                  <li><a href="#">
+                                  Resources
+                                  </a></li>
+                                  <li><a href="#">
+                                  Summary
+                                  </a></li>
+                            </ul>
+                            <li><a href="#">
+                            2: Building Our First App &ndash; 7 Minute Workout
+                            </a></li>
+                                  <ul>
+                                  <li><a href="#">
+                                  What is 7 Minute Workout?
+                                  </a></li>
+                                  <li><a href="#">
+                                  Code organization
+                                  </a></li>
+                                  <li><a href="#">
+                                  The 7 Minute Workout model
+                                  </a></li>
+                                  <li><a href="#">
+                                  Adding app modules
+                                  </a></li>
+                                  <li><a href="#">
+                                  The app controller
+                                  </a></li>
+                                  <li><a href="#">
+                                  The 7 Minute Workout view
+                                  </a></li>
+                                  <li><a href="#">
+                                  Adding start and finish pages
+                                  </a></li>
+                                  <li><a href="#">
+                                  Learning more about an exercise
+                                  </a></li>
+                                  <li><a href="#">
+                                  Displaying the remaining workout time using filters
+                                  </a></li>
+                                  <li><a href="#">
+                                  Adding the next exercise indicator using ng-if
+                                  </a></li>
+                                  <li><a href="#">
+                                  Summary
+                                  </a></li>
+                            </ul>
+                            <li><a href="#">
+                            3: More AngularJS Goodness for 7 Minute Workout
+                            </a></li>
+                                  <ul>
+                                  <li><a href="#">
+                                  Formatting the exercise steps
+                                  </a></li>
+                                  <li><a href="#">
+                                  Tracking exercise progress with audio clips
+                                  </a></li>
+                                  <li><a href="#">
+                                  Pausing exercises
+                                  </a></li>
+                                  <li><a href="#">
+                                  Enhancing the workout video panel
+                                  </a></li>
+                                  <li><a href="#">
+                                  Animations with AngularJS
+                                  </a></li>
+                                  <li><a href="#">
+                                  Workout history tracking using Angular services
+                                  </a></li>
+                                  <li><a href="#">
+                                  Summary
+                                  </a></li>
+                                  <li><a href="#">
+                                  4: Building Personal Trainer
+                                  </a></li>
+                                  <li><a href="#">
+                                  The Personal Trainer app the problem scope
+                                  </a></li>
+                                  <li><a href="#">
+                                  The Personal Trainer model
+                                  </a></li>
+                                  <li><a href="#">
+                                  The Personal Trainer layout
+                                  </a></li>
+                                  <li><a href="#">
+                                  Implementing the workout and exercise list
+                                  </a></li>
+                                  <li><a href="#">
+                                  Building a workout
+                                  </a></li>
+                                  <li><a href="#">
+                                  Summary
+                                  </a></li>
+                            </ul>
+                            <li><a href="#">
+                            5: Adding Data Persistence to Personal Trainer
+                            </a></li>
+                            <ul>
+                                  <li><a href="#">
+                                  AngularJS and server interactions
+                                  </a></li>
+                                  <li><a href="#">
+                                  $http service basics
+                                  </a></li>
+                                  <li><a href="#">
+                                  Personal Trainer and server integration
+                                  </a></li>
+                                  <li><a href="#">
+                                  Getting started with $resource
+                                  </a></li>
+                                  <li><a href="#">
+                                  Using $resource to access exercise data
+                                  </a></li>
+                                  <li><a href="#">
+                                  Exercising CRUD with $resource
+                                  </a></li>
+                                  <li><a href="#">
+                                  Request/response interceptors
+                                  </a></li>
+                                  <li><a href="#">
+                                  AngularJS request/response transformers
+                                  </a></li>
+                                  <li><a href="#">
+                                  Handling routing failure for rejected promises
+                                  </a></li>
+                                  <li><a href="#">
+                                  Fixing the 7 Minute Workout app
+                                  </a></li>
+                                  <li><a href="#">
+                                  Summary
+                                  </a></li>
+                            </ul>
+                            <li><a href="#">
+                            6: Working with Directives
+                            </a></li>
+                            <ul>
+                                  <li><a href="#">
+                                  Directives an introduction
+                                  </a></li>
+                                  <li><a href="#">
+                                  Anatomy of a directive
+                                  </a></li>
+                                  <li><a href="#">
+                                  Building a remote validation directive to validate the workout name
+                                  </a></li>
+                                  <li><a href="#">
+                                  Model update on blur
+                                  </a></li>
+                                  <li><a href="#">
+                                  Implementing a remote validation clues directive
+                                  </a></li>
+                                  <li><a href="#">
+                                  Understanding directive-isolated scopes
+                                  </a></li>
+                                  <li><a href="#">
+                                  AngularJS jQuery integration
+                                  </a></li>
+                                  <li><a href="#">
+                                  Summary
+                                  </a></li>
+                            </ul>
+                            <li><a href="#">
+                            7: Testing the AngularJS App
+                            </a></li>
+                            <ul>
+                                  <li><a href="#">
+                                  The need for automation
+                                  </a></li>
+                                  <li><a href="#">
+                                  Testing in AngularJS
+                                  </a></li>
+                                  <li><a href="#">
+                                  Getting started with unit testing
+                                  </a></li>
+                                  <li><a href="#">
+                                  Getting started with E2E testing
+                                  </a></li>
+                                  <li><a href="#">
+                                  Summary
+                                  </a></li>
+                            </ul>
+                            <li><a href="#">
+                            8: Handling Common Scenarios
+                            </a></li>
+                                  <ul>
+                                  <li><a href="#">
+                                  Building a new app
+                                  </a></li>
+                                  <li><a href="#">
+                                  Building multilingual apps (internationalization)
+                                  </a></li>
+                                  <li><a href="#">
+                                  Handling authentication and authorization
+                                  </a></li>
+                                  <li><a href="#">
+                                  Communication and data sharing patterns
+                                  </a></li>
+                                  <li><a href="#">
+                                  Performance
+                                  </a></li>
+                                  <li><a href="#">
+                                  Useful third-party libraries
+                                  </a></li>
+                                  <li><a href="#">
+                                  Summary
+                                  </a></li>
+                            </ul>
+                            <li><a href="#">
+                            Appendix A: Index
+                            </a></li>
+                      </ul>
+                      </div> 
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            
+          </div>
+        </div><!-- /#page-content-wrapper -->
+  </div><!-- /#wrapper -->
+    
+
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
+    <script src="js/jquery.js"></script>
+    <!-- Syntax Highlighting Script -->
+    <script src="js/prism.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+    <script type="text/javascript">
+    $("#myButton").click(function() {
+         $("#myDiv").fadeTo("slow", 0.01, function(){ //fade
+             $(this).slideUp("slow", function() { //slide up
+                 $(this).remove(); //then remove from the DOM
+                });
+             });
+    });
+    </script>
+    <script type="text/javascript">
+      $('#sidebar-nav .collapse').on('show.bs.collapse', function (e) {
+    var actives = $('#sidebar-nav').find('.in, .collapsing');
+    actives.each( function (index, element) {
+        $(element).collapse('hide');
+    })
+})
+    </script>
+</body>
+
+</html>

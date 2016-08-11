@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+    <link rel="apple-touch-icon" sizes="57x57" href="/packtlib-nv/images/apple-icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/packtlib-nv/images/apple-icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/packtlib-nv/images/apple-icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/packtlib-nv/images/apple-icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/packtlib-nv/images/apple-icons/apple-icon-180x180.png">
+
+    <title>Mapt - Developer Skills Delivered</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="language-markup">
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4>Add to Completed Skill Cards</h4>
+      </div>
+      <div class="modal-body">
+              <p>Are you sure you want to mark this Skill Card as complete and remove it from your Plan</p>
+      </div>
+      <div class="modal-footer">
+        <button id="myButton" href="#myDiv" type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+            <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
+              <li><a href="dashboard-test.html" class="sidenav-menu-holder back-btn"><span class="sidenav-menu">Back</span><span class="pull-left mr5"><i class="fa fa-chevron-left"></i></span></a>    </li>
+              <li class="search-form">
+              <form class="col-sm-12 mb15 pl25 pr25">
+                <input type="text" class="form-control" placeholder="&#xf002;  Search this course...">
+              </form>
+            </li>
+              <div class="clearfix"></div>
+              <li class=""><a href="#" class="sidenav-menu-holder"><div class="section-name ng-binding">AngularJS by Example </div></a> </li>
+              <ul id="toc" class="nav nav-pills nav-justified" role="tablist">
+                <li class="active ml15" style="text-indent: 0px;">
+                   <a href="#contents" ng-click="$event.preventDefault();" id="contents-tab" role="tab" data-toggle="tab" aria-controls="contents" aria-expanded="true">Contents</a>
+                </li>
+                <li style="text-indent: 0px;" ng-show="login_status == true">
+                   <a href="#bookmark" ng-click="$event.preventDefault();" role="tab" id="bookmark-tab" data-toggle="tab" aria-controls="bookmark" aria-expanded="false" class="ng-binding">Bookmarks (0)</a>
+                </li>
+             </ul>
+
+              <li class=""><a href="#" class="sidenav-menu-holder"><div class="section-name">Preface</div></a> </li>
+              <li class="active"><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="sidenav-menu-holder"><div class="section-name">1. Getting Started</div></a>    </li>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <li class="sub-nav active"><a href="#"><div class="section-name">Chapter 1. Getting Started</div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-name">Summary</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="sidenav-menu-holder"><div class="section-name">2. Building our first application</div></a>    </li>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <li class="sub-nav"><a href="#"><div class="section-name">Chapter 2. Learning about x and y</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><div class="section-name">3. More AngularJS Goodness</div></a>    </li>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="#"><div class="section-name">Chapter 3. Learning about x and y</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="sidenav-menu-holder"><div class="section-name">4. Building Personal Trainer</div></a>    </li>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="#"><div class="section-name">Chapter 3. Learning about x and y</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive" class="sidenav-menu-holder"><div class="section-name">5. Adding Data Persistance and other </div></a>    </li>
+              <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="#"><div class="section-name">Chapter 3. Learning about x and y</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix" class="sidenav-menu-holder"><div class="section-name">6. Working with Directives</div></a>    </li>
+              <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="#"><div class="section-name">Chapter 3. Learning about x and y</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven" class="sidenav-menu-holder"><div class="section-name">7. Testing the AngularJS Application</div></a>    </li>
+              <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="#"><div class="section-name">Chapter 3. Learning about x and y</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
+              </div>
+              <li class=""><a href="#" class="sidenav-menu-holder"><div class="section-name">Appendix A:Index</div></a> </li>
+            </div>
+          </ul>
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
+        <div id="page-content-wrapper" class="">
+            <a class="navbar-brand toggle-nav visible-sm visible-xs" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+    
+        </div><!-- /#page-content-wrapper -->
+  </div><!-- /#wrapper -->
+    
+
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
+    <script src="js/jquery.js"></script>
+    <!-- Syntax Highlighting Script -->
+    <script src="js/prism.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+    <script type="text/javascript">
+    $("#myButton").click(function() {
+         $("#myDiv").fadeTo("slow", 0.01, function(){ //fade
+             $(this).slideUp("slow", function() { //slide up
+                 $(this).remove(); //then remove from the DOM
+                });
+             });
+    });
+    </script>
+    <script type="text/javascript">
+      $('#sidebar-nav .collapse').on('show.bs.collapse', function (e) {
+    var actives = $('#sidebar-nav').find('.in, .collapsing');
+    actives.each( function (index, element) {
+        $(element).collapse('hide');
+    })
+})
+    </script>
+</body>
+
+</html>
