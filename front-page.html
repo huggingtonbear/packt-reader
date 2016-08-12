@@ -43,168 +43,167 @@
 
     <div id="wrapper">
 
-        <!-- Top Nav Bar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-                  <a href="dashboard.html" type="button" class="btn btn-default navbar-btn mr15 ml15 dashboard-back-btn lg hidden-xs">
-                    <i class="fa fa-chevron-left fa-lg mr5">
-                    </i>Back to Mapt</a>
-                    <a href="dashboard.html" type="button" class="btn btn-default dashboard-back-btn navbar-btn visible-xs">
-                    <i class="fa fa-chevron-left fa-lg mr5">
-                    </i>Back
-                  </a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                        <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
-                        </a>
-                        <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li> <a href="#">View Account</a></li> 
-                            <li><a href="#">View Subscriptions</a></li> 
-                            <li><a href="#">View Licences</a></li> 
-                            <li role="separator" class="divider"></li> 
-                            <li><a href="library-lo.html">Logout</a></li> 
-                        </ul> 
-                    </li>
-                    </ul>
-                    <form class="navbar-form navbar-right search-nav-collapse">
-                        <div class="form-group pull-right" style="display:inline;">
-                            <div class="input-group">
-                              <input class="form-control" type="text" placeholder="&#xf002;  Search the library...">
-                              
-                            </div>
-                        </div>
-                    </form>
-                </div><!--/.nav-collapse -->
-            </div>
-        </nav>
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+            <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
+              <li><a href="dashboard.html" class="sidenav-menu-holder back-btn"><span class="sidenav-menu">Back</span><span class="pull-left mr5"><i class="fa fa-chevron-left"></i></span></a>    </li>
+              <li><a href="front-page.html" class="sidenav-menu-holder"><span class="sidenav-menu"><img src="images/cover.png" class="cover-image"></span><span class="pull-left mr5"></a>    </li>
 
-            <ul class="sidebar-nav">
-                <ul id="toc" class="nav nav-pills nav-justified" role="tablist">
-                    <li class="active ml15" style="text-indent: 0px;">
-                        <a href="#contents" id="contents-tab" role="tab" data-toggle="tab" aria-controls="contents" aria-expanded="true">Contents</a>
-                    </li>
-                    <li style="text-indent: 0px;">
-                        <a href="#bookmark" role="tab" id="bookmark-tab" data-toggle="tab" aria-controls="bookmark" aria-expanded="false">Bookmarks (2)</a>
-                    </li>
-                </ul>
-                <div id="TocContent" class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade in active pt15" id="contents" aria-labelledby="contents-tab"> 
-                        <form class="col-sm-12 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
-                               <input type="text" class="form-control book_search_query" ng-keyup="sidebarSearchChange()" placeholder="&#xf002;  Search this course...">
-                        </form>
-                        <div class="clearfix"></div>
-                        <li class="active"><a href="front-page.html">Mastering JavaScript</a></li>
-                        <li><a href="#" class="completed-section">Preface</a></li>
-                        <li><a href="#" class="completed-section">1. Preparing your Data</a></li>
-                        <li><a class="completed-section" href="#">2. Driving Visual Analysis with Automated Automobiles</a></li>
-                        <li ><a href="index.html">3. Looping</a></li> <!-- 
-                        <li class="sub-nav"><a href="for-loop.html">The for loop</a></li>
-                        <li class="sub-nav"><a href="#" class="completed-section">The for/while loop</a></li>
-                        <li class="sub-nav"><a href="#">The 'if' loop</a></li>
-                        <li class="sub-nav"><a href="#">Looping with Unreal Engine</a></li> -->
-                        <li><a href="#">4. Forms and Entries</a></li>
-                        <li><a href="#">5. Functions and Macros</a></li>
-                        <li><a href="#">6. Dynamic Memory Allocation</a></li>
-                        <li><a href="#">7. If, Else and Switch</a></li>
-                        <li><a href="#">8. Actors and Roles</a></li>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade pt15" id="bookmark" aria-labelledby="bookmark-tab"> 
-                        <li><a href="#" class="completed-section">Preface</a></li>
-                        <li><a href="#" class="completed-section">1. Preparing your Data</a></li> 
-                    </div>
-                </div>
-            </ul>
+              <li class="search-form">
+              <form class="col-sm-12 mb15 pl25 pr25">
+                <input type="text" class="form-control" placeholder="&#xf002;  Search this course...">
+              </form>
+            </li>
+              <div class="clearfix"></div>
+              <li><a href="#" class="sidenav-menu-holder"><div class="section-name"><i class="fa fa-bookmark mr5"></i> Bookmarks (0)</div></a>    </li>
+              <li class=""><a href="#" class="sidenav-menu-holder"><div class="section-name">Preface</div></a> </li>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="sidenav-menu-holder"><div class="section-name">1. Getting Started</div></a>    </li>
+              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <li class="sub-nav"><a href="index.html"><div class="section-name">Chapter 1. Getting Started</div></a></li>
+                        <li class="sub-nav"><a href="index.html"><div class="section-name">Adding App Modules</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="index.html"><div class="section-name">The app controller</div></a></li>
+                        <li class="sub-nav"><a href="index.html"><div class="section-name">Adding the next exercise in tandem with everything</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="index.html"><div class="section-name">Understanding responsive design priciples</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="index.html"><div class="section-name">Migrating to Angular 2</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="index.html"><div class="section-name">Summary</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="sidenav-menu-holder"><div class="section-name">2. Building our first application</div></a>    </li>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <li class="sub-nav"><a href="#"><div class="section-name">Chapter 2. Learning about x and y</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><div class="section-name">3. More AngularJS Goodness</div></a>    </li>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="#"><div class="section-name">Chapter 3. Learning about x and y</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="sidenav-menu-holder"><div class="section-name">4. Building Personal Trainer</div></a>    </li>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="#"><div class="section-name">Chapter 3. Learning about x and y</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive" class="sidenav-menu-holder"><div class="section-name">5. Adding Data Persistance and other </div></a>    </li>
+              <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="#"><div class="section-name">Chapter 3. Learning about x and y</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix" class="sidenav-menu-holder"><div class="section-name">6. Working with Directives</div></a>    </li>
+              <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="#"><div class="section-name">Chapter 3. Learning about x and y</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven" class="sidenav-menu-holder"><div class="section-name">7. Testing the AngularJS Application</div></a>    </li>
+              <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="#"><div class="section-name">Chapter 3. Learning about x and y</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
+                <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
+              </div>
+              <li class=""><a href="#" class="sidenav-menu-holder"><div class="section-name">Appendix A:Index</div></a> </li>
+            </div>
+          </ul>
         </div>
 
         <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper" class="book-page ng-scope">
-            <div class="jumbotron heading">
-                <div class="container-fluid">
-                  <div class="col-sm-12">
-                    
-                    <h1>Mastering JavaScript</h1>
-                    
-
-                    <div class="btn-group btn-block mb10 mt10" role="group">
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle pull-" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                                        <i class="fa fa-shopping-cart fa-lg"></i>
-                                        <span class="hidden-xs ml15"> Buy eBook for $21.99</span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
-                                        </li>
-                                        <li role="separator" class="divider"></li>
-                                        <li class="disabled">
-                                            <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <button class="btn btn-default">
+                
+                <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 mt10">
+                        <a class="visible-sm visible-xs" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
+                        
+                    </div>
+                </div>  
+                            
+                <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
+                <div class="btn-group pull-right mt15 mb30" role="group">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-shopping-cart fa-lg"></i>
+                                <span class="hidden-xs hidden-sm ml5"> Buy eBook for $21.99</span>
+                                <span class="hidden-xs hidden-sm caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li class="disabled">
+                                    <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-default">
                                 <i class="fa fa-folder-open-o fa-lg"></i>
                                 <span class="hidden-xs ml5">Save for Later</span></button>
-                                
-                                <button class="btn btn-default hidden-xs">
-                                <i class="fa fa-file fa-lg"></i>
-                                <span class="hidden-xs ml5">Code Files</span></button>                        
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-share fa-lg no-text-padding"></i>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li class="disabled"><a href="#" class="disabled text-center"><b>Share</b></a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#" ng-click="facebookShare();">Facebook</a></li>
-                                        <li><a href="mailto:?Subject=Packt Book: Python Machine Learning&amp;body=Packt Book link: https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781783555130" target="_top" ng-click="emailShare();">Email</a></li>
-                                        <li><a href="#" ng-click="twitterShare();">Twitter</a></li>
-                                        <li><a href="#" ng-click="redditShare();">Reddit</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                  </div>
-
+                        <button class="btn btn-default hidden-xs">
+                        <i class="fa fa-file fa-lg"></i>
+                        <span class="hidden-xs hidden-sm ml5">Code Files</span></button>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-share fa-lg no-text-padding"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="disabled"><a href="#" class="disabled text-center"><b>Share</b></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" ng-click="facebookShare();">Facebook</a></li>
+                                <li><a href="mailto:?Subject=Packt Book: Python Machine Learning&amp;body=Packt Book link: https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781783555130" target="_top" ng-click="emailShare();">Email</a></li>
+                                <li><a href="#" ng-click="twitterShare();">Twitter</a></li>
+                                <li><a href="#" ng-click="redditShare();">Reddit</a></li>
+                            </ul>
+                        </div>
                 </div>
-            </div>
-
-            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
+                <div class="clearfix"></div>              
+                    
+                    <h2>AngularJS by Example</h2>
+                    <hr>
+                    
                     <div class="row">
 
                     <div class="col-sm-12">
+                        <h5 class="mt0">By Ben Frain</h5>
                         
                         <div class="">
-                             <div class="col-sm-3">
-                                <a href="front-page.html"><img src="images/book1.jpg" class="img-responsive hidden-xs"></a>
-                            </div>
-                            <div class="col-sm-9">
                                 
 
-                            <p class="mt20 mb20"><b>Learn the hot new front-end web framework from Facebook: ReactJS, an easy way of developing the V in MVC and a better approach to software engineering in functional JavaScript</b></p>
+                            <p class="mb20"><b>Learn the hot new front-end web framework from Facebook: ReactJS, an easy way of developing the V in MVC and a better approach to software engineering in functional JavaScript</b></p>
                             <a href="index.html" class="btn btn-info btn-lg pull-right hidden-xs">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                             <a href="index.html" class="btn btn-info btn-lg btn-block mt20 mb20 visible-xs">Resume Learning <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                             <div class="clearfix"></div>
 
-                            </div>
                             <div class="col-sm-12">
                                 
                                 <ul id="myTabs" class="nav nav-tabs nav-justified hidden-xs mt20" role="tablist">
@@ -310,6 +309,8 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
+    <script src="js/sidenav-accordion.js"></script>
+
 
 </body>
 
