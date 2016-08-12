@@ -77,7 +77,6 @@ span.input-group-btn button.btn {
 /* Top Nav Bar Styles */
 .brand-logo {
   color: #677280;
-  width: 200px;
   margin-left: -1px;
   float: left;
   text-align: center;
@@ -305,7 +304,6 @@ b.landing {
 .toggle-nav {
     font-size: 18px;
     margin-left: 0px;
-    padding-left: 0px;
 }
 .course-listing {
   margin-bottom: 0px;

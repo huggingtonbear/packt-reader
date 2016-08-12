@@ -68,59 +68,56 @@
   
 
     <div id="wrapper">
-
-
         
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-              <a class="brand-logo" href="dashboard.html"><img src="images/logo.png"></a>
-            <div class="clearfix"></div>
-            <ul class="sidebar-nav">
-              <form class="col-sm-12 mb15 ng-pristine ng-valid ng-scope" ng-submit="sidebarSearchSubmit()" ng-if="currentPage != 'video'">
-                               <input type="text" class="form-control book_search_query" ng-keyup="sidebarSearchChange()" placeholder="&#xf002;  Search for a course...">
-                        </form>
-              <li>
-
-                <a href="index.html" class="sidenav-menu-holder"><span class="sidenav-menu">Resume Course </span><span class="pull-right mr5"></span></a></li>
-                    <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Map</span><span class="pull-right mr5"><i class="fa fa-caret-down fa-lg"></i></span></a>    </li>
-                    <li class="sub-nav active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Skill Plan</span><span class="pull-right mr5">3</span></a>    </li>
-                    <li class="sub-nav"><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Cards </span><span class="pull-right mr5">6</span></a>    </li>
-                    <li class="sub-nav"><a href="usage.html" class="sidenav-menu-holder"><span class="sidenav-menu">Progress</span><span class="pull-right mr5"></span></a>    </li>
-                    <li class="sub-nav"><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Plans </span></a>    </li>
-                    <li class=""><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
-                    <li class=""><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Account</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
-                    <li class=""><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
-                    <li class=""><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Logout</span><span class="pull-right mr5"></span></a>    </li>
-                    
-            </ul>
+          <ul class="sidebar-nav">
+            <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
+              <li class="nav-logo "><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu"><img src="images/mapt-logo.png" class=""></span><span class="pull-left mr5"></span></a>    </li>
+              <form class="col-sm-12 mb15 pl25 pr25">
+                <input type="text" class="form-control" placeholder="&#xf002;  Search for a course...">
+              </form>
+              <div class="clearfix"></div>
+              <li class="active"><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="sidenav-menu-holder"><span class="sidenav-menu">Skills</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <li class="sub-nav active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Skill Plan</span><span class="pull-left mr5">3</span></a>    </li>
+                <li class="sub-nav"><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Cards </span><span class="pull-left mr5">6</span></a>    </li>
+                <li class="sub-nav"><a href="usage.html" class="sidenav-menu-holder"><span class="sidenav-menu">Progress</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Plans </span></a>    </li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <li class="sub-nav"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">Bookmarks</span><span class="pull-left mr5">8</span></a>    </li>
+                <li class="sub-nav"><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">Saved</span><span class="pull-left mr5">3</span></a>    </li>
+                <li class="sub-nav"><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchased </span><span class="pull-left mr5">6</span></a>    </li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><span class="sidenav-menu">My Account</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">Account Details</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="account-subscription.html" class="sidenav-menu-holder"><span class="sidenav-menu">Subscriptions</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="account-licences.html" class="sidenav-menu-holder"><span class="sidenav-menu">Licenses </span></a>    </li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">FAQs</span><span class="pull-left mr5"></span></a></li>
+              </div>
+              <li class=""><a href="dashboard-lo.html" class="sidenav-menu-holder"><span class="sidenav-menu">Logout</span><span class="pull-left mr5"></span></a> </li>
+            </div>
+          </ul>
         </div>
 
         <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper" class="">
-            <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-            <!-- <div class="jumbotron heading mb0">
-                <div class="container-fluid">
-                  <div class="col-sm-12">
-                    <h1 >My Skill Plan</h1>
-
-                    <ol class="breadcrumb row mt0">
-                      <li class="mt5">Manage your learning and skill development</li>
-                    </ol>
-                    <div class="progress mb0">
-                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                        <span class="sr-only">40% Complete</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div> -->
             <div id="book-wrapper" class="container-fluid">               
                 <div class="row">
                             <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
-                                    <h3>My Skill Plan</h3>
-                                    <hr>
-                                    <a href="skill-select.html" class="btn btn-info pull-right mt10"><i class="fa fa-plus mr5"></i> Add Skill Cards</a>
+                             <a class="visible-sm visible-xs" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
+                            <h3>My Skill Plan</h3>
+                            <h6 class="mt5">Manage your learning and skill development</h6>
+
+                            <hr>
                                     <div class="mt30">
                                       <h5><b>Python Developer:</b> 6/9  Skill Cards Completed</h5>
                                       <div class="progress mt5 mb25">
@@ -128,9 +125,6 @@
                                           <span class="sr-only">40% Complete</span>
                                         </div>
                                       </div>
-                                    
-                                        
-                                      
                                       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                         <div class="panel panel-default" id="myDiv">
                                           <div class="panel-heading clickable card-header" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -139,13 +133,23 @@
                                           </div>
                                           <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                             <div class="panel-body">
-                                              <div class="card-desc">
-                                                
-                                                <p><i class="fa fa-info-circle mr5" aria-hidden="true"></i>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
-                                                
-                                              </div>
-                                              
-                                              <hr>
+                                              <div class="col-sm-12 pl15 mb30 ">
+                                                <div class="col-sm-12"> 
+                                                  <div class="btn-group pull-right mt20 pl30">
+                                                    <a href="https://report.devskiller.com/candidate-report.html?cd066d47-d5bb-4f7d-8fc9-404b36f9012f/3d0e5476-b2ba-4f2c-8e09-e1d776cd6a41" target="_blank" class="btn btn-default"><i class="fa fa-download mr10" aria-hidden="true"></i>Get Report</a>
+                                                    <a href="https://candidate.devskiller.com/exam.html?PREVIEW-E1615-U930-7YHG-EAQR-YW4#/" target="_blank" class="btn btn-primary"><i class="fa fa-refresh mr10" aria-hidden="true"></i>Reassess</a>
+                                                  </div>
+                                                  <h5 class="mb15">Your current Skill Level: Advanced (61%)</h5>
+
+                                                  <p class="mb5"><b></b></p>
+                                                  <div class="progress mb10">
+                                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                      <span class="sr-only">60% Complete</span>
+                                                    </div>
+                                                  </div>
+                                                  <div class="clearfix"></div>
+                                                  <hr>
+                                                </div>
                                               <div class="col-sm-5">
                                                 <div class="">
                                                   <div class="dashboard-skillcard">
@@ -157,21 +161,9 @@
                                                         <li>Write Python scripts to automate daily tasks, and other software</li>
                                                         <li>Use unit tests to write better code, faster</li>
                                                     </ul>
-                                                    <div class="ml15 mb30 mt20">
-                                                      <h5 class="mb15">Your current Skill Level</h5>
-                                                      <p class="mb5"><b>Advanced (61%)</b></p>
-                                                      <div class="progress mb10">
-                                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                                          <span class="sr-only">60% Complete</span>
-                                                        </div>
-                                                      </div>
-                                                      <div class="text-center">
-                                                        <div class="btn-group btn-group-justified">
-                                                        <a href="https://report.devskiller.com/candidate-report.html?cd066d47-d5bb-4f7d-8fc9-404b36f9012f/3d0e5476-b2ba-4f2c-8e09-e1d776cd6a41" target="_blank" class="btn btn-info"><i class="fa fa-download mr10" aria-hidden="true"></i>Get Report</a>
-                                                        <a href="https://candidate.devskiller.com/exam.html?PREVIEW-E1748-U930-1467282193555#/" target="_blank" class="btn btn-default"><i class="fa fa-refresh mr10" aria-hidden="true"></i>Reassess</a>
-                                                        </div>
-                                                        <a data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-block mt20 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
-                                                      </div>
+                                                    <div class="text-center ml15">
+
+                                                      <a data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-block mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
                                                     </div>
                                                   </div>
                                                 </div>
@@ -256,6 +248,9 @@
                                                     </ul>
                                                   </div>
                                                 </div>
+
+                                                
+                                                </div>
                                               </div>
                                             </div>
                                             <div class="panel-footer card-footer">
@@ -268,11 +263,22 @@
                                           </div>
                                           <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                             <div class="panel-body">
-                                              <div class="card-desc">
-                                                <p><i class="fa fa-info-circle mr5" aria-hidden="true"></i>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale, and perform consistently; no matter how much data you’re crunching or how many users you’re serving.</p>
+                                              <div class="col-sm-12"> 
+                                                  <div class="btn-group pull-right mt20 pl30">
+                                                    <a href="https://report.devskiller.com/candidate-report.html?cd066d47-d5bb-4f7d-8fc9-404b36f9012f/3d0e5476-b2ba-4f2c-8e09-e1d776cd6a41" target="_blank" class="btn btn-default"><i class="fa fa-download mr10" aria-hidden="true"></i>Get Report</a>
+                                                    <a href="https://candidate.devskiller.com/exam.html?PREVIEW-E1615-U930-7YHG-EAQR-YW4#/" target="_blank" class="btn btn-primary"><i class="fa fa-refresh mr10" aria-hidden="true"></i>Reassess</a>
+                                                  </div>
+                                                  <h5 class="mb15">Your current Skill Level: Novice (33%)</h5>
 
-                                              </div>
-                                              <hr>
+                                                  <p class="mb5"><b></b></p>
+                                                  <div class="progress mb10">
+                                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 33%;">
+                                                      <span class="sr-only">33% Complete</span>
+                                                    </div>
+                                                  </div>
+                                                  <div class="clearfix"></div>
+                                                  <hr>
+                                                </div>
                                               <div class="col-sm-5">
                                                 <div class="">
                                                   <div class="dashboard-skillcard">
@@ -282,21 +288,8 @@
                                                         <li>Master code optimization techniques, and learn about all 16 classic design patterns</li>
                                                         <li>Deploy decorators, design patters, and various optimization techniques to use Python 3.5 effectively</li>
                                                     </ul>
-                                                    <div class="ml15 mb30 mt20">
-                                                      <h5 class="mb15">Your current Skill Level</h5>
-                                                      <p class="mb5"><b>Novice (33%)</b></p>
-                                                      <div class="progress mb10">
-                                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 33%;">
-                                                          <span class="sr-only">60% Complete</span>
-                                                        </div>
-                                                      </div>
-                                                      <div class="text-center">
-                                                        <div class="btn-group btn-group-justified">
-                                                        <a href="https://report.devskiller.com/candidate-report.html?cd066d47-d5bb-4f7d-8fc9-404b36f9012f/3d0e5476-b2ba-4f2c-8e09-e1d776cd6a41" target="_blank" class="btn btn-info"><i class="fa fa-download mr10" aria-hidden="true"></i>Get Report</a>
-                                                        <a href="https://candidate.devskiller.com/exam.html?PREVIEW-E1748-U930-1467282193555#/" target="_blank" class="btn btn-default"><i class="fa fa-refresh mr10" aria-hidden="true"></i>Reassess</a>
-                                                        </div>
-                                                        <a data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-block mt20 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
-                                                      </div>
+                                                     <div class="text-center ml15">
+                                                      <a data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-block mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
                                                     </div>
                                                     
                                                   </div>
@@ -433,7 +426,9 @@
                                                 <p><i class="fa fa-info-circle mr5" aria-hidden="true"></i>Django is the framework that powers some of the world’s most popular websites and web applications, such as Instagram, Pinterest and Disqus.</p>
                                                 <p>Scaling Django, both in terms of features and users, is difficult. As with any framework, it is more balanced towards developer efficiency than performance and optimization. “Production Ready Django” will help you gain the skills you need to create robust applications that are ready to go live.</p>
                                               </div>
-                                              <hr>
+                                              <div class="col-sm-12">
+                                                <hr>
+                                              </div>
                                               <div class="col-sm-5">
                                                 <div class="">
                                                   <div class="dashboard-skillcard">
@@ -443,8 +438,8 @@
                                                         <li>Reduce your future maintenance burden with well-tested, cleaner Python code</li>
                                                         <li>Create a rich user experience using Ajax and other JavaScript techniques</li>
                                                     </ul>
-                                                    <div class="text-center">
-                                                      <a href="https://candidate.devskiller.com/exam.html?PREVIEW-E1748-U930-1467282193555#/" target="_blank" class="btn btn-default btn-block mt0 mb15"><i class="fa fa-pencil mr10" aria-hidden="true"></i>Assess your Skill Level</a>
+                                                    <div class="text-center ml15">
+                                                      <a href="https://candidate.devskiller.com/exam.html?PREVIEW-E1615-U930-7YHG-EAQR-YW4#/" target="_blank" class="btn btn-default btn-block mt0 mb15"><i class="fa fa-pencil mr10" aria-hidden="true"></i>Assess your Skill Level</a>
                                                       <a data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-block mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
                                                     </div>
                                                   </div>
@@ -549,7 +544,9 @@
                                                 <p><i class="fa fa-info-circle mr5" aria-hidden="true"></i>Django is the framework that powers some of the world’s most popular websites and web applications, such as Instagram, Pinterest and Disqus.</p>
                                                 <p>Scaling Django, both in terms of features and users, is difficult. As with any framework, it is more balanced towards developer efficiency than performance and optimization. “Production Ready Django” will help you gain the skills you need to create robust applications that are ready to go live.</p>
                                               </div>
-                                              <hr>
+                                              <div class="col-sm-12">
+                                                <hr>
+                                              </div>
                                               <div class="col-sm-5">
                                                 <div class="">
                                                   <div class="dashboard-skillcard">
@@ -559,8 +556,8 @@
                                                         <li>Reduce your future maintenance burden with well-tested, cleaner Python code</li>
                                                         <li>Create a rich user experience using Ajax and other JavaScript techniques</li>
                                                     </ul>
-                                                    <div class="text-center">
-                                                      <a href="https://candidate.devskiller.com/exam.html?PREVIEW-E1748-U930-1467282193555#/" target="_blank" class="btn btn-default btn-block mt0 mb15"><i class="fa fa-pencil mr10" aria-hidden="true"></i>Assess your Skill Level</a>
+                                                    <div class="text-center ml15">
+                                                      <a href="https://candidate.devskiller.com/exam.html?PREVIEW-E1615-U930-7YHG-EAQR-YW4#/" target="_blank" class="btn btn-default btn-block mt0 mb15"><i class="fa fa-pencil mr10" aria-hidden="true"></i>Assess your Skill Level</a>
                                                       <a data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-block mt10 mb5 pl25 pr25">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
                                                     </div>
                                                   </div>
@@ -657,6 +654,8 @@
                                             </div>
                                           </div> <!-- Panel -->
                                         </div><!-- Panel group -->
+                                        <a href="skill-select.html" class="btn btn-info btn-block mt20 mb40"><i class="fa fa-plus mr5"></i> Add Skill Cards</a>
+
                                       </div> <!-- col-sm-12 -->
 
 
@@ -680,6 +679,8 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
+    <script src="js/sidenav-accordion.js"></script>
+
     <script type="text/javascript">
     $("#myButton").click(function() {
          $("#myDiv").fadeTo("slow", 0.01, function(){ //fade
