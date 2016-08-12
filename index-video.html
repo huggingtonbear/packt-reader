@@ -53,18 +53,12 @@
             <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
               <li><a href="dashboard.html" class="sidenav-menu-holder back-btn"><span class="sidenav-menu">Back</span><span class="pull-left mr5"><i class="fa fa-chevron-left"></i></span></a>    </li>
               <li><a href="front-page.html" class="sidenav-menu-holder"><span class="sidenav-menu"><img src="images/cover-video.png" class="cover-image"></span><span class="pull-left mr5"></a>    </li>
-
-              <li class="search-form">
-              <form class="col-sm-12 mb15 pl25 pr25">
-                <input type="text" class="form-control" placeholder="&#xf002;  Search this course...">
-              </form>
-            </li>
               <div class="clearfix"></div>
               <li><a href="#" class="sidenav-menu-holder"><div class="section-name"><i class="fa fa-bookmark mr5"></i> Bookmarks (0)</div></a>    </li>
               <li class=""><a href="#" class="sidenav-menu-holder"><div class="section-name">Preface</div></a> </li>
-              <li class="active"><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="sidenav-menu-holder"><div class="section-name">1. Getting Started</div></a>    </li>
-              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <li class="sub-nav active"><a href="#"><div class="section-name">Chapter 1. Getting Started</div></a></li>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="sidenav-menu-holder"><div class="section-name">1. Getting Started</div></a>    </li>
+              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <li class="sub-nav"><a href="#"><div class="section-name">Chapter 1. Getting Started</div></a></li>
                         <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
                         <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
                         <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
@@ -82,10 +76,10 @@
                 <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div></a></li>
                 <li class="sub-nav"><a href="#"><div class="section-name">Summary</div></a></li>
               </div>
-              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><div class="section-name">3. More AngularJS Goodness</div></a>    </li>
-              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <li class="active"><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><div class="section-name">3. More AngularJS Goodness</div></a>    </li>
+              <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
                 <li class="sub-nav"><a href="#"><div class="section-name">Chapter 3. Learning about x and y</div></a></li>
-                <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div></a></li>
+                <li class="sub-nav active"><a href="#"><div class="section-name">Downloading and Installing Linux</div></a></li>
                 <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
                 <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
                 <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div></a></li>
@@ -209,10 +203,12 @@
                                 </ul>
                             </div>
                     </div>
-                    
+                    <div class="clearfix"></div>
                             
                         <div style="position:relative;" class="book-content" ng-non-bindable="">
                                 <div class="packtlib-version v2">
+                                    <h2 class="title">Downloading and Installing Linux</h2><hr>
+
                                   <div id="myElement"></div>
                     <script type="text/javascript">
                         jwplayer("myElement").setup({
