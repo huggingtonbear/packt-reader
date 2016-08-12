@@ -305,6 +305,7 @@ b.landing {
 .toggle-nav {
     font-size: 18px;
     margin-left: 0px;
+    padding-left: 0px;
 }
 .course-listing {
   margin-bottom: 0px;
@@ -359,6 +360,7 @@ b.landing {
   border: 5px solid rgba(220, 220, 220, 0.7);
 }
 /*Custom Reader Style*/
+
 .reader-container p, .reader-container ul {
     font-size: 1.6rem;
     font-weight: 400;

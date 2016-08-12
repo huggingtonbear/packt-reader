@@ -120,6 +120,11 @@ li.sub-nav {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-transform: none;
+    line-height: 25px;
+}
+.cover-image {
+    width: 150px;
 }
 .section-complete {
     float: right;
