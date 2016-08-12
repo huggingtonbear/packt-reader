@@ -44,22 +44,34 @@
 
     <div id="wrapper">
 
+<<<<<<< HEAD
         
+=======
+>>>>>>> origin/gh-pages
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav">
             <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
               <li><a href="dashboard-test.html" class="sidenav-menu-holder back-btn"><span class="sidenav-menu">Back</span><span class="pull-left mr5"><i class="fa fa-chevron-left"></i></span></a>    </li>
+<<<<<<< HEAD
+=======
+              <li><a href="dashboard-test.html" class="sidenav-menu-holder"><span class="sidenav-menu">AngularJS by Example</span><span class="pull-left mr5"></a>    </li>
+
+>>>>>>> origin/gh-pages
               <li class="search-form">
               <form class="col-sm-12 mb15 pl25 pr25">
                 <input type="text" class="form-control" placeholder="&#xf002;  Search this course...">
               </form>
             </li>
               <div class="clearfix"></div>
+<<<<<<< HEAD
               <li class=""><a href="#" class="sidenav-menu-holder"><div class="section-name">AngularJS by Example </div></a> </li>
                 <li>
                    <a href="#"><div class="section-name"><i class="fa fa-bookmark fa-lg mr10"></i> Bookmarks (0)</div></a>
                 </li>
+=======
+              <li><a href="dashboard-test.html" class="sidenav-menu-holder"><span class="sidenav-menu"><i class="fa fa-bookmark mr5"></i> Bookmarks (0)</span><span class="pull-left mr5"></a>    </li>
+>>>>>>> origin/gh-pages
               <li class=""><a href="#" class="sidenav-menu-holder"><div class="section-name">Preface</div></a> </li>
               <li class="active"><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="sidenav-menu-holder"><div class="section-name">1. Getting Started</div></a>    </li>
               <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -139,12 +151,12 @@
         <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper" class="book-page ng-scope">
-          <div class="jumbotron heading">
-                <div class="container-fluid">
-                  <div class="col-sm-12">
-                    <h1>AngularJS by Example </h1>
-                    
-                    <div class="btn-group mb10 mt10" role="group">
+
+        <a class="navbar-brand toggle-nav visible-sm visible-xs" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
+    <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
+                <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">                    
+                    <div class="">
+                    <div class="btn-group mb30 pull-right mt15" role="group">
                         <button class="btn btn-default">
                         <i class="fa fa-bookmark-o fa-lg"></i>
                         <span class="hidden-xs ml5">Bookmark</span></button>
@@ -170,12 +182,15 @@
                         <button class="btn btn-default hidden-xs">
                         <i class="fa fa-file fa-lg"></i>
                         <span class="hidden-xs ml5">Code Files</span></button>
-                        <button class="btn nightmode-toggle btn-default"><i class="fa fa-moon-o fa-lg no-text-padding"></i></button>
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-font fa-lg no-text-padding"></i>
+                                <i class="fa fa-cog fa-lg no-text-padding"></i>
                             </button>
                             <ul class="dropdown-menu">
+                                <li class="disabled"><a class="disabled text-center"><b>Nightmode</b></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="" target="_self">Enable</a></li>
+                                <li role="separator" class="divider"></li>
                                 <li class="disabled"><a class="disabled text-center"><b>Font size (rem)</b></a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="" target="_self">1.5</a></li>
@@ -184,17 +199,6 @@
                                 <li><a href="" target="_self">1.8</a></li>
                                 <li><a href="" target="_self">1.9</a></li>
                                 <li><a href="" target="_self">2.0</a></li>
-                            </ul>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-pencil-square-o fa-lg no-text-padding"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li class="disabled"><a class="disabled text-center"><b>Annotations</b></a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="" target="_self">Show Public Annotations</a></li>
-                                <li><a href="" target="_self">Hide Personal Annotations</a></li>
                             </ul>
                         </div>
                         <div class="btn-group" role="group">
@@ -211,21 +215,17 @@
                             </ul>
                         </div>
                     </div>
-                    
-                  </div>
-
-                </div>
-            </div>
-
-    <!-- ngInclude:  --><div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">               
-                <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
-                    
-                    <div class="">
+                    <div class="clearfix">
+                    </div>
                             
                         <div style="position:relative;" class="book-content" id="content" ng-non-bindable="">
                                 <div class="packtlib-version v2">
+<<<<<<< HEAD
                                   <div class="titlepage"><div><div></div></div></div>
                                   <h3>Chapter 1. Getting Started </h3><hr>
+=======
+                                  <div class="titlepage"><div><div></div></div></div><h2>Chapter 1. Getting Started</h2><hr>
+>>>>>>> origin/gh-pages
 <p>
 <span class="emphasis"><em>We might have wondered numerous times if there is a way we could travel back in time to change what had happened in life. Well, as fictional as it sounds, you are going to learn a method to perform this travel when it comes to digitized files! Yes, you read that right; this chapter is going to introduce you to a system that makes this possible. We will begin by giving you a solid conceptual understanding about version control with Git.</em></span>
 </p><p>It's time to <a id="id127" class="indexterm"></a>code the tastiest part of our restaurant<a id="id128" class="indexterm"></a> website (sorry, that was a terrible pun). For our menu page, we'll use a three-column layout combined with some additional modal popups for our featured dishes. The following is a preview of what the page will look like:</p>
