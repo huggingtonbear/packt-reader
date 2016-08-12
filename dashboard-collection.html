@@ -48,79 +48,56 @@
 
     <div id="wrapper">
 
-        <!-- Top Nav Bar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-                  <a class="brand-logo" href="dashboard.html"><img src="images/logo.png"></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                        <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret ml5"></span>
-                        </a>
-                        <a href="#" class="dropdown-toggle navbar-avatar-link hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/222/015/06be2f6.jpg" alt="..." class="img-circle img-responsive navbar-avatar">
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li> <a href="#">View Account</a></li> 
-                            <li><a href="#">View Subscriptions</a></li> 
-                            <li><a href="#">View Licences</a></li> 
-                            <li role="separator" class="divider"></li> 
-                            <li><a href="library-lo.html">Logout</a></li> 
-                        </ul> 
-                    </li>
-                    </ul>
-                    <form class="navbar-form navbar-right search-nav-collapse">
-                        <div class="form-group pull-right" style="display:inline;">
-                            <div class="input-group">
-                              <input class="form-control" type="text" placeholder="&#xf002;  Search the library...">
-                              
-                            </div>
-                        </div>
-                    </form>
-                </div><!--/.nav-collapse -->
-            </div>
-        </nav>
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-
-            <ul class="sidebar-nav">
-              <li><a href="index.html" class="sidenav-menu-holder"><span class="sidenav-menu">Resume Course </span><span class="pull-right mr5"></span></a></li>
-                    <li class=""><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Map</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
-                    <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-right mr5"><i class="fa fa-caret-down fa-lg"></i></span></a>    </li>
-                    <li class="sub-nav"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library</span><span class="pull-right mr5"></span></a>    </li>
-                    <li class="sub-nav"><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">Bookmarks </span><span class="pull-right mr5">6</span></a>    </li>
-                    <li class="sub-nav active"><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">Saved </span><span class="pull-right mr5">12</span></a>    </li>
-                    <li class="sub-nav"><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchased  </span><span class="pull-right mr5">7</span></a>    </li>
-                    <li class=""><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Account</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
-                    <li class=""><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
-            </ul>
+          <ul class="sidebar-nav">
+            <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
+              <li class="nav-logo "><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu"><img src="images/mapt-logo.png" class=""></span><span class="pull-left mr5"></span></a>    </li>
+              <form class="col-sm-12 mb15 pl25 pr25">
+                <input type="text" class="form-control" placeholder="&#xf002;  Search for a course...">
+              </form>
+              <div class="clearfix"></div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="sidenav-menu-holder"><span class="sidenav-menu">Skills</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <li class="sub-nav"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Skill Plan</span><span class="pull-left mr5">3</span></a>    </li>
+                <li class="sub-nav"><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Cards </span><span class="pull-left mr5">6</span></a>    </li>
+                <li class="sub-nav"><a href="usage.html" class="sidenav-menu-holder"><span class="sidenav-menu">Progress</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Plans </span></a>    </li>
+              </div>
+              <li class="active"><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                <li class="sub-nav"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav "><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">Bookmarks</span><span class="pull-left mr5">8</span></a>    </li>
+                <li class="sub-nav active"><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">Saved</span><span class="pull-left mr5">3</span></a>    </li>
+                <li class="sub-nav"><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchased </span><span class="pull-left mr5">6</span></a>    </li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><span class="sidenav-menu">My Account</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">Account Details</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="account-subscription.html" class="sidenav-menu-holder"><span class="sidenav-menu">Subscriptions</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="account-licences.html" class="sidenav-menu-holder"><span class="sidenav-menu">Licenses </span></a>    </li>
+              </div>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">FAQs</span><span class="pull-left mr5"></span></a></li>
+              </div>
+              <li class=""><a href="dashboard-lo.html" class="sidenav-menu-holder"><span class="sidenav-menu">Logout</span><span class="pull-left mr5"></span></a> </li>
+            </div>
+          </ul>
         </div>
 
         <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper" class="">
-            <div class="jumbotron heading">
-                <div class="container-fluid">
-                  <div class="col-sm-12">
-                    <h1>Saved</h1>
-                    <ol class="breadcrumb row mt0">
-                      <li class="active mt5"> Quickly find the courses you have Saved</li>
-                    </ol>
-                  </div>
-                </div>
-            </div>
-            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
+            <div id="book-wrapper" class="container-fluid">               
                 <div class="row">
-                        <div class="col-lg-offset-1 col-lg-10">
+                            <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
+                             <a class="visible-sm visible-xs" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
+                            <h3>Saved</h3>
+                            <h6 class="mt5">Quickly find the courses you have Saved</h6>
+
+                            <hr>
+        
                           <div class="row">
                             <div ng-show="myList[0]" class="col-sm-offset-6 col-md-offset-8 col-lg-offset-9 col-sm-6 col-md-4 col-lg-3 mb20">
                                 <select ng-change="sort_myList($event)" class="form-control ng-pristine ng-untouched ng-valid" name="sorted_myList" data-ng-options="o.name for o in dropdown_options_sort track by o.id" data-ng-model="dropdown_selectedOption_sort"><option value="mostRecent" selected="selected" label="Sort by Most Recent">Sort by Most Recent</option><option value="mostPopular" label="Sort by Most Popular">Sort by Most Popular</option><option value="oldest" label="Sort by Oldest">Sort by Oldest</option><option value="sortAZ" label="Sort A-Z">Sort A-Z</option><option value="sortZA" label="Sort Z-A">Sort Z-A</option></select>
@@ -566,6 +543,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
+    <script src="js/sidenav-accordion.js"></script>
 
 </body>
 
