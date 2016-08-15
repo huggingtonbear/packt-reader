@@ -58,7 +58,7 @@ a.sidenav-menu-holder.back-btn {
 }
 #sidebar-wrapper {
     z-index: 1000;
-    position: sticky;
+    position: fixed;
     left: 250px;
     width: 0;
     height: 100%;
