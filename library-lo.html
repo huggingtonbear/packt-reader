@@ -108,60 +108,43 @@
               </div>
             </div>
 
-        <!-- Top Nav Bar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand toggle-nav" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg"></i></a>
-                  <a class="brand-logo" href="dashboard-lo.html"><img src="images/logo.png"></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class=""><button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-primary navbar-btn mr5">Sign in</button></li>
-                    </ul>
-                    <form class="navbar-form navbar-right search-nav-collapse">
-                        <div class="form-group pull-right" style="display:inline;">
-                            <div class="input-group">
-                              <input class="form-control" type="text" placeholder="&#xf002;  Search the library...">
-                              
-                            </div>
-                        </div>
-                    </form>
-                </div><!--/.nav-collapse -->
-            </div>
-        </nav>
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-
-            <ul class="sidebar-nav">
-             
-                    <li class="active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-right mr5"><i class="fa fa-caret-down fa-lg"></i></span></a>    </li>
-                    <li class="sub-nav active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library</span><span class="pull-right mr5"></span></a>    </li>
-                    <li class=""><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-right mr5"><i class="fa fa-caret-right fa-lg"></i></span></a>    </li>
-            </ul>
+          <ul class="sidebar-nav">
+            <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
+              <li class="nav-logo "><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu"><img src="images/mapt-logo.png" class=""></span><span class="pull-left mr5"></span></a>    </li>
+              <form class="col-sm-12 mb15 pl25 pr25">
+                <input type="text" class="form-control" placeholder="&#xf002;  Search for a course...">
+              </form>
+              <div class="clearfix"></div>
+              <li class=""><a href="#"  data-toggle="modal" data-target="#myModal" class="sidenav-menu-holder"><span class="sidenav-menu">Sign In</span><span class="pull-left mr5"></span></a> </li>
+              <li class="active"><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                <li class="sub-nav active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library</span><span class="pull-left mr5"></span></a>    </li>
+              </div>
+              
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">FAQs</span><span class="pull-left mr5"></span></a></li>
+              </div>
+              
+            </div>
+          </ul>
         </div>
 
         <!-- /#sidebar-wrapper -->
 
         <div id="page-content-wrapper" class="">
-            <div class="jumbotron heading">
-                <div class="container-fluid">
-                  <div class="col-sm-12">
-                    <h1>Library</h1>
-                    <ol class="breadcrumb row mt0">
-                      <li class="active mt5">Discover the most important skills in software today by exploring the library</li>
-                    </ol>
-                  </div>
-                </div>
-            </div>
-            <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="container-fluid">               
+            <a class="" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
+            <div id="book-wrapper" class="container-fluid">               
                 <div class="row">
+                  <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
+                    <div class="page-title">
+                      <h3 >Library</h3>
+                      <h6 class="mt5">Discover the most important skills in software today by exploring the library</h6>
+                    </div>
+                            <hr>
+                  </div>
                   <div class="">
                       <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
                         <div class="panel panel-default">
