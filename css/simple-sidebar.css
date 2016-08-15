@@ -13,12 +13,20 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+.non-subscriber-notice {
+    display: block;
+    padding: 15px 20px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    background-color: #e55138;
+}
 
 #wrapper.toggled {
     padding-left: 250px;
 }
 a#menu-toggle {
-    position: fixed;
+    position:sticky;
     background: #212121;
     top:15px;
     z-index: 1;
