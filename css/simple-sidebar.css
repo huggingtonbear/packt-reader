@@ -17,11 +17,19 @@
     display: block;
     padding: 15px 20px;
     font-weight: 700;
+    font-size: 16px;
     color: #fff;
     text-align: center;
     background-color: #e55138;
+    position: fixed;
+    top: 0;
+    z-index: 30;
+    width: 100%
 }
-
+a.non-subscriber-notice:hover, a.non-subscriber-notice:active, a.non-subscriber-notice:focus {
+    color: #fff;
+    text-decoration: none;
+}
 #wrapper.toggled {
     padding-left: 250px;
 }
@@ -50,7 +58,7 @@ a.sidenav-menu-holder.back-btn {
 }
 #sidebar-wrapper {
     z-index: 1000;
-    position: fixed;
+    position: sticky;
     left: 250px;
     width: 0;
     height: 100%;
