@@ -46,6 +46,9 @@ a#menu-toggle {
     padding-right: 20px;
 
 }
+a#menu-toggle.mobile-menu-toggle {
+    position: absolute;
+}
 #sidebar-wrapper input.form-control {
     color: #ddd;
 }
