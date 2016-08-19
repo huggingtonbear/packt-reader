@@ -37,7 +37,7 @@ a.non-subscriber-notice:hover, a.non-subscriber-notice:active, a.non-subscriber-
     padding-left: 250px;
 }
 a#menu-toggle {
-    position: fixed;
+    position: absolute;
     z-index: 40;
     padding:  15px;
     color: #212121;
@@ -45,11 +45,13 @@ a#menu-toggle {
     padding-right: 20px;
 
 }
-a#menu-toggle.mobile-menu-toggle {
-    position: absolute;
-}
 #sidebar-wrapper input.form-control {
     color: #ddd;
+}
+@media(min-width: 1200px) {
+    a#menu-toggle {
+    position: fixed;
+    }
 }
 @media(max-width:1200px) {
     .page-title {
