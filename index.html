@@ -139,68 +139,70 @@
             <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
                 
                 <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">
-              
-                    <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
+                    <div class="col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
                         <div class="btn-group pull-right mt15 mb30" role="group">
-                            <button class="btn btn-default">
-                            <i class="fa fa-bookmark-o fa-lg"></i>
-                            <span class="hidden-xs hidden-sm ml5">Bookmark</span></button>
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                                    <i class="fa fa-shopping-cart fa-lg"></i>
-                                    <span class="hidden-xs hidden-sm ml5"> Buy eBook for $21.99</span>
-                                    <span class="hidden-xs hidden-sm caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li class="disabled">
-                                        <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
-                                    </li>
-                                </ul>
+                                <button class="btn btn-default">
+                                <i class="fa fa-bookmark-o fa-lg"></i>
+                                <span class="hidden-xs hidden-sm ml5">Bookmark</span></button>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                        <i class="fa fa-shopping-cart fa-lg"></i>
+                                        <span class="hidden-xs hidden-sm ml5"> Buy eBook for $21.99</span>
+                                        <span class="hidden-xs hidden-sm caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
+                                        </li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="disabled">
+                                            <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="btn btn-default hidden-xs">
+                                <i class="fa fa-file fa-lg"></i>
+                                <span class="hidden-xs hidden-sm ml5">Code Files</span></button>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-cog fa-lg no-text-padding"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="disabled"><a class="disabled text-center"><b>Nightmode</b></a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="" target="_self">Enable</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="disabled"><a class="disabled text-center"><b>Font size (rem)</b></a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="" target="_self">1.5</a></li>
+                                        <li><a href="" target="_self">1.6</a></li>
+                                        <li><a href="" target="_self">1.7</a></li>
+                                        <li><a href="" target="_self">1.8</a></li>
+                                        <li><a href="" target="_self">1.9</a></li>
+                                        <li><a href="" target="_self">2.0</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-share fa-lg no-text-padding"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="disabled"><a href="#" class="disabled text-center"><b>Share</b></a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#" ng-click="facebookShare();">Facebook</a></li>
+                                        <li><a href="mailto:?Subject=Packt Book: Python Machine Learning&amp;body=Packt Book link: https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781783555130" target="_top" ng-click="emailShare();">Email</a></li>
+                                        <li><a href="#" ng-click="twitterShare();">Twitter</a></li>
+                                        <li><a href="#" ng-click="redditShare();">Reddit</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <button class="btn btn-default hidden-xs">
-                            <i class="fa fa-file fa-lg"></i>
-                            <span class="hidden-xs hidden-sm ml5">Code Files</span></button>
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-cog fa-lg no-text-padding"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li class="disabled"><a class="disabled text-center"><b>Nightmode</b></a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="" target="_self">Enable</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li class="disabled"><a class="disabled text-center"><b>Font size (rem)</b></a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="" target="_self">1.5</a></li>
-                                    <li><a href="" target="_self">1.6</a></li>
-                                    <li><a href="" target="_self">1.7</a></li>
-                                    <li><a href="" target="_self">1.8</a></li>
-                                    <li><a href="" target="_self">1.9</a></li>
-                                    <li><a href="" target="_self">2.0</a></li>
-                                </ul>
-                            </div>
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-share fa-lg no-text-padding"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li class="disabled"><a href="#" class="disabled text-center"><b>Share</b></a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#" ng-click="facebookShare();">Facebook</a></li>
-                                    <li><a href="mailto:?Subject=Packt Book: Python Machine Learning&amp;body=Packt Book link: https://www.packtpub.com/packtlib/book/Big-Data-and-Business-Intelligence/9781783555130" target="_top" ng-click="emailShare();">Email</a></li>
-                                    <li><a href="#" ng-click="twitterShare();">Twitter</a></li>
-                                    <li><a href="#" ng-click="redditShare();">Reddit</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>              
+                            <div class="clearfix"></div> 
+                        </div>  
+                    <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
+                                   
                     
                             
                         <div style="position:relative;" class="book-content" id="content" ng-non-bindable="">
