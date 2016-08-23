@@ -98,11 +98,10 @@
               </div>
               <li class="active"><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-left mr5"></span></a>    </li>
               <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-                <li class="sub-nav active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Library</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav active"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Search</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="my-library.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Library</span></a>    </li>  </li>
                 <li class="sub-nav"><a href="trending.html" class="sidenav-menu-holder"><span class="sidenav-menu">Trending</span><span class="pull-left mr5"></span></a>    </li>
-                <li class="sub-nav"><a href="dashboard-bookmark.html" class="sidenav-menu-holder"><span class="sidenav-menu">Bookmarks</span><span class="pull-left mr5">8</span></a>    </li>
-                <li class="sub-nav"><a href="dashboard-collection.html" class="sidenav-menu-holder"><span class="sidenav-menu">Saved</span><span class="pull-left mr5">3</span></a>    </li>
-                <li class="sub-nav"><a href="dashboard-owned.html" class="sidenav-menu-holder"><span class="sidenav-menu">Purchased </span><span class="pull-left mr5">6</span></a>    </li>
+                
               </div>
               <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><span class="sidenav-menu">My Account</span><span class="pull-left mr5"></span></a>    </li>
               <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
@@ -127,8 +126,8 @@
                 <div class="row">
                   <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
                     <div class="page-title">
-                      <h3 >Library</h3>
-                      <h6 class="mt5">Discover the most important skills in software today by exploring the library</h6>
+                      <h3 >Search</h3>
+                      <h6 class="mt5">Discover the most important skills in software today by exploring all of our courses</h6>
                     </div>
                             <hr>
                             <div class="col-sm-12 col-md-8 col-lg-8 mb5">
@@ -138,7 +137,7 @@
                             </form>
                       </div>
                   </div>
-                  <div class="col-sm-12 col-md-4 col-lg-offset-1 col-lg-3 mb5">
+                  <div class="col-sm-12 col-md-4 col-lg-offset-1 col-lg-3 mb30">
                       <div class="row">
                           <select class="form-control">
                             <option>Sort by Most Recent</option>
@@ -235,7 +234,7 @@
                         </div>
                       </div>
                       <div class="col-sm-9 col-lg-7 col-xl-8">
-                                    <div class="panel panel-default mt15">
+                                    <div class="panel panel-default">
                                       <ul class="list-group">
                                           <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
                                               <a href="index.html"><img src="images/book1.jpg" class="img-product-list"></a>
@@ -245,7 +244,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-shopping-cart fa-lg"></i>
@@ -271,6 +270,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -288,7 +288,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-shopping-cart fa-lg"></i>
@@ -314,6 +314,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -331,7 +332,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-shopping-cart fa-lg"></i>
@@ -357,6 +358,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -374,7 +376,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-download fa-lg"></i>
@@ -402,6 +404,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -419,7 +422,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                   <button type="button" class="btn btn-default">
                                                       <i class="fa fa-download fa-lg"></i>
                                                       <span class="hidden-xs ml5"> Download Video</span>
@@ -430,6 +433,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -447,7 +451,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-shopping-cart fa-lg"></i>
@@ -473,6 +477,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -490,7 +495,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-shopping-cart fa-lg"></i>
@@ -516,6 +521,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -533,7 +539,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-shopping-cart fa-lg"></i>
@@ -559,6 +565,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -576,7 +583,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-download fa-lg"></i>
@@ -604,6 +611,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -621,7 +629,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                   <button type="button" class="btn btn-default">
                                                       <i class="fa fa-download fa-lg"></i>
                                                       <span class="hidden-xs ml5"> Download Video</span>
@@ -632,6 +640,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -649,7 +658,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-shopping-cart fa-lg"></i>
@@ -675,6 +684,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -692,7 +702,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-shopping-cart fa-lg"></i>
@@ -718,6 +728,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -735,7 +746,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-shopping-cart fa-lg"></i>
@@ -761,6 +772,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -778,7 +790,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-download fa-lg"></i>
@@ -806,6 +818,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -823,7 +836,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                   <button type="button" class="btn btn-default">
                                                       <i class="fa fa-download fa-lg"></i>
                                                       <span class="hidden-xs ml5"> Download Video</span>
@@ -834,6 +847,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -851,7 +865,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-shopping-cart fa-lg"></i>
@@ -877,6 +891,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -894,7 +909,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-shopping-cart fa-lg"></i>
@@ -920,6 +935,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -937,7 +953,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-shopping-cart fa-lg"></i>
@@ -963,6 +979,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -980,7 +997,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                 <div class="btn-group dropup hidden-xs" role="group">
                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                       <i class="fa fa-download fa-lg"></i>
@@ -1008,6 +1025,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
@@ -1025,7 +1043,7 @@
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
                                               <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
                                               <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-left mt5 hidden-xs">
+                                              <div class="btn-group pull-right mt5 hidden-xs">
                                                   <button type="button" class="btn btn-default">
                                                       <i class="fa fa-download fa-lg"></i>
                                                       <span class="hidden-xs ml5"> Download Video</span>
@@ -1036,6 +1054,7 @@
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
                                               <div class="btn-group btn-group-justified visible-xs mt15">
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
                                                    </a>
