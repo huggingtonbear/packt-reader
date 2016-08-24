@@ -15,7 +15,7 @@ h1, .h1 {
 }
 .nav-pills > li > a {
     border-radius: 0;
-}
+}/*
 a.early-access:before {
   content:"EARLY ACCESS";
   font-family: fontawesome, "Montserrat", Helvetica, Arial, sans-serif;
@@ -50,7 +50,7 @@ a.early-access:after {
   z-index: 1000;
 }
 .early-access .img-product-list {
-}
+}*/
 .usage-desc {
   font-size: 16px;
 }
