@@ -1,0 +1,65 @@
+/*Skill Card Background Rules*/
+
+/* Skill Card Patterns */
+.triangle {
+  background-image: url('images/skillcard-bg/triangle.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.bubbles {
+  background-image: url('images/skillcard-bg/bubbles.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.bits {
+  background-image: url('images/skillcard-bg/bits.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.simple-nodes {
+  background-image: url('images/skillcard-bg/simple-nodes.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.complex-nodes {
+  background-image: url('images/skillcard-bg/complex-nodes.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+/* Skill Card Colors */
+.assembly {
+  background-color:#3a5ca8 !important;
+  color: white !important;
+}
+.field {
+  background-color:#00a351 !important;
+  color: white !important;
+}
+.java {
+  background-color:#906e58 !important;
+  color: white !important;
+}
+.sprint {
+  background-color:#c21a89 !important;
+  color: white !important;
+}
+.pearl {
+  background-color:#a09f9f !important;
+  color: white !important;
+}
+.hack {
+  background-color:#4b3793 !important;
+  color: white !important;
+}
+.evolve {
+  background-color:#00bec5 !important;
+  color: white !important;
+}
+.ruby {
+  background-color:#f42f4a !important;
+  color: white !important;
+}
+.munch {
+  background-color:#333333 !important;
+  color: white !important;
+}
