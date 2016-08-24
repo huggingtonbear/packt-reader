@@ -13,6 +13,16 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+.search_results_show a {
+    color: white;
+    text-transform: none;
+}
+span.search-result-title {
+    font-weight: 700;
+}
+.search-text {
+    font-weight: 300;
+}
 .non-subscriber-notice {
     display: block;
     padding: 12px 20px;
