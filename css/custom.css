@@ -15,7 +15,45 @@ h1, .h1 {
 }
 .nav-pills > li > a {
     border-radius: 0;
-}/*
+}
+.page-title ol.breadcrumb {
+  background: none;
+  margin-bottom: -10px;
+  padding-left:0px;
+  margin-top: 0px;
+}
+a.known-skill:before {
+    content: "\f058 ";
+    font-family: fontawesome;
+    padding: 12px;
+    display: block;
+    padding-top: 5px;
+    padding-left: 15px;
+    color: #fcfcfc;
+    font-size: 29px;
+    height: 170px;
+    position: absolute;
+    z-index: 1000;
+}
+a.known-skill .img-thumbnail {
+  background: #4caf50;
+}
+a.learning-skill:before {
+    content: "\f021 ";
+    font-family: fontawesome;
+    padding: 12px;
+    display: block;
+    padding-top: 5px;
+    padding-left: 15px;
+    color: #fcfcfc;
+    font-size: 29px;
+    height: 170px;
+    position: absolute;
+    z-index: 1000;
+}
+a.learning-skill .img-thumbnail {
+  background: #ec9720;
+}
 a.early-access:before {
   content:"EARLY ACCESS";
   font-family: fontawesome, "Montserrat", Helvetica, Arial, sans-serif;
@@ -50,7 +88,7 @@ a.early-access:after {
   z-index: 1000;
 }
 .early-access .img-product-list {
-}*/
+}
 .usage-desc {
   font-size: 16px;
 }
@@ -857,7 +895,6 @@ blockquote p {
     padding: 5px;
 }
 .card-desc {
-  padding: 20px;
   font-size: 16px;
 }
 .tech-icon.drop {
