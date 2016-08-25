@@ -119,68 +119,125 @@
                 <div class="row">
                           <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
                               <div class="page-title"> 
-                                <h3>Python</h3>
-                                <h6>
-                                  <ol class="breadcrumb">
-                                    <li><a href="skillcards.html">Skill Cards</a></li>
-                                    <li class="active">Python</li>
-                                  </ol>
-                                </h6>
+                                <h3>Skill Cards</h3>
+                                <h6 class="mt5">Keep track of the skills you have learned and discover new ones</h6>
                               </div>
                               <hr> 
                           </div>
                           <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
-                            <div class="panel panel-default">
-                              <!-- Default panel contents -->
-                              <div class="panel-heading"><h4 class="panel-title">Browse Skills</h4></div>
-                              <ul class="list-group">
-                                <a class="list-group-item" href="skillcards.html">    My Skills </a>    
-                                <a class="list-group-item" href="topic.html">    Android </a>    
-                                <a class="list-group-item" href="topic.html">    AngularJS   </a>    
-                                <a class="list-group-item" href="topic.html">    Arduino </a>    
-                                <a class="list-group-item" href="topic.html">    Blender </a>    
-                                <a class="list-group-item" href="topic.html">    Bootstrap   </a>    
-                                <a class="list-group-item" href="topic.html">    Django  </a>    
-                                <a class="list-group-item" href="topic.html">    Docker  </a>    
-                                <a class="list-group-item" href="topic.html">    Drupal  </a>    
-                                <a class="list-group-item" href="topic.html">    Hadoop  </a>    
-                                <a class="list-group-item" href="topic.html">    iOS </a>    
-                                <a class="list-group-item" href="topic.html">    Java    </a>    
-                                <a class="list-group-item" href="topic.html">    JavaScript  </a>    
-                                <a class="list-group-item" href="topic.html">    jQuery  </a>    
-                                <a class="list-group-item" href="topic.html">    Laravel </a>    
-                                <a class="list-group-item" href="topic.html">    Linux   </a>    
-                                <a class="list-group-item" href="topic.html">    Machine Learning    </a>    
-                                <a class="list-group-item" href="topic.html">    Node.js </a>    
-                                <a class="list-group-item" href="topic.html">    OpenCV  </a>    
-                                <a class="list-group-item" href="topic.html">    OpenStack   </a>    
-                                <a class="list-group-item" href="topic.html">    Oracle  </a>    
-                                <a class="list-group-item" href="topic.html">    PHP </a>    
-                                <a class="list-group-item active" href="topic.html">    Python  </a>    
-                                <a class="list-group-item" href="topic.html">    QlikView    </a>    
-                                <a class="list-group-item" href="topic.html">    R   </a>    
-                                <a class="list-group-item" href="topic.html">    Spark   </a>    
-                                <a class="list-group-item" href="topic.html">    Spring  </a>    
-                                <a class="list-group-item" href="topic.html">    Swift   </a>    
-                                <a class="list-group-item" href="topic.html">    Unity   </a>    
-                                <a class="list-group-item" href="topic.html">    WordPress   </a>    
-                              </ul>
-                            </div> 
-                          </div>
+                        <div class="panel-group" id="filters" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                          <!-- Default panel contents -->
+                          <div class="panel-heading"><h4 class="panel-title">Filter 113 Skills</h4></div>
+                          <ul class="list-group">
+                            <a role="tab" data-toggle="collapse" data-parent="#filters" href="#course-type" aria-expanded="true" aria-controls="course-type" class="filter-heading list-group-item collapsed">
+                                  <h6>Skill Status</h6>
+                            </a>
+                            <div id="course-type" class="panel-collapse collapse" role="tabpanel" aria-labelledby="release-date">
+                              <li class="list-group-item checkbox">
+                                  <label><input type="checkbox"></label> Skills I know (3)
+                              </li>
+                              <li class="list-group-item checkbox">
+                                  <label><input type="checkbox"></label> Actively learning (4)
+                              </li>
+                            </div>
+                            <a role="tab" data-toggle="collapse" data-parent="#filters" href="#release-date" aria-expanded="true" aria-controls="release-date" class="filter-heading list-group-item collapsed">
+                                  <h6>My Proficiency</h6>
+                            </a>
+                            <div id="release-date" class="panel-collapse collapse" role="tabpanel" aria-labelledby="release-date">
+                              <li class="list-group-item checkbox">
+                                  <label><input type="checkbox"></label> Expert (0)
+                              </li>
+                              <li class="list-group-item checkbox">
+                                  <label><input type="checkbox"></label> Advanced (1)
+                              </li>
+                              <li class="list-group-item checkbox">
+                                  <label><input type="checkbox"></label> Intermediate (0)
+                              </li>
+                              <li class="list-group-item checkbox">
+                                  <label><input type="checkbox"></label> Novice (0)
+                              </li>
+                              <li class="list-group-item checkbox">
+                                  <label><input type="checkbox"></label> Beginner (0)
+                              </li>
+                            </div>
+                            <a role="tab" data-toggle="collapse" data-parent="#filters" href="#assessment" aria-expanded="true" aria-controls="assessment" class="filter-heading list-group-item collapsed">
+                                  <h6>Assessment</h6>
+                            </a>
+                            <div id="assessment" class="panel-collapse collapse" role="tabpanel" aria-labelledby="assessment">
+                              <li class="list-group-item checkbox">
+                                  <label><input type="checkbox"></label> Assessed (1)
+                              </li>
+                              <li class="list-group-item checkbox">
+                                  <label><input type="checkbox"></label> Unassessed (1)
+                              </li>
+                            </div>
+                            
+                            <a role="tab" data-toggle="collapse" data-parent="#filters" href="#category" aria-expanded="true" aria-controls="category" class="filter-heading list-group-item">
+                                  <h6>Topic</h6>
+                            </a>
+                            <div id="category" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="category">
+                              <li class="list-group-item checkbox">
+                                <label><input type="checkbox"></label> AngularJS (45)
+                            </li> 
+                            <li class="list-group-item checkbox">
+                                <label><input type="checkbox" checked></label> Python (6)
+                            </li> 
+                            <li class="list-group-item checkbox">
+                                <label><input type="checkbox"></label> Django (4)
+                            </li> 
+                            <li class="list-group-item checkbox">
+                                <label><input type="checkbox"></label> Java (25)
+                            </li>
+                            <li class="list-group-item checkbox">
+                                <label><input type="checkbox"></label> Data Science (1)
+                            </li>
+                            <li class="list-group-item checkbox">
+                                <label><input type="checkbox"></label> TypeScript (1)
+                            </li>
+                            </div>
+                            <a role="tab" data-toggle="collapse" data-parent="#filters" href="#skill-plan" aria-expanded="true" aria-controls="skill-plan" class="filter-heading list-group-item collapsed">
+                                  <h6>Skill Plan</h6>
+                            </a>
+                            <div id="skill-plan" class="panel-collapse collapse" role="tabpanel" aria-labelledby="skill-plan">
+                              <li class="list-group-item checkbox">
+                                <label><input type="checkbox"></label>Front-end Web Developer (13)
+                            </li> 
+                            <li class="list-group-item checkbox">
+                                <label><input type="checkbox"></label> Python Developer (3)
+                            </li> 
+                            <li class="list-group-item checkbox">
+                                <label><input type="checkbox"></label> Senior Big Data Engineer (4)
+                            </li> 
+                            <li class="list-group-item checkbox">
+                                <label><input type="checkbox"></label> Game Developer (25)
+                            </li>
+                            <li class="list-group-item checkbox">
+                                <label><input type="checkbox"></label> DevOps Engineer (1)
+                            </li>
+                            </div>
+                            
+                          </ul>
+                        </div>
+                        </div>
+                      </div>
                           <div class="col-sm-9 col-lg-7 col-xl-8">
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-3 mb20" data-category="python">
-                                  <a href="card.html"><img src="images/skillcards/python-1.png" class="img-responsive mb10 img-thumbnail"></a>
-                                    <span class="name hidden">Python Fundamentals</span>
-                                    <a class="btn btn-success btn-block"><i class="fa fa-plus mr10"></i> Add to My Skills</a>
-                                    <a href="card.html" class="btn btn-info btn-block">View Card</i></a>
-                                </div>
-                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xl-3 mb20" data-category="python">
+                            <form class="mb25">
+                              <input type="text" class="form-control" placeholder="  Search for a Skill Card...">
+                            </form>
+                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xl-3 mb20">
                                   <a href="card-known.html" class=" known-skill"><img src="images/skillcards/python-2.png" class="img-responsive mb10 img-thumbnail"></a>
                                     <span class="name hidden">Python Data Science</span>
                                     <a class="btn btn-default btn-block"><i class="fa fa-remove mr10"></i> Remove from Skills</a>
                                     <a href="card-known.html" class="btn btn-info btn-block">View Card</i></a>
                                 </div>
-                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xl-3 mb20" data-category="python">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-3 mb20" data-category="python">
+                                  <a href="card.html" class="learning-skill"><img src="images/skillcards/python-1.png" class="img-responsive mb10 img-thumbnail"></a>
+                                    <span class="name hidden">Python Fundamentals</span>
+                                    <a class="btn btn-success btn-block"><i class="fa fa-plus mr10"></i> Add to My Skills</a>
+                                    <a href="card.html" class="btn btn-info btn-block">View Card</i></a>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-3 mb20" data-category="python">
                                   <img src="images/skillcards/python-3.png" class="img-responsive mb10 img-thumbnail">
                                     <span class="name hidden">Python Testing</span>
                                     <a class="btn btn-success btn-block"><i class="fa fa-plus mr10"></i> Add to My Skills</a>
@@ -198,6 +255,11 @@
                                     <a class="btn btn-success btn-block"><i class="fa fa-plus mr10"></i> Add to My Skills</a>
                                     <a href="card.html" class="btn btn-info btn-block">View Card</i></a>
                                 </div>  
+                               
+                               
+                                <div class="clearfix"></div>
+                                
+                                
                           </div>
                   </div><!-- row -->
       </div><!-- /#book-wrapper -->
