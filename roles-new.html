@@ -124,71 +124,99 @@
                     </div>
                     <hr>
                   </div>
-                  <div class="col-sm-6 col-lg-offset-1 col-lg-5 hidden-xs">
-                    <h5>Last 14 Days Activity:</h5>
-                    <div id="chartdiv"></div>
-                  </div>
-                  <div class="col-sm-6 col-lg-5">
-                    <h5>Last viewed:</h5>
-                    <ul class="list-group">
-                                        <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                            <a href="index.html"><img src="images/book1.jpg" class="img-product-list"></a>
-                                            <h1>Practical Data Science Cookbook</h1>
-                                            <p class="mb0">By Sunila Gollapudi</p>
-                                            <small class="title-duration mr10">Jan 2016</small>
-                                            <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                            <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                            <!-- Desktop Buttons START -->
-                                            
-                                              <a href="index.html" class="btn btn-info pull-right hidden-xs">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                            <!-- Desktop Buttons END -->
-                                            <!-- Mobile Buttons START -->
-                                            <div class="clearfix"></div>
-                                            <a href="index.html" class="btn btn-info btn-block mt10 visible-xs">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                            <!-- Mobile Buttons END -->
-                                        </li>
-                                      </ul>
-                  </div>
-                  <div class="col-sm-12 col-lg-offset-1 col-lg-10">
-                    <h5>My Skill Plan:</h5>
-                    <div class="panel panel-default">
-                      <div class="panel-body">
-                      <div class="col-sm-12">
-
-                        <h4 class="">Nicky Falkowski</h4>
-
-                        <h5><span class="dashboard-value">Python Developer</span></h5>
-                        <div class="progress mt5 mb5">
-                          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                            <span class="sr-only">40% Complete</span>
-                          </div>
-                        </div>
-                         
-                         <a href="roles.html" class="btn btn-info pull-right mt10 hidden-xs">View all Skill Cards <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                         <a href="roles.html" class="btn btn-default pull-right mt10 hidden-xs"><i class="fa fa-refresh mr5" aria-hidden="true"></i>Change Plan </a>
-                         <h6 class="hidden-xs">Skill Cards in Plan: <span class="dashboard-value">9</span></h6>
-                          <h6 class="hidden-xs">Completed: <span class="dashboard-value">1</span></h6>
-
-                          <h6 class="hidden-xs" >Remaining: <span class="dashboard-value">8</span></h6>
-
-                        <hr>
-                      <h5>Cards in Plan:</h5>
-                    </div>
-                    <div class="clearfix"></div>
-                      <div class="skill-plan">
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/python-1.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card-known.html"class="known-skill"><img src="images/skillcards/python-2.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/python-3.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/python-4.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/git.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/android-3.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/android-3.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/android-3.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/android-3.png" class="img-responsive mb10 img-thumbnail"></a></div>
+                  <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
+                        <div class="panel panel-default">
+                          <!-- Default panel contents -->
+                          <div class="panel-heading"><h4 class="panel-title">Categories</h4></div>
+                          <ul class="list-group">
+                            <a class="list-group-item" href="roles-2.html">    Web Development </a> 
+                            <a class="list-group-item active" href="roles-2.html">    App Development </a> 
+                            <a class="list-group-item" href="roles-2.html">    Game Development </a>   
+                            <a class="list-group-item" href="roles-2.html">    Data Science </a>   
+                            <a class="list-group-item" href="roles-2.html">    DevOps </a>   
+                            <a class="list-group-item" href="roles-2.html">    Security </a>            
+                          </ul>
+                        </div> 
                       </div>
-                    </div>
-                      <div class="clearfix"></div>
-                    </div>
+                      <div class="col-sm-9 col-lg-7 col-xl-8">
+                      <div class="panel-group" id="skill-plan" role="tablist" aria-multiselectable="true">
+                    <!-- ngRepeat: (key, role) in skillsController.skillsRoles --><div class="panel panel-default ng-scope" ng-repeat="(key, role) in skillsController.skillsRoles">
+                        <div class="panel-heading clickable" data-toggle="collapse" data-parent="#skill-plan" href="#android-developer" aria-expanded="true" aria-controls="android-developer">
+                            
+                            <span class="card-heading mb5 mt0 ng-binding">Android Developer
+                                <span class="plan-card-counter ng-binding">1/9</span>
+                            </span>
+                        </div>
+                        <div id="android-developer" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div class="col-sm-12">
+                                    <div class="">
+                                        <div class="">
+                                            <h5 class="mb20 ng-binding">
+                                                Informed by <b class="survey-number ng-binding">3,900</b> Android Developers and jobs openings from the following companies:
+                                            </h5>
+                                            <img class="img-responsive mt10 mb30 pl20 pr20 col-xl-offset-1 col-xl-10" ng-src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/android-developer.png" src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/android-developer.png">
+                                            <div class="clearfix"></div>
+                                            <p class="ng-binding">Android Developers create applications for the largest operating system the world has ever known, on a large and increasing number of different devices. Knowing how to make Android applications that maximize your audience is key to creating successful apps.</p><p class="ng-binding">Real world Android Developers contributed their experience to designing this Skill Plan and it will give you the Android and Java Skills you need to keep on top of this constantly evolving topic.</p>
+                                            <a href="#" ng-click="skillsController.selectRole(role.data.name, role.data.displayName);$event.preventDefault();" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Skill Plan<i class="fa fa-chevron-right ml10"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div><!-- end ngRepeat: (key, role) in skillsController.skillsRoles --><div class="panel panel-default ng-scope" ng-repeat="(key, role) in skillsController.skillsRoles">
+                        <div class="panel-heading clickable" data-toggle="collapse" data-parent="#skill-plan" href="#ios-developer" aria-expanded="true" aria-controls="ios-developer">
+                            
+                            <span class="card-heading mb5 mt0 ng-binding">iOS Developer
+                                <span class="plan-card-counter ng-binding">0/7</span>
+                            </span>
+                        </div>
+                        <div id="ios-developer" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div class="col-sm-12">
+                                    <div class="">
+                                        <div class="">
+                                            <h5 class="mb20 ng-binding">
+                                                Informed by <b class="survey-number ng-binding">2,700</b> iOS Developers and jobs openings from the following companies:
+                                            </h5>
+                                            <img class="img-responsive mt10 mb30 pl20 pr20 col-xl-offset-1 col-xl-10" ng-src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/ios-developer.png" src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/ios-developer.png">
+                                            <div class="clearfix"></div>
+                                            <p class="ng-binding">iOS Developers need to keep on top of near constant change. Objective-C; Swift; Swift 2; yearly releases of new versions of iOS and new hardware every 12 months can be demanding for iOS Developers to keep on top of. As well as all of the new features in each release, every application needs to look great and perform consistently.</p><p class="ng-binding">The iOS Developer Skill plan was designed to keep you on top of the skills you’ll need to keep creating iOS applications for years to come.</p>
+                                            <a href="#" ng-click="skillsController.selectRole(role.data.name, role.data.displayName);$event.preventDefault();" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Skill Plan<i class="fa fa-chevron-right ml10"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div><!-- end ngRepeat: (key, role) in skillsController.skillsRoles --><div class="panel panel-default ng-scope" ng-repeat="(key, role) in skillsController.skillsRoles">
+                        <div class="panel-heading clickable" data-toggle="collapse" data-parent="#skill-plan" href="#cross-platform-mobile-application-developer" aria-expanded="true" aria-controls="cross-platform-mobile-application-developer">
+                            
+                            <span class="card-heading mb5 mt0 ng-binding">Cross-Platform Mobile Application Developer
+                                <span class="plan-card-counter ng-binding">0/7</span>
+                            </span>
+                        </div>
+                        <div id="cross-platform-mobile-application-developer" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div class="col-sm-12">
+                                    <div class="">
+                                        <div class="">
+                                            <h5 class="mb20 ng-binding">
+                                                Informed by <b class="survey-number ng-binding">1,300</b> Cross-Platform Mobile Application Developers and jobs openings from the following companies:
+                                            </h5>
+                                            <img class="img-responsive mt10 mb30 pl20 pr20 col-xl-offset-1 col-xl-10" ng-src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/cross-platform-mobile-developer.png" src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/cross-platform-mobile-developer.png">
+                                            <div class="clearfix"></div>
+                                            <p class="ng-binding">Cross-platform Application Developers are charged with the rarest goal – to create two or more applications in the time it takes to build one. There are a huge number of challenges that come with this – Which tools are the best to use? Which native APIs do you need to access? How can you release on time, and without bugs?</p><p class="ng-binding">Our Cross-platform Application Developer Skill plan helps you to answer these questions. Based on leading, real-world, roles, you’ll be given all the skills you need to accomplish more with less.</p>
+                                            <a href="#" ng-click="skillsController.selectRole(role.data.name, role.data.displayName);$event.preventDefault();" class="btn btn-info btn-lg mt10 mb5 pl25 pr25 pull-right">Select Skill Plan<i class="fa fa-chevron-right ml10"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div><!-- end ngRepeat: (key, role) in skillsController.skillsRoles -->
+                </div>
                   </div>
                 </div><!-- row -->
       </div><!-- /#book-wrapper -->
@@ -206,7 +234,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
-    <script src="js/sidenav-accordion.js"></script>
+    <script src="js/sidenav-skill-plan.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
@@ -256,106 +284,6 @@
           ]
         });
       });
-    </script>
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-    <script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
-    <!-- Chart code -->
-    <script>
-    var chart = AmCharts.makeChart("chartdiv", {
-      "type": "serial",
-      "theme": "light",
-      "marginTop": 30,
-      "autoMarginOffset": 20,
-      "marginRight": 30,
-      "marginBottom": 30,
-      "backgroundAlpha": 1,
-      "backgroundColor": "#fff",
-      "color": "rgba(0,0,0,0.5",
-      "dataProvider": [{
-        "year": "11/08",
-        "sales": 2,
-      }, {
-        "year": "12/08",
-        "sales": 3,
-      }, {
-        "year": "13/08",
-        "sales": 9,
-      }, {
-        "year": "14/08",
-        "sales": 8,
-      }, {
-        "year": "15/08",
-        "sales": 0,
-      }, {
-        "year": "16/08",
-        "sales": 0,
-      }, {
-        "year": "17/08",
-        "sales": 0,
-      }, {
-        "year": "18/08",
-        "sales": 4,
-      }, {
-        "year": "19/08",
-        "sales": 14,
-      }, {
-        "year": "20/08",
-        "sales": 1,
-      }, {
-        "year": "21/08",
-        "sales": 3,
-      }, {
-        "year": "22/08",
-        "sales": 0,
-      }, {
-        "year": "23/08",
-        "sales": 0,
-      }, {
-        "year": "24/08",
-        "sales": 4,
-      }],
-      "graphs": [{
-        "title": "Section Views",
-        "lineColor": "#eb711e",
-        "lineAlpha": 0.7,
-        "lineThickness": 2,
-        "bulletAlpha": 1,
-        "bullet": "round",
-        "bulletBorderThickness": 2,
-        "bulletBorderAlpha": 1,
-        "bulletSize": 10,
-        "bulletColor": "#eb711e",
-        "useLineColorForBulletBorder": true,
-        "valueField": "sales",
-        "balloonText": "<span style='font-family: Montserrat;'>[[title]]</span><br /><span style='font-size: 16px;'>[[value]]</span>"
-      }],
-      "categoryField": "year",
-      "categoryAxis": {
-        "axisAlpha": 0,
-        "gridAlpha": 0,
-        "labelsEnabled": false,
-        "ignoreAxisWidth": true
-      },
-      "valueAxes": [{
-        "gridColor": "#eee",
-        "gridAlpha": 1,
-        "axisAlpha": 0
-      }],
-      "chartCursor": {
-        "cursorAlpha": 0,
-        "categoryBalloonEnabled": true,
-        "categoryBalloonColor": "#f2b146",
-        "color": "#fff",
-      },
-      "balloon":{
-        "adjustBorderColor":false,
-        "borderThickness":1,
-        "color":"#fff"
-      }
-    });
     </script>
 
 
