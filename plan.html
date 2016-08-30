@@ -25,6 +25,8 @@
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet"/>
+    <link href="css/slick-theme.css" rel="stylesheet"/>
     <link href="css/general.css" rel="stylesheet">
     <link href="css/skillcard.css" rel="stylesheet">
     <link href="css/bootstrap-xl.css" rel="stylesheet">
@@ -119,60 +121,54 @@
                 <div class="row">
                           <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
                               <div class="page-title"> 
-                                <h3>Skill Plans</h3>
-                                <h6 class="mt5">Select a plan most relevant to the role and skills you want to develop</h6>
+                                <h3>Python Developer</h3>
+                                <h6>
+                                  <ol class="breadcrumb">
+                                    <li><a href="skillcards.html">Skill Plans</a></li>
+                                    <li class="active">Python Developer</li>
+                                  </ol>
+                                </h6>
                               </div>
-                              <hr> 
+                              <hr>
                           </div>
-                          <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
-                        <div class="panel panel-default">
-                          <!-- Default panel contents -->
-                          <div class="panel-heading"><h4 class="panel-title">Categories</h4></div>
-                          <ul class="list-group">
-                            <a class="list-group-item" href="roles-2.html">    Web Development </a> 
-                            <a class="list-group-item active" href="roles-2.html">    App Development </a> 
-                            <a class="list-group-item" href="roles-2.html">    Game Development </a>   
-                            <a class="list-group-item" href="roles-2.html">    Data Science </a>   
-                            <a class="list-group-item" href="roles-2.html">    DevOps </a>   
-                            <a class="list-group-item" href="roles-2.html">    Security </a>            
-                          </ul>
-                        </div> 
-                      </div>
-                          <div class="col-sm-9 col-lg-7 col-xl-8">
-                           
-                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xl-3 mb20">
-                                  <a href="plan.html"  class="learning-skill"><img src="images/skillcards/python-developer.png" class="img-responsive mb10 img-thumbnail"></a>
-                                    <span class="name hidden">Python Data Science</span>
-                                    <div class="progress mb20">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                        <span class="sr-only">60% Complete</span>
-                                      </div>
-                                    </div>
-                                    <a href="card-known.html" class="btn btn-info btn-block">View Plan</i></a>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-3 mb20">
-                                  <a href="plan.html"><img src="images/skillcards/android-developer.png" class="img-responsive mb10 img-thumbnail"></a>
-                                    <span class="name hidden">Python Data Science</span>
-                                    <div class="progress mb20">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
-                                        <span class="sr-only">60% Complete</span>
-                                      </div>
-                                    </div>
-                                    <a href="card-known.html" class="btn btn-info btn-block">View Plan</i></a>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-3 mb20">
-                                  <a href="plan.html"><img src="images/skillcards/ios-developer.png" class="img-responsive mb10 img-thumbnail"></a>
-                                    <span class="name hidden">Python Data Science</span>
-                                    <div class="progress mb20">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                                        <span class="sr-only">60% Complete</span>
-                                      </div>
-                                    </div>
-                                    <a href="card-known.html" class="btn btn-info btn-block">View Plan</i></a>
-                                </div>
-                                <div class="clearfix"></div>
-                                
-                                
+                          <div class="col-sm-12 col-md-3 col-lg-offset-1 col-lg-3 col-xl-offset-1 col-xl-2">
+                            <a href="plan.html" class="learning-skill">
+                            <img src="images/skillcards/python-developer.png" class="img-responsive img-thumbnail hidden-xs hidden-sm"/>
+                            </a>
+                            <h6 class="hidden-xs">Skill Cards in Plan: <span class="dashboard-value">9</span></h6>
+                            <h6 class="hidden-xs">Completed: <span class="dashboard-value">1</span></h6>
+                            <h6 class="hidden-xs">Remaining: <span class="dashboard-value">8</span></h6>
+                            <div class="progress mb20">
+                              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                <span class="sr-only">60% Complete</span>
+                              </div>
+                            </div>
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-default disabled btn-block mt10 mb5 pl25 pr25"><i class="fa fa-refresh mr10"></i>Currently Selected</a>
+                          </div>
+                          <div class="col-sm-12 col-md-9 col-lg-7 col-xl-8">
+                            <h5>Informed by <b class="survey-number">4,200</b> Python Developers and jobs openings from the following companies:</h5>
+                            <p class="card-desc">Python is the language of the productive developer and it is in use everywhere, from Google to NASA. Being a Python Developer however is more than just knowing Python. Being a Python Developer means that you’re ready to tackle any challenge that may come your way; from data science projects and data crunching, to creating websites or writing automation scripts, Python Developers are ready to deliver the next project on time.
+                            </p>
+                            <p class="card-desc">Compiled from the experience of Python Developers around the world, this Skill Plan will give you the skills you need to cover every angle as a Python developer.
+
+                            </p>
+                            <a href="dashboard-new.html" class="btn btn-info  pull-right"> Select Plan<i class="fa fa-chevron-right ml5"></i></a> 
+                            <div class="clearfix"></div>
+                            <div class="skillcard-learning mt30 mb30">
+                              <h5 class="">Skill Cards in Plan</h5>
+                              <div class="skill-plan">
+                                <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/python-1.png" class="img-responsive mb10 img-thumbnail"></a></div>
+                                <div class="dashboard-cards"><a href="card-known.html"class="known-skill"><img src="images/skillcards/python-2.png" class="img-responsive mb10 img-thumbnail"></a></div>
+                                <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/python-3.png" class="img-responsive mb10 img-thumbnail"></a></div>
+                                <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/python-4.png" class="img-responsive mb10 img-thumbnail"></a></div>
+                                <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/git.png" class="img-responsive mb10 img-thumbnail"></a></div>
+                                <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/android-3.png" class="img-responsive mb10 img-thumbnail"></a></div>
+                                <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/android-3.png" class="img-responsive mb10 img-thumbnail"></a></div>
+                                <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/android-3.png" class="img-responsive mb10 img-thumbnail"></a></div>
+                                <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/android-3.png" class="img-responsive mb10 img-thumbnail"></a></div>
+                              </div>
+                            </div>
+                            
                           </div>
                   </div><!-- row -->
       </div><!-- /#book-wrapper -->
@@ -191,16 +187,55 @@
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
     <script src="js/sidenav-accordion.js"></script>
-
-
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript">
-    $("#myButton").click(function() {
-         $("#myDiv").fadeTo("slow", 0.01, function(){ //fade
-             $(this).slideUp("slow", function() { //slide up
-                 $(this).remove(); //then remove from the DOM
-                });
-             });
-    });
+      $(document).ready(function(){
+        $('.skill-plan').slick({
+          dots: true,
+          infinite: false,
+          arrows: false,
+          speed: 300,
+          slidesToShow: 4.5,
+          slidesToScroll: 5,
+          responsive: [
+            {
+              breakpoint: 1450,
+              settings: {
+                slidesToShow: 3.5,
+                slidesToScroll: 4,
+                infinite: false,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 1250,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 3,
+                infinite: false,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+        });
+      });
     </script>
 </body>
 
