@@ -16,6 +16,13 @@ h1, .h1 {
 .nav-pills > li > a {
     border-radius: 0;
 }
+.early-access-holder {
+  background: #eb6525;
+  color: white;
+}
+.early-access-holder .section-name {
+  color: white;
+}
 #chartdiv { 
   height: 225px;
   width: 100%;
