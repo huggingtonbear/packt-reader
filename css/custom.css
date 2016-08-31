@@ -355,6 +355,9 @@ span.input-group-btn button.btn {
   .jumbotron.heading {
     background-image: none;
   }
+  h3 {
+    font-size: 24px;
+  }
 }
 /* Jumbotron Header Styles END */
 
