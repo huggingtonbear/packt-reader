@@ -267,14 +267,20 @@ span.input-group-btn button.btn {
     margin-top: 15px;
 }
 .jumbotron.heading {
-    padding-bottom: 15px;
-    padding-top: 6px;
-    background: #F5F5F5;
-/*    background-image: url('images/sidebar.png');
-*/    background-repeat: no-repeat;
-    background-position: right;
+    background: #fcfcfc;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
     color: white;
-    border-bottom: 2px solid #DDDDDD;
+    border-bottom: none;
+}
+@media(max-width:1200px) {
+  .jumbotron.heading h3 {
+      margin-top:40px;
+  }
+}
+.jumbotron.heading hr{
+    margin-bottom: 0px;
 }
 .jumbotron.landingheading {
     padding-bottom: 15px;
