@@ -97,11 +97,14 @@ a.learning-skill:before {
     font-family: fontawesome;
     padding: 12px;
     display: block;
-    padding-top: 5px;
-    padding-left: 15px;
+    padding-top: 3px;
+    padding-left: 13px;
     color: #fcfcfc;
-    font-size: 29px;
+    font-size: 24px;
     height: 170px;
+    bottom: 0;
+    right: inherit;
+    margin-bottom: -110px;
     position: absolute;
     z-index: 1000;
 }
