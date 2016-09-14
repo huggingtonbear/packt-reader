@@ -98,13 +98,11 @@ a.learning-skill:before {
     padding: 12px;
     display: block;
     padding-top: 3px;
-    padding-left: 13px;
+    padding-right: 30px;
     color: #fcfcfc;
-    font-size: 24px;
+    font-size: 30px;
     height: 170px;
-    bottom: 0;
-    right: inherit;
-    margin-bottom: -110px;
+    right: 0;
     position: absolute;
     z-index: 1000;
 }
