@@ -21,6 +21,13 @@ h1, .h1 {
     font-weight: 500;
     line-height: 1.1;
 }
+.avatar-dashboard {
+  float: left;
+  height: 160px;
+  margin-top: 5px;
+  margin-right: 25px;
+  margin-bottom: 15px;
+}
 .nav-pills > li > a {
     border-radius: 0;
 }
@@ -57,11 +64,28 @@ a.known-skill:before {
     font-family: fontawesome;
     padding: 12px;
     display: block;
-    padding-top: 5px;
-    padding-left: 15px;
+    padding-top: 3px;
+    padding-right: 30px;
     color: #fcfcfc;
-    font-size: 29px;
+    font-size: 30px;
     height: 170px;
+    right: 0;
+    position: absolute;
+    z-index: 1000;
+}
+.dashboard-cards a.known-skill:before {
+    content: "\f058 ";
+    font-family: fontawesome;
+    padding: 12px;
+    display: block;
+    padding-top: 3px;
+    padding-left: 13px;
+    color: #fcfcfc;
+    font-size: 24px;
+    height: 170px;
+    bottom: 0;
+    right: inherit;
+    margin-bottom: -110px;
     position: absolute;
     z-index: 1000;
 }
