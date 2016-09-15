@@ -7434,7 +7434,7 @@ input[type="checkbox"]:disabled:checked:after,
   box-shadow: none;
 }
 .progress-bar:last-child {
-  border-radius: 0px 3px 3px 3px;
+  border-radius: 0px 0px 0px 0px;
 }
 .progress-bar:last-child:before {
   display: block;

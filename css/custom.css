@@ -28,6 +28,10 @@ h1, .h1 {
   margin-right: 25px;
   margin-bottom: 15px;
 }
+.avatar-table {
+  float: left;
+  height: 60px;
+}
 .nav-pills > li > a {
     border-radius: 0;
 }
@@ -435,9 +439,13 @@ b.landing {
   color: #eb711e;
 }
 /* Landing Page Custom Styles END */
-.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+.reader-container .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     border-top: none;
     width: 50%;
+}
+.table-team .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    border-top: none;
+    width: 25%;
 }
 
 .cover-image-thumb {
