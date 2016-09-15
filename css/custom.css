@@ -438,15 +438,7 @@ span.input-group-btn button.btn {
 b.landing {
   color: #eb711e;
 }
-/* Landing Page Custom Styles END */
-.reader-container .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
-    border-top: none;
-    width: 50%;
-}
-.table-team .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
-    border-top: none;
-    width: 25%;
-}
+
 
 .cover-image-thumb {
   float: left;

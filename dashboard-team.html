@@ -133,63 +133,109 @@
                   </div>
                   <div class="col-lg-offset-1 col-lg-10 hidden-xs">
                     <h5>Last 14 Days Activity:</h5>
-                    <div id="chartdiv"></div>
+                    <div id="chartdiv" style="height:320px;"></div>
                   </div>
-                  
-                  <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
-                    <h5>My Team:</h5>
-                    <div class="table-responsive table-team"> <!-- class table-responsive -->
-                        <table class="table table-bordered"> <!-- class table-condensed -->
+                  <div class="col-sm-12 col-lg-offset-1 col-lg-5 mt10">
+                    <h5>My Team (Last 14 Days):</h5>
+                    <div class="table-responsive panel panel-default"> <!-- class table-responsive -->
+                        <table class="table table-striped"> <!-- class table-condensed -->
                                 <thead><!-- table head-->
                                     <tr>
                                        <th><h6>User</h6></th>
-                                        <th>Skill Plan</th>
-                                      <th>Progress</th>
                                        
-                                        <th>Total Skills</th>
+                                        <th class="text-center"><h6>Sections Viewed</h6></th>
+                                        <th class="text-center"><h6>Time spent learning (Last 7 days)</h6></th>
                                     </tr>
                                 </thead>
                             
                                 <tbody>
                                     <tr class=""><!-- Row 1 , success class-->
-                                        <td><a href="#"><img src="images/avatar.jpg" class="avatar-table img-thumbnail hidden-xs mr15"/><h6 class="mt20"> John Smith</h6></a></td>
-                                        <td><h6 class="mt20"> Python Developer</h6></td>
-                                        <td>
-                                          <div class="progress mt5 mb5" style="height:20px;">
-                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                                              <span class="sr-only">40% Complete</span>
-                                            </div>
-                                          </div>
-                                        </td>
-                                        <td>3</td>
+                                        <td><a href="#"><h6 class="mt20"> John Smith</h6></a></td>
+ 
+                                        <td class="text-center"><h6 class="mt20">102</h6></td>
+                                        <td class="text-center"><h6 class="mt20">10hr(s) 45min(s) </h6></td>
+                                        
                                     </tr>
-                                    <tr class="danger"><!-- Row 2 , danger class-->
-                                        <td>180</td>
-                                        <td>Congo</td>
-                                        <td>422</td>
-                                        <td>World Bank</td>
+                                    <tr class=""><!-- Row 1 , success class-->
+                                        <td><a href="#"><h6 class="mt20"> Nick Jones</h6></a></td>
+
+                                        <td class="text-center"><h6 class="mt20">56</h6></td>
+                                        <td class="text-center"><h6 class="mt20">5hr(s) 14min(s) </h6></td>
                                     </tr>
-                                    <tr class="warning"><!-- Row 3 , warning class-->
-                                        <td>135</td>
-                                        <td>Pakistan</td>
-                                        <td>2,890</td>
-                                        <td>CIA</td>
+                                    <tr class=""><!-- Row 1 , success class-->
+                                        <td><a href="#"><h6 class="mt20"> Craig David</h6></a></td>
+                                       
+                                        <td class="text-center"><h6 class="mt20">79</h6></td>
+                                        <td class="text-center"><h6 class="mt20">2hr(s) 29min(s) </h6></td>
                                     </tr>
-                              <tr class="info"><!-- Row 4 , information class -->
-                                        <td>92</td>
-                                        <td>China</td>
-                                        <td>9,233</td>
-                                        <td>IMF</td>
+                                    <tr class=""><!-- Row 1 , success class-->
+                                        <td><a href="#"><h6 class="mt20"> Michelle O'Neill</h6></a></td>
+
+                                        <td class="text-center"><h6 class="mt20">85</h6></td>
+                                        <td class="text-center"><h6 class="mt20">1hr(s) 45min(s)</h6></td>
                                     </tr>
-                              <tr class="active"><!-- Row 5 , active class-->
-                                        <td>7</td>
-                                        <td>United States</td>
-                                        <td>49,965</td>
-                                        <td>World Bank</td>
+                                    <tr class=""><!-- Row 1 , success class-->
+                                        <td><a href="#"><h6 class="mt20"> Paulius Retz</h6></a></td>
+  
+                                        <td class="text-center"><h6 class="mt20">42</h6></td>
+                                        <td class="text-center"><h6 class="mt20">0hr(s) 5min(s)</h6></td>
                                     </tr>
                                 </tbody>
                         </table>
                         </div>
+                      </div>
+                  <div class="col-lg-5 mt10">
+                    <h5>Most viewed Courses:</h5>
+                    <div class="table-responsive panel panel-default"> <!-- class table-responsive -->
+                        <table class="table table-striped"> <!-- class table-condensed -->
+                                <thead><!-- table head-->
+                                    <tr>
+                                       <th><h6>Course</h6></th>
+                                        <th class="text-center"><h6>Sections Viewed</h6></th>
+                                        <th class="text-center"><h6>Time spent learning (Last 7 days)</h6></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class=""><!-- Row 1 , success class-->
+                                        <td><h6 class="mt20">Practical Data Science...</h6></td>
+                                        
+                                        <td class="text-center"><h6 class="mt20">102</h6></td>
+                                        <td class="text-center"><h6 class="mt20">10hr(s) 45min(s) </h6></td>
+                                        
+                                    </tr>
+                                    <tr class=""><!-- Row 1 , success class-->
+                                        <td><h6 class="mt20">Mastering JavaScript</h6></td>
+                                        
+                                        <td class="text-center"><h6 class="mt20">102</h6></td>
+                                        <td class="text-center"><h6 class="mt20">10hr(s) 45min(s) </h6></td>
+                                        
+                                    </tr>
+                                    <tr class=""><!-- Row 1 , success class-->
+                                        <td><h6 class="mt20">Building a Road in Civ...</h6></td>
+                                        
+                                        <td class="text-center"><h6 class="mt20">102</h6></td>
+                                        <td class="text-center"><h6 class="mt20">10hr(s) 45min(s) </h6></td>
+                                        
+                                    </tr>
+                                    <tr class=""><!-- Row 1 , success class-->
+                                        <td><h6 class="mt20">Mastering Python</h6></td>
+                                        
+                                        <td class="text-center"><h6 class="mt20">102</h6></td>
+                                        <td class="text-center"><h6 class="mt20">10hr(s) 45min(s) </h6></td>
+                                        
+                                    </tr>
+                                    <tr class=""><!-- Row 1 , success class-->
+                                        <td><h6 class="mt20">UX Design Fundamentals</h6></td>
+                                        
+                                        <td class="text-center"><h6 class="mt20">102</h6></td>
+                                        <td class="text-center"><h6 class="mt20">10hr(s) 45min(s) </h6></td>
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                        </table>
+                        </div>
+                  
                       <div class="clearfix"></div>
                     </div>
                   </div>
@@ -321,7 +367,7 @@
         "sales": 0,
       }],
       "graphs": [{
-        "title": "Section Views",
+        "title": "Total Views",
         "lineColor": "#eb711e",
         "lineAlpha": 0.7,
         "lineThickness": 2,
