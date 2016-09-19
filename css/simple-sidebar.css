@@ -129,10 +129,8 @@ li.sub-nav {
     line-height: 1.8em;
     background: rgba(0,0,0,0.4);
     border-top: none;
-    text-indent: 35px;
     text-transform: capitalize;
     text-align: right;
-    
 }
 .search-form {
     height: 80px;
@@ -166,7 +164,6 @@ li.sub-nav {
     transition: all .15s;
 }
 .sidebar-nav li a .section-name {
-    width: 200px;
     padding-right: 10px;
     white-space: nowrap;
     overflow: hidden;
@@ -181,13 +178,12 @@ li.sub-nav {
     float: right;
     width: 15px;
     text-indent: 0px;
-    margin-top: -45px;
+    color: #eb711e 
 }
 .sub-nav a .section-complete {
     float: right;
     width: 15px;
     text-indent: 0px;
-    margin-top: -21px;
 }
 .sub-nav a .sidenav-menu {
   font-size: 14px;
@@ -316,7 +312,6 @@ a#bookmark-tab, a#contents-tab {
         margin-left: 0px;
     }
     .sidebar-nav li a .section-name {
-    width: 250px;
     }
 }
 

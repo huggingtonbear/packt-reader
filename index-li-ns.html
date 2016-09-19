@@ -40,8 +40,6 @@
 
 <body class="language-markup">
 
-  <a href="account-subscription-ns.html" class="non-subscriber-notice">Get unlimited access to over 3500 courses for just $29.99 a month<button class="btn btn-default ml15">Subscribe Today</button></a>
-
     <div id="wrapper">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -61,12 +59,12 @@
               <li class="active"><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="sidenav-menu-holder"><div class="section-name">1. Getting Started</div></a>    </li>
               <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                         <li class="sub-nav active"><a href="#"><div class="section-name">Chapter 1. Getting Started</div></a></li>
-                        <li class="sub-nav"><a href="#"><div class="section-name">Adding App Modules</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-complete"><i class="fa fa-check"></i></div><div class="section-name">Adding App Modules</div></a></li>
                         <li class="sub-nav"><a href="#"><div class="section-name">The app controller</div></a></li>
-                        <li class="sub-nav"><a href="#"><div class="section-name">Adding the next exercise in tandem with everything</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
-                        <li class="sub-nav"><a href="#"><div class="section-name">Understanding responsive design priciples</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
-                        <li class="sub-nav"><a href="#"><div class="section-name">Migrating to Angular 2</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
-                        <li class="sub-nav"><a href="#"><div class="section-name">Summary</div><div class="section-complete"><i class="fa fa-check"></i></div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-complete"><i class="fa fa-check"></i></div><div class="section-name">Adding the next exercise in tandem with everything</div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-complete"><i class="fa fa-check"></i></div><div class="section-name">Understanding responsive design priciples</div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-complete"><i class="fa fa-check"></i></div><div class="section-name">Migrating to Angular 2</div></a></li>
+                        <li class="sub-nav"><a href="#"><div class="section-complete"><i class="fa fa-check"></i></div><div class="section-name">Summary</div></a></li>
               </div>
               <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="sidenav-menu-holder"><div class="section-name">2. Building our first application</div></a>    </li>
               <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
@@ -141,9 +139,7 @@
               
                     <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
                         <div class="btn-group pull-right mt15 mb30" role="group">
-                            <button class="btn btn-default">
-                            <i class="fa fa-bookmark-o fa-lg"></i>
-                            <span class="hidden-xs hidden-sm ml5">Bookmark</span></button>
+                            
                             <div class="btn-group" role="group">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                     <i class="fa fa-shopping-cart fa-lg"></i>
@@ -163,28 +159,9 @@
                                     </li>
                                 </ul>
                             </div>
-                            <button class="btn btn-default hidden-xs">
+                            <button class="btn btn-default hidden-xs disabled">
                             <i class="fa fa-file fa-lg"></i>
                             <span class="hidden-xs hidden-sm ml5">Code Files</span></button>
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-cog fa-lg no-text-padding"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li class="disabled"><a class="disabled text-center"><b>Nightmode</b></a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="" target="_self">Enable</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li class="disabled"><a class="disabled text-center"><b>Font size (rem)</b></a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="" target="_self">1.5</a></li>
-                                    <li><a href="" target="_self">1.6</a></li>
-                                    <li><a href="" target="_self">1.7</a></li>
-                                    <li><a href="" target="_self">1.8</a></li>
-                                    <li><a href="" target="_self">1.9</a></li>
-                                    <li><a href="" target="_self">2.0</a></li>
-                                </ul>
-                            </div>
                             <div class="btn-group" role="group">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fa fa-share fa-lg no-text-padding"></i>
@@ -202,22 +179,22 @@
                         <div class="clearfix"></div>              
                     
                         <div style="position:relative;" class="book-content" ng-non-bindable="">
+                            <div class="alert alert-info mb25" role="alert">
+                              <i class="fa fa-exclamation-circle fa-lg mr5"></i> You're currently viewing a course from Mapt logged out. If you already have an account, you can <a href="#" class="alert-link">click here to sign in </a>
+                            </div>
                                 <div class="packtlib-version v2"><!--?xml version="1.0" encoding="UTF-8"?-->
                                     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div></div></div><h2 class="title">Chapter 1. Getting Started</h2><hr></div><p>Now that <a id="id89" class="indexterm"></a>we have created our URL and interpreted by the routing system, we must ensure that a view (which is a controller in the MVC pattern) meets the customer's demand.</p><p>This is the function of the second parameter of the URLs present in <code class="literal">urls.py</code>. This parameter will define the method that will play the role of a view. Take, for example, our first URL: </p><div class="informalexample"><pre class="programlisting  language-markup">url (r'^$', 'TasksManager.views.index.page'), </pre></div><p>Firstly, as we have seen when studying regular expressions, this URL will be valid only if we browse the <code class="literal">http://localhost:8000</code> URL. The second parameter in the URL means that in the <code class="literal">index.py</code> file, there is a method called <code class="literal">page</code> that will process the request. In our <code class="literal">index.py</code> file, we will create a method called <code class="literal">page()</code>. This method will return an HTML page<a id="id91" class="indexterm"></a> to the client. The page is being returned by the HTTP protocol, so we will use the <code class="literal">HttpResponse()</code> function and its importation. The argument of this <code class="literal">HttpResponse()</code> function returns the HTML content that we will return<a id="id92" class="indexterm"></a> to the browser. To simplify reading this example, we do not use a proper HTML structure, because we just return <code class="literal">Hello world!</code> to the client, as shown in the following code:</p>    </div>
                                     </div><div class="fade-out"></div>                                                          </div>
                                     <div class="panel panel-default clearfix">
-                                        <div class="panel-body">
-                                            <div class="col-sm-6 col-lg-8">
-                                                <h5>Sorry! You've used up your free access to premium content</h5>
-                                            <h6><b>Don't worry! Subscribe today and access over 3,500 titles for just $12.99 a month</b>
-                                            </h6>
-                                            
-                                            </div>
-                                            <div class="col-sm-6 col-lg-4">
-                                                <a class="btn btn-info btn-lg btn-block mt20" href="https://www.packtpub.com/add_to_cart/23569">Start your FREE 10 Day Trial</a>
-                                            </div>
-                                            
-                                        </div>
+                                       <div class="panel-body text-center ng-scope" ng-if="!loggedIn">
+                                <h5>
+                                    <i class="fa fa-lock" style="margin-right:10px;"></i>
+                                        <a href="#" data-toggle="modal" data-target="#accountModal">
+                                            Sign Up
+                                        </a>
+                                         for FREE to view the full section
+                                </h5>
+                            </div>
                     </div>
                     <div class="row"> 
                         <hr>      
