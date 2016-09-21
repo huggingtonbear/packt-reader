@@ -19,6 +19,14 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
 .alert-warning {
     background-color: #eb711e;
 }
+.see-more-link {
+  float: right;
+}
+.see-more-link h6 {
+  color: #eb711e;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
 h1, .h1 {
     font-family: 'Montserrat' ,Helvetica,Arial,sans-serif;
     font-weight: 500;
