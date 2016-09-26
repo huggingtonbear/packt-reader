@@ -144,7 +144,7 @@
                     </div>
                 </div>  
                             
-                <div class="reader-container col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
+                <div class=" col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
                 <div class="btn-group pull-right mt15 mb30" role="group">
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
@@ -207,27 +207,22 @@
                                 
                                 <ul id="myTabs" class="nav nav-tabs nav-justified hidden-xs mt20" role="tablist">
                                     <li class="active">
-                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true"><h5>Features</h5></a>
+                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true"><h5>Info</h5></a>
                                     </li>
                                     <li>
-                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Learning</h5></a>
+                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Contents</h5></a>
                                     </li>
-                                    <li>
-                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail" ng-click="$event.preventDefault();" aria-expanded="false"><h5>About</h5></a>
-                                    </li>
+
                                     <li>
                                         <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="$event.preventDefault();" aria-expanded="false"><h5>Author</h5></a>
                                     </li>
                                 </ul>
                                 <ul id="myTabs" class="nav nav-pills text-center nav-stacked visible-xs mb60" role="tablist">
                                     <li class="active">
-                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true">Features</a>
+                                        <a href="#about" role="tab" id="about-tab" data-toggle="tab" aria-controls="about" ng-click="$event.preventDefault();" aria-expanded="true">Info</a>
                                     </li>
                                     <li>
-                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false">Learning</a>
-                                    </li>
-                                    <li>
-                                        <a href="#detail" role="tab" id="detail-tab" data-toggle="tab" aria-controls="detail" ng-click="$event.preventDefault();" aria-expanded="false">About</a>
+                                        <a href="#learn" role="tab" id="learn-tab" data-toggle="tab" aria-controls="learn" ng-click="$event.preventDefault();" aria-expanded="false">Contents</a>
                                     </li>
                                     <li>
                                         <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="$event.preventDefault();" aria-expanded="false">Author</a>
@@ -243,36 +238,106 @@
                                                 <h4 class="mobile-title">Course Features</h4>
                                                 <hr>
                                             </div>
-                                            <div ng-bind-html="book_data.about" class="ng-binding">
-                                                <ul>
+                                            <div ng-bind-html="book_data.learn" class="ng-binding">
+                                        <h5>Features</h6>
+                                        <hr>
+                                        <ul class="mb30">
                                                 <li>Harness the ability to build algorithms for unsupervised data using deep learning concepts with R</li>
                                                 <li>Master the common problems faced such as overfitting of data, anomalous datasets, image recognition, and performance tuning while building the models</li>
                                                 <li>Build models relating to neural networks, prediction and deep prediction</li>
                                                 </ul>
-                                        </div>
+                                        <h5>Learning</h6>
+                                            <hr>
+                                            <ul class="mb30">
+                                        <li>Set up the R package H2O to train deep learning models</li>
+                                        <li>Understand the core concepts behind deep learning models</li>
+                                        <li>Use Autoencoders to identify anomalous data or outliers</li>
+                                        <li>Predict or classify data automatically using deep neural networks</li>
+                                        <li>Build generalizable models using regularization to avoid overfitting the training data</li>
+                                        </ul></div>
+                                        <h5>About</h6>
+                                            <hr>
+                                        <div ng-bind-html="book_data.detail" class="ng-binding mb30"><p>Deep learning is a branch of machine learning based on a set of algorithms that attempt to model high-level abstractions in data by using model architectures. With the superb memory management and the full integration with multi-node big data platforms, the H2O engine has become more and more popular among data scientists in the field of deep learning.</p>
+                                        <p>This book will introduce you to the deep learning package H2O with R and help you understand the concepts of deep learning. We will start by setting up important deep learning packages available in R and then move towards building models related to neural networks, prediction, and deep prediction, all of this with the help of real-life examples.</p>
+                                        <p>After installing the H2O package, you will learn about prediction algorithms. Moving ahead, concepts such as overfitting data, anomalous data, and deep prediction models are explained. Finally, the book will cover concepts relating to tuning and optimizing models.</p></div>
+                                            
                                             </div>
                                         </div>
                                     <div role="tabpanel" class="tab-pane fade" id="learn" aria-labelledby="learn-tab">
                                         <div class="visible-xs">
-                                            <h4 class="mobile-title">What you'll learn</h4>
+                                            <h4 class="mobile-title">Contents</h4>
                                             <hr>
                                         </div>
-                                        <div ng-bind-html="book_data.learn" class="ng-binding"><ul>
-                <li>Set up the R package H2O to train deep learning models</li>
-                <li>Understand the core concepts behind deep learning models</li>
-                <li>Use Autoencoders to identify anomalous data or outliers</li>
-                <li>Predict or classify data automatically using deep neural networks</li>
-                <li>Build generalizable models using regularization to avoid overfitting the training data</li>
-                </ul></div>
-                                    </div> 
-                                    <div role="tabpanel" class="tab-pane fade" id="detail" aria-labelledby="detail-tab">
-                                        <div class="visible-xs">
-                                            <h4 class="mobile-title">Find out more</h4>
-                                            <hr>
+                                        <div ng-bind-html="book_data.toc" class="ng-binding">
+                                                <ul class="">
+                                                    <li class=""><a href="#">Preface</a> </li>
+                                                    <li><a href="index.html">1. Getting Started</a></li>
+                                                        <ul>
+                                                            <li><a href="index.html">Adding App Modules</a></li>
+                                                            <li> <a href="index.html">The app controller</a></li>
+                                                            <li><a href="index.html">Adding the next exercise in tandem with everything</a></li>
+                                                            <li><a href="index.html">Understanding responsive design priciples
+                                                            <li><a href="index.html">Migrating to Angular 2</a></li>
+                                                            <li><a href="index.html">Summary</a></li>
+                                                        </ul>
+                                                    <li><a href="#">2. Learning about x and y</a></li>
+                                                        <ul>
+                                                            <li><a href="index.html">Adding App Modules</a></li>
+                                                            <li> <a href="index.html">The app controller</a></li>
+                                                            <li><a href="index.html">Adding the next exercise in tandem with everything</a></li>
+                                                            <li><a href="index.html">Understanding responsive design priciples
+                                                            <li><a href="index.html">Migrating to Angular 2</a></li>
+                                                            <li><a href="index.html">Summary</a></li>
+                                                        </ul>
+                                                    <li><a href="index.html">3. More AngularJS Goodness</a></li>
+                                                        <ul>
+                                                            <li><a href="index.html">Adding App Modules</a></li>
+                                                            <li> <a href="index.html">The app controller</a></li>
+                                                            <li><a href="index.html">Adding the next exercise in tandem with everything</a></li>
+                                                            <li><a href="index.html">Understanding responsive design priciples
+                                                            <li><a href="index.html">Migrating to Angular 2</a></li>
+                                                            <li><a href="index.html">Summary</a></li>
+                                                        </ul>
+                                                    <li><a href="#">4. Building Personal Trainer</a></li>
+                                                        <ul>
+                                                            <li><a href="index.html">Adding App Modules</a></li>
+                                                            <li> <a href="index.html">The app controller</a></li>
+                                                            <li><a href="index.html">Adding the next exercise in tandem with everything</a></li>
+                                                            <li><a href="index.html">Understanding responsive design priciples
+                                                            <li><a href="index.html">Migrating to Angular 2</a></li>
+                                                            <li><a href="index.html">Summary</a></li>
+                                                        </ul>
+                                                    <li><a href="index.html">5. Adding Data Persistance and other</a></li>
+                                                        <ul>
+                                                            <li><a href="index.html">Adding App Modules</a></li>
+                                                            <li> <a href="index.html">The app controller</a></li>
+                                                            <li><a href="index.html">Adding the next exercise in tandem with everything</a></li>
+                                                            <li><a href="index.html">Understanding responsive design priciples
+                                                            <li><a href="index.html">Migrating to Angular 2</a></li>
+                                                            <li><a href="index.html">Summary</a></li>
+                                                        </ul>
+                                                    <li><a href="#">6. Working with Directives</a></li>
+                                                        <ul>
+                                                            <li><a href="index.html">Adding App Modules</a></li>
+                                                            <li> <a href="index.html">The app controller</a></li>
+                                                            <li><a href="index.html">Adding the next exercise in tandem with everything</a></li>
+                                                            <li><a href="index.html">Understanding responsive design priciples
+                                                            <li><a href="index.html">Migrating to Angular 2</a></li>
+                                                            <li><a href="index.html">Summary</a></li>
+                                                        </ul>
+                                                    <li><a href="#">7. Testing the AngularJS Application</a></li>
+                                                        <ul>
+                                                            <li><a href="index.html">Adding App Modules</a></li>
+                                                            <li> <a href="index.html">The app controller</a></li>
+                                                            <li><a href="index.html">Adding the next exercise in tandem with everything</a></li>
+                                                            <li><a href="index.html">Understanding responsive design priciples
+                                                            <li><a href="index.html">Migrating to Angular 2</a></li>
+                                                            <li><a href="index.html">Summary</a></li>
+                                                        </ul>
+                
+                                                    </ul>
                                         </div>
-                                        <div ng-bind-html="book_data.detail" class="ng-binding"><p>Deep learning is a branch of machine learning based on a set of algorithms that attempt to model high-level abstractions in data by using model architectures. With the superb memory management and the full integration with multi-node big data platforms, the H2O engine has become more and more popular among data scientists in the field of deep learning.</p>
-                <p>This book will introduce you to the deep learning package H2O with R and help you understand the concepts of deep learning. We will start by setting up important deep learning packages available in R and then move towards building models related to neural networks, prediction, and deep prediction, all of this with the help of real-life examples.</p>
-                <p>After installing the H2O package, you will learn about prediction algorithms. Moving ahead, concepts such as overfitting data, anomalous data, and deep prediction models are explained. Finally, the book will cover concepts relating to tuning and optimizing models.</p></div>
+                                        
                                     </div>
                                     <div role="tabpanel" class="tab-pane fade" id="author" aria-labelledby="author-tab">
                                         <div class="visible-xs">
