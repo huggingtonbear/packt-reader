@@ -116,6 +116,7 @@ a.known-skill:before {
 }
 a.known-skill .img-thumbnail {
   background: #4caf50;
+  opacity: 0.5;
 }
 a.learning-skill:before {
     content: "\f021 ";
