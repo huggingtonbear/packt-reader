@@ -125,35 +125,9 @@
                     <hr>
                   </div>
                   <div class="col-sm-6 col-lg-offset-1 col-lg-5 hidden-xs">
-                    <h5>Last 14 Days Activity:</h5>
-                    <div id="chartdiv"></div>
-                  </div>
-                  <div class="col-sm-6 col-lg-5">
-                    <h5>Last viewed:</h5>
-                    <ul class="list-group">
-                                        <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                            <a href="index.html"><img src="images/book1.jpg" class="img-product-list"></a>
-                                            <h1>Practical Data Science Cookbook</h1>
-                                            <p class="mb0">By Sunila Gollapudi</p>
-                                            <small class="title-duration mr10">Jan 2016</small>
-                                            <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                            <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                            <!-- Desktop Buttons START -->
-                                            
-                                              <a href="index.html" class="btn btn-info pull-right hidden-xs">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                            <!-- Desktop Buttons END -->
-                                            <!-- Mobile Buttons START -->
-                                            <div class="clearfix"></div>
-                                            <a href="index.html" class="btn btn-info btn-block mt10 visible-xs">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                            <!-- Mobile Buttons END -->
-                                        </li>
-                                      </ul>
-                  </div>
-                  <div class="col-sm-12 col-lg-offset-1 col-lg-10">
                     <h5>My Skill Plan:</h5>
                     <div class="panel panel-default">
                       <div class="panel-body">
-                      <div class="col-sm-12">
                         <img src="images/avatar.jpg" class="avatar-dashboard img-thumbnail hidden-xs"/>
                         <h4 class="">John Smith</h4>
 
@@ -171,27 +145,141 @@
 
                           <h6 class="hidden-xs" ><i class="fa fa-refresh mr5"></i> Cards Remaining: <span class="dashboard-value">8</span></h6>
 
-                        <hr>
-
-                        <div class="well hidden-xs">
-                          <i class="fa fa-info-circle mr5"></i> Listed below are all the Skill Cards that are part of your Plan. Skill Cards make is super easy to find the content you need to learn new skills. Simply click a card, see what's entailed and discover the content you need to Skill Up. As you learn new skills you'll be able to 'tick' the relevant Skill Cards, assess your ability and track your progress toward your Plan.
-                        </div>
-
-                      <h5>Remaining Cards in Plan:</h5>
-                    </div>
-                    <div class="clearfix"></div>
-                      <div class="skill-plan">
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/python-fundamentals.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <!-- <div class="dashboard-cards"><a href="card-known.html" class="known-skill"><img src="images/skillcards/python-data-science.png" class="img-responsive mb10 img-thumbnail"></a></div> -->
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/python-high-performance-programming.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/ux-design-basics.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/production-ready-django.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/git-fundamentals.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/android-studio-fundamentals.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        <div class="dashboard-cards"><a href="card.html" class=""><img src="images/skillcards/unity.png" class="img-responsive mb10 img-thumbnail"></a></div>
-                        
                       </div>
                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-5">
+                    <h5>Last viewed:</h5>
+                    <ul class="list-group">
+                      <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                          <a href="index.html"><img src="images/book1.jpg" class="img-product-list"></a>
+                          <h1>Practical Data Science Cookbook</h1>
+                          <p class="mb0">By Sunila Gollapudi</p>
+                          <small class="title-duration mr10">Jan 2016</small>
+                          <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
+                          <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                          <!-- Desktop Buttons START -->
+                          
+                            <a href="index.html" class="btn btn-info pull-right hidden-xs">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                          <!-- Desktop Buttons END -->
+                          <!-- Mobile Buttons START -->
+                          <div class="clearfix"></div>
+                          <a href="index.html" class="btn btn-info btn-block mt10 visible-xs">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                          <!-- Mobile Buttons END -->
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                    <h5>Currently Learning:</h5>
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                      <div class="col-sm-12">
+                        <div class="col-sm-12 col-md-3 col-xl-2">
+                            <img src="images/skillcards/python-fundamentals.png" class="img-responsive img-thumbnail hidden-xs hidden-sm"/>
+                            <div class="mb20">
+                              <a data-toggle="modal" data-target="#myModal" class="btn btn-success btn-block mt10 mb5 pl25 pr25"><i class="fa fa-plus mr10"></i>Add to My Skills</a>
+                              
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-md-9 col-xl-10">
+                            <h4>Python Fundamentals</h4>
+                            <hr>
+                            <p class="card-desc">Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.
+                            </p>
+                            <a href="index.html" class="btn btn-info mt10">More info <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                            <div class="skillcard-learning mt30 mb30">
+                              <h5 class="">What will I be able to do?</h5>
+                              <ul class="mt20">
+                                  <li>Install and set up Python on Mac, Windows or Linux</li>
+                                  <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
+                                  <li>Use Git to manage your Python code</li>
+                                  <li>Write Python scripts to automate daily tasks, and other software</li>
+                                  <li>Use unit tests to write better code, faster</li>
+                              </ul>
+                            </div>
+                            <h5 class="mb20">Recommended Courses</h5>
+                            <ul class="list-group">
+                                      
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book5.jpg" class="img-product-list"></a>
+                                              <h1>Clean Data</h1>
+                                              <p class="mb0">By Margaret Matty</p>
+                                              <small class="title-duration mr10">Jun 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
+                                              <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                                  <button type="button" class="btn btn-default">
+                                                      <i class="fa fa-download fa-lg"></i>
+                                                      <span class="hidden-xs ml5"> Download Video</span>
+                                                  </button>
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-folder-o fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Save for later</span></a>
+                                                <a href="index.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
+                                              <div class="btn-group btn-group-justified visible-xs mt15">
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
+                                                   </a>
+                                                <a href="index.html" class="btn btn-default"><i class="fa fa-folder fa-lg"></i>
+                                                    </a>
+                                                <a href="index.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="index.html"><img src="images/book1.jpg" class="img-product-list"></a>
+                                              <h1>Practical Data Science Cookbook</h1>
+                                              <p class="mb0">By Sunila Gollapudi</p>
+                                              <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
+                                              <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                                <div class="btn-group dropup hidden-xs" role="group">
+                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                                      <i class="fa fa-shopping-cart fa-lg"></i>
+                                                      <span class="hidden-xs ml5"> Buy for $21.99</span>
+                                                      <span class="hidden-xs caret"></span>
+                                                  </button>
+                                                  <ul class="dropdown-menu">
+                                                      <li>
+                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
+                                                      </li>
+                                                      <li role="separator" class="divider"></li>
+                                                      <li class="disabled">
+                                                          <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
+                                                      </li>
+                                                  </ul>
+                                                </div>
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-folder fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Saved</span></a>
+                                                <a href="index.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
+                                              <div class="btn-group btn-group-justified visible-xs mt15">
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
+                                                   </a>
+                                                <a href="index.html" class="btn btn-default"><i class="fa fa-folder fa-lg"></i>
+                                                    </a>
+                                                <a href="index.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          
+                                          
+                                      
+                                          
+                                      </ul>
+                    </div>
+                    
                       <div class="clearfix"></div>
                     </div>
                   </div>
