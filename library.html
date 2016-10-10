@@ -122,43 +122,26 @@
 
         <div id="page-content-wrapper" class="">
         <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
-              <div class="jumbotron heading mb0">
-                <div class="container-fluid">
-                    <div class="col-sm-12 col-lg-offset-1 col-lg-10">
-                      <div class="row">
-                        <h3 class="ng-binding">Search</h3>
-                        <h6>
-                        <ol class="breadcrumb row mt0">
-                            <li class="active mt5 ng-binding">Discover the most important skills in software today by exploring all of our courses</li>
-                        </ol>
-                        </h6>
-                        <hr>
-                      </div>
-                    </div>
-                </div>
-              </div>
             <div id="book-wrapper" class="container-fluid">               
                 <div class="row">
                   <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
-               
-                    <div class="col-sm-12 col-md-8 col-lg-8 mb5">
+                    <div class="page-title"> 
+                      <h3>Search</h3>
+                      <h6 class="mt5">Discover the most important skills in software today by exploring all of our courses</h6>
+                    </div>
+                    <hr>
+                    <div class="col-sm-12 mb5">
                       <div class="row">
-                          <form class="mb25">
-                              <input type="text" class="form-control" placeholder="&#xf002;  Search for a course...">
+                         <form class="mb25">
+                              <div class="input-group">
+                                <input type="text" class="form-control home-search" placeholder="&#xf002;  Search for a course...">
+                                <span class="input-group-btn">
+                                  <button class="btn btn-primary" type="button">Search</button>
+                                </span>
+                              </div><!-- /input-group -->
                           </form>
                       </div>
                     </div>
-                  <div class="col-sm-12 col-md-4 col-lg-offset-1 col-lg-3 mb30">
-                      <div class="row">
-                          <select class="form-control">
-                            <option>Sort by Most Recent</option>
-                            <option>Sort by Most Popular</option>
-                            <option>Sort by Oldest</option>
-                            <option>Sort A-Z</option>
-                            <option>Sort Z-A</option>
-                          </select>
-                      </div>
-                  </div>
                   </div>
                   
                       <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
@@ -245,6 +228,18 @@
                         </div>
                       </div>
                       <div class="col-sm-9 col-lg-7 col-xl-8">
+                        <div class="col-sm-12 col-md-offset-8 col-md-4 mb15">
+                            <div class="row">
+                                <select class="form-control">
+                                  <option>Sort by Most Recent</option>
+                                  <option>Sort by Most Popular</option>
+                                  <option>Sort by Oldest</option>
+                                  <option>Sort A-Z</option>
+                                  <option>Sort Z-A</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
                                     <div class="panel panel-default">
                                       <ul class="list-group">
                                           <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
