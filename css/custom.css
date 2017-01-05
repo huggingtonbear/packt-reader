@@ -361,11 +361,12 @@ a.early-access:after {
 }
 .product-desc {
   line-height: 20px;
-  display: -webkit-box;
+  color: #555;
+/*  display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;  
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis;*/
 } 
 .filter-heading {
   position: relative;
