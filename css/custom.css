@@ -35,6 +35,46 @@ h1 span.skill-item {
     margin-bottom: 2em;
     min-width: 1em;
 }
+.btn-book {
+    position: absolute;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    top: -16px;
+    right:0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    z-index: 5;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    display: none;
+    transition: all 0.5s ease;
+}
+.btn-book-1 {
+    top: -20px;
+}
+.btn-book-2 {
+    top: 25px;
+}
+.book:hover img {
+    opacity: 0.5;
+}
+.book * {
+    transition: all 0.5s ease;
+}
+.book:hover .btn-book {
+    display: inherit;
+    animation: fadein 0.5s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
 .skill-img {
   height: 30px;
   float: left;
@@ -55,6 +95,9 @@ h1 span.skill-item {
 }
 .history-kpi {
   margin-left: 200px;
+}
+.panel h4 {
+    margin-top: 0;
 }
 .badge.badge-progress {
   background: #f9b89e;

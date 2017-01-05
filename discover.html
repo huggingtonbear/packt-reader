@@ -52,7 +52,7 @@
                     <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-left mr5"></span></a> </li>
                     <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                         <li class="sub-nav"><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">FAQs</span><span class="pull-left mr5"></span></a></li>
-                        <li class="sub-nav"><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">FAQs</span><span class="pull-left mr5"></span></a></li>
+                        <li class="sub-nav"><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Feedback</span><span class="pull-left mr5"></span></a></li>
                     </div>
                     <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><span class="sidenav-menu">Account</span><span class="pull-left mr5"></span></a> </li>
                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
@@ -82,7 +82,7 @@
             <!-- end jumbotron -->
             <div id="" class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                    <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt15">
                         <form class="mb25">
                             <div class="input-group input-group-lg">
                                 <input type="text" class="form-control home-search " placeholder="&#xf002;  Find your next learning..."> <span class="input-group-btn">
@@ -98,18 +98,18 @@
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <h4>Get your next career</h4>
+                                <hr class="mt5 mb15">
                                 <p><i class="fa fa-building icon-stand-out"></i>We have data from over 30,000 developers from companies like Facebook, Google and Tinder to identify the right skills required for top developer careers.</p>
-                                <p><i class="fa fa-code-fork icon-stand-out"></i>These paths will guide you through a series of books and videos to increase your knowledge for your next career!</p>
-                                <a class="btn btn-primary pull-right" type="button" href="careers.html">Explore career plans</a>
-                            </div>
+                                <p><i class="fa fa-code-fork icon-stand-out"></i>These paths will guide you through a series of books and videos to increase your knowledge for your next career!</p> <a class="btn btn-primary pull-right" type="button" href="careers.html">Explore career plans</a> </div>
                         </div>
                     </div>
                     <div class="col-sm-12 col-lg-5" style="height: 100%">
                         <div class="panel panel-default" style="height: 100%">
                             <div class="panel-body" style="height: 100%">
                                 <h4>Learn a new skill</h4>
+                                <hr class="mt5 mb15">
                                 <p><i class="fa fa-book icon-stand-out"></i>From our library of over 4000 ebooks and videos and industry data, we have created mini-plans to help you skill-up across a range of technologies.</p>
-                                <p><i class="fa fa-play-circle icon-stand-out"></i>Add skills to your learning queue to create your own playlist for your development.</p>
+                                <p><i class="fa fa-play-circle icon-stand-out"></i>Add skills to your learning to create your own playlist for your development.</p>
                                 <button class="btn btn-primary pull-right" type="button">Discover new skills</button>
                             </div>
                         </div>
@@ -121,25 +121,56 @@
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <h4>Recommendations</h4>
+                                <hr class="mt5 mb15">
                                 <p>Here are our top recommendations especially for you:</p>
                                 <div class="row">
-                                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book1.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center book">
+                                        <a href="index.html"><img class="img-responsive title-shadow" src="images/book1.jpg"></a>
+                                        <div class="progress mt10 mb15">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"> <span class="sr-only">30% Complete</span> </div>
+                                        </div>
+                                        <button class="btn btn-primary mt5 btn-book btn-book-1" type="button"><i class="fa fa-plus" onclick="$(this).toggleClass('fa-plus fa-minus')"></i></button>
+                                        <button class="btn btn-primary mt5 btn-book btn-book-2" type="button"><i class="fa fa-play"></i></button>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book2.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center book">
+                                        <a href="index.html"><img class="img-responsive title-shadow" src="images/book2.jpg"></a>
+                                        <div class="progress mt10 mb15">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"> <span class="sr-only">30% Complete</span> </div>
+                                        </div>
+                                        <button class="btn btn-primary mt5 btn-book btn-book-1" type="button"><i class="fa fa-plsu"></i></button>
+                                        <button class="btn btn-primary mt5 btn-book btn-book-2" type="button"><i class="fa fa-play"></i></button>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book3.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center book">
+                                        <a href="index.html"><img class="img-responsive title-shadow" src="images/book3.jpg"></a>
+                                        <div class="progress mt10 mb15">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"> <span class="sr-only">30% Complete</span> </div>
+                                        </div>
+                                        <button class="btn btn-primary mt5 btn-book btn-book-1" type="button"><i class="fa fa-plus"></i></button>
+                                        <button class="btn btn-primary mt5 btn-book btn-book-2" type="button"><i class="fa fa-play"></i></button>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book4.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center book">
+                                        <a href="index.html"><img class="img-responsive title-shadow" src="images/book4.jpg"></a>
+                                        <div class="progress mt10 mb15">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"> <span class="sr-only">30% Complete</span> </div>
+                                        </div>
+                                        <button class="btn btn-primary mt5 btn-book btn-book-1" type="button"><i class="fa fa-plus"></i></button>
+                                        <button class="btn btn-primary mt5 btn-book btn-book-2" type="button"><i class="fa fa-play"></i></button>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book5.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center book">
+                                        <a href="index.html"><img class="img-responsive title-shadow" src="images/book5.jpg"></a>
+                                        <div class="progress mt10 mb15">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"> <span class="sr-only">30% Complete</span> </div>
+                                        </div>
+                                        <button class="btn btn-primary mt5 btn-book btn-book-1" type="button"><i class="fa fa-plus"></i></button>
+                                        <button class="btn btn-primary mt5 btn-book btn-book-2" type="button"><i class="fa fa-play"></i></button>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book6.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center book">
+                                        <a href="index.html"><img class="img-responsive title-shadow" src="images/book6.jpg"></a>
+                                        <div class="progress mt10 mb15">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"> <span class="sr-only">30% Complete</span> </div>
+                                        </div>
+                                        <button class="btn btn-primary mt5 btn-book btn-book-1" type="button"><i class="fa fa-plus"></i></button>
+                                        <button class="btn btn-primary mt5 btn-book btn-book-2" type="button"><i class="fa fa-play"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -152,25 +183,26 @@
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <h4>Most Popular</h4>
+                                <hr class="mt5 mb15">
                                 <p>These are the books and videos being read most right now:</p>
                                 <div class="row">
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book5.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i></button>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book3.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i></button>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book6.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i></button>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book1.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i></button>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book4.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i></button>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book2.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -183,25 +215,26 @@
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <h4>Latest additions</h4>
+                                <hr class="mt5 mb15">
                                 <p>Here are our newest books and videos for you to learn:</p>
                                 <div class="row">
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book4.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i></button>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book1.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i></button>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book5.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i></button>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book6.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i></button>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book2.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i></button>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center mb5"><img src="images/book3.jpg" class="img-responsive" />
-                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i> Queue</button>
+                                        <button class="btn btn-primary mt5" type="button"><i class="fa fa-plus mr5"></i></button>
                                     </div>
                                 </div>
                             </div>
