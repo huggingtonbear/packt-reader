@@ -1,7 +1,16 @@
 /*Boostrap Overwritten Rules*/
 body {
   font-family: 'Lato', Helvetica, sans-serif;
-  background: #fcfcfc;
+  background: #f3f3f3;
+}
+.jumbotron {
+  background: #f3f3f3!important;
+}
+hr {
+    margin-top: 23px;
+    margin-bottom: 23px;
+    border: 0;
+    border-top: 1px solid #dddddd;
 }
 h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Montserrat', Helvetica,Arial,sans-serif;
@@ -537,7 +546,7 @@ span.input-group-btn button.btn {
 .jumbotron.landingheading {
     padding-bottom: 15px;
     padding-top: 79px;
-    background: #424242;
+    background: #f3f3f3;
     background-image: url('images/bgc.jpg');
     background-size: cover;
     height: 100%;
