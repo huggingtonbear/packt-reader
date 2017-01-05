@@ -25,7 +25,6 @@ h1 span.skill-item {
     margin-left: 5px;
     
 }
-<<<<<<< HEAD
 .icon-stand-out {
     color: #5594DB;
     font-size: x-large;
@@ -36,14 +35,12 @@ h1 span.skill-item {
     margin-bottom: 2em;
     min-width: 1em;
 }
-=======
 .skill-img {
   height: 30px;
   float: left;
   margin-right: 10px;
 }
 
->>>>>>> origin/gh-pages
 .history-ph {
   position: absolute;
   top: 25px;
