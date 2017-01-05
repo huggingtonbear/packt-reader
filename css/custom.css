@@ -1217,7 +1217,7 @@ blockquote p {
 .img-card-list {
   float: left;
   height: 125px;
-  margin-right: 20px;
+  margin-right: 25px;
   border-radius: 8px;
   border: 3px solid #fff;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
