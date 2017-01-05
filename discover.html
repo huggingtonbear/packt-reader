@@ -256,6 +256,21 @@
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
     <script src="js/sidenav-accordion.js"></script>
+    <script type="text/javascript">
+        
+        var id;
+        bootstrap_alert = function () {}
+        bootstrap_alert.warning = function (message) {
+            id = 'abc' + parseInt(Math.random() * 100000);
+            $('#wrapper').append('<div id="' + id + '" class="packt-message alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><span>' + message + '</span></div>');
+            setTimeout(function() {
+                $('#' + id).fadeOut(500, function() { $(this).remove(); })
+            }, 5000);
+        }
+        $('.btn-book-1').on('click', function () {
+            bootstrap_alert.warning('eBook added to your queue');
+        });
+    </script>
 </body>
 
 </html>
