@@ -310,7 +310,7 @@ a.early-access:after {
   -webkit-box-orient: vertical;  
   overflow: hidden;
   text-overflow: ellipsis;
-}
+} 
 .filter-heading {
   position: relative;
 }
