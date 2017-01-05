@@ -19,7 +19,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -74,21 +74,22 @@
           <ul class="sidebar-nav">
             <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
               <li class="nav-logo "><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu"><img src="images/mapt-logo.png" class=""></span><span class="pull-left mr5"></span></a>    </li>
-              <form class="col-sm-12 mb15 pl25 pr25">
+              <!-- <form class="col-sm-12 mb15 pl25 pr25">
                 <input type="text" class="form-control" placeholder="&#xf002;  Search for a course...">
-              </form>
+              </form> -->
               <div class="clearfix"></div>
+              <li class=""><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span><span class="pull-left mr5"></span></a>    </li>
               <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="sidenav-menu-holder"><span class="sidenav-menu">Skills</span><span class="pull-left mr5"></span></a>    </li>
               <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                <li class="sub-nav"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Skill Plan</span><span class="pull-left mr5">3</span></a>    </li>
-                <li class="sub-nav"><a href="dashboard-profile.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Cards </span><span class="pull-left mr5">6</span></a>    </li>
+                <li class="sub-nav"><a href="all-skillcards.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Cards </span><span class="pull-left mr5">6</span></a>    </li>
                 <li class="sub-nav"><a href="usage.html" class="sidenav-menu-holder"><span class="sidenav-menu">Progress</span><span class="pull-left mr5"></span></a>    </li>
                 <li class="sub-nav"><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Plans </span></a>    </li>
               </div>
-              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="sidenav-menu-holder"><span class="sidenav-menu">Courses</span><span class="pull-left mr5"></span></a>    </li>
+              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="sidenav-menu-holder"><span class="sidenav-menu">Library</span><span class="pull-left mr5"></span></a>    </li>
               <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <li class="sub-nav "><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Search</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Search</span><span class="pull-left mr5"></span></a>    </li>
                 <li class="sub-nav"><a href="my-library.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Library</span></a>    </li>
+                <li class="sub-nav"><a href="history.html" class="sidenav-menu-holder"><span class="sidenav-menu">History</span></a>    </li>
                 <li class="sub-nav"><a href="trending.html" class="sidenav-menu-holder"><span class="sidenav-menu">Trending</span></a>    </li>
               </div>
               <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-left mr5"></span></a>    </li>
@@ -97,7 +98,7 @@
               </div>
               <li class="active"><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><span class="sidenav-menu">Account</span><span class="pull-left mr5"></span></a>    </li>
               <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
-                <li class="sub-nav active "><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">Account Details</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav active"><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">Account Details</span><span class="pull-left mr5"></span></a>    </li>
                 <li class="sub-nav "><a href="account-subscription.html" class="sidenav-menu-holder"><span class="sidenav-menu">Subscriptions</span><span class="pull-left mr5"></span></a>    </li>
                 <li class="sub-nav "><a href="account-licences.html" class="sidenav-menu-holder"><span class="sidenav-menu">Licences </span></a>    </li>
                 <li class="sub-nav"><a href="account-licences.html" class="sidenav-menu-holder"><span class="sidenav-menu">Logout </span></a>    </li>
@@ -111,24 +112,16 @@
 
         <div id="page-content-wrapper" class="">
         <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
-              <div class="jumbotron heading mb0">
-                <div class="container-fluid">
-                    <div class="col-sm-12 col-lg-offset-1 col-lg-10">
-                      <div class="row">
-                        <h3 class="ng-binding">Account Details</h3>
-                        <h6>
-                        <ol class="breadcrumb row mt0">
-                            <li class="active mt5 ng-binding">Manage your account and update your details as and when you need to</li>
-                        </ol>
-                        </h6>
-                        <hr>
-                      </div>
-                    </div>
-                </div>
-              </div>
             <div id="book-wrapper" class="container-fluid">               
                 <div class="row">
-                  <div class="col-sm-12 col-lg-offset-1 col-lg-5 mt30">
+                  <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
+                  <div class="page-title"> 
+                      <h3>Account Details</h3>
+                      <h6 class="mt5">Manage your account and update your details as and when you need to</h6>
+                    </div>
+                    <hr>
+                  </div>
+                  <div class="col-sm-12 col-lg-offset-1 col-lg-5">
                     <h4>Your Details</h4>
                     <hr>
                     <form class="form-horizontal">
@@ -220,7 +213,19 @@
                       
                     
                 </div>
-                <div class="col-sm-12 col-lg-5 mt30">
+                <div class="col-sm-12 col-lg-5">
+                  <h4>Mapt Preferences</h4>
+                    <hr>
+                    <form class="form-horizontal">
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox"> <b>Show 'Buy' option for Courses</b> <p class="mail-label">When enabled, Courses will show the option to buy them</p>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
                     <h4>Newsletter Preferences</h4>
                     <hr>
                     <form class="form-horizontal">
