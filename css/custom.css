@@ -25,7 +25,16 @@ h1 span.skill-item {
     margin-left: 5px;
     
 }
-
+.icon-stand-out {
+    color: #5594DB;
+    font-size: x-large;
+    float: left;
+    vertical-align: top;
+    margin-right: 8px;
+    margin-top: 0.3em;
+    margin-bottom: 2em;
+    min-width: 1em;
+}
 .history-ph {
   position: absolute;
   top: 25px;
