@@ -1,10 +1,7 @@
 /*Boostrap Overwritten Rules*/
 body {
   font-family: 'Lato', Helvetica, sans-serif;
-  background: #f3f3f3;
-}
-.jumbotron {
-  background: #f3f3f3!important;
+  background: #f1f1f1;
 }
 hr {
     margin-top: 23px;
@@ -528,7 +525,7 @@ span.input-group-btn button.btn {
     margin-top: 15px;
 }
 .jumbotron.heading {
-    background: #fcfcfc;
+    background: #f1f1f1;
     padding-bottom: 0px;
     padding-top: 0px;
     margin-bottom: 0px;
