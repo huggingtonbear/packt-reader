@@ -422,11 +422,12 @@ span.input-group-btn button.btn {
 .panel-card {
     border-radius: 4px;
     border-left: 30px solid #5594DB;
+    position: relative;
 }
 .panel-icon {
     position: absolute;
-    left: 20px;
-    top 10px;
+    left: -25px;
+    top: 10px;
     color: white;
     font-size: 1.4em;
 }
