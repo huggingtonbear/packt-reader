@@ -42,7 +42,7 @@
 
 </head>
 
-<body class="language-markup">
+<body ng-app="mapt">
 
   
 
@@ -52,37 +52,27 @@
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav">
             <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
-              <li class="nav-logo "><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu"><img src="images/mapt-logo.png" class=""></span><span class="pull-left mr5"></span></a>    </li>
-              <!-- <form class="col-sm-12 mb15 pl25 pr25">
-                <input type="text" class="form-control" placeholder="&#xf002;  Search for a course...">
-              </form> -->
+              <li class="nav-logo "><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu"><img src="images/logo.png" height="30px" class=""></span></a>    </li>
+              <form class="col-sm-12 mb15 pl25 pr25">
+                <input type="text" class="form-control" placeholder="&#xf002; Search for a topic...">
+              </form>
               <div class="clearfix"></div>
-              <li class=""><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span><span class="pull-left mr5"></span></a>    </li>
-              <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="sidenav-menu-holder"><span class="sidenav-menu">Skills</span><span class="pull-left mr5"></span></a>    </li>
-              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                <li class="sub-nav"><a href="all-skillcards.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Cards </span><span class="pull-left mr5">6</span></a>    </li>
-                <li class="sub-nav"><a href="usage.html" class="sidenav-menu-holder"><span class="sidenav-menu">Progress</span><span class="pull-left mr5"></span></a>    </li>
-                <li class="sub-nav"><a href="roles.html" class="sidenav-menu-holder"><span class="sidenav-menu">Skill Plans </span></a>    </li>
-              </div>
-              <li class="active"><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="sidenav-menu-holder"><span class="sidenav-menu">Library</span><span class="pull-left mr5"></span></a>    </li>
-              <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-                <li class="sub-nav"><a href="library.html" class="sidenav-menu-holder"><span class="sidenav-menu">Search</span><span class="pull-left mr5"></span></a>    </li>
-                <li class="sub-nav"><a href="my-library.html" class="sidenav-menu-holder"><span class="sidenav-menu">My Library</span></a>    </li>
-                <li class="sub-nav active"><a href="history.html" class="sidenav-menu-holder"><span class="sidenav-menu">History</span></a>    </li>
-                <li class="sub-nav"><a href="trending.html" class="sidenav-menu-holder"><span class="sidenav-menu">Trending</span></a>    </li>
-              </div>
+              <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span></a>    </li>
+              <li class=""><a href="discover.html" class="sidenav-menu-holder"><span class="sidenav-menu">Discover</span><span class="pull-left mr5"></span></a>    </li>
               <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-left mr5"></span></a>    </li>
               <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <li class="sub-nav"><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">FAQs</span><span class="pull-left mr5"></span></a></li>
+                <li class="sub-nav"><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Feedback</span><span class="pull-left mr5"></span></a></li>
               </div>
               <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><span class="sidenav-menu">Account</span><span class="pull-left mr5"></span></a>    </li>
               <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <li class="sub-nav "><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">Account Details</span><span class="pull-left mr5"></span></a>    </li>
-                <li class="sub-nav "><a href="account-subscription.html" class="sidenav-menu-holder"><span class="sidenav-menu">Subscriptions</span><span class="pull-left mr5"></span></a>    </li>
-                <li class="sub-nav "><a href="account-licences.html" class="sidenav-menu-holder"><span class="sidenav-menu">Licences </span></a>    </li>
-                <li class="sub-nav"><a href="account-licences.html" class="sidenav-menu-holder"><span class="sidenav-menu">Logout </span></a>    </li>
-
+                <li class="sub-nav"><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">Account Details</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="account-subscription.html" class="sidenav-menu-holder"><span class="sidenav-menu">Subscriptions</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="account-licences.html" class="sidenav-menu-holder"><span class="sidenav-menu">Licenses </span></a>    </li>
+                <li class="sub-nav"><a href="dashboard-lo.html" class="sidenav-menu-holder"><span class="sidenav-menu">Logout</span><span class="pull-left mr5"></span></a>    </li>
               </div>
+              <li class="">
+                <a href="https://www.packtpub.com" class="sidenav-menu-holder"><span class="sidenav-menu logo-text">Powered by <img src="images/packt-orange.png" target="_blank" class="packt-logo"></span><span class="pull-left mr5"></span></a></li>
             </div>
           </ul>
         </div>
@@ -96,8 +86,11 @@
                 <div class="row">
                             <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
                               <div class="page-title">
-                                <h3>History</h3>
-                                <h6 class="mt5">Get back to what you were last looking at</h6>
+                                <h3>Recently Viewed</h3>
+                                <ol class="breadcrumb">
+                                  <li><a href="dashboard.html">Dashboard</a></li>
+                                  <li class="active">Recently Viewed</li>
+                                </ol>
                               </div>
 
                             <hr>
@@ -107,350 +100,65 @@
                                     <div class="panel panel-default">
 
                                       <ul class="list-group">
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="index.html" class=""><img src="images/book1.jpg" class="img-product-list"></a>
-                                              <h1>Practical Data Science Cookbook</h1>
-                                              <p class="mb0">By Sunila Gollapudi</p>
-                                              <small class="title-duration mr10">Jan 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                              <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                              <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-right mt5 hidden-xs">
-                                                <div class="btn-group dropup hidden-xs" role="group">
-                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                                                      <i class="fa fa-shopping-cart fa-lg"></i>
-                                                      <span class="hidden-xs ml5"> Buy for $21.99</span>
-                                                      <span class="hidden-xs caret"></span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                      <li>
-                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
-                                                      </li>
-                                                      <li>
-                                                          <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
-                                                      </li>
-                                                      <li role="separator" class="divider"></li>
-                                                      <li class="disabled">
-                                                          <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
-                                                      </li>
-                                                  </ul>
-                                                </div>
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-folder fa-lg"></i>
-                                                  <span class="hidden-xs ml5">Saved</span></a>
-                                                <a href="index.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Desktop Buttons END -->
-                                              <!-- Mobile Buttons START -->
-                                              <div class="clearfix"></div>
-                                              <div class="btn-group btn-group-justified visible-xs mt15">
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
-                                                   </a>
-                                                <a href="index.html" class="btn btn-default"><i class="fa fa-folder fa-lg"></i>
-                                                    </a>
-                                                <a href="index.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Mobile Buttons END -->
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="index.html"><img src="images/book2.jpg" class="img-product-list"></a>
-                                              <h1>UX Design for Web Developers</h1>
-                                              <p class="mb0">By Sunila Gollapudi</p>
-                                              <small class="title-duration mr10">March 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                              <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                              <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-right mt5 hidden-xs">
-                                                <div class="btn-group dropup hidden-xs" role="group">
-                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                                                      <i class="fa fa-shopping-cart fa-lg"></i>
-                                                      <span class="hidden-xs ml5"> Buy for $41.99</span>
-                                                      <span class="hidden-xs caret"></span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                      <li>
-                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
-                                                      </li>
-                                                      <li>
-                                                          <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
-                                                      </li>
-                                                      <li role="separator" class="divider"></li>
-                                                      <li class="disabled">
-                                                          <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
-                                                      </li>
-                                                  </ul>
-                                                </div>
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-folder fa-lg"></i>
-                                                  <span class="hidden-xs ml5">Saved</span></a>
-                                                <a href="index.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Desktop Buttons END -->
-                                              <!-- Mobile Buttons START -->
-                                              <div class="clearfix"></div>
-                                              <div class="btn-group btn-group-justified visible-xs mt15">
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
-                                                   </a>
-                                                <a href="index.html" class="btn btn-default"><i class="fa fa-folder fa-lg"></i>
-                                                    </a>
-                                                <a href="index.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Mobile Buttons END -->
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="index.html"><img src="images/book4.jpg" class="img-product-list"></a>
-                                              <h1>Python Data Science Essentials</h1>
-                                              <p class="mb0">By Sunila Gollapudi</p>
-                                              <small class="title-duration mr10">April 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                              <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                              <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-right mt5 hidden-xs">
-                                                <div class="btn-group dropup hidden-xs" role="group">
-                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                                                      <i class="fa fa-shopping-cart fa-lg"></i>
-                                                      <span class="hidden-xs ml5"> Buy for $32.99</span>
-                                                      <span class="hidden-xs caret"></span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                      <li>
-                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
-                                                      </li>
-                                                      <li>
-                                                          <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
-                                                      </li>
-                                                      <li role="separator" class="divider"></li>
-                                                      <li class="disabled">
-                                                          <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
-                                                      </li>
-                                                  </ul>
-                                                </div>
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-folder-o fa-lg"></i>
-                                                  <span class="hidden-xs ml5">Save for later</span></a>
-                                                <a href="index.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Desktop Buttons END -->
-                                              <!-- Mobile Buttons START -->
-                                              <div class="clearfix"></div>
-                                              <div class="btn-group btn-group-justified visible-xs mt15">
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
-                                                   </a>
-                                                <a href="index.html" class="btn btn-default"><i class="fa fa-folder fa-lg"></i>
-                                                    </a>
-                                                <a href="index.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Mobile Buttons END -->
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="index.html"><img src="images/book3.jpg" class="img-product-list"></a>
-                                              <h1>Practical Machine Learning</h1>
-                                              <p class="mb0">By Ved Anwas</p>
-                                              <small class="title-duration mr10">Jun 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                              <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                              <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-right mt5 hidden-xs">
-                                                <div class="btn-group dropup hidden-xs" role="group">
-                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                                                      <i class="fa fa-download fa-lg"></i>
-                                                      <span class="hidden-xs ml5"> Download eBook</span>
-                                                      <span class="hidden-xs caret"></span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                      <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
-                                                      <li role="separator" class="divider"></li>
-                                                      <li>
-                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download PDF</a>
-                                                      </li>
-                                                      <li>
-                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download ePub</a>
-                                                      </li>
-                                                      <li>
-                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Download Mobi</a>
-                                                      </li>
-                                                      
-                                                  </ul>
-                                                </div>
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-folder-o fa-lg"></i>
-                                                  <span class="hidden-xs ml5">Save for later</span></a>
-                                                <a href="index.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Desktop Buttons END -->
-                                              <!-- Mobile Buttons START -->
-                                              <div class="clearfix"></div>
-                                              <div class="btn-group btn-group-justified visible-xs mt15">
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
-                                                   </a>
-                                                <a href="index.html" class="btn btn-default"><i class="fa fa-folder fa-lg"></i>
-                                                    </a>
-                                                <a href="index.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Mobile Buttons END -->
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="index.html"><img src="images/book5.jpg" class="img-product-list"></a>
-                                              <h1>Clean Data</h1>
-                                              <p class="mb0">By Margaret Matty</p>
-                                              <small class="title-duration mr10">Jun 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                              <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                              <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-right mt5 hidden-xs">
-                                                  <button type="button" class="btn btn-default">
-                                                      <i class="fa fa-download fa-lg"></i>
-                                                      <span class="hidden-xs ml5"> Download Video</span>
-                                                  </button>
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-folder-o fa-lg"></i>
-                                                  <span class="hidden-xs ml5">Save for later</span></a>
-                                                <a href="index.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Desktop Buttons END -->
-                                              <!-- Mobile Buttons START -->
-                                              <div class="clearfix"></div>
-                                              <div class="btn-group btn-group-justified visible-xs mt15">
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
-                                                   </a>
-                                                <a href="index.html" class="btn btn-default"><i class="fa fa-folder fa-lg"></i>
-                                                    </a>
-                                                <a href="index.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Mobile Buttons END -->
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="index.html"><img src="images/book1.jpg" class="img-product-list"></a>
-                                              <h1>Practical Data Science Cookbook</h1>
-                                              <p class="mb0">By Sunila Gollapudi</p>
-                                              <small class="title-duration mr10">Jan 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                              <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                              <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-right mt5 hidden-xs">
-                                                <div class="btn-group dropup hidden-xs" role="group">
-                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                                                      <i class="fa fa-shopping-cart fa-lg"></i>
-                                                      <span class="hidden-xs ml5"> Buy for $21.99</span>
-                                                      <span class="hidden-xs caret"></span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                      <li>
-                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
-                                                      </li>
-                                                      <li>
-                                                          <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
-                                                      </li>
-                                                      <li role="separator" class="divider"></li>
-                                                      <li class="disabled">
-                                                          <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
-                                                      </li>
-                                                  </ul>
-                                                </div>
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-folder fa-lg"></i>
-                                                  <span class="hidden-xs ml5">Saved</span></a>
-                                                <a href="index.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Desktop Buttons END -->
-                                              <!-- Mobile Buttons START -->
-                                              <div class="clearfix"></div>
-                                              <div class="btn-group btn-group-justified visible-xs mt15">
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
-                                                   </a>
-                                                <a href="index.html" class="btn btn-default"><i class="fa fa-folder fa-lg"></i>
-                                                    </a>
-                                                <a href="index.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Mobile Buttons END -->
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="index.html"><img src="images/book2.jpg" class="img-product-list"></a>
-                                              <h1>UX Design for Web Developers</h1>
-                                              <p class="mb0">By Sunila Gollapudi</p>
-                                              <small class="title-duration mr10">March 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                              <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                              <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-right mt5 hidden-xs">
-                                                <div class="btn-group dropup hidden-xs" role="group">
-                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                                                      <i class="fa fa-shopping-cart fa-lg"></i>
-                                                      <span class="hidden-xs ml5"> Buy for $41.99</span>
-                                                      <span class="hidden-xs caret"></span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                      <li>
-                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
-                                                      </li>
-                                                      <li>
-                                                          <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
-                                                      </li>
-                                                      <li role="separator" class="divider"></li>
-                                                      <li class="disabled">
-                                                          <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
-                                                      </li>
-                                                  </ul>
-                                                </div>
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-folder fa-lg"></i>
-                                                  <span class="hidden-xs ml5">Saved</span></a>
-                                                <a href="index.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Desktop Buttons END -->
-                                              <!-- Mobile Buttons START -->
-                                              <div class="clearfix"></div>
-                                              <div class="btn-group btn-group-justified visible-xs mt15">
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
-                                                   </a>
-                                                <a href="index.html" class="btn btn-default"><i class="fa fa-folder fa-lg"></i>
-                                                    </a>
-                                                <a href="index.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Mobile Buttons END -->
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="index.html"><img src="images/book4.jpg" class="img-product-list"></a>
-                                              <h1>Python Data Science Essentials</h1>
-                                              <p class="mb0">By Sunila Gollapudi</p>
-                                              <small class="title-duration mr10">April 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                              <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                              <!-- Desktop Buttons START -->
-                                              <div class="btn-group pull-right mt5 hidden-xs">
-                                                <div class="btn-group dropup hidden-xs" role="group">
-                                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                                                      <i class="fa fa-shopping-cart fa-lg"></i>
-                                                      <span class="hidden-xs ml5"> Buy for $32.99</span>
-                                                      <span class="hidden-xs caret"></span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                      <li>
-                                                          <a href="big-data-and-business-intelligence/python-machine-learning" target="_self">Buy from Store</a>
-                                                      </li>
-                                                      <li>
-                                                          <a href="#" data-toggle="modal" data-target="#claimModal">Claim using Token</a>
-                                                      </li>
-                                                      <li role="separator" class="divider"></li>
-                                                      <li class="disabled">
-                                                          <a href="#">You have <strong>3</strong> Token(s) Remaining</a>
-                                                      </li>
-                                                  </ul>
-                                                </div>
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-folder-o fa-lg"></i>
-                                                  <span class="hidden-xs ml5">Save for later</span></a>
-                                                <a href="index.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Desktop Buttons END -->
-                                              <!-- Mobile Buttons START -->
-                                              <div class="clearfix"></div>
-                                              <div class="btn-group btn-group-justified visible-xs mt15">
-                                                <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-cart fa-lg"></i>
-                                                   </a>
-                                                <a href="index.html" class="btn btn-default"><i class="fa fa-folder fa-lg"></i>
-                                                    </a>
-                                                <a href="index.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
-                                              </div>
-                                              <!-- Mobile Buttons END -->
-                                          </li>
-                                          
-                                      
-                                          
-                                      </ul>
-                                      <div class="panel-footer text-right" ng-show="myList.pagination > 1">
+
+                                            <mapt-book-list-item data-book-title="Practical Data Science Cookbook" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="UX Design for Web Developers" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book2.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="Practical Machine Learning" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book3.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="Python Data Science Fundamentals" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book4.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+                                            <mapt-book-list-item data-book-title="Practical Data Science Cookbook" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="UX Design for Web Developers" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book2.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="Practical Machine Learning" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book3.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="Python Data Science Fundamentals" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book4.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+                                            <mapt-book-list-item data-book-title="Practical Data Science Cookbook" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="UX Design for Web Developers" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book2.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="Practical Machine Learning" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book3.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="Python Data Science Fundamentals" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book4.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+                                            <mapt-book-list-item data-book-title="Practical Data Science Cookbook" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="UX Design for Web Developers" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book2.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="Practical Machine Learning" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book3.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="Python Data Science Fundamentals" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book4.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+                                            <mapt-book-list-item data-book-title="Practical Data Science Cookbook" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="UX Design for Web Developers" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book2.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="Practical Machine Learning" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book3.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="Python Data Science Fundamentals" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book4.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                        </ul>
+                                      <div class="panel-footer text-right">
                                         <nav>
                                             <ul class="pagination">
                                                 <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.previous, 'list');" class="disabled">
@@ -458,12 +166,12 @@
                                                         <span aria-hidden="true">«</span>
                                                     </a>
                                                 </li>
-                                                <!-- ngRepeat: i in getNumber(myList.pagination) track by $index --><li ng-repeat="i in getNumber(myList.pagination) track by $index" id="paginationNumber" ng-class="{active: myList.offset == $index}" data-page="list" ng-click="$event.preventDefault();click_pagination($event, $index, 'list');" class="ng-scope active">
+                                                <!-- ngRepeat: i in getNumber(myList.pagination) track by $index --><li class="ng-scope active">
                                                         <a href="#" class="ng-binding">1</a>
-                                                </li><!-- end ngRepeat: i in getNumber(myList.pagination) track by $index --><li ng-repeat="i in getNumber(myList.pagination) track by $index" id="paginationNumber" ng-class="{active: myList.offset == $index}" data-page="list" ng-click="$event.preventDefault();click_pagination($event, $index, 'list');" class="ng-scope">
+                                                </li><!-- end ngRepeat: i in getNumber(myList.pagination) track by $index --><li class="ng-scope">
                                                         <a href="#" class="ng-binding">2</a>
                                                 </li><!-- end ngRepeat: i in getNumber(myList.pagination) track by $index -->
-                                                <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.next, 'list');" class=""> 
+                                                <li id="paginationNumber" class=""> 
                                                     <a href="#" aria-label="Next">
                                                         <span aria-hidden="true">»</span>
                                                     </a>
@@ -495,6 +203,9 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
+    <!-- AngularJS -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/custom-angular.js"></script>
     <script src="js/sidenav-accordion.js"></script>
 
 </body>
