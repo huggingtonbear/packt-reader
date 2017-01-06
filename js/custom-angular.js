@@ -1,4 +1,6 @@
-var maptModule = angular.module('mapt', []);
+//
+// General code
+//
 maptAlert = function (message, type) {
     if (type === undefined) type = 'warning';
     var id = 'abc' + parseInt(Math.random() * 100000);
@@ -18,6 +20,10 @@ maptAlert = function (message, type) {
         })
     }, 5000);
 };
+//
+// Angular code
+//
+var maptModule = angular.module('mapt', []);
 maptModule.directive('maptBook', function () {
     return {
         scope: {
