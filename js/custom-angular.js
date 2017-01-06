@@ -109,6 +109,7 @@ maptModule.directive('maptSkillCard', function () {
             cardTitle: '@cardTitle'
             , relatedTopic: '@relatedTopic'
             , description: '@description'
+            , cardListItem: '@cardListItem'
             , icon: '@icon'
             , added: '@added'
         }
@@ -142,9 +143,13 @@ maptModule.directive('maptSkillCard', function () {
                         </div> \
                     </div>'
         , link: function (scope, element, attributes) {
+            if (scope.cardListItem!=undefined) 
+                    {$(element).find('div.col-lg-6').toggleClass ('col-lg-6 col-lg-12'
+                        );}
             var transcluded = $(element).find('[ng-transclude] > div').length;
             var insertCols = (3 - transcluded) * 2;
             var added = $(element).find('[ng-transclude]').prepend('<div class="col-lg-' + insertCols + '"></div>');
+
         }
     };
 });

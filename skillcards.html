@@ -41,7 +41,7 @@
 
 </head>
 
-<body class="language-markup">
+<body ng-app="mapt">
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -119,6 +119,10 @@
                     <div class="page-title"> 
                       <h3>Skill Cards</h3>
                       <h6 class="mt5">Keep track of the skills you have learned and discover new ones</h6>
+                      <ol class="breadcrumb">
+                                <li><a href="discover.html">Discover</a></li>
+                                <li class="active">Skill Cards</li>
+                            </ol>
                     </div>
                     <hr>
                     <div class="col-sm-12 mb5">
@@ -237,183 +241,42 @@
                         <div class="clearfix"></div>
                                     <div class="panel panel-default">
                                       <ul class="list-group">
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="card.html" class=""><img src="images/skillcards/python-data-science.png" class="img-card-list"></a>
-                                              <h1>Python Data Science 
-                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
-                                              </h1>
-                                              <small class="title-duration mr10">Related Topic: <a href="#">Python</a></small>
-                                              <!-- <small class="title-duration mr10">Jan 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
-                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
-                                                <div class="btn-group dropup pull-right mt10">
-                                                  <button type="button" class="btn btn-info" title="Click to add to Plan"><i class="fa fa-plus"></i></button>
-                                                  <a href="card.html" class="btn btn-info">View Card</a>
-                                                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="caret"></span>
-                                                    <span class="sr-only">Toggle Dropdown</span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                    <li><a href="#"><i class="fa fa-plus fa-lg mr5"></i> Add to Custom Plan</a></li>
-                                                    <li><a href="#"><i class="fa fa-check-circle-o fa-lg mr5"></i> Add to Completed Skills</a></li>
-                                                  </ul>
-                                                </div>                                              
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="card.html" class=""><img src="images/skillcards/python-high-performance-programming.png" class="img-card-list"></a>
-                                              <h1>Python High Performance Programming
-                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
-                                              </h1>
-                                              <small class="title-duration mr10">Related Topic: <a href="#">Python</a></small>
-                                              <!-- <small class="title-duration mr10">Jan 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
-                                              <p class="product-desc hidden-xs mt10"><small>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale and perform consistently, no matter how much data you’re crunching or how many users you’re serving.</small></p>
-                                              <div class="btn-group dropup pull-right mt10">
-                                                  <button type="button" class="btn btn-primary" title="Click to remove from Plan"><i class="fa fa-refresh"></i></button>
-                                                  <a href="card.html" class="btn btn-primary">View Card</a>
-                                                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="caret"></span>
-                                                    <span class="sr-only">Toggle Dropdown</span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                    <li><a href="#"><i class="fa fa-times-circle-o fa-lg mr5"></i> Remove from Plan</a></li>
-                                                    <li><a href="#"><i class="fa fa-check-circle-o fa-lg mr5"></i> Add to Completed Skills</a></li>
-                                                  </ul>
-                                                </div>
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="card.html" class=""><img src="images/skillcards/unity.png" class="img-card-list"></a>
-                                              <h1>C# Programming with Unity
-                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
-                                              </h1>
-                                              <small class="title-duration mr10">Related Topic: <a href="#">Unity</a></small>
-                                              <!-- <small class="title-duration mr10">Jan 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
-                                              <p class="product-desc hidden-xs mt10"><small>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale and perform consistently, no matter how much data you’re crunching or how many users you’re serving.</small></p>
-                                              <div class="btn-group dropup pull-right mt10">
-                                                  <button type="button" class="btn btn-success" title="Click to add to Plan"><i class="fa fa-check-circle"></i></button>
-                                                  <a href="card.html" class="btn btn-success">View Card</a>
-                                                  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="caret"></span>
-                                                    <span class="sr-only">Toggle Dropdown</span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                    <li><a href="#"><i class="fa fa-times-circle-o fa-lg mr5"></i> Remove from Completed Skills</a></li>
-                                                  </ul>
-                                                </div>
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="card.html" class=""><img src="images/skillcards/python-fundamentals.png" class="img-card-list"></a>
-                                              <h1>Python Fundamentals
-                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
-                                              </h1>
-                                              <small class="title-duration mr10">Related Topic: <a href="#">Python</a></small>
-                                              <!-- <small class="title-duration mr10">Jan 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
-                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
-                                              <div class="btn-group dropup pull-right mt10">
-                                                  <button type="button" class="btn btn-info" title="Click to add to Plan"><i class="fa fa-plus"></i></button>
-                                                  <a href="card.html" class="btn btn-info">View Card</a>
-                                                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="caret"></span>
-                                                    <span class="sr-only">Toggle Dropdown</span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                    <li><a href="#"><i class="fa fa-plus fa-lg mr5"></i> Add to Custom Plan</a></li>
-                                                    <li><a href="#"><i class="fa fa-check-circle-o fa-lg mr5"></i> Add to Completed Skills</a></li>
-                                                  </ul>
-                                                </div>
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="card.html" class=""><img src="images/skillcards/git-fundamentals.png" class="img-card-list"></a>
-                                              <h1>Git Fundamentals
-                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
-                                              </h1>
-                                              <small class="title-duration mr10">Related Topic: <a href="#">Git</a></small>
-                                              <!-- <small class="title-duration mr10">Jan 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
-                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
-                                              <div class="btn-group dropup pull-right mt10">
-                                                  <button type="button" class="btn btn-info" title="Click to add to Plan"><i class="fa fa-plus"></i></button>
-                                                  <a href="card.html" class="btn btn-info">View Card</a>
-                                                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="caret"></span>
-                                                    <span class="sr-only">Toggle Dropdown</span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                    <li><a href="#"><i class="fa fa-plus fa-lg mr5"></i> Add to Custom Plan</a></li>
-                                                    <li><a href="#"><i class="fa fa-check-circle-o fa-lg mr5"></i> Add to Completed Skills</a></li>
-                                                  </ul>
-                                                </div>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="card.html" class=""><img src="images/skillcards/android-studio-fundamentals.png" class="img-card-list"></a>
-                                              <h1>Android Studio Fundamentals
-                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
-                                              </h1>
-                                              <small class="title-duration mr10">Related Topic: <a href="#">Android</a></small>
-                                              <!-- <small class="title-duration mr10">Jan 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
-                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
-                                              <div class="btn-group dropup pull-right mt10">
-                                                  <button type="button" class="btn btn-info" title="Click to add to Plan"><i class="fa fa-plus"></i></button>
-                                                  <a href="card.html" class="btn btn-info">View Card</a>
-                                                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="caret"></span>
-                                                    <span class="sr-only">Toggle Dropdown</span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                    <li><a href="#"><i class="fa fa-plus fa-lg mr5"></i> Add to Custom Plan</a></li>
-                                                    <li><a href="#"><i class="fa fa-check-circle-o fa-lg mr5"></i> Add to Completed Skills</a></li>
-                                                  </ul>
-                                                </div>
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="card.html" class=""><img src="images/skillcards/production-ready-django.png" class="img-card-list"></a>
-                                              <h1>Production Ready Django
-                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
-                                              </h1>
-                                              <small class="title-duration mr10">Related Topic: <a href="#">Django</a></small>
-                                              <!-- <small class="title-duration mr10">Jan 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
-                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
-                                              <div class="btn-group dropup pull-right mt10">
-                                                  <button type="button" class="btn btn-info" title="Click to add to Plan"><i class="fa fa-plus"></i></button>
-                                                  <a href="card.html" class="btn btn-info">View Card</a>
-                                                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="caret"></span>
-                                                    <span class="sr-only">Toggle Dropdown</span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                    <li><a href="#"><i class="fa fa-plus fa-lg mr5"></i> Add to Custom Plan</a></li>
-                                                    <li><a href="#"><i class="fa fa-check-circle-o fa-lg mr5"></i> Add to Completed Skills</a></li>
-                                                  </ul>
-                                                </div>
-                                          </li>
-                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                              <a href="card.html" class=""><img src="images/skillcards/ux-design-basics.png" class="img-card-list"></a>
-                                              <h1>UX Design Basics
-                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
-                                              </h1>
-                                              <small class="title-duration mr10">Related Topic: <a href="#">Web Design</a></small>
-                                              <!-- <small class="title-duration mr10">Jan 2016</small>
-                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
-                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
-                                              <div class="btn-group dropup pull-right mt10">
-                                                  <button type="button" class="btn btn-info" title="Click to add to Plan"><i class="fa fa-plus"></i></button>
-                                                  <a href="card.html" class="btn btn-info">View Card</a>
-                                                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="caret"></span>
-                                                    <span class="sr-only">Toggle Dropdown</span>
-                                                  </button>
-                                                  <ul class="dropdown-menu">
-                                                    <li><a href="#"><i class="fa fa-plus fa-lg mr5"></i> Add to Custom Plan</a></li>
-                                                    <li><a href="#"><i class="fa fa-check-circle-o fa-lg mr5"></i> Add to Completed Skills</a></li>
-                                                  </ul>
-                                                </div>
-                                          </li>
+                                          <mapt-skill-card data-card-title="Python Data Science" data-card-list-item="true" data-description="Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development." data-related-topic="Python" data-icon="devicon-python-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="Python High Performance Programming" data-card-list-item="true" data-description="Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale and perform consistently, no matter how much data you’re crunching or how many users you’re serving." data-related-topic="Python" data-icon="devicon-python-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="C# Programming with Unity" data-card-list-item="true" data-description="C# (or C Sharp) is a great enterprise language built on the .Net Framework.  Unity is a powerful game engine easy to get into.  Combining these two technologies will enable you to build amazing games very quickly!" data-related-topic="C Sharp" data-icon="devicon-csharp-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="Python Fundamentals" data-card-list-item="true" data-description="Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development." data-related-topic="Python" data-icon="devicon-python-plain">
+                                              
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="Python Data Science" data-card-list-item="true" data-description="Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development." data-related-topic="Python" data-icon="devicon-python-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="Python High Performance Programming" data-card-list-item="true" data-description="Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale and perform consistently, no matter how much data you’re crunching or how many users you’re serving." data-related-topic="Python" data-icon="devicon-python-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="C# Programming with Unity" data-card-list-item="true" data-description="C# (or C Sharp) is a great enterprise language built on the .Net Framework.  Unity is a powerful game engine easy to get into.  Combining these two technologies will enable you to build amazing games very quickly!" data-related-topic="C Sharp" data-icon="devicon-csharp-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="Python Fundamentals" data-card-list-item="true" data-description="Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development." data-related-topic="Python" data-icon="devicon-python-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="Python Data Science" data-card-list-item="true" data-description="Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development." data-related-topic="Python" data-icon="devicon-python-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="Python High Performance Programming" data-card-list-item="true" data-description="Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale and perform consistently, no matter how much data you’re crunching or how many users you’re serving." data-related-topic="Python" data-icon="devicon-python-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="C# Programming with Unity" data-card-list-item="true" data-description="C# (or C Sharp) is a great enterprise language built on the .Net Framework.  Unity is a powerful game engine easy to get into.  Combining these two technologies will enable you to build amazing games very quickly!" data-related-topic="C Sharp" data-icon="devicon-csharp-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="Python Fundamentals" data-card-list-item="true" data-description="Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development." data-related-topic="Python" data-icon="devicon-python-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="Python Data Science" data-card-list-item="true" data-description="Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development." data-related-topic="Python" data-icon="devicon-python-plain">                                
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="Python High Performance Programming" data-card-list-item="true" data-description="Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale and perform consistently, no matter how much data you’re crunching or how many users you’re serving." data-related-topic="Python" data-icon="devicon-python-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="C# Programming with Unity" data-card-list-item="true" data-description="C# (or C Sharp) is a great enterprise language built on the .Net Framework.  Unity is a powerful game engine easy to get into.  Combining these two technologies will enable you to build amazing games very quickly!" data-related-topic="C Sharp" data-icon="devicon-csharp-plain">
+                                          </mapt-skill-card>
+                                          <mapt-skill-card data-card-title="Python Fundamentals" data-card-list-item="true" data-description="Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development." data-related-topic="Python" data-icon="devicon-python-plain">
+                                          </mapt-skill-card>
 
-                                            </ul>
-                                            <div class="panel-footer text-right" ng-show="myList.pagination > 1">
+                                      </ul>
+                                      <div class="panel-footer text-right" ng-show="myList.pagination > 1">
                                         <nav>
                                             <ul class="pagination">
                                                 <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.previous, 'list');" class="disabled">
@@ -460,6 +323,9 @@
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
     <script src="js/sidenav-accordion.js"></script>
+    <!-- AngularJS -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/custom-angular.js"></script>
     <script src="js/sticky-filter.js"></script>
 
     <script type="text/javascript">
