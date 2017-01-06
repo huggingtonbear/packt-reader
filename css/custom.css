@@ -35,9 +35,6 @@ h6,
     line-height: 1.8em;
     margin-bottom: 30px
 }
-<<<<<<< HEAD
-
-=======
 a.slick-prev i, a.slick-next i {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
@@ -47,7 +44,6 @@ a.slick-prev:hover i, a.slick-next:hover i {
   text-shadow: 2px 2px 2px #ccc;
   color:#888;
 }
->>>>>>> origin/gh-pages
 h1 span.skill-item {
     display: inline-block;
     border-radius: 3px;
