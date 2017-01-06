@@ -1485,6 +1485,16 @@ blockquote p {
 .clickable {
     cursor: pointer;
 }
+.skillcard-icon {
+    font-size: 120px;
+    color: white;
+}
+.skillcard-icon-box {
+    background: #5594DB;
+    border-radius: 4px;
+
+}
+
 
 .top-skillcard {
     padding: 25px;
