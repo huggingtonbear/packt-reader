@@ -41,11 +41,16 @@ h1 span.skill-item {
     margin-bottom: 2em;
     min-width: 1em;
 }
-.packt-message {
+#alertbox {
     position: fixed;
     top: 30px;
     right: 30px;
     z-index: 1000;
+    transition: all 0.5s ease;
+}
+
+#alertbox .alert {
+    margin-bottom: 10px;
 }
 .btn-book {
     position: absolute;
