@@ -55,7 +55,7 @@ maptModule.directive('maptBook', function () {
     };
 });
 
-maptModule.directive('skillCard', function () {
+maptModule.directive('maptSkillCard', function () {
     return {
         scope: {
             cardTitle: '@cardTitle'
