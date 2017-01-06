@@ -29,7 +29,18 @@ maptModule.directive('maptBook', function () {
         replace: true
         , controller: function ($scope) {
             $scope.addAlert = function () {
-                maptAlert($scope.bookTitle + ' has been added to your learning queue');
+                if ($scope.added == undefined) {
+                    $scope.added = false;
+                }
+                if ($scope.added == true) {
+                    maptAlert($scope.bookTitle + ' has been removed from your <a href="dashboard.html#future">queue</a>', 'danger');
+                    $scope.added = false;
+                }
+                else {
+                    maptAlert($scope.bookTitle + ' has been added to your <a href="dashboard.html#future">queue</a>');
+                    $scope.added = true;
+                }
+                
             }
         }
         , template: '\
@@ -38,7 +49,7 @@ maptModule.directive('maptBook', function () {
                         <div ng-show="progress" class="progress mt10 mb15"> \
                             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}};"> <span class="sr-only">30% Complete</span> </div> \
                         </div> \
-                        <button class="btn btn-primary mt5 btn-book btn-book-1" type="button"><i class="fa fa-plus" onclick="$(this).toggleClass(\'fa-plus fa-minus\')" ng-click="addAlert()"></i></button> \
+                        <button class="btn btn-primary mt5 btn-book btn-book-1" type="button"><i class="fa fa-plus" onclick="$(this).toggleClass(\'fa-plus fa-minus\');$(this).parent().toggleClass(\'btn-primary btn-danger\')" ng-click="addAlert()"></i></button> \
                         <button class="btn btn-primary mt5 btn-book btn-book-2" type="button"><i class="fa fa-play"></i></button> \
                     </div>'
     };
