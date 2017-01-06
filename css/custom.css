@@ -318,9 +318,14 @@ a.dashboard-kpi h1 {
 .form-control.home-search {
     background: white;
     box-shadow: none;
-    border: 1px solid #ccc;
+    border: none;
     -webkit-box-shadow: none !important;
     padding-left: 15px !important;
+}
+
+.input-group.panel  .btn {
+    margin: 0;
+    letter-spacing: 0;
 }
 
 .input-group-lg > .form-control,
