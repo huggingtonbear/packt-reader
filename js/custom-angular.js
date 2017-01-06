@@ -80,12 +80,12 @@ maptModule.directive('skillCard', function () {
                                 <p class="mt10"><small>{{description}}</small></p> \
                                 <!-- Desktop Buttons START --> \
                                 <div class="btn-group mt5 hidden-xs"> \
-                                    <a href="index.html" target="_blank" class="btn btn-default "><i class="fa fa-plus fa-lg"></i> \
-                                    <span class="hidden-xs ml5">Add to Completed Skills</span></a> <a href="card.html" class="btn btn-info ">View Skill Card <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a> </div> \
+                                    <a href="index.html" target="_blank" class="btn btn-default "><i class="fa fa-check fa-lg"></i> \
+                                    <span class="hidden-xs ml5">Mark as Complete</span></a> <a href="card.html" class="btn btn-info "><i class="fa fa-info-circle mr5" aria-hidden="true"></i> More info </a> </div> \
                                 <!-- Desktop Buttons END --> \
                                 <!-- Mobile Buttons START --> \
                                 <div class="clearfix"></div> \
-                                <div class="btn-group btn-group-justified visible-xs mt15"> <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i> \
+                                <div class="btn-group btn-group-justified visible-xs mt15"> <a href="card.html" class="btn btn-default "><i class="fa fa-check fa-lg"></i> \
                                            </a> <a href="card.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a> </div> \
                                 <!-- Mobile Buttons END --> \
                             </div> \
