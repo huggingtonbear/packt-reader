@@ -49,14 +49,16 @@ maptModule.directive('maptBook', function () {
             }
         }
         , template: '\
-                    <div class="col-xs-6 col-sm-3 col-lg-2 text-center book"> \
+                <div class="book-wrapper col-xs-6 col-sm-3 col-lg-2 "> \
+                    <div class="text-center book"> \
                         <a href="index.html"><img class="img-responsive title-shadow" src="{{coverImage}}" title="{{bookTitle}}"></a> \
                         <div ng-show="progress" class="progress mt10 mb15"> \
                             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}};"> <span class="sr-only">30% Complete</span> </div> \
                         </div> \
                         <button class="btn btn-primary mt5 btn-book btn-book-1" type="button" onclick="$(this).find(\'i\').toggleClass(\'fa-plus fa-minus\');$(this).toggleClass(\'btn-primary btn-danger\')" ng-click="addAlert()"><i class="fa fa-plus"></i></button> \
                         <button class="btn btn-primary mt5 btn-book btn-book-2" type="button"><i class="fa fa-play"></i></button> \
-                    </div>'
+                    </div> \
+                </div>'
     };
 });
 maptModule.directive('maptBookListItem', function () {
