@@ -197,69 +197,32 @@
                                       </div>  
 
                                         <ul class="list-group">
-                                            <li class="list-group-item list-name">
-                                                <mapt-book data-book-title="Practical Data Science Cookbook" data-cover-image="images/book1.jpg" data-progress="33%"></mapt-book>
-                                                <div class="col-xs-12 col-sm-9 col-lg-10">
-                                                  <h1><a href="index.html">Practical Data Science Cookbook</a></h1>
-                                                  <p class="mb0">By Sunila Gollapudi</p>
-                                                  <small class="title-duration mr10">March 2016</small>
-                                                  <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                                  <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item list-name">
-                                                <mapt-book data-book-title="UX Design for Web Developers" data-cover-image="images/book2.jpg" data-progress="33%"></mapt-book>
-                                                <div class="col-xs-12 col-sm-9 col-lg-10">
-                                                  <h1><a href="index.html">UX Design for Web Developers</a></h1>
-                                                  <p class="mb0">By Sunila Gollapudi</p>
-                                                  <small class="title-duration mr10">March 2016</small>
-                                                  <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                                  <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item list-name">
-                                                <mapt-book data-book-title="Practical Machine Learning" data-cover-image="images/book3.jpg" data-progress="33%"></mapt-book>
-                                                <div class="col-xs-12 col-sm-9 col-lg-10">
-                                                  <h1><a href="index.html">Practical Machine Learning</a></h1>
-                                                  <p class="mb0">By Sunila Gollapudi</p>
-                                                  <small class="title-duration mr10">March 2016</small>
-                                                  <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                                  <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item list-name">
-                                                <mapt-book data-book-title="Python Data Science Essentials" data-cover-image="images/book4.jpg" data-progress="33%"></mapt-book>
-                                                <div class="col-xs-12 col-sm-9 col-lg-10">
-                                                  <h1><a href="index.html">Python Data Science Essentials</a></h1>
-                                                  <p class="mb0">By Sunila Gollapudi</p>
-                                                  <small class="title-duration mr10">March 2016</small>
-                                                  <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                                  <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item list-name">
-                                                <mapt-book data-book-title="Clean Data" data-cover-image="images/book5.jpg" data-progress="33%"></mapt-book>
-                                                <div class="col-xs-12 col-sm-9 col-lg-10">
-                                                  <h1><a href="index.html">Clean Data</a></h1>
-                                                  <p class="mb0">By Sunila Gollapudi</p>
-                                                  <small class="title-duration mr10">March 2016</small>
-                                                  <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
-                                                  <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
-                                                </div>
-                                            </li>    
+
+                                            <mapt-book-list-item data-book-title="Practical Data Science Cookbook" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="UX Design for Web Developers" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book2.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="Practical Machine Learning" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book3.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
+                                            <mapt-book-list-item data-book-title="Python Data Science Fundamentals" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book4.jpg" data-progress="33%">
+                                            </mapt-book-list-item>
+
                                         </ul>
-                                        <div class="panel-footer text-right" ng-show="myList.pagination > 1">
+                                        <div class="panel-footer text-right">
                                           <nav>
                                               <ul class="pagination">
-                                                  <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.previous, 'list');" class="disabled">
+                                                  <li id="paginationNumber" class="disabled">
                                                       <a href="#" aria-label="Previous">
                                                           <span aria-hidden="true">«</span>
                                                       </a>
                                                   </li>
-                                                  <!-- ngRepeat: i in getNumber(myList.pagination) track by $index --><li ng-repeat="i in getNumber(myList.pagination) track by $index" id="paginationNumber" ng-class="{active: myList.offset == $index}" data-page="list" ng-click="$event.preventDefault();click_pagination($event, $index, 'list');" class= active">
-                                                          <a href="#" class="ng-binding">1</a>
+                                                  <li id="paginationNumber" class="active">
+                                                          <a href="#">1</a>
                                                   </li>
-                                                  <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.next, 'list');" class="disabled"> 
+                                                  <li id="paginationNumber" class="disabled"> 
                                                       <a href="#" aria-label="Next">
                                                           <span aria-hidden="true">»</span>
                                                       </a>
