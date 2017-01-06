@@ -22,6 +22,15 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
     line-height: 1.8em;
     margin-bottom: 30px
 }
+a.slick-prev i, a.slick-next i {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  color:#aaa
+}
+a.slick-prev:hover i, a.slick-next:hover i {
+  text-shadow: 2px 2px 2px #ccc;
+  color:#888;
+}
 h1 span.skill-item {
     display: inline-block;
     border-radius: 3px;
