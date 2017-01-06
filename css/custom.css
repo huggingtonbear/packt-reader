@@ -615,6 +615,11 @@ span.input-group-btn button.btn {
     position: relative;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+
+.panel-card-completed {
+    border-left-color: #4caf50;
+}
+
 .panel .nav-pills li.active h6 {
   color: white;
 }

@@ -95,7 +95,7 @@ maptModule.directive('maptBookListItem', function () {
                     <li class="list-group-item list-name"> \
                         <mapt-book data-book-title="{{bookTitle}}" data-cover-image="{{coverImage}}" data-progress="{{progress}}"></mapt-book> \
                         <div class="col-xs-12 col-sm-9 col-lg-10"> \
-                            <h1><a href="index.html" target="_blank">{{bookTitle}}</a></h1> \
+                            <h1><a href="index.html">{{bookTitle}}</a></h1> \
                             <p class="mb0" ng-hide="lite">By {{authors}}</p> \
                             <small class="title-duration mr10" ng-hide="lite">{{releaseDate}}</small> \
                             <small class="title-duration hidden-xs" ng-hide="lite"><i class="fa fa-clock-o mr5"></i>{{duration}}</small> \
@@ -114,6 +114,7 @@ maptModule.directive('maptSkillCard', function () {
             , cardListItem: '@cardListItem'
             , icon: '@icon'
             , added: '@added'
+            , completed: '@completed'
         }
         , restrict: 'E'
         , replace: true
@@ -129,13 +130,16 @@ maptModule.directive('maptSkillCard', function () {
                                 <p class="mt10"><small>{{description}}</small></p> \
                                 <!-- Desktop Buttons START --> \
                                 <div class="btn-group mt5 hidden-xs"> \
-                                    <a href="index.html" target="_blank" class="btn btn-default "><i class="fa fa-check fa-lg"></i> \
-                                    <span class="hidden-xs ml5">Mark as Complete</span></a> <a href="card.html" class="btn btn-info "><i class="fa fa-info-circle mr5" aria-hidden="true"></i> More info </a> </div> \
+                                    <a ng-hide="completed" href="index.html" target="_blank" class="btn btn-default "><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a> \
+                                    <a ng-show="completed" href="index.html" target="_blank" class="btn btn-success "><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Completed Skill</span></a> \
+                                    <a href="card.html" class="btn btn-info "><i class="fa fa-info-circle mr5" aria-hidden="true"></i> More info </a> </div> \
                                 <!-- Desktop Buttons END --> \
                                 <!-- Mobile Buttons START --> \
                                 <div class="clearfix"></div> \
-                                <div class="btn-group btn-group-justified visible-xs mt15"> <a href="card.html" class="btn btn-default "><i class="fa fa-check fa-lg"></i> \
-                                           </a> <a href="card.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a> </div> \
+                                <div class="btn-group btn-group-justified visible-xs mt15"> \
+                                    <a ng-hide="completed" href="card.html" class="btn btn-default "><i class="fa fa-check fa-lg"></i></a> \
+                                    <a ng-show="completed" href="card.html" class="btn btn-success "><i class="fa fa-check fa-lg"></i></a> \
+                                    <a href="card.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a> </div> \
                                 <!-- Mobile Buttons END --> \
                             </div> \
                             <!-- content START --> \
@@ -145,13 +149,15 @@ maptModule.directive('maptSkillCard', function () {
                         </div> \
                     </div>'
         , link: function (scope, element, attributes) {
-            if (scope.cardListItem!=undefined) 
-                    {$(element).find('div.col-lg-6').toggleClass ('col-lg-6 col-lg-12'
-                        );}
+            if (scope.cardListItem != undefined) {
+                $(element).find('div.col-lg-6').toggleClass('col-lg-6 col-lg-12');
+            }
+            if (scope.completed != undefined) {
+                $(element).addClass('panel-card-completed');
+            }
             var transcluded = $(element).find('[ng-transclude] > div').length;
             var insertCols = (3 - transcluded) * 2;
             var added = $(element).find('[ng-transclude]').prepend('<div class="col-lg-' + insertCols + '"></div>');
-
         }
     };
 });
