@@ -119,6 +119,7 @@ span.skill-item {
     display: none;
     transition: all 0.5s ease;
     transform: rotate(0deg);
+    line-height: 40px;
 }
 
 .btn-book:focus {
