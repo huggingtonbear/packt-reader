@@ -301,7 +301,7 @@
                                             </div>
                                             <!-- content START -->
                                             <div class="col-xs-6 col-sm-3 col-sm-2 text-center book">
-                                                <a href="index.html"><img class="img-responsive title-shadow" src="images/book7.jpg"></a>
+                                                <a href="index.html"><img class="img-responsive title-shadow" src="images/book3.jpg"></a>
                                                 <div class="progress mt10 mb15">
                                                     <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"> <span class="sr-only">30% Complete</span> </div>
                                                 </div>
@@ -309,7 +309,7 @@
                                                 <button class="btn btn-primary mt5 btn-book btn-book-2" type="button"><i class="fa fa-play"></i></button>
                                             </div>
                                             <div class="col-xs-6 col-sm-3 col-sm-2 text-center book">
-                                                <a href="index.html"><img class="img-responsive title-shadow" src="images/book8.jpg"></a>
+                                                <a href="index.html"><img class="img-responsive title-shadow" src="images/book2.jpg"></a>
                                                 <div class="progress mt10 mb15">
                                                     <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 13%;"> <span class="sr-only">30% Complete</span> </div>
                                                 </div>
@@ -355,6 +355,85 @@
                           
                         </div>
                         <div role="tabpanel" class="tab-pane" id="future">
+                        <div class="row">
+                        
+                          <div class="col-xs-12">
+                            <select class="form-control mb15 mt15">
+                              <option>Sort by Most Recent</option>
+                              <option>Sort by Most Popular</option>
+                              <option>Sort by Oldest</option>
+                              <option>Sort A-Z</option>
+                              <option>Sort Z-A</option>
+                            </select>
+                                      <div class="panel panel-default">
+
+                                        <ul class="list-group">
+                                            <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                                <a href="index.html"><img src="images/book2.jpg" class="img-product-list"></a>
+                                                <h1>UX Design for Web Developers</h1>
+                                                <p class="mb0">By Sunila Gollapudi</p>
+                                                <small class="title-duration mr10">March 2016</small>
+                                                <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
+                                                <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                            </li>
+                                            <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                                <a href="index.html"><img src="images/book4.jpg" class="img-product-list"></a>
+                                                <h1>Python Data Science Essentials</h1>
+                                                <p class="mb0">By Sunila Gollapudi</p>
+                                                <small class="title-duration mr10">April 2016</small>
+                                                <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
+                                                <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                            </li>
+                                            <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                                <a href="index.html"><img src="images/book3.jpg" class="img-product-list"></a>
+                                                <h1>Practical Machine Learning</h1>
+                                                <p class="mb0">By Ved Anwas</p>
+                                                <small class="title-duration mr10">Jun 2016</small>
+                                                <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
+                                                <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                            </li>
+                                            <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                                <a href="index.html"><img src="images/book5.jpg" class="img-product-list"></a>
+                                                <h1>Clean Data</h1>
+                                                <p class="mb0">By Margaret Matty</p>
+                                                <small class="title-duration mr10">Jun 2016</small>
+                                                <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
+                                                <p class="product-desc hidden-xs"><small>Modernize existing Python code and plan code migrations to Python using this definitive guide</small></p>
+                                            </li>
+                                            
+                                            
+                                        
+                                            
+                                        </ul>
+                                        <div class="panel-footer text-right" ng-show="myList.pagination > 1">
+                                          <nav>
+                                              <ul class="pagination">
+                                                  <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.previous, 'list');" class="disabled">
+                                                      <a href="#" aria-label="Previous">
+                                                          <span aria-hidden="true">«</span>
+                                                      </a>
+                                                  </li>
+                                                  <!-- ngRepeat: i in getNumber(myList.pagination) track by $index --><li ng-repeat="i in getNumber(myList.pagination) track by $index" id="paginationNumber" ng-class="{active: myList.offset == $index}" data-page="list" ng-click="$event.preventDefault();click_pagination($event, $index, 'list');" class="ng-scope active">
+                                                          <a href="#" class="ng-binding">1</a>
+                                                  </li>
+                                                  <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.next, 'list');" class="disabled"> 
+                                                      <a href="#" aria-label="Next">
+                                                          <span aria-hidden="true">»</span>
+                                                      </a>
+                                                  </li>
+
+                                              </ul>
+                                              
+                                              </nav>
+                                          </div>
+                                        </div>
+                                      </div>  
+                                  </div> 
+
+                      </div>
+                    </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="past">
                           
                         </div>
                       </div>
