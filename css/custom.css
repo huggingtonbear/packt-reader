@@ -592,17 +592,17 @@ span.input-group-btn button.btn {
 
 .panel-card {
     border-radius: 4px;
-    border-left: 30px solid #5594DB;  
+    border-left: 60px solid #5594DB;  
     padding-top: 15px;
     position: relative;
 }
 
 .panel-icon {
     position: absolute;
-    left: -25px;
-    top: 10px;
+    left: -45px;
+    top: 2px;
     color: white;
-    font-size: 1.4em;
+    font-size: 34px;
 }
 
 .panel-heading {
