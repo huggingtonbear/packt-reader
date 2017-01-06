@@ -52,6 +52,9 @@ h1 span.skill-item {
 #alertbox .alert {
     margin-bottom: 10px;
 }
+.alert a {
+    text-decoration: underline;
+}
 .btn-book {
     position: absolute;
     border-radius: 100%;
