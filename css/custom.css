@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Lato', Helvetica, sans-serif;
-    background: #f1f1f1;
+    background: #fafafa;
 }
 
 hr {
@@ -115,7 +115,7 @@ span.skill-item {
     vertical-align: middle;
     margin: 0;
     z-index: 5;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     display: none;
     transition: all 0.5s ease;
     transform: rotate(0deg);
@@ -585,9 +585,10 @@ span.input-group-btn button.btn {
 }
 
 .panel {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     border: 0;
+    border-radius: 3px;
 }
 
 .panel-card {
@@ -595,6 +596,7 @@ span.input-group-btn button.btn {
     border-left: 60px solid #5594DB;  
     padding-top: 15px;
     position: relative;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .panel-icon {
@@ -607,13 +609,22 @@ span.input-group-btn button.btn {
 
 .panel-heading {
     padding: 15px !important;
-    background: #fafafa !important;
-    border-bottom: 1px solid #eee;
+    background: white !important;
+    border-bottom: 1px solid #f1f1f1;
+    border-color: #f1f1f1 !important;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: 2px !important;
+    border-bottom-left-radius: 2px  !important;
 }
 
 .panel-heading h5 {
     margin-bottom: 5px;
     margin-top: 5px;
+    color: #555555;
 }
 
 .sidebar-title {
@@ -713,7 +724,7 @@ span.input-group-btn button.btn {
 }
 
 .jumbotron.heading {
-    background: #f1f1f1;
+    background: #fafafa;
     padding-bottom: 0px;
     padding-top: 0px;
     margin-bottom: 0px;
@@ -1661,7 +1672,7 @@ blockquote p {
 }
 
 .title-shadow {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .img-card-list-sm {

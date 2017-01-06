@@ -120,7 +120,7 @@ maptModule.directive('maptSkillCard', function () {
         , controller: function ($scope) {}
         , transclude: true
         , template: '\
-                    <div class="panel panel-card"> \
+                    <div class="panel panel-card mt5 mb20 mr5 ml5"> \
                         <div class="panel-icon"><i class="{{icon}}"></i></div> \
                         <div class="panel-body"> \
                             <div class="col-lg-6 mb15"> \
