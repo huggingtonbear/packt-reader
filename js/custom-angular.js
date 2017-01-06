@@ -71,8 +71,10 @@ maptModule.directive('maptBookListItem', function () {
             , productDescription: '@productDescription'
             , authors: '@authors'
             , progress: '@progress'
+            , lite: '@lite'
         }
         , restrict: 'E'
+        , transclude: true
         , replace: true
         , controller: function ($scope) {
             $scope.addAlert = function () {
@@ -90,15 +92,15 @@ maptModule.directive('maptBookListItem', function () {
             }
         }
         , template: '\
-                    <li class="list-group-item list-name">\
-                        \
-                    <mapt-book data-book-title="{{bookTitle}}" data-cover-image="{{coverImage}}" data-progress="{{progress}}"></mapt-book>\
-                        <div class="col-xs-12 col-sm-9 col-lg-10">\
-                          <h1><a href="index.html">{{bookTitle}}</a></h1>\
-                          <p class="mb0">By {{authors}}</p>\
-                          <small class="title-duration mr10">{{releaseDate}}</small>\
-                          <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>{{duration}}</small>\
-                          <p class="product-desc hidden-xs"><small>{{productDescription}}</small></p>\
+                    <li class="list-group-item list-name"> \
+                        <mapt-book data-book-title="{{bookTitle}}" data-cover-image="{{coverImage}}" data-progress="{{progress}}"></mapt-book> \
+                        <div class="col-xs-12 col-sm-9 col-lg-10"> \
+                            <h1><a href="index.html">{{bookTitle}}</a></h1> \
+                            <p class="mb0" ng-hide="lite">By {{authors}}</p> \
+                            <small class="title-duration mr10" ng-hide="lite">{{releaseDate}}</small> \
+                            <small class="title-duration hidden-xs" ng-hide="lite"><i class="fa fa-clock-o mr5"></i>{{duration}}</small> \
+                            <p class="product-desc hidden-xs" ng-hide="lite"><small>{{productDescription}}</small></p> \
+                            <div class="book-extra-detail" ng-transclude></div> \
                         </div>\
                     </li>'
     };
