@@ -24,9 +24,9 @@ maptModule.directive('maptBook', function () {
             bookTitle: '@bookTitle'
             , coverImage: '@coverImage'
             , progress: '@progress'
-        }, 
-        restrict: 'E', 
-        replace: true
+        }
+        , restrict: 'E'
+        , replace: true
         , controller: function ($scope) {
             $scope.addAlert = function () {
                 if ($scope.added == undefined) {
@@ -40,7 +40,6 @@ maptModule.directive('maptBook', function () {
                     maptAlert($scope.bookTitle + ' has been added to your <a href="dashboard.html#tab_future">queue</a>');
                     $scope.added = true;
                 }
-                
             }
         }
         , template: '\
@@ -64,9 +63,9 @@ maptModule.directive('maptBookListItem', function () {
             , productDescription: '@productDescription'
             , authors: '@authors'
             , progress: '@progress'
-        }, 
-        restrict: 'E', 
-        replace: true
+        }
+        , restrict: 'E'
+        , replace: true
         , controller: function ($scope) {
             $scope.addAlert = function () {
                 if ($scope.added == undefined) {
@@ -80,7 +79,6 @@ maptModule.directive('maptBookListItem', function () {
                     maptAlert($scope.bookTitle + ' has been added to your <a href="dashboard.html#tab_future">queue</a>');
                     $scope.added = true;
                 }
-                
             }
         }
         , template: '\
@@ -104,7 +102,6 @@ maptModule.directive('maptBookListItem', function () {
                     </li>'
     };
 });
-
 maptModule.directive('maptSkillCard', function () {
     return {
         scope: {
@@ -113,12 +110,10 @@ maptModule.directive('maptSkillCard', function () {
             , description: '@description'
             , icon: '@icon'
             , added: '@added'
-        }, 
-        restrict: 'E',
-        replace: true
-        , controller: function ($scope) {
-            
         }
+        , restrict: 'E'
+        , replace: true
+        , controller: function ($scope) {}
         , transclude: true
         , template: '\
                     <div class="panel panel-card"> \
@@ -145,5 +140,10 @@ maptModule.directive('maptSkillCard', function () {
                             <!-- content END --> \
                         </div> \
                     </div>'
+        , link: function (scope, element, attributes) {
+            var transcluded = $(element).find('[ng-transclude] > div').length;
+            var insertCols = (3 - transcluded) * 2;
+            var added = $(element).find('[ng-transclude]').prepend('<div class="col-lg-' + insertCols + '"></div>');
+        }
     };
 });
