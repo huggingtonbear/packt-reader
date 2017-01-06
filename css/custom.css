@@ -357,6 +357,14 @@ h1,
 .nav-pills > li > a {
     border-radius: 0;
 }
+.panel .nav-pills li:first-child a,  {
+    border-top-left-radius: 2px !important;
+    border-bottom-left-radius: 2px !important;
+}
+.panel .nav-pills li:last-child a,  {
+    border-top-right-radius: 2px !important;
+    border-bottom-right-radius: 2px !important;
+}
 
 .early-access-holder {
     background: #eb6525;
@@ -602,7 +610,9 @@ span.input-group-btn button.btn {
     position: relative;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-
+.panel .nav-pills li.active h6 {
+  color: white;
+}
 .panel-icon {
     position: absolute;
     left: -47px;
