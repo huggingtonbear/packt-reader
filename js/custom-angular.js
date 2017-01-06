@@ -95,7 +95,7 @@ maptModule.directive('maptBookListItem', function () {
                     <li class="list-group-item list-name"> \
                         <mapt-book data-book-title="{{bookTitle}}" data-cover-image="{{coverImage}}" data-progress="{{progress}}"></mapt-book> \
                         <div class="col-xs-12 col-sm-9 col-lg-10"> \
-                            <h1><a href="index.html">{{bookTitle}}</a></h1> \
+                            <h1><a href="index.html" target="_blank">{{bookTitle}}</a></h1> \
                             <p class="mb0" ng-hide="lite">By {{authors}}</p> \
                             <small class="title-duration mr10" ng-hide="lite">{{releaseDate}}</small> \
                             <small class="title-duration hidden-xs" ng-hide="lite"><i class="fa fa-clock-o mr5"></i>{{duration}}</small> \
