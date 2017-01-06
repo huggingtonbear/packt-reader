@@ -33,11 +33,11 @@ maptModule.directive('maptBook', function () {
                     $scope.added = false;
                 }
                 if ($scope.added == true) {
-                    maptAlert($scope.bookTitle + ' has been removed from your <a href="dashboard.html#tab_future">queue</a>', 'danger');
+                    maptAlert($scope.bookTitle + ' has been removed from your <a href="dashboard.html#future">queue</a>', 'danger');
                     $scope.added = false;
                 }
                 else {
-                    maptAlert($scope.bookTitle + ' has been added to your <a href="dashboard.html#tab_future">queue</a>');
+                    maptAlert($scope.bookTitle + ' has been added to your <a href="dashboard.html#future">queue</a>');
                     $scope.added = true;
                 }
                 
