@@ -615,6 +615,14 @@ span.input-group-btn button.btn {
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
 }
+.panel-footer {
+    padding: 15px !important;
+    background: white !important;
+    border-top: 1px solid #f1f1f1;
+    border-color: #f1f1f1 !important;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
 .list-group-item:last-child {
     margin-bottom: 0;
     border-bottom-right-radius: 2px !important;
