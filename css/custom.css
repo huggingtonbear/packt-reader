@@ -28,8 +28,7 @@ h6,
 }
 
 .reader-container p,
-.reader-container ul,
-.tab-content {
+.reader-container ul {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.8em;
