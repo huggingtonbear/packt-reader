@@ -71,8 +71,8 @@ maptModule.controller('maptController', function ($scope, $http) {
             
         }
         
-        $scope.completeCard = function(card) {
-            card.complete = 'true';
+        $scope.completeCard = function() {
+            this.card.complete = 'true';
         };
     });
 });
@@ -169,8 +169,7 @@ maptModule.directive('maptSkillCard', function ($timeout) {
             , completed: '@completed'
         }
         , restrict: 'E'
-        , replace: true
-        , controller: function ($scope) {}
+        , replace: false
         , transclude: true
         , template: '\
                     <div class="panel panel-card mt5 mb20 mr5 ml5"> \
@@ -182,7 +181,7 @@ maptModule.directive('maptSkillCard', function ($timeout) {
                                 <p class="mt10"><small>{{description}}</small></p> \
                                 <!-- Desktop Buttons START --> \
                                 <div class="btn-group mt5 hidden-xs"> \
-                                    <a ng-hide="completed == \'true\'" class="btn btn-default " ng-click="$parent.completeCard(card)"><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a> \
+                                    <a ng-hide="completed == \'true\'" class="btn btn-default " ng-click="$parent.completeCard()"><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a> \
                                     <a ng-show="completed == \'true\'" class="btn btn-success disabled"><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Completed</span></a> \
                                     <a ng-show="completed == \'true\'" class="btn btn-default"><i class="fa fa-times fa-lg"></i> <span class="hidden-xs ml5">Remove</span></a> \
                                     <a href="card.html" class="btn btn-info "><i class="fa fa-info-circle mr5" aria-hidden="true"></i> More info </a> </div> \
