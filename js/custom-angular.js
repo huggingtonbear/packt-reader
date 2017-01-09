@@ -208,7 +208,7 @@ maptModule.directive('maptSkillCard', function ($timeout) {
             $timeout(function () {
                 var added = $(element).find('[ng-transclude]').prepend('<div class="col-lg-' + insertCols + '"></div>');
                 if ($('.skillcard-carousel').length > 0) {
-                    $('.skillcard-carousel').slick({
+                    $('.skillcard-carousel').not('.slick-initialized').slick({
                         speed: 500
                         , fade: true
                         , prevArrow: '.slick-prev'
