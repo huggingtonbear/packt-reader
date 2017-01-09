@@ -185,6 +185,8 @@ span.skill-item {
     text-align: center;
     position: relative;
     margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .skill-card-nav .items .skill-card-nav-item {
