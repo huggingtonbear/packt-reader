@@ -34,7 +34,6 @@ h6,
     line-height: 1.8em;
     margin-bottom: 30px
 }
-
 a.slick-prev i,
 a.slick-next i {
     -webkit-transition-duration: 0.4s;
@@ -195,7 +194,7 @@ span.skill-item {
 .skill-card-nav .items .skill-card-nav-item {
     max-width: 100%;
     width: 60px;
-    height: 20px;
+    height: 30px;
     border-left: 6px solid #5594DB;
     margin-left: auto;
     margin-right: auto;
