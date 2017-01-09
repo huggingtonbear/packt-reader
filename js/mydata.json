@@ -1,0 +1,43 @@
+{
+    me: {
+        plan: {
+            title: "Python Developer"
+            , avatar: "images/avatar4.jpg"
+            , cards: []
+        }
+    }
+    , books: [{
+            id = 0, title: "Practical Data Science Cookbook", cover: "images/book1.jpg", progress: "20%", lastRead: "2016-04-01", addedDate: "2015-01-01", popular: 11
+        }
+        , {
+            id = 1, title: "UX Design for Web Developers", cover: "images/book2.jpg", progress: "98%", lastRead: "2016-04-01", addedDate: "2015-05-01", popular: 45
+        }
+        , {
+            id = 2, title: "Practical Machine Learning", cover: "images/book3.jpg", addedDate: "2015-03-01", popular: 78
+        }
+        , {
+            id = 3, title: "Python Data Essentials", cover: "images/book4.jpg", progress: "20%", lastRead: "2016-04-01", addedDate: "2016-01-01", popular: 64
+        }
+        , {
+            id = 4, title: "Clean Data", cover: "images/book5.jpg", progress: "6%", lastRead: "2016-04-01", addedDate: "2015-10-01", popular: 12
+        }
+        , {
+            id = 5, title: "Unity 5 Game Optimization", cover: "images/book6.jpg", "2016-04-01", addedDate: "2015-11-01", popular: 32
+        }
+        , {
+            id = 6, title: "Learning Python", cover: "images/book7.png", progress: "76%", lastRead: "2016-04-01", addedDate: "2015-03-21", popular: 98
+        }
+        , {
+            id = 7, title: "Python 3 Object-Orientated Programming", cover: "images/book8.png", progress: "8%", lastRead: "2016-04-01", addedDate: "2015-02-11", popular: 45
+        }
+        , {
+            id = 8, title: "Mastering Object-Oriented Python", cover: "images/book9.png", addedDate: "2015-06-05", popular: 16
+        }
+        , {
+            id = 9, title: "Functional Python Programming", cover: "images/book10.png", progress: "2%", lastRead: "2016-04-01", addedDate: "2015-03-08", popular: 63
+        }
+        , {
+            id = 10, title: "Test-Driven Python Development", cover: "images/book11.png", addedDate: "2016-01-21", popular: 85
+        }
+             ]
+}
