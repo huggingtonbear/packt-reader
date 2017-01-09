@@ -46,6 +46,7 @@ maptModule.controller('maptController', function ($scope, $http) {
         $scope.recents = $scope.mydata.books.filter(hasLastRead);
         $scope.recents = $scope.recents.sort(sortLastRead).slice(0, 6);
         $scope.lastAdded = $scope.mydata.books.sort(sortLastAdded).slice(0, 6);
+        var numcards = $scope.mydata.me.plan.cards.length;
         for (var card in $scope.mydata.me.plan.cards) {
             var bookids = $scope.mydata.me.plan.cards[card].books;
             var newbooks = [];
@@ -55,6 +56,7 @@ maptModule.controller('maptController', function ($scope, $http) {
                 }
             }
             $scope.mydata.me.plan.cards[card].books = newbooks;
+            $scope.mydata.me.plan.cards[card].space = parseInt(100 / numcards) - 1;
         }
     });
 });

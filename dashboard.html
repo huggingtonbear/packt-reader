@@ -115,32 +115,8 @@
                                                 <div class="col-sm-10">
                                                     <div class="skill-card-nav">
                                                         <div class="items">
-                                                            <div class="selected" style="width: 10%;">
-                                                                <div class="panel skill-card-nav-item"><i class="fa fa-circle-o fa-lg"></i></div>
-                                                            </div>
-                                                            <div style="width: 10%;">
-                                                                <div class="panel skill-card-nav-item"><i class="fa fa-circle-o fa-lg"></i></div>
-                                                            </div>
-                                                            <div style="width: 10%;">
-                                                                <div class="panel skill-card-nav-item panel-card-completed"><i class="fa fa-check fa-lg"></i> </div>
-                                                            </div>
-                                                            <div style="width: 10%;">
-                                                                <div class="panel skill-card-nav-item"><i class="fa fa-circle-o fa-lg"></i></div>
-                                                            </div>
-                                                            <div style="width: 10%;">
-                                                                <div class="panel skill-card-nav-item"><i class="fa fa-circle-o fa-lg"></i></div>
-                                                            </div>
-                                                            <div style="width: 10%;">
-                                                                <div class="panel skill-card-nav-item"><i class="fa fa-circle-o fa-lg"></i></div>
-                                                            </div>
-                                                            <div style="width: 10%;">
-                                                                <div class="panel skill-card-nav-item"><i class="fa fa-circle-o fa-lg"></i></div>
-                                                            </div>
-                                                            <div style="width: 10%;">
-                                                                <div class="panel skill-card-nav-item"><i class="fa fa-circle-o fa-lg"></i></div>
-                                                            </div>
-                                                            <div style="width: 10%;">
-                                                                <div class="panel skill-card-nav-item"><i class="fa fa-circle-o fa-lg"></i></div>
+                                                            <div ng-class="{selected: $index == 0}" ng-repeat="card in mydata.me.plan.cards" style="width: {{card.space}}%">
+                                                                <div class="panel skill-card-nav-item" ng-class="{'panel-card-completed': card.completed == 'true'}"><i ng-hide="card.completed == 'true'" class="fa fa-circle-o fa-lg"></i> <i ng-show="card.completed == 'true'" class="fa fa-check fa-lg"></i></div>
                                                             </div>
                                                         </div>
                                                     </div>

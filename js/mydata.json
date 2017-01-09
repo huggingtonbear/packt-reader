@@ -17,7 +17,7 @@
                     , "icon": "devicon-python-plain"
                     , "desc": "Object-oriented programming is a powerful design paradigm that allows you to manipulate data and behavior together by creating objects. Understanding how to write object-oriented code is an important part of Python programming, as it allows you to stop writing simple scripts and start creating more complex programs."
                     , "books": [7, 8]
-                    , "completed": true
+                    , "completed": "true"
             }
             , {
                     "title": "Functional Python Programming"
