@@ -67,7 +67,7 @@
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-        <div id="page-content-wrapper" class=""> <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
+        <div id="page-content-wrapper" class="" ng-controller="maptController"> <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
             <div id="book-wrapper" class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
@@ -110,19 +110,8 @@
                         <div class="skillcard-learning mt30 mb30">
                             <h5 class="">Skill Cards in Plan:</h5>
                             <hr>
-                            <mapt-skill-card data-card-title="Python Data Science" data-description="Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development." data-related-topic="Python" data-icon="devicon-python-plain">
-                                <mapt-book data-book-title="Practical Data Science Cookbook" data-cover-image="images/book1.jpg" data-progress="33%"></mapt-book>
-                                <mapt-book data-book-title="UX Design for Web Developers" data-cover-image="images/book2.jpg" data-progress="13%"></mapt-book>
-                                <mapt-book data-book-title="Practical Machine Learning" data-cover-image="images/book3.jpg" data-progress="63%"></mapt-book>
-                            </mapt-skill-card>
-                            <mapt-skill-card data-card-title="Python High Performance Programming" data-description="Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale and perform consistently, no matter how much data you’re crunching or how many users you’re serving." data-related-topic="Python" data-icon="devicon-python-plain" data-completed="yea">
-                                <mapt-book data-book-title="Clean Data" data-cover-image="images/book5.jpg" data-progress="13%"></mapt-book>
-                            </mapt-skill-card>
-                            <mapt-skill-card data-card-title="C# Programming with Unity" data-description="C# (or C Sharp) is a great enterprise language built on the .Net Framework.  Unity is a powerful game engine easy to get into.  Combining these two technologies will enable you to build amazing games very quickly!" data-related-topic="C Sharp" data-icon="devicon-csharp-plain">
-                                <mapt-book data-book-title="Unity 5 Game Optimization" data-cover-image="images/book6.jpg" data-progress="3%"></mapt-book>
-                            </mapt-skill-card>
-                            <mapt-skill-card data-card-title="Python Fundamentals" data-description="Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development." data-related-topic="Python" data-icon="devicon-python-plain">
-                                <mapt-book data-book-title="Python Data Science Fundamentals" data-cover-image="images/book4.jpg" data-progress="33%"></mapt-book>
+                            <mapt-skill-card ng-repeat="card in mydata.me.plan.cards" data-card-title="{{card.title}}" data-description="{{card.desc}}" data-related-topic="{{card.topic}}" data-icon="{{card.icon}}" data-completed="{{card.completed}}">
+                                <mapt-book ng-repeat="book in card.books" data-book-title="{{book.title}}" data-cover-image="{{book.cover}}" data-progress="{{book.progress}}"></mapt-book>
                             </mapt-skill-card>
                         </div>
                     </div>

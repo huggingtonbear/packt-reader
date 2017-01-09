@@ -67,7 +67,7 @@
         </div>
         <!-- /#sidebar-wrapper -->
         <!-- Content Page -->
-        <div id="page-content-wrapper" class=""> <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
+        <div id="page-content-wrapper" class="" ng-controller="maptController"> <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
             <div class="jumbotron heading mb0">
                 <div class="container-fluid">
                     <div class="col-sm-12 col-lg-offset-1 col-lg-10">
@@ -164,12 +164,7 @@
                             <div class="panel-body">
                                 <p>Here are our newest books and videos for you to learn:</p>
                                 <div class="row">
-                                    <mapt-book data-book-title="Python Data Essentials" data-cover-image="images/book4.jpg" ></mapt-book>
-                                    <mapt-book data-book-title="Practical Data Science Cookbook" data-cover-image="images/book1.jpg" data-progress="33%"></mapt-book>
-                                    <mapt-book data-book-title="Clean Data" data-cover-image="images/book5.jpg" data-progress="3%"></mapt-book>
-                                    <mapt-book data-book-title="Unity 5 Game Optimization" data-cover-image="images/book6.jpg" data-progress="2%"></mapt-book>
-                                    <mapt-book data-book-title="UX Design for Web Developers" data-cover-image="images/book2.jpg" data-progress="13%"></mapt-book>
-                                    <mapt-book data-book-title="Practical Machine Learning" data-cover-image="images/book3.jpg" data-progress="63%"></mapt-book>
+                                    <mapt-book ng-repeat="last in lastAdded" data-book-title="{{last.title}}" data-cover-image="{{last.cover}}" data-progress="{{last.progress}}"></mapt-book>
                                 </div>
                             </div>
                         </div>
