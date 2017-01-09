@@ -34,7 +34,6 @@ h6,
     line-height: 1.8em;
     margin-bottom: 30px
 }
-
 a.slick-prev i,
 a.slick-next i {
     -webkit-transition-duration: 0.4s;
@@ -173,12 +172,8 @@ span.skill-item {
     transform: rotate(-90deg);
 }
 
-.skill-card-nav{
-    line-height: 12px;
-}
-
 .skill-card-nav .items {
-    width: 80%;
+    width: 100%;
 }
 
 .skill-card-nav .buttons {
@@ -195,12 +190,20 @@ span.skill-item {
 .skill-card-nav .items .skill-card-nav-item {
     max-width: 100%;
     width: 60px;
-    height: 20px;
+    height: 35px;
     border-left: 6px solid #5594DB;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    position: absolute;
     opacity: 0.3;
+}
+.skill-card-nav .skill-card-nav-item i {
+    color:#5594db;
+    margin-top: 11px;
+}
+.skill-card-nav .panel-card-completed i {
+    color:#4caf50;
 }
 
 .skill-card-nav .selected .skill-card-nav-item {
