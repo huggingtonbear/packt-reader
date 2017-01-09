@@ -69,14 +69,6 @@ maptModule.controller('maptController', function ($scope, $http) {
             $scope.mydata.me.plan.cards[card].books = newbooks;
             $scope.mydata.me.plan.cards[card].space = parseInt(100 / numcards) - 1;
         }
-<<<<<<< HEAD
-        
-        $scope.completeCard = function(card) {
-=======
-        $scope.completeCard = function (card) {
->>>>>>> origin/gh-pages
-            card.complete = 'true';
-        };
     });
 });
 maptModule.directive('maptBook', function () {
