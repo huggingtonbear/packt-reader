@@ -13,12 +13,11 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/packtlib-nv/images/apple-icons/apple-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="144x144" href="/packtlib-nv/images/apple-icons/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/packtlib-nv/images/apple-icons/apple-icon-180x180.png">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-    <title>Mapt - Python Developer Career Plan</title>
+    <title>Mapt - Discover new Skills</title>
     <!-- Bootstrap Core CSS -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -49,8 +48,8 @@
                         <input type="text" class="form-control" placeholder="&#xf002; Search for a topic..."> </form>
                     <div class="clearfix"></div>
                     <li class=""><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span></a> </li>
-                    <li class="active"><a href="discover.html" class="sidenav-menu-holder"><span class="sidenav-menu">Discover</span><span class="pull-left mr5"></span></a> </li>
-                    <li class=""><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-left mr5"></span></a> </li>
+                    <li class=""><a href="discover.html" class="sidenav-menu-holder"><span class="sidenav-menu">Discover</span><span class="pull-left mr5"></span></a> </li>
+                    <li class="active"><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-left mr5"></span></a> </li>
                     <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><span class="sidenav-menu">Account</span><span class="pull-left mr5"></span></a> </li>
                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                         <li class="sub-nav"><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">Account Details</span><span class="pull-left mr5"></span></a> </li>
@@ -63,53 +62,49 @@
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
+        <!-- Content Page -->
         <div id="page-content-wrapper" class="" ng-controller="maptController"> <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
-            <div id="book-wrapper" class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
-                        <div class="page-title">
-                            <h3>Python Developer</h3>
-                            <h6>A career plan is a playlist of eBooks and videos to guide you through the required skills for your chosen career.
-                                </h6>
-                            <ol class="breadcrumb">
-                                <li><a href="discover.html">Discover</a></li>
-                                <li><a href="careers.html">Career Plans</a></li>
-                                <li class="active">Python Developer</li>
-                            </ol>
+            <div class="jumbotron heading mb0">
+                <div class="container-fluid">
+                    <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                        <div class="row">
+                            <div class="page-title">
+                                <h3>Help</h3>
+                                <h6 class="mt5">How can we help?</h6> </div>
                             <hr> </div>
                     </div>
-                    <div class="col-sm-6 col-lg-3 col-xl-2 col-lg-offset-1">
-                        <div class="panel panel-card">
-                            <div class="panel-icon"> <i class="devicon-python-plain"></i> </div>
-                            <div class="panel-body pt0">
-                                <h5 class="text-center mt5 mb5">Career</h5> </div>
+                </div>
+            </div>
+            <!-- end jumbotron -->
+            <div id="" class="container-fluid">
+                <div class="row mt15">
+                    <div class="col-lg-3 col-lg-offset-1">
+                        <div class="panel panel-default panel-med-height">
+                            <div class="panel-heading">
+                                <h6>FAQs</h6> </div>
+                            <div class="panel-body"><p>See what other Mapt Users are asking.</p>
+                                <br> <a href="faq.html" class="btn btn-primary pull-right">Browse the FAQs <i class="fa fa-chevron-right ml5"></i></a> </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-8">
-                        <p class="mb10"> {{(mydata.me.plan.cards | filter:filterCardsCompleted).length}}/{{mydata.me.plan.cards.length}} Skill Cards Completed</p>
-                        <div class="progress mt10 mb20">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"> <span class="sr-only">30% Complete</span> </div>
+                    <div class="col-lg-4">
+                        <div class="panel panel-default panel-med-height">
+                            <div class="panel-heading">
+                                <h6>Support</h6> </div>
+                            <div class="panel-body"><p>Need help? Have a question? <br><br>maptsupport@packtpub.com</p>
+                                <br> <a href="mailto:maptsupport@packtpub.com" class="btn btn-primary pull-right">Email Mapt Support <i class="fa fa-envelope ml5"></i></a> </div>
                         </div>
-                        <div class="alert alert-info">
-                            <p><i class="fa fa-info-circle mr5"></i> This Career Plan has been informed by <b>4,200</b> Python Developers and jobs openings from companies across the world</p>
-                        </div>
-                        <p class="card-desc">Python is the language of the productive developer and it is in use everywhere, from Google to NASA. Being a Python Developer however is more than just knowing Python. Being a Python Developer means that you’re ready to tackle any challenge that may come your way; from data science projects and data crunching, to creating websites or writing automation scripts, Python Developers are ready to deliver the next project on time. </p>
-                        <p class="card-desc">Compiled from the experience of Python Developers around the world, this Career Plan will give you the skills you need to cover every angle as a Python developer. </p> <a href="dashboard.html" class="btn btn-default disabled  pull-right"><i class="fa fa-refresh mr5"></i> Active Plan</a>
-                        <div class="clearfix"></div>
                     </div>
-                    <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
-                        <div class="skillcard-learning mt30 mb30">
-                            <h5 class="">Skill Cards in Plan:</h5>
-                            <hr>
-                            <mapt-skill-card ng-repeat="card in mydata.me.plan.cards" data-card-title="{{card.title}}" data-description="{{card.desc}}" data-related-topic="{{card.topic}}" data-icon="{{card.icon}}" data-completed="{{card.completed}}">
-                                <mapt-book ng-repeat="book in card.books" data-book-title="{{book.title}}" data-cover-image="{{book.cover}}" data-progress="{{book.progress}}"></mapt-book>
-                            </mapt-skill-card>
+                    <div class="col-lg-3">
+                        <div class="panel panel-default panel-med-height">
+                            <div class="panel-heading">
+                                <h6>Feedback</h6> </div>
+                            <div class="panel-body"><p>Drop us a line with your suggestion or what you do/don't like!</p>
+                                <br> <a href="#" class="btn btn-primary pull-right">Send feedback <i class="fa fa-commenting ml5"></i></a> </div>
                         </div>
                     </div>
                 </div>
-                <!-- row -->
             </div>
-            <!-- /#book-wrapper -->
+            <!-- /container -->
         </div>
         <!-- /#page-content-wrapper -->
     </div>
@@ -117,16 +112,13 @@
     <!-- JAVASCRIPT BLOCKS -->
     <!-- jQuery Script-->
     <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
     <!-- AngularJS -->
     <script src="js/angular.min.js"></script>
     <script src="js/custom-angular.js"></script>
-    <!-- Syntax Highlighting Script -->
-    <script src="js/prism.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
-    <script src="js/sidenav-accordion.js"></script>
 </body>
 
 </html>
