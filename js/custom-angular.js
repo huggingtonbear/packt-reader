@@ -28,8 +28,8 @@ function sortLastRead(a, b) {
 };
 
 function sortLastAdded(a, b) {
-    if (a.addedDate > b.addedDate) return 1;
-    if (a.addedDate < b.addedDate) return -1;
+    if (a.addedDate > b.addedDate) return -1;
+    if (a.addedDate < b.addedDate) return 1;
     return 0;
 };
 
@@ -46,6 +46,9 @@ maptModule.controller('maptController', function ($scope, $http) {
         $scope.recents = $scope.mydata.books.filter(hasLastRead);
         $scope.recents = $scope.recents.sort(sortLastRead).slice(0, 6);
         $scope.lastAdded = $scope.mydata.books.sort(sortLastAdded).slice(0, 6);
+        $scope.filterCardsCompleted = function (card) {
+            return (card.completed == 'true');
+        };
         var numcards = $scope.mydata.me.plan.cards.length;
         for (var card in $scope.mydata.me.plan.cards) {
             var bookids = $scope.mydata.me.plan.cards[card].books;

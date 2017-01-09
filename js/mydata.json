@@ -33,6 +33,64 @@
                     , "desc": "Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development."
                     , "books": [0]
             }
+            , {
+                    "title": "Testing Python"
+                    , "topic": "Python"
+                    , "icon": "devicon-python-plain"
+                    , "desc": "Testing is vital to the smooth running of any application. Python code is no different. Creating test-driven applications puts testing at the heart of your development process, making sure your applications are ready to deploy more efficiently."
+                    , "books": [10]
+            }
+            , {
+                    "title": "Django Basics"
+                    , "topic": "Django"
+                    , "icon": "devicon-django-plain"
+                    , "desc": "Django adopts the same “batteries included” philosophy as Python, and has options straight out of the box for all major web development aspects such as authentication, routing, and templating, as well as database schema migrations. It is the best choice for the productive Python programmer to make professional web applications."
+                    , "books": [11]
+            }
+                , {
+                    "title": "Python Fundamentals"
+                    , "topic": "Python"
+                    , "icon": "devicon-python-plain"
+                    , "desc": "Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development."
+                    , "books": [6, 9, 10]
+            }
+            , {
+                    "title": "Object-Oriented Python Programming"
+                    , "topic": "Python"
+                    , "icon": "devicon-python-plain"
+                    , "desc": "Object-oriented programming is a powerful design paradigm that allows you to manipulate data and behavior together by creating objects. Understanding how to write object-oriented code is an important part of Python programming, as it allows you to stop writing simple scripts and start creating more complex programs."
+                    , "books": [7, 8]
+                    , "completed": "true"
+            }
+            , {
+                    "title": "Functional Python Programming"
+                    , "topic": "Python"
+                    , "icon": "devicon-python-plain"
+                    , "desc": "Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development."
+                    , "books": [9, 1]
+            }
+            , {
+                    "title": "Python High Performance Programming"
+                    , "topic": "Python"
+                    , "icon": "devicon-python-plain"
+                    , "desc": "Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development."
+                    , "books": [0]
+            }
+            , {
+                    "title": "Testing Python"
+                    , "topic": "Python"
+                    , "icon": "devicon-python-plain"
+                    , "desc": "Testing is vital to the smooth running of any application. Python code is no different. Creating test-driven applications puts testing at the heart of your development process, making sure your applications are ready to deploy more efficiently."
+                    , "books": [10]
+            }
+            , {
+                    "title": "Django Basics"
+                    , "topic": "Django"
+                    , "icon": "devicon-django-plain"
+                    , "desc": "Django adopts the same “batteries included” philosophy as Python, and has options straight out of the box for all major web development aspects such as authentication, routing, and templating, as well as database schema migrations. It is the best choice for the productive Python programmer to make professional web applications."
+                    , "books": [11]
+                    , "completed": "true"
+            }
         ]
         }
     }
@@ -100,7 +158,6 @@
             "id": 7
             , "title": "Python 3 Object-Orientated Programming"
             , "cover": "images/book8.png"
-            , "progress": "8%"
             , "lastRead": "2016-04-01"
             , "addedDate": "2015-02-11"
             , "popular": 45
@@ -129,6 +186,13 @@
             , "cover": "images/book11.png"
             , "addedDate": "2016-01-21"
             , "popular": 85
+        }
+        , {
+            "id": 11
+            , "title": "Django By Example"
+            , "cover": "images/book12.png"
+            , "addedDate": "2016-07-21"
+            , "popular": 1
         }
              ]
 }

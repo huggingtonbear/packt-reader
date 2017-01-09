@@ -72,30 +72,25 @@
                 <div class="row">
                     <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
                         <div class="page-title">
-                            <div class="skill-header">
-                                <div class="col-md-3 col-lg-3 col-xl-2 panel panel-card">
-                                    <div class="panel-icon"> <i class="devicon-python-plain"></i> </div>
-                                    <div class="panel-body pt0">
-                                        <h5 class="text-center mt5 mb5">Career</h5> </div>
-                                </div>
-                                <div class="col-lg-8">
-                                    <h3>Python Developer</h3></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h6>A career plan is a playlist of eBooks and videos to guide you through the required skills for your chosen career.
+                            <h3>Python Developer</h3>
+                            <h6>A career plan is a playlist of eBooks and videos to guide you through the required skills for your chosen career.
                                 </h6>
-                                <ol class="breadcrumb">
-                                    <li><a href="discover.html">Discover</a></li>
-                                    <li><a href="careers.html">Career Plans</a></li>
-                                    <li class="active">Python Developer</li>
-                                </ol>
-                                <hr> </div>
+                            <ol class="breadcrumb">
+                                <li><a href="discover.html">Discover</a></li>
+                                <li><a href="careers.html">Career Plans</a></li>
+                                <li class="active">Python Developer</li>
+                            </ol>
+                            <hr> </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 col-lg-offset-1">
+                        <div class="panel panel-card">
+                            <div class="panel-icon"> <i class="devicon-python-plain"></i> </div>
+                            <div class="panel-body pt0">
+                                <h5 class="text-center mt5 mb5">Career</h5> </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-10 col-xl-10 col-lg-offset-1">
-                        <p class="mb10"> 3/9 Skill Cards Completed</p>
+                    <div class="col-sm-12 col-lg-8">
+                        <p class="mb10"> {{(mydata.me.plan.cards | filter:filterCardsCompleted).length}}/{{mydata.me.plan.cards.length}} Skill Cards Completed</p>
                         <div class="progress mt10 mb20">
                             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"> <span class="sr-only">30% Complete</span> </div>
                         </div>
