@@ -52,7 +52,7 @@ maptModule.controller('maptController', function ($scope, $http) {
         $scope.topicFilterer = function (card) {
             return (card.topic == $scope.topicFilter || $scope.topicFilter == undefined);
         };
-        $scope.quickTopicFilterer = function(topic) {
+        $scope.quickTopicFilterer = function (topic) {
             return function (card) {
                 return card.topic == topic;
             }
@@ -68,11 +68,9 @@ maptModule.controller('maptController', function ($scope, $http) {
             }
             $scope.mydata.me.plan.cards[card].books = newbooks;
             $scope.mydata.me.plan.cards[card].space = parseInt(100 / numcards) - 1;
-            
         }
-        
-        $scope.completeCard = function() {
-            this.card.complete = 'true';
+        $scope.completeCard = function (card) {
+            card.complete = 'true';
         };
     });
 });
@@ -169,7 +167,8 @@ maptModule.directive('maptSkillCard', function ($timeout) {
             , completed: '@completed'
         }
         , restrict: 'E'
-        , replace: false
+        , replace: true
+        , controller: function ($scope) {}
         , transclude: true
         , template: '\
                     <div class="panel panel-card mt5 mb20 mr5 ml5"> \
@@ -181,7 +180,7 @@ maptModule.directive('maptSkillCard', function ($timeout) {
                                 <p class="mt10"><small>{{description}}</small></p> \
                                 <!-- Desktop Buttons START --> \
                                 <div class="btn-group mt5 hidden-xs"> \
-                                    <a ng-hide="completed == \'true\'" class="btn btn-default " ng-click="$parent.completeCard()"><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a> \
+                                    <a ng-hide="completed == \'true\'" class="btn btn-default "><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a> \
                                     <a ng-show="completed == \'true\'" class="btn btn-success disabled"><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Completed</span></a> \
                                     <a ng-show="completed == \'true\'" class="btn btn-default"><i class="fa fa-times fa-lg"></i> <span class="hidden-xs ml5">Remove</span></a> \
                                     <a href="card.html" class="btn btn-info "><i class="fa fa-info-circle mr5" aria-hidden="true"></i> More info </a> </div> \
@@ -211,16 +210,18 @@ maptModule.directive('maptSkillCard', function ($timeout) {
             var insertCols = (3 - transcluded) * 2;
             $timeout(function () {
                 var added = $(element).find('[ng-transclude]').prepend('<div class="col-lg-' + insertCols + '"></div>');
-                $('.skillcard-carousel').slick({
-                    speed: 500
-                    , fade: true
-                    , prevArrow: '.slick-prev'
-                    , nextArrow: '.slick-next'
-                    , adaptiveHeight: true
-                });
-                $('.skillcard-carousel').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-                    console.log(nextSlide);
-                });
+                if ($('.skillcard-carousel').length > 0) {
+                    $('.skillcard-carousel').slick({
+                        speed: 500
+                        , fade: true
+                        , prevArrow: '.slick-prev'
+                        , nextArrow: '.slick-next'
+                        , adaptiveHeight: true
+                    });
+                    $('.skillcard-carousel').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                        console.log(nextSlide);
+                    });
+                }
             });
         }
     };
