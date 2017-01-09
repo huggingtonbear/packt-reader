@@ -396,14 +396,12 @@ h1,
 .nav-pills > li > a {
     border-radius: 0;
 }
-
-.panel .nav-pills li:first-child a,
-{
+.panel .nav-pills li:first-child a, .panel .nav-pills li:first-child .active a  {
     border-top-left-radius: 2px !important;
     border-bottom-left-radius: 2px !important;
 }
 
-.panel .nav-pills li:last-child a,
+.panel .nav-pills li:last-child a, .panel .nav-pills li:last-child .active a
 {
     border-top-right-radius: 2px !important;
     border-bottom-right-radius: 2px !important;

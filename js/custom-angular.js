@@ -131,7 +131,8 @@ maptModule.directive('maptSkillCard', function () {
                                 <!-- Desktop Buttons START --> \
                                 <div class="btn-group mt5 hidden-xs"> \
                                     <a ng-hide="completed" href="index.html" target="_blank" class="btn btn-default "><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a> \
-                                    <a ng-show="completed" href="index.html" target="_blank" class="btn btn-success "><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Completed Skill</span></a> \
+                                    <a ng-show="completed" href="index.html" target="_blank" class="btn btn-success disabled"><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Completed</span></a> \
+                                    <a ng-show="completed" href="index.html" target="_blank" class="btn btn-default"><i class="fa fa-times fa-lg"></i> <span class="hidden-xs ml5">Remove</span></a> \
                                     <a href="card.html" class="btn btn-info "><i class="fa fa-info-circle mr5" aria-hidden="true"></i> More info </a> </div> \
                                 <!-- Desktop Buttons END --> \
                                 <!-- Mobile Buttons START --> \
