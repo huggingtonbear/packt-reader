@@ -124,14 +124,14 @@
                                                 <div class="col-sm-2">
                                                     <div class="text-center mt10"> <a href="#" class="slick-prev mr15"><i class="fa fa-chevron-circle-left fa-3x"></i></a> <a href="#" class="slick-next"><i class="fa fa-chevron-circle-right fa-3x"></i></a> </div>
                                                 </div>
-                                                <div class="col-sm-12">
+                                                <div class="clearfix"></div>
                                                     <div class="skillcard-carousel mt15">
                                                         <mapt-skill-card ng-repeat="card in mydata.me.plan.cards" data-card-title="{{card.title}}" data-description="{{card.desc}}" data-related-topic="{{card.topic}}" data-icon="{{card.icon}}" data-completed="{{card.completed}}">
                                                             <mapt-book ng-repeat="book in card.books" data-book-title="{{book.title}}" data-cover-image="{{book.cover}}" data-progress="{{book.progress}}"></mapt-book>
                                                         </mapt-skill-card>
                                                     </div>
-                                                </div>
-                                                <div class="clearfix"></div>
+                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -195,7 +195,6 @@
                                         <div class="clearfix"></div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-<<<<<<< HEAD
                                                 <h5>Bookmarks</h5> 
                                             </div>
                                             <ul class="list-group">
@@ -224,10 +223,6 @@
                                                 <div class="clearfix"></div>
                                               </li>
                                             </ul>
-=======
-                                                <h5>Bookmarks</h5> </div>
-                                            <ul class="list-group"> </ul>
->>>>>>> origin/gh-pages
                                             <div class="panel-footer text-right">
                                                 <nav>
                                                     <ul class="pagination">

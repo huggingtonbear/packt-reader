@@ -169,7 +169,7 @@ maptModule.directive('maptSkillCard', function ($timeout) {
                                     <a ng-hide="completed == \'true\'" href="index.html" target="_blank" class="btn btn-default "><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a> \
                                     <a ng-show="completed == \'true\'" href="#" class="btn btn-success disabled"><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Completed</span></a> \
                                     <a ng-show="completed == \'true\'" href="index.html" target="_blank" class="btn btn-default"><i class="fa fa-times fa-lg"></i> <span class="hidden-xs ml5">Remove</span></a> \
-                                    <a href="card.html" class="btn btn-info "><i class="fa fa-info-circle mr5" aria-hidden="true"></i> More info </a> </div> \
+                                    <a href="card.html" class="btn btn-info "><i class="fa fa-info-circle mr5" aria-hidden="true"></i> Info </a> </div> \
                                 <!-- Desktop Buttons END --> \
                                 <!-- Mobile Buttons START --> \
                                 <div class="clearfix"></div> \
