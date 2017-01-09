@@ -52,7 +52,7 @@ maptModule.controller('maptController', function ($scope, $http) {
         $scope.topicFilterer = function (card) {
             return (card.topic == $scope.topicFilter || $scope.topicFilter == undefined);
         };
-        $scope.quickTopicFilterer = function(topic) {
+        $scope.quickTopicFilterer = function (topic) {
             return function (card) {
                 return card.topic == topic;
             }
@@ -68,10 +68,13 @@ maptModule.controller('maptController', function ($scope, $http) {
             }
             $scope.mydata.me.plan.cards[card].books = newbooks;
             $scope.mydata.me.plan.cards[card].space = parseInt(100 / numcards) - 1;
-            
         }
+<<<<<<< HEAD
         
         $scope.completeCard = function(card) {
+=======
+        $scope.completeCard = function (card) {
+>>>>>>> origin/gh-pages
             card.complete = 'true';
         };
     });
@@ -212,16 +215,18 @@ maptModule.directive('maptSkillCard', function ($timeout) {
             var insertCols = (3 - transcluded) * 2;
             $timeout(function () {
                 var added = $(element).find('[ng-transclude]').prepend('<div class="col-lg-' + insertCols + '"></div>');
-                $('.skillcard-carousel').slick({
-                    speed: 500
-                    , fade: true
-                    , prevArrow: '.slick-prev'
-                    , nextArrow: '.slick-next'
-                    , adaptiveHeight: true
-                });
-                $('.skillcard-carousel').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-                    console.log(nextSlide);
-                });
+                if ($('.skillcard-carousel').length > 0) {
+                    $('.skillcard-carousel').slick({
+                        speed: 500
+                        , fade: true
+                        , prevArrow: '.slick-prev'
+                        , nextArrow: '.slick-next'
+                        , adaptiveHeight: true
+                    });
+                    $('.skillcard-carousel').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                        console.log(nextSlide);
+                    });
+                }
             });
         }
     };
