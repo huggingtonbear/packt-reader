@@ -91,6 +91,13 @@
                     , "books": [11]
                     , "completed": "true"
             }
+                , {
+                    "title": "Data Analysis with Python"
+                    , "topic": "Data Science"
+                    , "icon": "devicon-python-plain"
+                    , "desc": "Gaining insight from your data is one of the most important tasks for any Python developer. There will never be a scenario or situation you find yourself in when it’s not useful to make data-driven decisions in the interests or your clients or users. From web developers to machine learning engineers, you can achieve a lot with some simple data analysis skills."
+                    , "books": [4, 0]
+            }
         ]
         }
     }

@@ -49,6 +49,14 @@ maptModule.controller('maptController', function ($scope, $http) {
         $scope.filterCardsCompleted = function (card) {
             return (card.completed == 'true');
         };
+        $scope.topicFilterer = function (card) {
+            return (card.topic == $scope.topicFilter || $scope.topicFilter == undefined);
+        };
+        $scope.quickTopicFilterer = function(topic) {
+            return function (card) {
+                return card.topic == topic;
+            }
+        }
         var numcards = $scope.mydata.me.plan.cards.length;
         for (var card in $scope.mydata.me.plan.cards) {
             var bookids = $scope.mydata.me.plan.cards[card].books;
@@ -60,7 +68,12 @@ maptModule.controller('maptController', function ($scope, $http) {
             }
             $scope.mydata.me.plan.cards[card].books = newbooks;
             $scope.mydata.me.plan.cards[card].space = parseInt(100 / numcards) - 1;
+            
         }
+        
+        $scope.completeCard = function(card) {
+            card.complete = 'true';
+        };
     });
 });
 maptModule.directive('maptBook', function () {
@@ -169,16 +182,16 @@ maptModule.directive('maptSkillCard', function ($timeout) {
                                 <p class="mt10"><small>{{description}}</small></p> \
                                 <!-- Desktop Buttons START --> \
                                 <div class="btn-group mt5 hidden-xs"> \
-                                    <a ng-hide="completed == \'true\'" href="index.html" target="_blank" class="btn btn-default "><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a> \
-                                    <a ng-show="completed == \'true\'" href="#" class="btn btn-success disabled"><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Completed</span></a> \
-                                    <a ng-show="completed == \'true\'" href="index.html" target="_blank" class="btn btn-default"><i class="fa fa-times fa-lg"></i> <span class="hidden-xs ml5">Remove</span></a> \
+                                    <a ng-hide="completed == \'true\'" class="btn btn-default " ng-click="$parent.completeCard(card)"><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a> \
+                                    <a ng-show="completed == \'true\'" class="btn btn-success disabled"><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Completed</span></a> \
+                                    <a ng-show="completed == \'true\'" class="btn btn-default"><i class="fa fa-times fa-lg"></i> <span class="hidden-xs ml5">Remove</span></a> \
                                     <a href="card.html" class="btn btn-info "><i class="fa fa-info-circle mr5" aria-hidden="true"></i> More info </a> </div> \
                                 <!-- Desktop Buttons END --> \
                                 <!-- Mobile Buttons START --> \
                                 <div class="clearfix"></div> \
                                 <div class="btn-group btn-group-justified visible-xs mt15"> \
-                                    <a ng-hide="completed == \'true\'" href="card.html" class="btn btn-default "><i class="fa fa-check fa-lg"></i></a> \
-                                    <a ng-show="completed == \'true\'" href="card.html" class="btn btn-success "><i class="fa fa-check fa-lg"></i></a> \
+                                    <a ng-hide="completed == \'true\'" href="#" class="btn btn-default "><i class="fa fa-check fa-lg"></i></a> \
+                                    <a ng-show="completed == \'true\'" href="#" class="btn btn-success "><i class="fa fa-check fa-lg"></i></a> \
                                     <a href="card.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a> </div> \
                                 <!-- Mobile Buttons END --> \
                             </div> \
