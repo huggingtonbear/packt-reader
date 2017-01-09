@@ -124,14 +124,14 @@
                                                 <div class="col-sm-2">
                                                     <div class="text-center mt10"> <a href="#" class="slick-prev mr15"><i class="fa fa-chevron-circle-left fa-3x"></i></a> <a href="#" class="slick-next"><i class="fa fa-chevron-circle-right fa-3x"></i></a> </div>
                                                 </div>
-                                                <div class="col-sm-12">
+                                                <div class="clearfix"></div>
                                                     <div class="skillcard-carousel mt15">
                                                         <mapt-skill-card ng-repeat="card in mydata.me.plan.cards" data-card-title="{{card.title}}" data-description="{{card.desc}}" data-related-topic="{{card.topic}}" data-icon="{{card.icon}}" data-completed="{{card.completed}}">
                                                             <mapt-book ng-repeat="book in card.books" data-book-title="{{book.title}}" data-cover-image="{{book.cover}}" data-progress="{{book.progress}}"></mapt-book>
                                                         </mapt-skill-card>
                                                     </div>
-                                                </div>
-                                                <div class="clearfix"></div>
+                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -195,8 +195,34 @@
                                         <div class="clearfix"></div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <h5>Bookmarks</h5> </div>
-                                            <ul class="list-group"> </ul>
+                                                <h5>Bookmarks</h5> 
+                                            </div>
+                                            <ul class="list-group">
+                                              <li class="list-group-item">
+                                                  <mapt-book data-book-title="Practical Data Science Cookbook" data-cover-image="images/book1.jpg"> </mapt-book>
+                                                  <div class="col-sm-10">
+                                                     <ul class="list-group">
+                                                       <li class="list-group-item">
+                                                       Understanding the structure of the library
+                                                        <a href="#" class="pull-right ml5"><i class="fa fa-times-circle fa-2x"></i></a>
+                                                        <a href="#" class="pull-right"><i class="fa fa-play-circle fa-2x"></i></a>
+                                                        
+                                                       </li>
+                                                       <li class="list-group-item">
+                                                       Raising exceptions
+                                                        <a href="#" class="pull-right ml5"><i class="fa fa-times-circle fa-2x"></i></a>
+                                                        <a href="#" class="pull-right"><i class="fa fa-play-circle fa-2x"></i></a>
+                                                       </li>
+                                                       <li class="list-group-item">
+                                                       The user's model
+                                                        <a href="#" class="pull-right ml5"><i class="fa fa-times-circle fa-2x"></i></a>
+                                                        <a href="#" class="pull-right"><i class="fa fa-play-circle fa-2x"></i></a>
+                                                       </li>
+                                                     </ul>
+                                                  </div>
+                                                <div class="clearfix"></div>
+                                              </li>
+                                            </ul>
                                             <div class="panel-footer text-right">
                                                 <nav>
                                                     <ul class="pagination">
