@@ -20,15 +20,21 @@ maptAlert = function (message, type) {
         })
     }, 5000);
 };
+
 function sortLastRead(a, b) {
-    if (a.lastRead > b.lastRead)
-        return 1;
-    if (a.lastRead < b.lastRead)
-        return -1;
+    if (a.lastRead > b.lastRead) return 1;
+    if (a.lastRead < b.lastRead) return -1;
     return 0;
 };
-function hasLastRead(book){
-   return book.lastRead != undefined; 
+
+function sortLastAdded(a, b) {
+    if (a.addedDate > b.addedDate) return 1;
+    if (a.addedDate < b.addedDate) return -1;
+    return 0;
+};
+
+function hasLastRead(book) {
+    return book.lastRead != undefined;
 };
 //
 // Angular code
@@ -38,7 +44,20 @@ maptModule.controller('maptController', function ($scope, $http) {
     $http.get('js/mydata.json').then(function (res) {
         $scope.mydata = res.data;
         $scope.recents = $scope.mydata.books.filter(hasLastRead);
-        $scope.recents = $scope.recents.sort(sortLastRead).slice(0,6);
+        $scope.recents = $scope.recents.sort(sortLastRead).slice(0, 6);
+        $scope.lastAdded = $scope.mydata.books.sort(sortLastAdded).slice(0, 6);
+        var numcards = $scope.mydata.me.plan.cards.length;
+        for (var card in $scope.mydata.me.plan.cards) {
+            var bookids = $scope.mydata.me.plan.cards[card].books;
+            var newbooks = [];
+            for (var book in $scope.mydata.books) {
+                if (bookids.indexOf($scope.mydata.books[book].id) > -1) {
+                    newbooks.push($scope.mydata.books[book]);
+                }
+            }
+            $scope.mydata.me.plan.cards[card].books = newbooks;
+            $scope.mydata.me.plan.cards[card].space = parseInt(100 / numcards) - 1;
+        }
     });
 });
 maptModule.directive('maptBook', function () {
@@ -68,7 +87,7 @@ maptModule.directive('maptBook', function () {
         , template: '\
                 <div class="book-wrapper col-xs-6 col-sm-3 col-lg-2 "> \
                     <div class="text-center book"> \
-                        <a href="index.html" target="_blank"><img class="img-responsive title-shadow" src="{{coverImage}}" title="{{bookTitle}}"></a> \
+                        <a href="index.html" target="_blank"><img class="img-responsive title-shadow" ng-src="{{coverImage}}" title="{{bookTitle}}"></a> \
                         <div ng-show="progress" class="progress mt10 mb15"> \
                             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}};"> <span class="sr-only">30% Complete</span> </div> \
                         </div> \
@@ -122,7 +141,7 @@ maptModule.directive('maptBookListItem', function () {
                     </li>'
     };
 });
-maptModule.directive('maptSkillCard', function () {
+maptModule.directive('maptSkillCard', function ($timeout) {
     return {
         scope: {
             cardTitle: '@cardTitle'
@@ -147,16 +166,16 @@ maptModule.directive('maptSkillCard', function () {
                                 <p class="mt10"><small>{{description}}</small></p> \
                                 <!-- Desktop Buttons START --> \
                                 <div class="btn-group mt5 hidden-xs"> \
-                                    <a ng-hide="completed" href="index.html" target="_blank" class="btn btn-default "><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a> \
-                                    <a ng-show="completed" href="#" class="btn btn-success disabled"><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Completed</span></a> \
-                                    <a ng-show="completed" href="index.html" target="_blank" class="btn btn-default"><i class="fa fa-times fa-lg"></i> <span class="hidden-xs ml5">Remove</span></a> \
+                                    <a ng-hide="completed == \'true\'" href="index.html" target="_blank" class="btn btn-default "><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a> \
+                                    <a ng-show="completed == \'true\'" href="#" class="btn btn-success disabled"><i class="fa fa-check fa-lg"></i> <span class="hidden-xs ml5">Completed</span></a> \
+                                    <a ng-show="completed == \'true\'" href="index.html" target="_blank" class="btn btn-default"><i class="fa fa-times fa-lg"></i> <span class="hidden-xs ml5">Remove</span></a> \
                                     <a href="card.html" class="btn btn-info "><i class="fa fa-info-circle mr5" aria-hidden="true"></i> More info </a> </div> \
                                 <!-- Desktop Buttons END --> \
                                 <!-- Mobile Buttons START --> \
                                 <div class="clearfix"></div> \
                                 <div class="btn-group btn-group-justified visible-xs mt15"> \
-                                    <a ng-hide="completed" href="card.html" class="btn btn-default "><i class="fa fa-check fa-lg"></i></a> \
-                                    <a ng-show="completed" href="card.html" class="btn btn-success "><i class="fa fa-check fa-lg"></i></a> \
+                                    <a ng-hide="completed == \'true\'" href="card.html" class="btn btn-default "><i class="fa fa-check fa-lg"></i></a> \
+                                    <a ng-show="completed == \'true\'" href="card.html" class="btn btn-success "><i class="fa fa-check fa-lg"></i></a> \
                                     <a href="card.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a> </div> \
                                 <!-- Mobile Buttons END --> \
                             </div> \
@@ -170,12 +189,24 @@ maptModule.directive('maptSkillCard', function () {
             if (scope.cardListItem != undefined) {
                 $(element).find('div.col-lg-6').toggleClass('col-lg-6 col-lg-12');
             }
-            if (scope.completed != undefined) {
+            if (scope.completed == 'true') {
                 $(element).addClass('panel-card-completed');
             }
             var transcluded = $(element).find('[ng-transclude] > div').length;
             var insertCols = (3 - transcluded) * 2;
-            var added = $(element).find('[ng-transclude]').prepend('<div class="col-lg-' + insertCols + '"></div>');
+            $timeout(function () {
+                var added = $(element).find('[ng-transclude]').prepend('<div class="col-lg-' + insertCols + '"></div>');
+                $('.skillcard-carousel').slick({
+                    speed: 500
+                    , fade: true
+                    , prevArrow: '.slick-prev'
+                    , nextArrow: '.slick-next'
+                    , adaptiveHeight: true
+                });
+                $('.skillcard-carousel').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                    console.log(nextSlide);
+                });
+            });
         }
     };
 });
