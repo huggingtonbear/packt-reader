@@ -104,6 +104,7 @@
             , "lastRead": "2016-04-01"
             , "addedDate": "2015-02-11"
             , "popular": 45
+            , "progress": "100%"
         }
         , {
             "id": 8
@@ -111,6 +112,7 @@
             , "cover": "images/book9.png"
             , "addedDate": "2015-06-05"
             , "popular": 16
+            , "progress": "100%"
         }
         , {
             "id": 9
