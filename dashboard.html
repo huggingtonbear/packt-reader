@@ -68,7 +68,7 @@
         </div>
         <!-- /#sidebar-wrapper -->
         <!-- Content Page -->
-        <div id="page-content-wrapper" class=""> <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
+        <div ng-controller="maptController" id="page-content-wrapper" class=""> <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
             <div class="jumbotron heading mb0">
                 <div class="container-fluid">
                     <div class="col-xs-12 col-lg-offset-1 col-lg-10">
@@ -102,12 +102,7 @@
                                                 <h5>Recently viewed <a href="history.html" class="see-more-link mt5"><p> View All</p></a></h5> </div>
                                             <div class="panel-body">
                                                 <div class="row">
-                                                    <mapt-book data-book-title="Practical Data Science Cookbook" data-cover-image="images/book1.jpg" data-progress="33%"></mapt-book>
-                                                    <mapt-book data-book-title="UX Design for Web Developers" data-cover-image="images/book2.jpg" data-progress="13%"></mapt-book>
-                                                    <mapt-book data-book-title="Practical Machine Learning" data-cover-image="images/book3.jpg" data-progress="63%"></mapt-book>
-                                                    <mapt-book data-book-title="Python Data Essentials" data-cover-image="images/book4.jpg"></mapt-book>
-                                                    <mapt-book data-book-title="Clean Data" data-cover-image="images/book5.jpg" data-progress="3%"></mapt-book>
-                                                    <mapt-book data-book-title="Unity 5 Game Optimization" data-cover-image="images/book6.jpg" data-progress="2%"></mapt-book>
+                                                    <mapt-book ng-repeat="recent in recents" data-book-title="{{recent.title}}" data-cover-image="{{recent.cover}}" data-progress="{{recent.progress}}"></mapt-book>
                                                 </div>
                                             </div>
                                         </div>

@@ -20,10 +20,27 @@ maptAlert = function (message, type) {
         })
     }, 5000);
 };
+function sortLastRead(a, b) {
+    if (a.lastRead > b.lastRead)
+        return 1;
+    if (a.lastRead < b.lastRead)
+        return -1;
+    return 0;
+};
+function hasLastRead(book){
+   return book.lastRead != undefined; 
+};
 //
 // Angular code
 //
 var maptModule = angular.module('mapt', []);
+maptModule.controller('maptController', function ($scope, $http) {
+    $http.get('js/mydata.json').then(function (res) {
+        $scope.mydata = res.data;
+        $scope.recents = $scope.mydata.books.filter(hasLastRead);
+        $scope.recents = $scope.recents.sort(sortLastRead).slice(0,6);
+    });
+});
 maptModule.directive('maptBook', function () {
     return {
         scope: {
