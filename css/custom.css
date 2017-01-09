@@ -667,6 +667,9 @@ span.input-group-btn button.btn {
 .panel .nav-pills li.active h6 {
     color: white;
 }
+.panel .nav-pills li.active a {
+    background: #F9953D;
+}
 
 .panel-icon {
     position: absolute;
