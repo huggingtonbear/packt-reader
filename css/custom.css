@@ -28,6 +28,10 @@ h6,
     line-height: 1.1;
 }
 
+#page-content-wrapper {
+    padding-bottom: 150px;
+}
+
 .reader-container p,
 .reader-container ul {
     font-size: 1.6rem;
