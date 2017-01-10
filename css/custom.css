@@ -107,6 +107,10 @@ span.skill-item {
     text-decoration: underline;
 }
 
+#discover-big-calls .panel-body p {
+    min-height: 3.5em;
+}
+
 .book-wrapper {
     position: relative;
     padding-left: 0;
