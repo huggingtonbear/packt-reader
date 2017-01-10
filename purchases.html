@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Mapt - Your Reading History</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-app="mapt">
+
+  
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+            <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
+              <li class="nav-logo "><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu"><img src="images/logo.png" height="30px" class=""></span></a>    </li>
+              <form class="col-sm-12 mb15 pl25 pr25">
+                <input type="text" class="form-control" placeholder="&#xf002; Search for a topic...">
+              </form>
+              <div class="clearfix"></div>
+              <li class=""><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span></a>    </li>
+              <li class="active"><a href="discover.html" class="sidenav-menu-holder"><span class="sidenav-menu">Discover</span><span class="pull-left mr5"></span></a>    </li>
+              <li class=""><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-left mr5"></span></a> </li>
+                <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><span class="sidenav-menu">Account</span><span class="pull-left mr5"></span></a>    </li>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <li class="sub-nav"><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">Account Details</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="account-subscription.html" class="sidenav-menu-holder"><span class="sidenav-menu">Subscriptions</span><span class="pull-left mr5"></span></a>    </li>
+                <li class="sub-nav"><a href="account-licences.html" class="sidenav-menu-holder"><span class="sidenav-menu">Licenses </span></a>    </li>
+                <li class="sub-nav"><a href="dashboard-lo.html" class="sidenav-menu-holder"><span class="sidenav-menu">Logout</span><span class="pull-left mr5"></span></a>    </li>
+              </div>
+              <li class="">
+                <a href="https://www.packtpub.com" class="sidenav-menu-holder"><span class="sidenav-menu logo-text">Powered by <img src="images/packt-orange.png" target="_blank" class="packt-logo"></span><span class="pull-left mr5"></span></a></li>
+            </div>
+          </ul>
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
+        <div id="page-content-wrapper" class="">
+          <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
+
+            <div id="book-wrapper" class="container-fluid">               
+                <div class="row">
+                            <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
+                              <div class="page-title">
+                                <h3>Purchases</h3>
+                                <ol class="breadcrumb">
+                                  <li><a href="discover.html">Discover</a></li>
+                                  <li class="active">Recently Viewed</li>
+                                </ol>
+                              </div>
+
+                            <hr>
+
+                  </div>
+                      <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h5>2 titles purchased</h5>
+                                        </div>  
+
+                                      <ul class="list-group">
+
+                                            <mapt-book-list-item data-book-title="Clean Data" data-cover-image="images/book5.jpg" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%"></mapt-book-list-item>
+                                            
+                                            <mapt-book-list-item data-book-title="Unity 5 Game Optimization" data-cover-image="images/book6.jpg" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%"></mapt-book-list-item>
+
+                                        </ul>
+                                      <div class="panel-footer text-right">
+                                        <nav>
+                                            <ul class="pagination">
+                                                <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.previous, 'list');" class="disabled">
+                                                    <a href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                    </a>
+                                                </li>
+                                                <!-- ngRepeat: i in getNumber(myList.pagination) track by $index --><li class="ng-scope active">
+                                                        <a href="#" class="ng-binding">1</a>
+                                                </li>
+                                                <li id="paginationNumber" class="disabled"> 
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">»</span>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                            
+                                            </nav>
+                                        </div>
+                                      </div>
+                                  
+
+                      </div>
+                    </div>
+                        </div>
+                  </div><!-- row -->
+			</div><!-- /#book-wrapper -->
+		</div><!-- /#page-content-wrapper -->
+	</div><!-- /#wrapper -->
+    
+
+    <!-- JAVASCRIPT BLOCKS -->
+
+    <!-- jQuery Script-->
+    <script src="js/jquery.js"></script>
+    <!-- Syntax Highlighting Script -->
+    <script src="js/prism.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+    <!-- AngularJS -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/custom-angular.js"></script>
+    <script src="js/sidenav-accordion.js"></script>
+
+</body>
+
+</html>
