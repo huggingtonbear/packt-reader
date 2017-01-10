@@ -108,27 +108,27 @@
                                             <div class="panel-heading">
                                                 <h5> Career Plan: Python Developer<a href="plan.html" class="see-more-link mt5"><p> View Plan</p></a></h5> </div>
                                             <div class="panel-body">
-                                                <div class="col-sm-10">
-                                                    <div class="skill-card-nav">
-                                                        <div class="items">
-                                                            <div ng-class="{selected: $index == 0}" ng-repeat="card in mydata.me.plan.cards" style="width: {{card.space}}%">
-                                                                <div class="panel skill-card-nav-item" ng-class="{'panel-card-completed': card.completed == 'true'}"><i ng-hide="card.completed == 'true'" class="fa fa-circle-o fa-lg"></i> <i ng-show="card.completed == 'true'" class="fa fa-check fa-lg"></i></div>
+                                                <div class="row">
+                                                    <div class="col-sm-10">
+                                                        <div class="skill-card-nav">
+                                                            <div class="items">
+                                                                <div ng-class="{selected: $index == 0}" ng-repeat="card in mydata.me.plan.cards" style="width: {{card.space}}%">
+                                                                    <div class="panel skill-card-nav-item" ng-class="{'panel-card-completed': card.completed == 'true'}"><i ng-hide="card.completed == 'true'" class="fa fa-circle-o fa-lg"></i> <i ng-show="card.completed == 'true'" class="fa fa-check fa-lg"></i></div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="col-sm-2">
+                                                        <div class="text-center mt10"> <a href="#" class="slick-prev mr15"><i class="fa fa-chevron-circle-left fa-3x"></i></a> <a href="#" class="slick-next"><i class="fa fa-chevron-circle-right fa-3x"></i></a> </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-sm-2">
-                                                    <div class="text-center mt10"> <a href="#" class="slick-prev mr15"><i class="fa fa-chevron-circle-left fa-3x"></i></a> <a href="#" class="slick-next"><i class="fa fa-chevron-circle-right fa-3x"></i></a> </div>
-                                                </div>
-                                                <div class="clearfix"></div>
                                                     <div class="skillcard-carousel mt15">
                                                         <mapt-skill-card ng-repeat="card in mydata.me.plan.cards" data-card-title="{{card.title}}" data-description="{{card.desc}}" data-related-topic="{{card.topic}}" data-icon="{{card.icon}}" data-completed="{{card.completed}}">
                                                             <mapt-book ng-repeat="book in card.books" data-book-title="{{book.title}}" data-cover-image="{{book.cover}}" data-progress="{{book.progress}}"></mapt-book>
                                                         </mapt-skill-card>
                                                     </div>
-                                                
+                                                 </div>
 
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
