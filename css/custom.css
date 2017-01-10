@@ -711,8 +711,13 @@ span.input-group-btn button.btn {
     background: white !important;
     border-bottom: 1px solid #f1f1f1;
     border-color: #f1f1f1 !important;
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.panel-heading .img-responsive {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
 }
 
 .panel-footer {
@@ -720,8 +725,8 @@ span.input-group-btn button.btn {
     background: white !important;
     border-top: 1px solid #f1f1f1;
     border-color: #f1f1f1 !important;
-    border-bottom-right-radius: 2px;
-    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 
 .list-group-item:last-child {
