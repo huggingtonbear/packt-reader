@@ -99,8 +99,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
                         <div class="skillcard-learning mt30 mb30">
-                            <h5 class="">Skill Cards in Plan:</h5>
-                            <hr>
+                            <h5 class="mb25">Skill Cards in Plan:</h5>
                             <mapt-skill-card ng-repeat="card in mydata.me.plan.cards" data-card-title="{{card.title}}" data-description="{{card.desc}}" data-related-topic="{{card.topic}}" data-icon="{{card.icon}}" data-completed="{{card.completed}}">
                                 <mapt-book ng-repeat="book in card.books" data-book-title="{{book.title}}" data-cover-image="{{book.cover}}" data-progress="{{book.progress}}"></mapt-book>
                             </mapt-skill-card>
