@@ -78,33 +78,53 @@
                             </ol>
                             <hr> </div>
                     </div>
-                    <div class="col-sm-6 col-lg-3 col-xl-2 col-lg-offset-1">
-                        <div class="panel panel-card">
-                            <div class="panel-icon"> <i class="devicon-python-plain"></i> </div>
-                            <div class="panel-body pt0">
-                                <h5 class="text-center mt5 mb5">Career</h5> </div>
+                    <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p class="mb10"> {{(mydata.me.plan.cards | filter:filterCardsCompleted).length}}/{{mydata.me.plan.cards.length}} Skill Cards Completed</p>
+                                <div class="progress mt10 mb20">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"> <span class="sr-only">30% Complete</span> </div>
+                                </div>
+                                <div class="alert alert-info">
+                                    <p><i class="fa fa-info-circle mr5"></i> This Career Plan has been informed by <b>4,200</b> Python Developers and jobs openings from companies across the world</p>
+                                </div>
+                                <p>Python is the language of the productive developer and it is in use everywhere, from Google to NASA. Being a Python Developer however is more than just knowing Python. Being a Python Developer means that you’re ready to tackle any challenge that may come your way; from data science projects and data crunching, to creating websites or writing automation scripts, Python Developers are ready to deliver the next project on time. </p>
+                                <p>Compiled from the experience of Python Developers around the world, this Career Plan will give you the skills you need to cover every angle as a Python developer. </p> <a href="dashboard.html" class="btn btn-primary  pull-right"> Start Plan <i class="fa fa-chevron-right ml5"></i></a>
+                                <div class="clearfix"></div>
+                                <h5 class="">Skill Cards in Plan:</h5>
+                                <hr>
+                                <div class="col-sm-10">
+                                                    <div class="skill-card-nav">
+                                                        <div class="items">
+                                                            <div ng-class="{selected: $index == 0}" ng-repeat="card in mydata.me.plan.cards" style="width: {{card.space}}%">
+                                                                <div class="panel skill-card-nav-item" ng-class="{'panel-card-completed': card.completed == 'true'}"><i ng-hide="card.completed == 'true'" class="fa fa-circle-o fa-lg"></i> <i ng-show="card.completed == 'true'" class="fa fa-check fa-lg"></i></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <div class="text-center mt10"> <a href="#" class="slick-prev mr15"><i class="fa fa-chevron-circle-left fa-3x"></i></a> <a href="#" class="slick-next"><i class="fa fa-chevron-circle-right fa-3x"></i></a> </div>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                    <div class="skillcard-carousel mt15">
+                                                        <mapt-skill-card ng-repeat="card in mydata.me.plan.cards" data-card-title="{{card.title}}" data-description="{{card.desc}}" data-related-topic="{{card.topic}}" data-icon="{{card.icon}}" data-completed="{{card.completed}}">
+                                                            <mapt-book ng-repeat="book in card.books" data-book-title="{{book.title}}" data-cover-image="{{book.cover}}" data-progress="{{book.progress}}"></mapt-book>
+                                                        </mapt-skill-card>
+                                                    </div>
+                                                
+
+                                            </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-8">
-                        <p class="mb10"> {{(mydata.me.plan.cards | filter:filterCardsCompleted).length}}/{{mydata.me.plan.cards.length}} Skill Cards Completed</p>
-                        <div class="progress mt10 mb20">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"> <span class="sr-only">30% Complete</span> </div>
-                        </div>
-                        <div class="alert alert-info">
-                            <p><i class="fa fa-info-circle mr5"></i> This Career Plan has been informed by <b>4,200</b> Python Developers and jobs openings from companies across the world</p>
-                        </div>
-                        <p class="card-desc">Python is the language of the productive developer and it is in use everywhere, from Google to NASA. Being a Python Developer however is more than just knowing Python. Being a Python Developer means that you’re ready to tackle any challenge that may come your way; from data science projects and data crunching, to creating websites or writing automation scripts, Python Developers are ready to deliver the next project on time. </p>
-                        <p class="card-desc">Compiled from the experience of Python Developers around the world, this Career Plan will give you the skills you need to cover every angle as a Python developer. </p> <a href="dashboard.html" class="btn btn-default disabled  pull-right"><i class="fa fa-refresh mr5"></i> Active Plan</a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
+                    <!-- <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
                         <div class="skillcard-learning mt30 mb30">
                             <h5 class="mb25">Skill Cards in Plan:</h5>
                             <mapt-skill-card ng-repeat="card in mydata.me.plan.cards" data-card-title="{{card.title}}" data-description="{{card.desc}}" data-related-topic="{{card.topic}}" data-icon="{{card.icon}}" data-completed="{{card.completed}}">
                                 <mapt-book ng-repeat="book in card.books" data-book-title="{{book.title}}" data-cover-image="{{book.cover}}" data-progress="{{book.progress}}"></mapt-book>
                             </mapt-skill-card>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- row -->
             </div>
@@ -119,6 +139,29 @@
     <!-- AngularJS -->
     <script src="js/angular.min.js"></script>
     <script src="js/custom-angular.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slick-next').click(function () {
+                var current = $('.skill-card-nav .selected');
+                var next = current.next();
+                if (next.length == 0) {
+                    next = $('.skill-card-nav .items').children().first();
+                }
+                current.toggleClass('selected');
+                next.toggleClass('selected');
+            });
+            $('.slick-prev').click(function () {
+                var current = $('.skill-card-nav .selected');
+                var next = current.prev();
+                if (next.length == 0) {
+                    next = $('.skill-card-nav .items').children().last();
+                }
+                current.toggleClass('selected');
+                next.toggleClass('selected');
+            });
+        });
+    </script>
     <!-- Syntax Highlighting Script -->
     <script src="js/prism.js"></script>
     <!-- Bootstrap Core JavaScript -->
