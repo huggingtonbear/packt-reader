@@ -699,11 +699,20 @@ span.input-group-btn button.btn {
     border-left-color: #4caf50 !important;
 }
 
-.panel .nav-pills li.active h6 {
+
+.panel .nav-pills li a:hover {
+    background: #efefef;
+    color:#333;
+    -webkit-box-shadow: none;
+     box-shadow: none; 
+}
+.panel .nav-pills li.active h6, .panel .nav-pills li a:focus h6  {
     color: white;
 }
-.panel .nav-pills li.active a {
+.panel .nav-pills li.active a, .panel .nav-pills li a:focus {
     background: #F9953D;
+    -webkit-box-shadow: none; */
+     box-shadow: none;
 }
 
 .panel-icon {
