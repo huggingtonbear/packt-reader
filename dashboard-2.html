@@ -122,7 +122,69 @@
                                                         <div class="text-center mt10"> <a href="#" class="slick-prev mr15"><i class="fa fa-chevron-circle-left fa-3x"></i></a> <a href="#" class="slick-next"><i class="fa fa-chevron-circle-right fa-3x"></i></a> </div>
                                                     </div>
                                                 </div>
-                                                    <div class="skillcard-carousel mt15">
+                                                    <div class="skillcard-carousel mt25">
+                                                        <div class="col-lg-12">
+                                                            <div class="panel panel-card">
+                                                                <div class="panel-icon">
+                                                                    <i class="devicon-python-plain"></i>
+                                                                </div>
+                                                                <div class="panel-body pt0">
+                                                                    <div class="col-sm-8 col-xl-9">
+                                                                        <h5>Python Fundamentals</h5>
+                                                                        <p class="mb5 mt15">Advanced (61%)</p>
+                                                                        <div class="progress mb20">
+                                                                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                                            <span class="sr-only">60% Complete</span>
+                                                                          </div>
+                                                                        </div>
+                                                                        <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development. </p>
+                                                                    </div>
+                                                                    <div class="col-sm-4 col-xl-3">
+                                                                        <div class="mb20">
+                                                                          <a href="card.html" class="btn btn-info btn-block mb5 pl25 pr25"><i class="fa fa-info-circle mr10"></i>Info</a>
+                                                                          <a class="btn btn-default btn-block mt10 mb5 pl25 pr25"><i class="fa fa-square-o fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                                          <hr>
+                                                                          <a data-toggle="modal" data-target="#myModal" class="btn btn-default btn-block mt10 mb5 pl25 pr25"><i class="fa fa-download mr10"></i>Get Report</a>
+                                                                          <a data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-block mt10 mb5 pl25 pr25"><i class="fa fa-refresh mr10"></i>Reassess</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="clearfix"></div>                                                                    
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="panel-body">
+                                                                        <h5 class="">Core learning content</h5>
+                                                                        <hr>
+                                                                        <div class="row">
+                                                                            <div class="col-lg-4 col-xl-2">
+                                                                                <a href="index.html" class="play-btn"><img src="images/book1.jpg" class="img-responsive title-shadow"></a>
+                                                                                <div class="progress mt10 mb15">
+                                                                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                                                    <span class="sr-only">60% Complete</span>
+                                                                                  </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-4 col-xl-2">
+                                                                                <img src="images/book2.jpg" class="img-responsive title-shadow">
+                                                                                <div class="progress mt10 mb15">
+                                                                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                                                                    <span class="sr-only">60% Complete</span>
+                                                                                  </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-4 col-xl-2">
+                                                                                <img src="images/book5.jpg" class="img-responsive title-shadow">
+                                                                                <div class="progress mt10 mb15">
+                                                                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                                                                    <span class="sr-only">60% Complete</span>
+                                                                                  </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                        </div>
                                                         <mapt-skill-card ng-repeat="card in mydata.me.plan.cards" data-card-title="{{card.title}}" data-description="{{card.desc}}" data-related-topic="{{card.topic}}" data-icon="{{card.icon}}" data-completed="{{card.completed}}">
                                                             <mapt-book ng-repeat="book in card.books" data-book-title="{{book.title}}" data-cover-image="{{book.cover}}" data-progress="{{book.progress}}" data-book-skill-card="true"></mapt-book>
                                                         </mapt-skill-card>

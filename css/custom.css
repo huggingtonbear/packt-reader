@@ -693,6 +693,7 @@ span.input-group-btn button.btn {
 
 .panel-card {
     border-radius: 4px;
+    margin-top: 2px;
     border-left: 60px solid #5594DB;
     padding-top: 15px;
     position: relative;
