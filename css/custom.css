@@ -1910,6 +1910,16 @@ blockquote p {
         top: 10px;
         right: 10px;
     }
+    
+    .alert {
+        padding: 8px;
+        line-height: 1em;
+    }
+    
+    .alert-dismissable .close {
+        top: -6px;
+        right: -5px;
+    }
 }
 
 
