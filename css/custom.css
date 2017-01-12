@@ -1898,18 +1898,6 @@ blockquote p {
         right: 10px;
         margin-left: 10px;
     }
-}
-
-/* Small Devices, Phones */
-
-@media only screen and (min-width: 480px) {
-    .book-wrapper.col-xs-6 {
-        padding-bottom: 60%;
-    }
-    #alertbox {
-        top: 10px;
-        right: 10px;
-    }
     
     .alert {
         padding: 8px;
@@ -1919,6 +1907,14 @@ blockquote p {
     .alert-dismissable .close {
         top: -6px;
         right: -5px;
+    }
+}
+
+/* Small Devices, Phones */
+
+@media only screen and (min-width: 480px) {
+    .book-wrapper.col-xs-6 {
+        padding-bottom: 60%;
     }
 }
 
