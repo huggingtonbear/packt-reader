@@ -141,6 +141,7 @@ span.skill-item {
     right: 8px;
     padding: 0;
     display: none;
+    pointer-events: none;
     transition: all 0.5s ease;
     transform: rotate(0deg);
     text-align: right;
@@ -201,6 +202,7 @@ span.skill-item {
 .book:focus .book-btn-holder {
     display: block;
     animation: fadein 0.5s;
+    pointer-events: all;
 }
 
 @keyframes fadein {
