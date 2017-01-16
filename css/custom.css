@@ -28,10 +28,7 @@ h6,
     font-weight: 300;
     line-height: 1.1;
 }
-.kpi-link {
-    font-family: Lato, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-}
+
 select,
 select.form-control {
     background-color: #ffffff;
@@ -230,12 +227,6 @@ span.skill-item {
 
 .skill-card-nav .items {
     width: 100%;
-    background: url(../images/node-line.png);
-    background-repeat: repeat-x;
-    background-position-y: 12px;
-}
-.skill-card-nav .fa-circle-o {
-    color: #99bade;
 }
 
 .skill-card-nav .buttons {
@@ -249,7 +240,6 @@ span.skill-item {
     margin-bottom: 5px;
     margin-right: 5px;
     margin-left: 5px;
-    background: white
 }
 
 .skill-card-nav .items .skill-card-nav-item {
