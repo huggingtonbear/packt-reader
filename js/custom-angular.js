@@ -77,6 +77,7 @@ maptModule.directive('maptBook', function () {
             bookTitle: '@bookTitle'
             , coverImage: '@coverImage'
             , progress: '@progress'
+            , bigger: '@bigger'
         }
         , restrict: 'E'
         , replace: true
@@ -114,6 +115,11 @@ maptModule.directive('maptBook', function () {
                         </div> \
                     </div> \
                 </div>'
+            , link: function (scope, element, attributes) {
+                if (scope.bigger != undefined) {
+                    $(element).toggleClass('col-sm-3 col-sm-4 col-lg-2 col-lg-3');
+                }
+            }
     };
 });
 maptModule.directive('maptBookListItem', function () {
@@ -188,7 +194,7 @@ maptModule.directive('maptSkillCard', function ($timeout) {
                                     <a ng-hide="completed == \'true\'" class="btn btn-default " ng-click="$parent.completeCard(card)"><i class="fa fa-square-o fa-lg"></i> <span class="hidden-xs ml5">Mark as Complete</span></a> \
                                     <a ng-show="completed == \'true\'" class="btn btn-success disabled"><i class="fa fa-check-square-o fa-lg"></i> <span class="hidden-xs ml5">Completed</span></a> \
                                     <a ng-show="completed == \'true\'" class="btn btn-default"><i class="fa fa-times fa-lg"></i> <span class="hidden-xs ml5">Remove</span></a> \
-                                    <a href="card.html" class="btn btn-info "><i class="fa fa-info-circle mr5" aria-hidden="true"></i> Info </a> </div> \
+                                    <a href="card.html" class="btn btn-info ">View Skill <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a> </div> \
                                 <!-- Desktop Buttons END --> \
                                 <!-- Mobile Buttons START --> \
                                 <div class="clearfix"></div> \
