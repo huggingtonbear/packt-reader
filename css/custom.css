@@ -28,6 +28,9 @@ h6,
     font-weight: 300;
     line-height: 1.1;
 }
+li.sub-nav {
+    border-top: none;
+}
 
 select,
 select.form-control {
