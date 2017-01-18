@@ -1950,6 +1950,10 @@ blockquote p {
         top: -6px;
         right: -5px;
     }
+    
+    .see-more-link {
+    font-size: 12px;
+    }
 }
 
 /* Small Devices, Phones */
