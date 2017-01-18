@@ -41,7 +41,7 @@
 
 </head>
 
-<body ng-app="mapt">
+<body>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -115,22 +115,17 @@
                     <div class="page-title"> 
                       <h3>Skill Cards</h3>
                       <h6 class="mt5">Keep track of the skills you have learned and discover new ones</h6>
-                      <ol class="breadcrumb">
-                                <li><a href="discover.html">Discover</a></li>
-                                <li class="active">Skill Cards</li>
-                            </ol>
                     </div>
                     <hr>
                     <div class="col-sm-12 mb5">
                       <div class="row">
                          <form class="mb25">
-                              <div class="input-group input-group-lg panel">
-                                <input type="text" class="form-control home-search" placeholder="Search for a Skill you want to learn...">
-                                <span class="input-group-btn">
+                            <div class="input-group input-group-lg panel">
+                                <input type="text" class="form-control home-search " placeholder="Search for a skill you want to learn..."> <span class="input-group-btn">
                                   <button class="btn btn-primary" type="button"><i class="fa fa-search mr5"></i> Search</button>
-                                </span>
-                              </div><!-- /input-group -->
-                          </form>
+                                </span> </div>
+                            <!-- /input-group -->
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -146,10 +141,10 @@
                                     <h6>Topics </h6>
                                 </a>
                                 <div id="course-type" class="panel-collapse collapse" role="tabpanel" aria-labelledby="release-date">
-                                <a class="list-group-item active" href="" ng-click="topicFilter = undefined" onclick="$('.active').removeClass('active');$(this).addClass('active');">    All Cards<span class="badge pull-right" ng-class="{'badge-progress': (mydata.me.plan.cards | filter:filterCardsCompleted).length > 0}">{{(mydata.me.plan.cards | filter:filterCardsCompleted).length}} / {{(mydata.me.plan.cards).length}}</span></a> 
-                                <a class="list-group-item" href="" ng-click="topicFilter = 'Python'" onclick="$('.active').removeClass('active');$(this).addClass('active');">    Python <span class="badge pull-right" ng-class="{'badge-progress': (mydata.me.plan.cards | filter:filterCardsCompleted | filter:quickTopicFilterer('Python')).length > 0}">{{(mydata.me.plan.cards | filter:filterCardsCompleted | filter:quickTopicFilterer('Python')).length}} / {{(mydata.me.plan.cards | filter:quickTopicFilterer('Python')).length}}</span></a>   
-                                <a class="list-group-item" href="" ng-click="topicFilter = 'Django'" onclick="$('.active').removeClass('active');$(this).addClass('active');">    Django<span class="badge pull-right" ng-class="{'badge-progress': (mydata.me.plan.cards | filter:filterCardsCompleted | filter:quickTopicFilterer('Django')).length > 0}">{{(mydata.me.plan.cards | filter:filterCardsCompleted | filter:quickTopicFilterer('Django')).length}} / {{(mydata.me.plan.cards | filter:quickTopicFilterer('Django')).length}}</span></a>   
-                                <a class="list-group-item" href="" ng-click="topicFilter = 'Data Science'" onclick="$('.active').removeClass('active');$(this).addClass('active');">    Data Science <span class="badge pull-right" ng-class="{'badge-progress': (mydata.me.plan.cards | filter:filterCardsCompleted | filter:quickTopicFilterer('Data Science')).length > 0}">{{(mydata.me.plan.cards | filter:filterCardsCompleted | filter:quickTopicFilterer('Data Science')).length}} / {{(mydata.me.plan.cards | filter:quickTopicFilterer('Data Science')).length}}</span></a>   
+                                <a class="list-group-item active" href="#">    All Cards<span class="badge pull-right">6 / 120</span></a> 
+                                <a class="list-group-item" href="#">    Python <span class="badge badge-progress pull-right">1 / 3</span></a>   
+                                <a class="list-group-item" href="#">    Django<span class="badge pull-right">0 / 2</span></a>   
+                                <a class="list-group-item" href="#">    Data Science <span class="badge pull-right">0 / 2</span></a>   
                                 <a class="list-group-item" href="#">    Java<span class="badge pull-right">0 / 2</span> </a>  
                                 <a class="list-group-item" href="#">    Android <span class="badge pull-right">0 / 3</span></a>
                                 <a class="list-group-item" href="#">    Git <span class="badge badge-complete pull-right">1 / 1</span></a>
@@ -188,10 +183,10 @@
                                 </div>
                               </div> 
                               <div class="hidden-xs">
-                                <a class="list-group-item active" href="" ng-click="topicFilter = undefined" onclick="$('.active').removeClass('active');$(this).addClass('active');">    All Cards<span class="badge pull-right" ng-class="{'badge-progress': (mydata.me.plan.cards | filter:filterCardsCompleted).length > 0}">{{(mydata.me.plan.cards | filter:filterCardsCompleted).length}} / {{(mydata.me.plan.cards).length}}</span></a> 
-                                <a class="list-group-item" href="" ng-click="topicFilter = 'Python'" onclick="$('.active').removeClass('active');$(this).addClass('active');">    Python <span class="badge pull-right" ng-class="{'badge-progress': (mydata.me.plan.cards | filter:filterCardsCompleted | filter:quickTopicFilterer('Python')).length > 0}">{{(mydata.me.plan.cards | filter:filterCardsCompleted | filter:quickTopicFilterer('Python')).length}} / {{(mydata.me.plan.cards | filter:quickTopicFilterer('Python')).length}}</span></a>   
-                                <a class="list-group-item" href="" ng-click="topicFilter = 'Django'" onclick="$('.active').removeClass('active');$(this).addClass('active');">    Django<span class="badge pull-right" ng-class="{'badge-progress': (mydata.me.plan.cards | filter:filterCardsCompleted | filter:quickTopicFilterer('Django')).length > 0}">{{(mydata.me.plan.cards | filter:filterCardsCompleted | filter:quickTopicFilterer('Django')).length}} / {{(mydata.me.plan.cards | filter:quickTopicFilterer('Django')).length}}</span></a>   
-                                <a class="list-group-item" href="" ng-click="topicFilter = 'Data Science'" onclick="$('.active').removeClass('active');$(this).addClass('active');">    Data Science <span class="badge pull-right" ng-class="{'badge-progress': (mydata.me.plan.cards | filter:filterCardsCompleted | filter:quickTopicFilterer('Data Science')).length > 0}">{{(mydata.me.plan.cards | filter:filterCardsCompleted | filter:quickTopicFilterer('Data Science')).length}} / {{(mydata.me.plan.cards | filter:quickTopicFilterer('Data Science')).length}}</span></a>   
+                                <a class="list-group-item active" href="#">    All Cards<span class="badge pull-right">6 / 120</span></a> 
+                                <a class="list-group-item" href="#">    Python <span class="badge badge-progress pull-right">1 / 3</span></a>   
+                                <a class="list-group-item" href="#">    Django<span class="badge pull-right">0 / 2</span></a>   
+                                <a class="list-group-item" href="#">    Data Science <span class="badge pull-right">0 / 2</span></a>   
                                 <a class="list-group-item" href="#">    Java<span class="badge pull-right">0 / 2</span> </a>  
                                 <a class="list-group-item" href="#">    Android <span class="badge pull-right">0 / 3</span></a>
                                 <a class="list-group-item" href="#">    Git <span class="badge badge-complete pull-right">1 / 1</span></a>
@@ -232,13 +227,970 @@
                           </div> 
                         </div>
                       </div>
-                      <div class="col-sm-9 col-lg-7 col-xl-8">
-                        <mapt-skill-card ng-repeat="card in mydata.me.plan.cards  | filter:topicFilterer" data-card-title="{{card.title}}" data-description="{{card.desc}}" data-related-topic="{{card.topic}}" data-icon="{{card.icon}}" data-completed="{{card.completed}}" data-card-list-item="true">
-                        </mapt-skill-card>
+                      <div class="col-sm-9 col-lg-7 col-xl-8" id="content">
+                        
+                        <div class="clearfix"></div>
+                                    <div class="panel panel-default">
+                                      <ul class="list-group">
+                        <!-- ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/python/python-fundamentals">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/python-fundamentals-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Python Fundamentals
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/python" class="ng-binding" href="/mapt/skill-cards/python">
+            Python
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false --><a ng-if="!skillCardController.card.data.completed || skillCardController.card.data.completed === false" href="#" class="btn btn-default ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+                <i class="fa fa-plus fa-lg"></i>
+                <span class="hidden-xs ml5">Add to Completed Skills</span>
+            </a><!-- end ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="card.html" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="!skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-default mobile-skill-action ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+        <i class="fa fa-plus fa-lg"></i>
+    </a><!-- end ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/python/python-fundamentals" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/python/object-oriented-python-programming">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/object-oriented-python-progamming-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Object-Oriented Python Programming
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/python" class="ng-binding" href="/mapt/skill-cards/python">
+            Python
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Object-oriented programming is a powerful design paradigm that allows you to manipulate data and behavior together by creating objects. Understanding how to write object-oriented code is an important part of Python programming, as it allows you to stop writing simple scripts and start creating more complex programs.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true --><a ng-if="skillCardController.card.data.completed === true" href="#" class="btn btn-success ng-scope" ng-click="skillCardController.setCardNotComplete(skillCardController.card.data.name)">
+                <i class="fa fa-check fa-lg"></i>
+                <span class="hidden-xs ml5">Completed Skill</span>
+            </a><!-- end ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="card.html" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-success mobile-skill-action ng-scope" ng-click="skillCardController.setCardNotComplete(skillCardController.card.data.name)">
+        <i class="fa fa-check fa-lg"></i>
+    </a><!-- end ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/python/object-oriented-python-programming" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/python/functional-python-programming">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/functional-python-progamming-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Functional Python Programming
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/python" class="ng-binding" href="/mapt/skill-cards/python">
+            Python
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">As your Python applications start to gain features and grow in complexity, your code base can fail to scale to meet your increased demands. Functional programming breaks your code into modules, allowing you to compose applications from different parts that can be swapped in and out, more easily maintained, and tested to make sure your large-scale applications are production-ready.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true --><a ng-if="skillCardController.card.data.completed === true" href="#" class="btn btn-success ng-scope" ng-click="skillCardController.setCardNotComplete(skillCardController.card.data.name)">
+                <i class="fa fa-check fa-lg"></i>
+                <span class="hidden-xs ml5">Completed Skill</span>
+            </a><!-- end ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/python/functional-python-programming" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-success mobile-skill-action ng-scope" ng-click="skillCardController.setCardNotComplete(skillCardController.card.data.name)">
+        <i class="fa fa-check fa-lg"></i>
+    </a><!-- end ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/python/functional-python-programming" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/python/python-high-performance-programming">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/python-high-performance-programming-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Python High Performance Programming
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/python" class="ng-binding" href="/mapt/skill-cards/python">
+            Python
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale and perform consistently, no matter how much data you’re crunching or how many users you’re serving.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false --><a ng-if="!skillCardController.card.data.completed || skillCardController.card.data.completed === false" href="#" class="btn btn-default ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+                <i class="fa fa-plus fa-lg"></i>
+                <span class="hidden-xs ml5">Add to Completed Skills</span>
+            </a><!-- end ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/python/python-high-performance-programming" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="!skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-default mobile-skill-action ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+        <i class="fa fa-plus fa-lg"></i>
+    </a><!-- end ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/python/python-high-performance-programming" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/python/testing-python">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/testing-python-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Testing Python
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/python" class="ng-binding" href="/mapt/skill-cards/python">
+            Python
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Testing is vital to the smooth running of any application. Python code is no different. Creating test-driven applications puts testing at the heart of your development process, making sure your applications are ready to deploy more efficiently.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false --><a ng-if="!skillCardController.card.data.completed || skillCardController.card.data.completed === false" href="#" class="btn btn-default ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+                <i class="fa fa-plus fa-lg"></i>
+                <span class="hidden-xs ml5">Add to Completed Skills</span>
+            </a><!-- end ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/python/testing-python" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="!skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-default mobile-skill-action ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+        <i class="fa fa-plus fa-lg"></i>
+    </a><!-- end ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/python/testing-python" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/django/django-basics">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/django-basics-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Django Basics
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/django" class="ng-binding" href="/mapt/skill-cards/django">
+            Django
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Django adopts the same “batteries included” philosophy as Python, and has options straight out of the box for all major web development aspects such as authentication, routing, and templating, as well as database schema migrations. It is the best choice for the productive Python programmer to make professional web applications.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false --><a ng-if="!skillCardController.card.data.completed || skillCardController.card.data.completed === false" href="#" class="btn btn-default ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+                <i class="fa fa-plus fa-lg"></i>
+                <span class="hidden-xs ml5">Add to Completed Skills</span>
+            </a><!-- end ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/django/django-basics" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="!skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-default mobile-skill-action ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+        <i class="fa fa-plus fa-lg"></i>
+    </a><!-- end ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/django/django-basics" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/django/production-ready-django">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/production-ready-django-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Production Ready Django
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/django" class="ng-binding" href="/mapt/skill-cards/django">
+            Django
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Django is the framework that powers some of the world’s most popular websites and web applications, such as Instagram, Pinterest, and Disqus.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true --><a ng-if="skillCardController.card.data.completed === true" href="#" class="btn btn-success ng-scope" ng-click="skillCardController.setCardNotComplete(skillCardController.card.data.name)">
+                <i class="fa fa-check fa-lg"></i>
+                <span class="hidden-xs ml5">Completed Skill</span>
+            </a><!-- end ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/django/production-ready-django" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-success mobile-skill-action ng-scope" ng-click="skillCardController.setCardNotComplete(skillCardController.card.data.name)">
+        <i class="fa fa-check fa-lg"></i>
+    </a><!-- end ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/django/production-ready-django" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/data-science/data-analysis-with-python">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/data-analysis-with-python-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Data Analysis with Python
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/data-science" class="ng-binding" href="/mapt/skill-cards/data-science">
+            Data Science
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Gaining insight from your data is one of the most important tasks for any Python developer. There will never be a scenario or situation you find yourself in when it’s not useful to make data-driven decisions in the interests or your clients or users. From web developers to machine learning engineers, you can achieve a lot with some simple data analysis skills</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false --><a ng-if="!skillCardController.card.data.completed || skillCardController.card.data.completed === false" href="#" class="btn btn-default ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+                <i class="fa fa-plus fa-lg"></i>
+                <span class="hidden-xs ml5">Add to Completed Skills</span>
+            </a><!-- end ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/data-science/data-analysis-with-python" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="!skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-default mobile-skill-action ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+        <i class="fa fa-plus fa-lg"></i>
+    </a><!-- end ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/data-science/data-analysis-with-python" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/java/reactive-java-programming">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/reactive-java-programming-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Reactive Java Programming
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/java" class="ng-binding" href="/mapt/skill-cards/java">
+            Java
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Reactive programming is a paradigm that allows you to write fast, concurrent, and powerful applications. The introduction of Lambdas in Java 8 has made this a viable option for Java developers. Understanding the paradigm and how it fits in with your next Java application is important if you’re looking to build applications that make the most of the hardware they have available to them.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false --><a ng-if="!skillCardController.card.data.completed || skillCardController.card.data.completed === false" href="#" class="btn btn-default ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+                <i class="fa fa-plus fa-lg"></i>
+                <span class="hidden-xs ml5">Add to Completed Skills</span>
+            </a><!-- end ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/java/reactive-java-programming" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="!skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-default mobile-skill-action ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+        <i class="fa fa-plus fa-lg"></i>
+    </a><!-- end ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/java/reactive-java-programming" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/java/restful-java-programming">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/restful-java-programming-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    RESTful Java Programming
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/java" class="ng-binding" href="/mapt/skill-cards/java">
+            Java
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Unless you’re building an application that tends to ignore the Internet, the chances are at some point you’re going to need to know about RESTful Web Service. RESTful Java Programming will show you how to make sure that your applications are Internet-aware, and are ready to communicate with other web services.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false --><a ng-if="!skillCardController.card.data.completed || skillCardController.card.data.completed === false" href="#" class="btn btn-default ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+                <i class="fa fa-plus fa-lg"></i>
+                <span class="hidden-xs ml5">Add to Completed Skills</span>
+            </a><!-- end ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/java/restful-java-programming" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="!skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-default mobile-skill-action ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+        <i class="fa fa-plus fa-lg"></i>
+    </a><!-- end ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/java/restful-java-programming" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/android/android-development-fundamentals">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/android-development-fundamentals-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Android Development Fundamentals
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/android" class="ng-binding" href="/mapt/skill-cards/android">
+            Android
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">As Android applications grow in complexity, it is important to make sure that they are built on solid foundations. In this skill card, we quickly go over the basics to get you up to speed with Android, Android Studio, and Java.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false --><a ng-if="!skillCardController.card.data.completed || skillCardController.card.data.completed === false" href="#" class="btn btn-default ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+                <i class="fa fa-plus fa-lg"></i>
+                <span class="hidden-xs ml5">Add to Completed Skills</span>
+            </a><!-- end ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/android/android-development-fundamentals" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="!skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-default mobile-skill-action ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+        <i class="fa fa-plus fa-lg"></i>
+    </a><!-- end ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/android/android-development-fundamentals" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/android/android-ui-design">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/android-ui-design-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Android UI Design
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/android" class="ng-binding" href="/mapt/skill-cards/android">
+            Android
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Making great and engaging applications starts with the design: if it doesn’t feel great to use, your customers won’t use your application. With the increasing number of devices and screen sizes accessing your application, delivering that great user experience consistently has become its own challenge over the past few years.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false --><a ng-if="!skillCardController.card.data.completed || skillCardController.card.data.completed === false" href="#" class="btn btn-default ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+                <i class="fa fa-plus fa-lg"></i>
+                <span class="hidden-xs ml5">Add to Completed Skills</span>
+            </a><!-- end ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/android/android-ui-design" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="!skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-default mobile-skill-action ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+        <i class="fa fa-plus fa-lg"></i>
+    </a><!-- end ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/android/android-ui-design" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/android/advanced-android-development">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/advanced-android-development-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Advanced Android Development
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/android" class="ng-binding" href="/mapt/skill-cards/android">
+            Android
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Professional development is about knowing how to both make applications that look great and write code that will scale, and Android is no different. You not only need to master the fundamental skills, but you need to know how to use them to create applications that can be used by millions of people simultaneously. This incorporates everything from design to handling data, to integrating the latest Android features that your users are desperate to use.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false --><a ng-if="!skillCardController.card.data.completed || skillCardController.card.data.completed === false" href="#" class="btn btn-default ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+                <i class="fa fa-plus fa-lg"></i>
+                <span class="hidden-xs ml5">Add to Completed Skills</span>
+            </a><!-- end ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/android/advanced-android-development" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="!skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-default mobile-skill-action ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+        <i class="fa fa-plus fa-lg"></i>
+    </a><!-- end ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/android/advanced-android-development" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/android/android-high-performance-programming">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/android-high-peformance-programming-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Android High Performance Programming
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/android" class="ng-binding" href="/mapt/skill-cards/android">
+            Android
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Less than 1% of Android devices are running the latest version of Android. In fact, the majority of the devices in circulation are currently using Jellybean or below; the majority of your audience is using hardware that is several years old. You need to know how to make the most of the hardware you have available, and make sure that your applications take up as little resources as possible.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false --><a ng-if="!skillCardController.card.data.completed || skillCardController.card.data.completed === false" href="#" class="btn btn-default ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+                <i class="fa fa-plus fa-lg"></i>
+                <span class="hidden-xs ml5">Add to Completed Skills</span>
+            </a><!-- end ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/android/android-high-performance-programming" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="!skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-default mobile-skill-action ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+        <i class="fa fa-plus fa-lg"></i>
+    </a><!-- end ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/android/android-high-performance-programming" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/android/android-studio-basics">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/android-studio-basics-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Android Studio Basics
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/android" class="ng-binding" href="/mapt/skill-cards/android">
+            Android
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Since its release in 2013, Android Studio has become the de facto IDE for Android development. Whilst its features do simplify the building of applications in the long term, it has its own learning requirements and can be pretty overwhelming to newcomers.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false --><a ng-if="!skillCardController.card.data.completed || skillCardController.card.data.completed === false" href="#" class="btn btn-default ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+                <i class="fa fa-plus fa-lg"></i>
+                <span class="hidden-xs ml5">Add to Completed Skills</span>
+            </a><!-- end ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/android/android-studio-basics" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="!skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-default mobile-skill-action ng-scope" ng-click="skillCardController.setCardComplete(skillCardController.card.data.name)">
+        <i class="fa fa-plus fa-lg"></i>
+    </a><!-- end ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/android/android-studio-basics" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards --><li ng-repeat="(key, card) in skillsController.skillsCards" href="#" class="list-group-item list-name ng-scope">
+                            <skillcard card="card" role="dashboardController.roleName" controller="skillsController" hidecomplete="true"><a href="/mapt/skill-cards/git/git-fundamentals">
+    <img src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/git-fundamentals-v2.png" class="img-card-list">
+</a>
+
+<h1 class="ng-binding">
+    Git Fundamentals
+    <span class="skill-item skill-card hidden-xs">Skill Card</span>
+</h1>
+
+<small class="title-duration mr10">Related Topic: 
+    <!-- ngRepeat: (key, category) in skillCardController.card.data.categories --><span ng-repeat="(key, category) in skillCardController.card.data.categories" class="ng-scope">
+        <a ng-href="/mapt/skill-cards/git" class="ng-binding" href="/mapt/skill-cards/git">
+            Git
+        </a>
+        <!-- ngIf: skillCardController.card.data.categories.length > 1
+            && key < (skillCardController.card.data.categories.length - 1) -->
+    </span><!-- end ngRepeat: (key, category) in skillCardController.card.data.categories -->
+</small>
+
+<p class="product-desc mt10">
+    <small class="ng-binding">Git is a magic tool you can use that can reverse time, resurrect old versions of code, and allow all developers to work simultaneously on one code base. It’s one of the most important developer tools available today, and is used in all areas of software development—from web development to data science.</small>
+</p>
+
+<div class="btn-group pull-right mt5 hidden-xs">
+    <div class="skill-card-action">
+        <!-- ngIf: skillCardController.isLoggedIn === false && !skillCardController.hideCompleteButton -->
+
+        <!-- ngIf: skillCardController.isLoggedIn === true --><span ng-if="skillCardController.isLoggedIn === true" class="ng-scope">
+            <!-- ngIf: !skillCardController.card.data.completed || skillCardController.card.data.completed === false -->
+            <!-- ngIf: skillCardController.card.data.completed === true --><a ng-if="skillCardController.card.data.completed === true" href="#" class="btn btn-success ng-scope" ng-click="skillCardController.setCardNotComplete(skillCardController.card.data.name)">
+                <i class="fa fa-check fa-lg"></i>
+                <span class="hidden-xs ml5">Completed Skill</span>
+            </a><!-- end ngIf: skillCardController.card.data.completed === true -->
+        </span><!-- end ngIf: skillCardController.isLoggedIn === true -->
+    </div>
+
+    <a href="/mapt/skill-cards/git/git-fundamentals" class="btn btn-info ">
+        View Skill Card
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !skillCardController.isLoggedIn && !skillCardController.hideCompleteButton -->
+
+    <!-- ngIf: !skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <!-- ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn --><a ng-if="skillCardController.card.data.completed &amp;&amp; skillCardController.isLoggedIn" href="#" class="btn btn-success mobile-skill-action ng-scope" ng-click="skillCardController.setCardNotComplete(skillCardController.card.data.name)">
+        <i class="fa fa-check fa-lg"></i>
+    </a><!-- end ngIf: skillCardController.card.data.completed && skillCardController.isLoggedIn -->
+
+    <a href="/mapt/skill-cards/git/git-fundamentals" class="btn btn-info mobile-skill-action">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a>
+</div></skillcard>
+                        </li><!-- end ngRepeat: (key, card) in skillsController.skillsCards -->
+                    </ul>
+                                            <div class="panel-footer text-right" ng-show="myList.pagination > 1">
+                                        <nav>
+                                            <ul class="pagination">
+                                                <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.previous, 'list');" class="disabled">
+                                                    <a href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                    </a>
+                                                </li>
+                                                <!-- ngRepeat: i in getNumber(myList.pagination) track by $index --><li ng-repeat="i in getNumber(myList.pagination) track by $index" id="paginationNumber" ng-class="{active: myList.offset == $index}" data-page="list" ng-click="$event.preventDefault();click_pagination($event, $index, 'list');" class="ng-scope active">
+                                                        <a href="#" class="ng-binding">1</a>
+                                                </li><!-- end ngRepeat: i in getNumber(myList.pagination) track by $index --><li ng-repeat="i in getNumber(myList.pagination) track by $index" id="paginationNumber" ng-class="{active: myList.offset == $index}" data-page="list" ng-click="$event.preventDefault();click_pagination($event, $index, 'list');" class="ng-scope">
+                                                        <a href="#" class="ng-binding">2</a>
+                                                </li><!-- end ngRepeat: i in getNumber(myList.pagination) track by $index -->
+                                                <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.next, 'list');" class=""> 
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">»</span>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                            
+                                            </nav>
+                                        </div>
+                                        </div>
+                                      </div>
                                   
-                </div><!-- row -->
-      </div>
-      </div><!-- /#book-wrapper -->
+
+                      </div>
+                    </div>
     </div><!-- /#page-content-wrapper -->
   </div><!-- /#wrapper -->
     

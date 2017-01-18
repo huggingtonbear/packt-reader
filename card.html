@@ -38,7 +38,7 @@
     <![endif]-->
 </head>
 
-<body class="language-markup" ng-app="mapt">
+<body class="language-markup">
     <div id="wrapper">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -63,80 +63,163 @@
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-        <div id="page-content-wrapper" class=""> <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
-            <div id="book-wrapper" class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
-                        <div class="page-title">
-                            <h3>Python Fundamentals</h3>
-                            <h6>
-                                </h6>
-                            <ol class="breadcrumb">
-                                <li><a href="discover.html">Discover</a></li>
-                                <li><a href="careers.html">Career Plans</a></li>
-                                <li><a href="plan.html">Python Developer</a></li>
-                                <li class="active">Python Fundamentals</li>
-                            </ol>
+        <div id="page-content-wrapper" class="ng-scope">
+    <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
+    <div ng-show="skillsController.cardData" class="">
+        <jumbotron jumbotrontitle="skillsController.cardData.displayName" description="" eval="true"><div class="jumbotron heading mb0">
+    <div class="container-fluid">
+        <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
+            <div class="row">
+                <div class="page-title">
+                    <h3 title="Python Fundamentals" class="ng-binding">Python Fundamentals</h3>
+                    <!-- ngIf: jumbotronController.hasDescription() -->
+                    <div class="alert alert-warning mt15 ng-hide" role="alert" ng-show="jumbotronController.isSubscribed() === false &amp;&amp; jumbotronController.showSubscriptionUpsell() === true" ng-click="jumbotronController.toggleMenuActivity()">
+                        <i class="fa fa-unlock-alt mr15 fa-lg"></i>
+                        Unlock unlimited access to over 3500 courses from just <b class="ng-binding">£16.99 a month</b> when you subscribe to Mapt.
+                        <a href="mapt/account-subscription" class="btn btn-default ml25">Subscribe today</a>
+                    </div>
+                    <div class="alert alert-warning mt15 ng-hide" role="alert" ng-show="!jumbotronController.isLoggedIn();">
+                        <div class="col-sm-7 mt5">
+                            <i class="fa fa-exclamation-circle fa-lg mr5"></i> You're currently using Mapt logged out
                         </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="panel panel-card">
-                                    <div class="panel-icon">
-                                        <i class="devicon-python-plain"></i>
-                                    </div>
-                                    <div class="panel-body pt0">
-                                        <div class="row">
-                                            <div class="col-sm-8">
-                                                <h5>Python Fundamentals</h5>
-                                                <p class="mb5 mt15">Advanced (61%)</p>
-                                                <div class="progress mb20">
-                                                  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                                    <span class="sr-only">60% Complete</span>
-                                                  </div>
-                                                </div>
-                                                <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development. </p>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="mb20">
-                                                  <a data-toggle="modal" data-target="#myModal" class="btn btn-default btn-block mt10 mb5 pl25 pr25"><i class="fa fa-download mr10"></i>Get Report</a>
-                                                  <a data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-block mt10 mb5 pl25 pr25"><i class="fa fa-refresh mr10"></i>Reassess</a>
-                                                  <a data-toggle="modal" data-target="#myModal" class="btn btn-default btn-block mt10 mb5 pl25 pr25"><i class="fa fa-remove mr10"></i>Remove from Skills</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-sm-12 skillcard-learning">
-                                                <h5 class="">What will I be able to do?</h5>
-                                                <ul class="mt20">
-                                                    <li>Install and set up Python on Mac, Windows or Linux</li>
-                                                    <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                                                    <li>Use Git to manage your Python code</li>
-                                                    <li>Write Python scripts to automate daily tasks, and other software</li>
-                                                    <li>Use unit tests to write better code, faster</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <h5 class="">Reading List</h5>
-                                        <hr>
-                                        <mapt-book data-bigger="true" data-book-title="Practical Data Science Cookbook" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%"> </mapt-book>
-                                                <mapt-book data-bigger="true" data-book-title="UX Design for Web Developers" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book2.jpg" data-progress="33%"> </mapt-book>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                           
+                        <div class="col-sm-5">
+                            <span class="pull-right">
+                                <a href="/mapt/login" type="button" class="btn btn-default">Sign in</a>
+                                <span class="mr10 ml10">or</span>
+                                <a href="/mapt/register" type="button" class="btn btn-default">Create Account</a>
+                            </span>
                         </div>
+                        <div class="clearfix"></div>
                     </div>
                 </div>
-                <!-- row -->
+                <hr>
             </div>
-            <!-- /#book-wrapper -->
         </div>
+    </div>
+</div>
+</jumbotron>
+    </div>
+
+    <div id="book-wrapper" class="container-fluid">
+        <div class="col-sm-12 col-md-3 col-lg-offset-1 col-lg-3 col-xl-offset-1 col-xl-2 mt20">
+            <img class="img-responsive img-card hidden-xs hidden-sm" ng-src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/python-fundamentals-v2.png" src="https://d3gnp09177mxuh.cloudfront.net/mapt-skills-images/python-fundamentals-v2.png">
+
+            <div ng-show="skillsController.candidateInformation" class="">
+                <p class="mb0 mt20 ng-binding"><strong>Skill Level:</strong> Beginner (0 %)</p>
+                <div class="progress mb20">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                        <span class="sr-only ng-binding">0% Complete</span>
+                  </div>
+                </div>
+            </div>
+
+            <div class="mb20" ng-show="skillsController.loggedIn">
+                <div ng-show="skillsController.cardData.examId &amp;&amp; skillsController.isSubscribed" class="">
+                    <a target="_blank" ng-show="skillsController.candidateInformation" class="btn btn-default btn-block reset-whitespace mt10 mb5 pl25 pr25" ng-href="https://report.devskiller.com/candidate-report.html?cd066d47-d5bb-4f7d-8fc9-404b36f9012f/074b7046-b560-44ff-b6e9-0043fd8b567f" href="https://report.devskiller.com/candidate-report.html?cd066d47-d5bb-4f7d-8fc9-404b36f9012f/074b7046-b560-44ff-b6e9-0043fd8b567f">
+                        <i class="fa fa-download mr10"></i>
+                        Get Report
+                    </a>
+                    <a data-toggle="modal" data-target="#open-assessment" ng-show="!skillsController.candidateExists &amp;&amp; skillsController.assessementAlreadyTaken" class="btn btn-primary btn-block reset-whitespace mt10 mb5 pl25 pr25 ng-binding" ng-click="skillsController.createAssessment();">
+                        <i class="fa fa-refresh mr10"></i>
+                        Reassess
+                    </a>
+                    <a data-toggle="modal" data-target="#reopen-assessment" ng-show="skillsController.candidateExists" class="btn btn-primary btn-block reset-whitespace mt10 mb5 pl25 pr25 ng-binding ng-hide" ng-click="skillsController.openDevskiller();">
+                        <i class="fa fa-refresh mr10"></i>
+                        Reassess
+                    </a>
+                    <a data-toggle="modal" data-target="#open-assessment" ng-show="!skillsController.candidateExists &amp;&amp; !skillsController.assessementAlreadyTaken" class="btn btn-primary btn-block reset-whitespace btn-lg mt10 mb5 pl25 pr25 ng-hide" ng-click="skillsController.createAssessment();">
+                        <i class="fa fa-pencil mr10"></i>
+                        Take Assessment
+                    </a>
+                </div>
+                <a class="btn btn-default btn-block reset-whitespace mt10 mb5 pl25 pr25 ng-hide" ng-click="skillsController.removeSkillCard();" ng-show="skillsController.cardCompleted">
+                    <i class="fa fa-remove mr10"></i>
+                    Remove from Skills
+                </a>
+                <a class="btn btn-default btn-block reset-whitespace mt10 mb5 pl25 pr25" ng-click="skillsController.completeSkillCard();" ng-show="!skillsController.cardCompleted">
+                    <i class="fa fa-plus mr10"></i>
+                    Add to Completed Skills
+                </a>
+            </div>
+
+            <a class="btn btn-default btn-block reset-whitespace  mt10 mb5 pl25 pr25 ng-binding ng-hide" ng-show="skillsController.getTotalPrice() &amp;&amp; skillsController.showBuyButton" ng-href="add_to_cart/22031" target="_&quot;self&quot;" href="add_to_cart/22031">
+                <i class="fa fa-shopping-cart fa-lg mr5"></i>
+                Buy all courses for £31.18
+            </a>
+        </div>
+
+        <div class="col-sm-12 col-md-9 col-lg-7 col-xl-8 mt20">
+            <p class="ng-binding">Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</p>
+            <hr>
+            <div class="skillcard-learning mt30 mb30">
+                <h5 class="">What will I be able to do?</h5>
+                <ul class="mt20">
+                    <!-- ngRepeat: (key, learningPoint) in skillsController.cardData.learningPoints track by key --><li ng-repeat="(key, learningPoint) in skillsController.cardData.learningPoints track by key" class="ng-binding ng-scope">Install and set up Python on Mac, Windows, or Linux</li><!-- end ngRepeat: (key, learningPoint) in skillsController.cardData.learningPoints track by key --><li ng-repeat="(key, learningPoint) in skillsController.cardData.learningPoints track by key" class="ng-binding ng-scope">Write efficient and reusable Python code to use in your future projects</li><!-- end ngRepeat: (key, learningPoint) in skillsController.cardData.learningPoints track by key --><li ng-repeat="(key, learningPoint) in skillsController.cardData.learningPoints track by key" class="ng-binding ng-scope">Use Git to manage your Python code</li><!-- end ngRepeat: (key, learningPoint) in skillsController.cardData.learningPoints track by key --><li ng-repeat="(key, learningPoint) in skillsController.cardData.learningPoints track by key" class="ng-binding ng-scope">Apply Python to a wide variety of real-world tasks</li><!-- end ngRepeat: (key, learningPoint) in skillsController.cardData.learningPoints track by key --><li ng-repeat="(key, learningPoint) in skillsController.cardData.learningPoints track by key" class="ng-binding ng-scope">Use unit tests to write better code, faster</li><!-- end ngRepeat: (key, learningPoint) in skillsController.cardData.learningPoints track by key -->
+                </ul>
+            </div>
+            <h5 class="mb20" ng-show="skillsController.cardData.products.length">Recommended Courses:</h5>
+            <hr>
+            <ul class="list-group">
+                <!-- ngRepeat: (key, relatedProduct) in skillsController.cardData.products track by key --><li ng-repeat="(key, relatedProduct) in skillsController.cardData.products track by key" class="list-group-item list-name ng-scope">
+                    <product base-url="baseURL" value="relatedProduct"><a ng-href="/mapt/book/application_development/9781783551712" href="/mapt/book/application_development/9781783551712">
+    <!-- ngIf: productLineViewCtrl.imagePath --><img ng-if="productLineViewCtrl.imagePath" ng-src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/B04715_MockupCover.png" class="img-product-list ng-scope" src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/B04715_MockupCover.png"><!-- end ngIf: productLineViewCtrl.imagePath -->
+</a>
+
+<h1 ng-bind-html="productLineViewCtrl.title" class="ng-binding">Learning Python</h1>
+
+<!-- ngIf: productLineViewCtrl.author --><p class="mb0 ng-binding ng-scope" ng-if="productLineViewCtrl.author">By Fabrizio Romano</p><!-- end ngIf: productLineViewCtrl.author -->
+
+<!-- ngIf: productLineViewCtrl.publicationDate --><small ng-if="productLineViewCtrl.publicationDate" class="title-duration mr10 ng-binding ng-scope">Dec 2015</small><!-- end ngIf: productLineViewCtrl.publicationDate -->
+
+<small class="title-duration hidden-xs ng-binding">
+    <!-- ngIf: productLineViewCtrl.length --><i ng-if="productLineViewCtrl.length" class="fa fa-clock-o mr5 ng-scope"></i><!-- end ngIf: productLineViewCtrl.length -->13 hours 15 minutes
+</small>
+
+<p class="product-desc hidden-xs"><small class="ng-binding">Learn to code like a professional with Python – an open source, versatile, and powerful programming language</small></p>
+<div class="btn-group pull-right hidden-xs mt5">
+    <!-- ngIf: productLineViewCtrl.owned === false && !productLineViewCtrl.lastViewed && productLineViewCtrl.showBuyButton && !productLineViewCtrl.tokens -->
+
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#claimModal" ng-show="productLineViewCtrl.owned === false &amp;&amp; productLineViewCtrl.tokens" ng-click="productLineViewCtrl.claimBookWithTokenConfirm();">
+        <i class="fa fa-download fa-lg"></i>
+        <span class="hidden-xs ml5">Use Token</span>
+    </button>
+
+    <!-- ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true -->
+
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed --><button class="btn btn-default hidden-xs ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined &amp;&amp; !productLineViewCtrl.lastViewed">
+        <i class="fa fa-folder fa-lg" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+        <span class="hidden-xs ml5" ng-show="productLineViewCtrl.inCollection">Saved</span>
+        <span class="hidden-xs ml5 ng-hide" ng-show="productLineViewCtrl.inCollection === false">Save for Later</span>
+    </button><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/application_development/9781783551712/1/ch01lvl1sec10/About+Python" class="btn btn-info hidden-xs ng-scope">
+        <!-- ngIf: !productLineViewCtrl.lastReadUrl -->
+
+        <!-- ngIf: productLineViewCtrl.lastReadUrl --><div ng-if="productLineViewCtrl.lastReadUrl" class="ng-scope">
+            Resume<i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+        </div><!-- end ngIf: productLineViewCtrl.lastReadUrl -->
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined --><a class="btn btn-default ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined">
+        <i class="fa fa-folder fa-lg" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+    </a><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/application_development/9781783551712/1/ch01lvl1sec10/About+Python" class="btn btn-info ng-scope">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+</product>
+                </li><!-- end ngRepeat: (key, relatedProduct) in skillsController.cardData.products track by key -->
+            </ul>
+        </div>
+    </div>
+</div>
         <!-- /#page-content-wrapper -->
     </div>
     <!-- /#wrapper -->
