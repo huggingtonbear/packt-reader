@@ -64,96 +64,134 @@
         </div>
         <!-- /#sidebar-wrapper -->
         <div id="page-content-wrapper" class=""> <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
-            <div id="book-wrapper" class="container-fluid">
+            <div id="book-wrapper" class="container-fluid">               
                 <div class="row">
-                    <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
-                        <div class="page-title">
-                            <h3>Skill Plans</h3>
-                            <h6 class="mt5">Select a plan most relevant to the career and role you want to develop</h6>
-                            <ol class="breadcrumb">
-                              <li><a href="discover.html">Discover</a></li>
-                              <li class="active">Skill Plans</li>
-                            </ol>
-                        </div>
-                        <hr> </div>
-                    <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
+                          <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
+                              <div class="page-title"> 
+                                <h3>Skill Plans</h3>
+                                <h6 class="mt5">Select a plan most relevant to the role and skills you want to develop</h6>
+                              </div>
+                              <hr> 
+                          </div>
+                          <div class="col-sm-3 col-lg-offset-1 col-lg-3 col-xl-2">
                         <div class="panel panel-default">
-                            <!-- Default panel contents -->
-                            <div class="panel-heading">
-                                <h4 class="panel-title">Categories</h4></div>
-                            <ul class="list-group"> <a class="list-group-item" href="#">    All Plans</a> <a class="list-group-item" href="#">    Front End Web Developer</a> <a class="list-group-item" href="#">    Full Stack End Web Developer </a> <a class="list-group-item active" href="#">    Mobile Developer</a> <a class="list-group-item" href="#">    Programmer </a> <a class="list-group-item" href="#">    Data Scientist </a> <a class="list-group-item" href="#">    Game Developer </a> <a class="list-group-item" href="#">    System Administrator </a> </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-9 col-lg-7 col-xl-8">
-                        <div class="panel panel-default">
+                          <!-- Default panel contents -->
+                          <div class="panel-heading"><h4 class="panel-title">Categories</h4></div>
                             <ul class="list-group">
-                                <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                    <h5>Android Developer
-                                                <span class="skill-item skill-plan hidden-xs">Skill Plan</span>
-                                              </h5>
-                                    <p class="mb10"> 1/10 Skill Cards Completed</p>
-                                    <div class="progress mt10 mb20">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"> <span class="sr-only">30% Complete</span> </div>
-                                    </div>
-                                    <!-- Desktop Buttons START -->
-                                    <div class="btn-group pull-right mt5 hidden-xs">
-                                        <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
-                                                  <span class="hidden-xs ml5">Claim with Token</span></a> --><a href="plan.html" class="btn btn-default ">View Skill Plan </a>
-                                        <a href="index.html" class="btn btn-primary"> <span class="hidden-xs ml5">Start Plan <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></span></a>
-                                    </div>
-                                    <!-- Desktop Buttons END -->
-                                    <!-- Mobile Buttons START -->
-                                    <div class="clearfix"></div>
-                                    <div class="btn-group btn-group-justified visible-xs mt15"> <a href="plan.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
-                                                   </a> <a href="plan.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a> </div>
-                                    <!-- Mobile Buttons END -->
-                                </li>
-                                <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                    <h5>Python Developer
-                                                <span class="skill-item skill-plan hidden-xs">Skill Plan</span>
-                                              </h5>
-                                    <p class="mb10"> 3/9 Skill Cards Completed</p>
-                                    <div class="progress mt10 mb20">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"> <span class="sr-only">30% Complete</span> </div>
-                                    </div>
-                                    <!-- Desktop Buttons START -->
-                                    <div class="btn-group pull-right mt5 hidden-xs">
-                                        <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
-                                                  <span class="hidden-xs ml5">Claim with Token</span></a> --><a href="plan-2.html" class="btn btn-default ">View Skill Plan </a> <a href="index.html" class="btn btn-default disabled"><i class="fa fa-refresh fa-lg"></i>
-                                                  <span class="hidden-xs ml5">Active Plan</span></a> </div>
-                                    <!-- Desktop Buttons END -->
-                                    <!-- Mobile Buttons START -->
-                                    <div class="clearfix"></div>
-                                    <div class="btn-group btn-group-justified visible-xs mt15"> <a href="plan.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
-                                                   </a> <a href="plan.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a> </div>
-                                    <!-- Mobile Buttons END -->
-                                </li>
-                                <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
-                                    <h5>iOS Developer
-                                                <span class="skill-item skill-plan hidden-xs">Skill Plan</span>
-                                              </h5>
-                                    <p class="mb10"> 0/9 Skill Cards Completed</p>
-                                    <div class="progress mt10 mb20">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"> <span class="sr-only">30% Complete</span> </div>
-                                    </div>
-                                    
-                                    <!-- Desktop Buttons START -->
-                                    <div class="btn-group pull-right mt5 hidden-xs"> <a href="plan.html" class="btn btn-default ">View Skill Plan </a>
-                                        <a href="index.html" class="btn btn-primary"> <span class="hidden-xs ml5">Start Plan <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></span></a>
-                                    </div>
-                                    <!-- Desktop Buttons END -->
-                                    <!-- Mobile Buttons START -->
-                                    <div class="clearfix"></div>
-                                    <div class="btn-group btn-group-justified visible-xs mt15"> <a href="plan.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
-                                                   </a> <a href="plan.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a> </div>
-                                    <!-- Mobile Buttons END -->
-                                </li>
+                              <a class="list-group-item" href="roles-2.html">    All Plans</a>
+                              <a class="list-group-item" href="roles-2.html">    Front End Web Developer</a> 
+                              <a class="list-group-item" href="roles-2.html">    Full Stack End Web Developer </a>   
+                              <a class="list-group-item active" href="roles-2.html">    Mobile Developer</a>   
+                              <a class="list-group-item" href="roles-2.html">    Programmer </a>   
+                              <a class="list-group-item" href="roles-2.html">    Data Scientist </a>  
+                              <a class="list-group-item" href="roles-2.html">    Game Developer </a>
+                              <a class="list-group-item" href="roles-2.html">    System Administrator </a>           
                             </ul>
+                          </div> 
                         </div>
-                    </div>
-                    <!-- row -->
-                </div>
-                <!-- /#book-wrapper -->
+                          <div class="col-sm-9 col-lg-7 col-xl-8">
+                           
+                                 <div class="panel panel-default">
+                                      <ul class="list-group">
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="plan.html" class=""><img src="images/skillcards/android-developer.png" class="img-card-list"></a>
+                                              <h1>Android Developer
+                                                <span class="skill-item skill-plan hidden-xs">Skill Plan</span>
+                                              </h1>
+                                              <p class="mb10"> 1/10  Skill Cards Completed</p>
+                                              <div class="progress mt10 mb20">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+                                                    <span class="sr-only">30% Complete</span>
+                                                  </div>
+                                                </div>   
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Android Developers create applications for the largest operating system the world has ever known, on a large and increasing number of different devices. Knowing how to make Android applications that maximize your audience is key to creating successful apps.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                
+                                                <a href="plan.html" class="btn btn-default ">View Skill Plan </a>
+                                                <a href="index.html" class="btn btn-primary">
+                                                  <span class="hidden-xs ml5">Start Plan <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></span></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
+                                              <div class="btn-group btn-group-justified visible-xs mt15">
+                                                <a href="plan.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="plan.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="plan.html" class=""><img src="images/skillcards/python-developer.png" class="img-card-list"></a>
+                                              <h1>Python Developer
+                                                <span class="skill-item skill-plan hidden-xs">Skill Plan</span>
+                                              </h1>
+                                              <p class="mb10"> 3/9  Skill Cards Completed</p>
+                                              <div class="progress mt10 mb20">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;">
+                                                    <span class="sr-only">30% Complete</span>
+                                                  </div>
+                                                </div>   
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Python is the language of the productive developer and it is in use everywhere, from Google to NASA. Being a Python Developer however is more than just knowing Python. Being a Python Developer means that you’re ready to tackle any challenge that may come your way; from data science projects and data crunching, to creating websites or writing automation scripts, Python Developers are ready to deliver the next project on time.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="plan.html" class="btn btn-default ">View Skill Plan </a>
+                                                <a href="index.html" class="btn btn-default disabled"><i class="fa fa-refresh fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Active Plan</span></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
+                                              <div class="btn-group btn-group-justified visible-xs mt15">
+                                                <a href="plan.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="plan.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="plan.html" class=""><img src="images/skillcards/ios-developer.png" class="img-card-list"></a>
+                                              <h1>iOS Developer
+                                                <span class="skill-item skill-plan hidden-xs">Skill Plan</span>
+                                              </h1>
+                                              <p class="mb10"> 0/9  Skill Cards Completed</p>
+                                              <div class="progress mt10 mb20">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                                    <span class="sr-only">30% Complete</span>
+                                                  </div>
+                                                </div>   
+                                              <p class="product-desc hidden-xs mt10"><small>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale and perform consistently, no matter how much data you’re crunching or how many users you’re serving.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                                <a href="plan.html" class="btn btn-default ">View Skill Plan </a>
+                                                <a href="index.html" class="btn btn-primary">
+                                                  <span class="hidden-xs ml5">Start Plan <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></span></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
+                                              <div class="btn-group btn-group-justified visible-xs mt15">
+                                                <a href="plan.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="plan.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                        </ul>
+                                
+                                
+                          </div>
+                  </div><!-- row -->
+      </div><!-- /#book-wrapper -->
             </div>
             <!-- /#page-content-wrapper -->
         </div>
