@@ -42,7 +42,7 @@
 
 </head>
 
-<body ng-app="mapt">
+<body>
 
   
 
@@ -75,75 +75,796 @@
 
         <!-- /#sidebar-wrapper -->
 
-        <div id="page-content-wrapper" class="">
-          <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
-
-            <div id="book-wrapper" class="container-fluid">               
-                <div class="row">
-                            <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
-                              <div class="page-title">
-                                <h3>Purchases</h3>
-                                <ol class="breadcrumb">
-                                  <li><a href="discover.html">Discover</a></li>
-                                  <li class="active">Recently Viewed</li>
-                                </ol>
-                              </div>
-
-                            <hr>
-
-                  </div>
-                      <div class="col-sm-offset-8 col-sm-3">
-                        <select class="form-control mb15">
-                            <option>Sort by Most Recent</option>
-                            <option>Sort by Most Popular</option>
-                            <option>Sort by Oldest</option>
-                            <option>Sort A-Z</option>
-                            <option>Sort Z-A</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-12 col-lg-offset-1 col-lg-10">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h5>2 titles purchased</h5>
-                                        </div>  
-
-                                      <ul class="list-group">
-
-                                            <mapt-book-list-item data-book-title="Clean Data" data-cover-image="images/book5.jpg" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%"></mapt-book-list-item>
-                                            
-                                            <mapt-book-list-item data-book-title="Unity 5 Game Optimization" data-cover-image="images/book6.jpg" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%"></mapt-book-list-item>
-
-                                        </ul>
-                                      <div class="panel-footer text-right">
-                                        <nav>
-                                            <ul class="pagination">
-                                                <li id="paginationNumber" data-page="list" ng-click="$event.preventDefault();click_pagination($event, myList.previous, 'list');" class="disabled">
-                                                    <a href="#" aria-label="Previous">
-                                                        <span aria-hidden="true">«</span>
-                                                    </a>
-                                                </li>
-                                                <!-- ngRepeat: i in getNumber(myList.pagination) track by $index --><li class="ng-scope active">
-                                                        <a href="#" class="ng-binding">1</a>
-                                                </li>
-                                                <li id="paginationNumber" class="disabled"> 
-                                                    <a href="#" aria-label="Next">
-                                                        <span aria-hidden="true">»</span>
-                                                    </a>
-                                                </li>
-
-                                            </ul>
-                                            
-                                            </nav>
-                                        </div>
-                                      </div>
-                                  
-
-                      </div>
+        <div id="page-content-wrapper">
+        <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
+        <jumbotron jumbotrontitle="libraryController.jumbotronTitle" description="libraryController.description" eval="true"><div class="jumbotron heading mb0">
+    <div class="container-fluid">
+        <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
+            <div class="row">
+                <div class="page-title">
+                    <h3 title="Purchased" class="ng-binding">Purchases</h3>
+                    <!-- ngIf: jumbotronController.hasDescription() --><h6 title="All the courses you have purchased or claimed" class="mt5 ng-binding ng-scope" ng-if="jumbotronController.hasDescription()">
+                        All the courses you have purchased or claimed
+                    </h6><!-- end ngIf: jumbotronController.hasDescription() -->
+                    <div class="alert alert-warning mt15 ng-hide" role="alert" ng-show="jumbotronController.isSubscribed() === false &amp;&amp; jumbotronController.showSubscriptionUpsell() === true" ng-click="jumbotronController.toggleMenuActivity()">
+                        <i class="fa fa-unlock-alt mr15 fa-lg"></i>
+                        Unlock unlimited access to over 3500 courses from just <b class="ng-binding">£16.99 a month</b> when you subscribe to Mapt.
+                        <a href="mapt/account-subscription" class="btn btn-default ml25">Subscribe today</a>
                     </div>
+                    <div class="alert alert-warning mt15 ng-hide" role="alert" ng-show="!jumbotronController.isLoggedIn();">
+                        <div class="col-sm-7 mt5">
+                            <i class="fa fa-exclamation-circle fa-lg mr5"></i> You're currently using Mapt logged out
                         </div>
-                  </div><!-- row -->
-			</div><!-- /#book-wrapper -->
-		</div><!-- /#page-content-wrapper -->
+                        <div class="col-sm-5">
+                            <span class="pull-right">
+                                <a href="/mapt/login" type="button" class="btn btn-default">Sign in</a>
+                                <span class="mr10 ml10">or</span>
+                                <a href="/mapt/register" type="button" class="btn btn-default">Create Account</a>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+</jumbotron>
+            <div class="col-lg-offset-1 col-lg-10">
+                <div class="row">
+                    <div ng-show="libraryController.purchasedCount() > 0" class="col-sm-offset-6 col-md-offset-8 col-lg-offset-8 col-sm-6 col-md-4 col-lg-4 mb20 mt10">
+                        <select ng-change="libraryController.sortMyOwned($event)" class="form-control ng-pristine ng-untouched ng-valid" name="sorted_myOwned" data-ng-options="o.name for o in libraryController.dropdownSortOptions track by o.id" data-ng-model="libraryController.dropdownSelectedOptionSort"><option value="mostRecent" selected="selected" label="Sort by Most Recent">Sort by Most Recent</option><option value="mostPopular" label="Sort by Most Popular">Sort by Most Popular</option><option value="oldest" label="Sort by Oldest">Sort by Oldest</option><option value="sortAZ" label="Sort A-Z">Sort A-Z</option><option value="sortZA" label="Sort Z-A">Sort Z-A</option></select>
+                    </div>
+                    <div class="col-sm-12">
+                        <div ng-show="libraryController.purchasedCount() > 0" class="panel panel-default">
+                            <ul class="list-group">
+                                <!-- ngRepeat: (key, value) in libraryController.myOwned.docs --><li ng-repeat="(key, value) in libraryController.myOwned.docs" class="list-group-item list-name ng-scope">
+                                    <product value="value" base-url="baseURL" <="" product=""><a ng-href="/mapt/book/virtualization_and_cloud/9781785880063" href="/mapt/book/virtualization_and_cloud/9781785880063">
+    <!-- ngIf: productLineViewCtrl.imagePath --><img ng-if="productLineViewCtrl.imagePath" ng-src="//d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/0063cov_.jpg" class="img-product-list ng-scope" src="//d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/0063cov_.jpg"><!-- end ngIf: productLineViewCtrl.imagePath -->
+</a>
+
+<h1 ng-bind-html="productLineViewCtrl.title" class="ng-binding">Kubernetes Cookbook</h1>
+
+<!-- ngIf: productLineViewCtrl.author --><p class="mb0 ng-binding ng-scope" ng-if="productLineViewCtrl.author">By Hideto Saito</p><!-- end ngIf: productLineViewCtrl.author -->
+
+<!-- ngIf: productLineViewCtrl.publicationDate --><small ng-if="productLineViewCtrl.publicationDate" class="title-duration mr10 ng-binding ng-scope">Jun 2016</small><!-- end ngIf: productLineViewCtrl.publicationDate -->
+
+<small class="title-duration hidden-xs ng-binding">
+    <!-- ngIf: productLineViewCtrl.length --><i ng-if="productLineViewCtrl.length" class="fa fa-clock-o mr5 ng-scope"></i><!-- end ngIf: productLineViewCtrl.length -->11 hours 16 minutes
+</small>
+
+<p class="product-desc hidden-xs"><small class="ng-binding">Learn how to automate and manage your Linux containers and improve the overall performance of your system</small></p>
+<div class="btn-group pull-right hidden-xs mt5">
+    <!-- ngIf: productLineViewCtrl.owned === false && !productLineViewCtrl.lastViewed && productLineViewCtrl.showBuyButton && !productLineViewCtrl.tokens -->
+
+    <button type="button" class="btn btn-default ng-hide" data-toggle="modal" data-target="#claimModal" ng-show="productLineViewCtrl.owned === false &amp;&amp; productLineViewCtrl.tokens" ng-click="productLineViewCtrl.claimBookWithTokenConfirm();">
+        <i class="fa fa-download fa-lg"></i>
+        <span class="hidden-xs ml5">Use Token</span>
+    </button>
+
+    <!-- ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true --><div class="btn-group dropup hidden-xs ng-scope" role="group" ng-if="productLineViewCtrl.owned &amp;&amp; !productLineViewCtrl.lastViewed &amp;&amp; productLineViewCtrl.b2b !== true">
+
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><button type="button" class="btn btn-default dropdown-toggle ng-scope" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" ng-if="productLineViewCtrl.type == 'books'">
+            <i class="fa fa-download fa-lg"></i>
+            <span class="hidden-xs ml5"> Download eBook</span>
+            <span class="hidden-xs caret"></span>
+        </button><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><ul class="dropdown-menu ng-scope" ng-if="productLineViewCtrl.type == 'books'">
+            <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+            <li role="separator" class="divider"></li>
+            <!-- ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/25232/pdf" target="_self" class="ng-binding">Download PDF</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/25232/epub" target="_self" class="ng-binding">Download ePub</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/25232/mobi" target="_self" class="ng-binding">Download Mobi</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads -->
+        </ul><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+
+        <!-- ngIf: productLineViewCtrl.type == 'videos' -->
+    </div><!-- end ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true -->
+
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed --><button class="btn btn-default hidden-xs ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined &amp;&amp; !productLineViewCtrl.lastViewed">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+        <span class="hidden-xs ml5 ng-hide" ng-show="productLineViewCtrl.inCollection">Saved</span>
+        <span class="hidden-xs ml5" ng-show="productLineViewCtrl.inCollection === false">Save for Later</span>
+    </button><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/virtualization_and_cloud/9781785880063/1/ch01lvl1sec15/Configuring+nodes" class="btn btn-info hidden-xs ng-scope">
+        <!-- ngIf: !productLineViewCtrl.lastReadUrl -->
+
+        <!-- ngIf: productLineViewCtrl.lastReadUrl --><div ng-if="productLineViewCtrl.lastReadUrl" class="ng-scope">
+            Resume<i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+        </div><!-- end ngIf: productLineViewCtrl.lastReadUrl -->
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined --><a class="btn btn-default ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+    </a><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/virtualization_and_cloud/9781785880063/1/ch01lvl1sec15/Configuring+nodes" class="btn btn-info ng-scope">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+</product></li><!-- end ngRepeat: (key, value) in libraryController.myOwned.docs --><li ng-repeat="(key, value) in libraryController.myOwned.docs" class="list-group-item list-name ng-scope">
+                                    <product value="value" base-url="baseURL" <="" product=""><a ng-href="/mapt/video/networking_and_servers/9781786467980" href="/mapt/video/networking_and_servers/9781786467980">
+    <!-- ngIf: productLineViewCtrl.imagePath --><img ng-if="productLineViewCtrl.imagePath" ng-src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/bookretailers/9781786467980.jpg" class="img-product-list ng-scope" src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/bookretailers/9781786467980.jpg"><!-- end ngIf: productLineViewCtrl.imagePath -->
+</a>
+
+<h1 ng-bind-html="productLineViewCtrl.title" class="ng-binding">Mastering Windows PowerShell 5 Administration [Video]</h1>
+
+<!-- ngIf: productLineViewCtrl.author --><p class="mb0 ng-binding ng-scope" ng-if="productLineViewCtrl.author">By Heiko Horn</p><!-- end ngIf: productLineViewCtrl.author -->
+
+<!-- ngIf: productLineViewCtrl.publicationDate --><small ng-if="productLineViewCtrl.publicationDate" class="title-duration mr10 ng-binding ng-scope">Sep 2016</small><!-- end ngIf: productLineViewCtrl.publicationDate -->
+
+<small class="title-duration hidden-xs ng-binding">
+    <!-- ngIf: productLineViewCtrl.length --><i ng-if="productLineViewCtrl.length" class="fa fa-clock-o mr5 ng-scope"></i><!-- end ngIf: productLineViewCtrl.length -->3 hours 48 minute
+</small>
+
+<p class="product-desc hidden-xs"><small class="ng-binding">Write maintainable and production-quality scripts that save time and effort</small></p>
+<div class="btn-group pull-right hidden-xs mt5">
+    <!-- ngIf: productLineViewCtrl.owned === false && !productLineViewCtrl.lastViewed && productLineViewCtrl.showBuyButton && !productLineViewCtrl.tokens -->
+
+    <button type="button" class="btn btn-default ng-hide" data-toggle="modal" data-target="#claimModal" ng-show="productLineViewCtrl.owned === false &amp;&amp; productLineViewCtrl.tokens" ng-click="productLineViewCtrl.claimBookWithTokenConfirm();">
+        <i class="fa fa-download fa-lg"></i>
+        <span class="hidden-xs ml5">Use Token</span>
+    </button>
+
+    <!-- ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true --><div class="btn-group dropup hidden-xs ng-scope" role="group" ng-if="productLineViewCtrl.owned &amp;&amp; !productLineViewCtrl.lastViewed &amp;&amp; productLineViewCtrl.b2b !== true">
+
+        <!-- ngIf: productLineViewCtrl.type == 'books' -->
+        <!-- ngIf: productLineViewCtrl.type == 'books' -->
+
+        <!-- ngIf: productLineViewCtrl.type == 'videos' --><button type="button" class="btn btn-default ng-scope" ng-if="productLineViewCtrl.type == 'videos'">
+            <a href="/video_download/26135/" target="_self">
+                <i class="fa fa-download fa-lg"></i>
+                <span class="hidden-xs ml5">Download Video</span>
+            </a>
+        </button><!-- end ngIf: productLineViewCtrl.type == 'videos' -->
+    </div><!-- end ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true -->
+
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed --><button class="btn btn-default hidden-xs ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined &amp;&amp; !productLineViewCtrl.lastViewed">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+        <span class="hidden-xs ml5 ng-hide" ng-show="productLineViewCtrl.inCollection">Saved</span>
+        <span class="hidden-xs ml5" ng-show="productLineViewCtrl.inCollection === false">Save for Later</span>
+    </button><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/video/networking_and_servers/9781786467980" class="btn btn-info hidden-xs ng-scope">
+        <!-- ngIf: !productLineViewCtrl.lastReadUrl --><div ng-if="!productLineViewCtrl.lastReadUrl" class="ng-scope">
+            Start <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+        </div><!-- end ngIf: !productLineViewCtrl.lastReadUrl -->
+
+        <!-- ngIf: productLineViewCtrl.lastReadUrl -->
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined --><a class="btn btn-default ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+    </a><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/video/networking_and_servers/9781786467980" class="btn btn-info ng-scope">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+</product></li><!-- end ngRepeat: (key, value) in libraryController.myOwned.docs --><li ng-repeat="(key, value) in libraryController.myOwned.docs" class="list-group-item list-name ng-scope">
+                                    <product value="value" base-url="baseURL" <="" product=""><a ng-href="/mapt/book/networking_and_servers/9781785886805" href="/mapt/book/networking_and_servers/9781785886805">
+    <!-- ngIf: productLineViewCtrl.imagePath --><img ng-if="productLineViewCtrl.imagePath" ng-src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/6805OS_4961_Docker High Performance.jpg" class="img-product-list ng-scope" src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/6805OS_4961_Docker High Performance.jpg"><!-- end ngIf: productLineViewCtrl.imagePath -->
+</a>
+
+<h1 ng-bind-html="productLineViewCtrl.title" class="ng-binding">Docker High Performance</h1>
+
+<!-- ngIf: productLineViewCtrl.author --><p class="mb0 ng-binding ng-scope" ng-if="productLineViewCtrl.author">By Allan Espinosa</p><!-- end ngIf: productLineViewCtrl.author -->
+
+<!-- ngIf: productLineViewCtrl.publicationDate --><small ng-if="productLineViewCtrl.publicationDate" class="title-duration mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: productLineViewCtrl.publicationDate -->
+
+<small class="title-duration hidden-xs ng-binding">
+    <!-- ngIf: productLineViewCtrl.length --><i ng-if="productLineViewCtrl.length" class="fa fa-clock-o mr5 ng-scope"></i><!-- end ngIf: productLineViewCtrl.length -->4 hours 48 minutes
+</small>
+
+<p class="product-desc hidden-xs"><small class="ng-binding">Master performance enhancement practices for Docker, and unlock faster and more efficient container deployment that will improve your development workflow</small></p>
+<div class="btn-group pull-right hidden-xs mt5">
+    <!-- ngIf: productLineViewCtrl.owned === false && !productLineViewCtrl.lastViewed && productLineViewCtrl.showBuyButton && !productLineViewCtrl.tokens -->
+
+    <button type="button" class="btn btn-default ng-hide" data-toggle="modal" data-target="#claimModal" ng-show="productLineViewCtrl.owned === false &amp;&amp; productLineViewCtrl.tokens" ng-click="productLineViewCtrl.claimBookWithTokenConfirm();">
+        <i class="fa fa-download fa-lg"></i>
+        <span class="hidden-xs ml5">Use Token</span>
+    </button>
+
+    <!-- ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true --><div class="btn-group dropup hidden-xs ng-scope" role="group" ng-if="productLineViewCtrl.owned &amp;&amp; !productLineViewCtrl.lastViewed &amp;&amp; productLineViewCtrl.b2b !== true">
+
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><button type="button" class="btn btn-default dropdown-toggle ng-scope" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" ng-if="productLineViewCtrl.type == 'books'">
+            <i class="fa fa-download fa-lg"></i>
+            <span class="hidden-xs ml5"> Download eBook</span>
+            <span class="hidden-xs caret"></span>
+        </button><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><ul class="dropdown-menu ng-scope" ng-if="productLineViewCtrl.type == 'books'">
+            <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+            <li role="separator" class="divider"></li>
+            <!-- ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/23342/pdf" target="_self" class="ng-binding">Download PDF</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/23342/epub" target="_self" class="ng-binding">Download ePub</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/23342/mobi" target="_self" class="ng-binding">Download Mobi</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads -->
+        </ul><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+
+        <!-- ngIf: productLineViewCtrl.type == 'videos' -->
+    </div><!-- end ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true -->
+
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed --><button class="btn btn-default hidden-xs ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined &amp;&amp; !productLineViewCtrl.lastViewed">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+        <span class="hidden-xs ml5 ng-hide" ng-show="productLineViewCtrl.inCollection">Saved</span>
+        <span class="hidden-xs ml5" ng-show="productLineViewCtrl.inCollection === false">Save for Later</span>
+    </button><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/networking_and_servers/9781785886805" class="btn btn-info hidden-xs ng-scope">
+        <!-- ngIf: !productLineViewCtrl.lastReadUrl --><div ng-if="!productLineViewCtrl.lastReadUrl" class="ng-scope">
+            Start <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+        </div><!-- end ngIf: !productLineViewCtrl.lastReadUrl -->
+
+        <!-- ngIf: productLineViewCtrl.lastReadUrl -->
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined --><a class="btn btn-default ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+    </a><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/networking_and_servers/9781785886805" class="btn btn-info ng-scope">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+</product></li><!-- end ngRepeat: (key, value) in libraryController.myOwned.docs --><li ng-repeat="(key, value) in libraryController.myOwned.docs" class="list-group-item list-name ng-scope">
+                                    <product value="value" base-url="baseURL" <="" product=""><a ng-href="/mapt/book/web_development/9781786463739" href="/mapt/book/web_development/9781786463739">
+    <!-- ngIf: productLineViewCtrl.imagePath --><img ng-if="productLineViewCtrl.imagePath" ng-src="//d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/3739OS_5467_Ionic 2 Blueprints.jpg" class="img-product-list ng-scope" src="//d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/3739OS_5467_Ionic 2 Blueprints.jpg"><!-- end ngIf: productLineViewCtrl.imagePath -->
+</a>
+
+<h1 ng-bind-html="productLineViewCtrl.title" class="ng-binding">Ionic 2 Blueprints</h1>
+
+<!-- ngIf: productLineViewCtrl.author --><p class="mb0 ng-binding ng-scope" ng-if="productLineViewCtrl.author">By Indermohan Singh</p><!-- end ngIf: productLineViewCtrl.author -->
+
+<!-- ngIf: productLineViewCtrl.publicationDate --><small ng-if="productLineViewCtrl.publicationDate" class="title-duration mr10 ng-binding ng-scope">Aug 2016</small><!-- end ngIf: productLineViewCtrl.publicationDate -->
+
+<small class="title-duration hidden-xs ng-binding">
+    <!-- ngIf: productLineViewCtrl.length --><i ng-if="productLineViewCtrl.length" class="fa fa-clock-o mr5 ng-scope"></i><!-- end ngIf: productLineViewCtrl.length -->10 hours 04 minutes
+</small>
+
+<p class="product-desc hidden-xs"><small class="ng-binding">Build real-time, scalable, and interactive mobile apps with the Ionic framework</small></p>
+<div class="btn-group pull-right hidden-xs mt5">
+    <!-- ngIf: productLineViewCtrl.owned === false && !productLineViewCtrl.lastViewed && productLineViewCtrl.showBuyButton && !productLineViewCtrl.tokens -->
+
+    <button type="button" class="btn btn-default ng-hide" data-toggle="modal" data-target="#claimModal" ng-show="productLineViewCtrl.owned === false &amp;&amp; productLineViewCtrl.tokens" ng-click="productLineViewCtrl.claimBookWithTokenConfirm();">
+        <i class="fa fa-download fa-lg"></i>
+        <span class="hidden-xs ml5">Use Token</span>
+    </button>
+
+    <!-- ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true --><div class="btn-group dropup hidden-xs ng-scope" role="group" ng-if="productLineViewCtrl.owned &amp;&amp; !productLineViewCtrl.lastViewed &amp;&amp; productLineViewCtrl.b2b !== true">
+
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><button type="button" class="btn btn-default dropdown-toggle ng-scope" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" ng-if="productLineViewCtrl.type == 'books'">
+            <i class="fa fa-download fa-lg"></i>
+            <span class="hidden-xs ml5"> Download eBook</span>
+            <span class="hidden-xs caret"></span>
+        </button><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><ul class="dropdown-menu ng-scope" ng-if="productLineViewCtrl.type == 'books'">
+            <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+            <li role="separator" class="divider"></li>
+            <!-- ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/26406/pdf" target="_self" class="ng-binding">Download PDF</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/26406/epub" target="_self" class="ng-binding">Download ePub</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/26406/mobi" target="_self" class="ng-binding">Download Mobi</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads -->
+        </ul><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+
+        <!-- ngIf: productLineViewCtrl.type == 'videos' -->
+    </div><!-- end ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true -->
+
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed --><button class="btn btn-default hidden-xs ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined &amp;&amp; !productLineViewCtrl.lastViewed">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+        <span class="hidden-xs ml5 ng-hide" ng-show="productLineViewCtrl.inCollection">Saved</span>
+        <span class="hidden-xs ml5" ng-show="productLineViewCtrl.inCollection === false">Save for Later</span>
+    </button><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/web_development/9781786463739" class="btn btn-info hidden-xs ng-scope">
+        <!-- ngIf: !productLineViewCtrl.lastReadUrl --><div ng-if="!productLineViewCtrl.lastReadUrl" class="ng-scope">
+            Start <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+        </div><!-- end ngIf: !productLineViewCtrl.lastReadUrl -->
+
+        <!-- ngIf: productLineViewCtrl.lastReadUrl -->
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined --><a class="btn btn-default ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+    </a><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/web_development/9781786463739" class="btn btn-info ng-scope">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+</product></li><!-- end ngRepeat: (key, value) in libraryController.myOwned.docs --><li ng-repeat="(key, value) in libraryController.myOwned.docs" class="list-group-item list-name ng-scope">
+                                    <product value="value" base-url="baseURL" <="" product=""><a ng-href="/mapt/book/web_development/9781785281341" href="/mapt/book/web_development/9781785281341">
+    <!-- ngIf: productLineViewCtrl.imagePath --><img ng-if="productLineViewCtrl.imagePath" ng-src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/4709_1341OS_Mastering JavaScript.jpg" class="img-product-list ng-scope" src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/4709_1341OS_Mastering JavaScript.jpg"><!-- end ngIf: productLineViewCtrl.imagePath -->
+</a>
+
+<h1 ng-bind-html="productLineViewCtrl.title" class="ng-binding">Mastering JavaScript</h1>
+
+<!-- ngIf: productLineViewCtrl.author --><p class="mb0 ng-binding ng-scope" ng-if="productLineViewCtrl.author">By Ved Antani</p><!-- end ngIf: productLineViewCtrl.author -->
+
+<!-- ngIf: productLineViewCtrl.publicationDate --><small ng-if="productLineViewCtrl.publicationDate" class="title-duration mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: productLineViewCtrl.publicationDate -->
+
+<small class="title-duration hidden-xs ng-binding">
+    <!-- ngIf: productLineViewCtrl.length --><i ng-if="productLineViewCtrl.length" class="fa fa-clock-o mr5 ng-scope"></i><!-- end ngIf: productLineViewCtrl.length -->7 hours 30 minutes
+</small>
+
+<p class="product-desc hidden-xs"><small class="ng-binding">Explore and master modern JavaScript techniques in order to build large-scale web applications</small></p>
+<div class="btn-group pull-right hidden-xs mt5">
+    <!-- ngIf: productLineViewCtrl.owned === false && !productLineViewCtrl.lastViewed && productLineViewCtrl.showBuyButton && !productLineViewCtrl.tokens -->
+
+    <button type="button" class="btn btn-default ng-hide" data-toggle="modal" data-target="#claimModal" ng-show="productLineViewCtrl.owned === false &amp;&amp; productLineViewCtrl.tokens" ng-click="productLineViewCtrl.claimBookWithTokenConfirm();">
+        <i class="fa fa-download fa-lg"></i>
+        <span class="hidden-xs ml5">Use Token</span>
+    </button>
+
+    <!-- ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true --><div class="btn-group dropup hidden-xs ng-scope" role="group" ng-if="productLineViewCtrl.owned &amp;&amp; !productLineViewCtrl.lastViewed &amp;&amp; productLineViewCtrl.b2b !== true">
+
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><button type="button" class="btn btn-default dropdown-toggle ng-scope" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" ng-if="productLineViewCtrl.type == 'books'">
+            <i class="fa fa-download fa-lg"></i>
+            <span class="hidden-xs ml5"> Download eBook</span>
+            <span class="hidden-xs caret"></span>
+        </button><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><ul class="dropdown-menu ng-scope" ng-if="productLineViewCtrl.type == 'books'">
+            <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+            <li role="separator" class="divider"></li>
+            <!-- ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/23427/pdf" target="_self" class="ng-binding">Download PDF</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/23427/epub" target="_self" class="ng-binding">Download ePub</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/23427/mobi" target="_self" class="ng-binding">Download Mobi</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads -->
+        </ul><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+
+        <!-- ngIf: productLineViewCtrl.type == 'videos' -->
+    </div><!-- end ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true -->
+
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed --><button class="btn btn-default hidden-xs ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined &amp;&amp; !productLineViewCtrl.lastViewed">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+        <span class="hidden-xs ml5 ng-hide" ng-show="productLineViewCtrl.inCollection">Saved</span>
+        <span class="hidden-xs ml5" ng-show="productLineViewCtrl.inCollection === false">Save for Later</span>
+    </button><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/web_development/9781785281341/pref05" class="btn btn-info hidden-xs ng-scope">
+        <!-- ngIf: !productLineViewCtrl.lastReadUrl -->
+
+        <!-- ngIf: productLineViewCtrl.lastReadUrl --><div ng-if="productLineViewCtrl.lastReadUrl" class="ng-scope">
+            Resume<i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+        </div><!-- end ngIf: productLineViewCtrl.lastReadUrl -->
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined --><a class="btn btn-default ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+    </a><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/web_development/9781785281341/pref05" class="btn btn-info ng-scope">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+</product></li><!-- end ngRepeat: (key, value) in libraryController.myOwned.docs --><li ng-repeat="(key, value) in libraryController.myOwned.docs" class="list-group-item list-name ng-scope">
+                                    <product value="value" base-url="baseURL" <="" product=""><a ng-href="/mapt/book/big_data_and_business_intelligence/9781784399689" href="/mapt/book/big_data_and_business_intelligence/9781784399689">
+    <!-- ngIf: productLineViewCtrl.imagePath --><img ng-if="productLineViewCtrl.imagePath" ng-src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/9781784399689.png" class="img-product-list ng-scope" src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/9781784399689.png"><!-- end ngIf: productLineViewCtrl.imagePath -->
+</a>
+
+<h1 ng-bind-html="productLineViewCtrl.title" class="ng-binding">Practical Machine Learning</h1>
+
+<!-- ngIf: productLineViewCtrl.author --><p class="mb0 ng-binding ng-scope" ng-if="productLineViewCtrl.author">By Sunila Gollapudi</p><!-- end ngIf: productLineViewCtrl.author -->
+
+<!-- ngIf: productLineViewCtrl.publicationDate --><small ng-if="productLineViewCtrl.publicationDate" class="title-duration mr10 ng-binding ng-scope">Jan 2016</small><!-- end ngIf: productLineViewCtrl.publicationDate -->
+
+<small class="title-duration hidden-xs ng-binding">
+    <!-- ngIf: productLineViewCtrl.length --><i ng-if="productLineViewCtrl.length" class="fa fa-clock-o mr5 ng-scope"></i><!-- end ngIf: productLineViewCtrl.length -->14 hours 02 minutes
+</small>
+
+<p class="product-desc hidden-xs"><small class="ng-binding">Learn how to build Machine Learning applications to solve real-world data analysis challenges with this Machine Learning book – packed with practical tutorials</small></p>
+<div class="btn-group pull-right hidden-xs mt5">
+    <!-- ngIf: productLineViewCtrl.owned === false && !productLineViewCtrl.lastViewed && productLineViewCtrl.showBuyButton && !productLineViewCtrl.tokens -->
+
+    <button type="button" class="btn btn-default ng-hide" data-toggle="modal" data-target="#claimModal" ng-show="productLineViewCtrl.owned === false &amp;&amp; productLineViewCtrl.tokens" ng-click="productLineViewCtrl.claimBookWithTokenConfirm();">
+        <i class="fa fa-download fa-lg"></i>
+        <span class="hidden-xs ml5">Use Token</span>
+    </button>
+
+    <!-- ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true --><div class="btn-group dropup hidden-xs ng-scope" role="group" ng-if="productLineViewCtrl.owned &amp;&amp; !productLineViewCtrl.lastViewed &amp;&amp; productLineViewCtrl.b2b !== true">
+
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><button type="button" class="btn btn-default dropdown-toggle ng-scope" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" ng-if="productLineViewCtrl.type == 'books'">
+            <i class="fa fa-download fa-lg"></i>
+            <span class="hidden-xs ml5"> Download eBook</span>
+            <span class="hidden-xs caret"></span>
+        </button><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><ul class="dropdown-menu ng-scope" ng-if="productLineViewCtrl.type == 'books'">
+            <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+            <li role="separator" class="divider"></li>
+            <!-- ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/20987/pdf" target="_self" class="ng-binding">Download PDF</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/20987/epub" target="_self" class="ng-binding">Download ePub</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/20987/mobi" target="_self" class="ng-binding">Download Mobi</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads -->
+        </ul><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+
+        <!-- ngIf: productLineViewCtrl.type == 'videos' -->
+    </div><!-- end ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true -->
+
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed --><button class="btn btn-default hidden-xs ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined &amp;&amp; !productLineViewCtrl.lastViewed">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+        <span class="hidden-xs ml5 ng-hide" ng-show="productLineViewCtrl.inCollection">Saved</span>
+        <span class="hidden-xs ml5" ng-show="productLineViewCtrl.inCollection === false">Save for Later</span>
+    </button><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/big_data_and_business_intelligence/9781784399689/2" class="btn btn-info hidden-xs ng-scope">
+        <!-- ngIf: !productLineViewCtrl.lastReadUrl -->
+
+        <!-- ngIf: productLineViewCtrl.lastReadUrl --><div ng-if="productLineViewCtrl.lastReadUrl" class="ng-scope">
+            Resume<i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+        </div><!-- end ngIf: productLineViewCtrl.lastReadUrl -->
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined --><a class="btn btn-default ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+    </a><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/big_data_and_business_intelligence/9781784399689/2" class="btn btn-info ng-scope">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+</product></li><!-- end ngRepeat: (key, value) in libraryController.myOwned.docs --><li ng-repeat="(key, value) in libraryController.myOwned.docs" class="list-group-item list-name ng-scope">
+                                    <product value="value" base-url="baseURL" <="" product=""><a ng-href="/mapt/book/web_development/9781786465788" href="/mapt/book/web_development/9781786465788">
+    <!-- ngIf: productLineViewCtrl.imagePath --><img ng-if="productLineViewCtrl.imagePath" ng-src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/AngularJS_Course Front Cover.jpg" class="img-product-list ng-scope" src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/AngularJS_Course Front Cover.jpg"><!-- end ngIf: productLineViewCtrl.imagePath -->
+</a>
+
+<h1 ng-bind-html="productLineViewCtrl.title" class="ng-binding">AngularJS: Maintaining Web Applications</h1>
+
+<!-- ngIf: productLineViewCtrl.author --><p class="mb0 ng-binding ng-scope" ng-if="productLineViewCtrl.author">By Rodrigo Branas</p><!-- end ngIf: productLineViewCtrl.author -->
+
+<!-- ngIf: productLineViewCtrl.publicationDate --><small ng-if="productLineViewCtrl.publicationDate" class="title-duration mr10 ng-binding ng-scope">Apr 2016</small><!-- end ngIf: productLineViewCtrl.publicationDate -->
+
+<small class="title-duration hidden-xs ng-binding">
+    <!-- ngIf: productLineViewCtrl.length --><i ng-if="productLineViewCtrl.length" class="fa fa-clock-o mr5 ng-scope"></i><!-- end ngIf: productLineViewCtrl.length -->30 hours 18 minutes
+</small>
+
+<p class="product-desc hidden-xs"><small class="ng-binding">Get started with speed building AngularJS applications, and scale up to a full-stack web application, using the existing AngularJS framework without the trouble of migrating to Angular 2</small></p>
+<div class="btn-group pull-right hidden-xs mt5">
+    <!-- ngIf: productLineViewCtrl.owned === false && !productLineViewCtrl.lastViewed && productLineViewCtrl.showBuyButton && !productLineViewCtrl.tokens -->
+
+    <button type="button" class="btn btn-default ng-hide" data-toggle="modal" data-target="#claimModal" ng-show="productLineViewCtrl.owned === false &amp;&amp; productLineViewCtrl.tokens" ng-click="productLineViewCtrl.claimBookWithTokenConfirm();">
+        <i class="fa fa-download fa-lg"></i>
+        <span class="hidden-xs ml5">Use Token</span>
+    </button>
+
+    <!-- ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true --><div class="btn-group dropup hidden-xs ng-scope" role="group" ng-if="productLineViewCtrl.owned &amp;&amp; !productLineViewCtrl.lastViewed &amp;&amp; productLineViewCtrl.b2b !== true">
+
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><button type="button" class="btn btn-default dropdown-toggle ng-scope" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" ng-if="productLineViewCtrl.type == 'books'">
+            <i class="fa fa-download fa-lg"></i>
+            <span class="hidden-xs ml5"> Download eBook</span>
+            <span class="hidden-xs caret"></span>
+        </button><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><ul class="dropdown-menu ng-scope" ng-if="productLineViewCtrl.type == 'books'">
+            <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+            <li role="separator" class="divider"></li>
+            <!-- ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/25535/pdf" target="_self" class="ng-binding">Download PDF</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/25535/epub" target="_self" class="ng-binding">Download ePub</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/25535/mobi" target="_self" class="ng-binding">Download Mobi</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads -->
+        </ul><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+
+        <!-- ngIf: productLineViewCtrl.type == 'videos' -->
+    </div><!-- end ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true -->
+
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed --><button class="btn btn-default hidden-xs ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined &amp;&amp; !productLineViewCtrl.lastViewed">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+        <span class="hidden-xs ml5 ng-hide" ng-show="productLineViewCtrl.inCollection">Saved</span>
+        <span class="hidden-xs ml5" ng-show="productLineViewCtrl.inCollection === false">Save for Later</span>
+    </button><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/web_development/9781786465788/28" class="btn btn-info hidden-xs ng-scope">
+        <!-- ngIf: !productLineViewCtrl.lastReadUrl -->
+
+        <!-- ngIf: productLineViewCtrl.lastReadUrl --><div ng-if="productLineViewCtrl.lastReadUrl" class="ng-scope">
+            Resume<i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+        </div><!-- end ngIf: productLineViewCtrl.lastReadUrl -->
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined --><a class="btn btn-default ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+    </a><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/web_development/9781786465788/28" class="btn btn-info ng-scope">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+</product></li><!-- end ngRepeat: (key, value) in libraryController.myOwned.docs --><li ng-repeat="(key, value) in libraryController.myOwned.docs" class="list-group-item list-name ng-scope">
+                                    <product value="value" base-url="baseURL" <="" product=""><a ng-href="/mapt/video/application_development/9781786468994" href="/mapt/video/application_development/9781786468994">
+    <!-- ngIf: productLineViewCtrl.imagePath --><img ng-if="productLineViewCtrl.imagePath" ng-src="//d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/bookretailers/9781786468994.jpg" class="img-product-list ng-scope" src="//d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/bookretailers/9781786468994.jpg"><!-- end ngIf: productLineViewCtrl.imagePath -->
+</a>
+
+<h1 ng-bind-html="productLineViewCtrl.title" class="ng-binding">Beginning Python [Video]</h1>
+
+<!-- ngIf: productLineViewCtrl.author --><p class="mb0 ng-binding ng-scope" ng-if="productLineViewCtrl.author">By William Fiset</p><!-- end ngIf: productLineViewCtrl.author -->
+
+<!-- ngIf: productLineViewCtrl.publicationDate --><small ng-if="productLineViewCtrl.publicationDate" class="title-duration mr10 ng-binding ng-scope">Apr 2016</small><!-- end ngIf: productLineViewCtrl.publicationDate -->
+
+<small class="title-duration hidden-xs ng-binding">
+    <!-- ngIf: productLineViewCtrl.length --><i ng-if="productLineViewCtrl.length" class="fa fa-clock-o mr5 ng-scope"></i><!-- end ngIf: productLineViewCtrl.length -->4 hours and 20 minutes
+</small>
+
+<p class="product-desc hidden-xs"><small class="ng-binding">A beginner’s guide to creating your own application with Python</small></p>
+<div class="btn-group pull-right hidden-xs mt5">
+    <!-- ngIf: productLineViewCtrl.owned === false && !productLineViewCtrl.lastViewed && productLineViewCtrl.showBuyButton && !productLineViewCtrl.tokens -->
+
+    <button type="button" class="btn btn-default ng-hide" data-toggle="modal" data-target="#claimModal" ng-show="productLineViewCtrl.owned === false &amp;&amp; productLineViewCtrl.tokens" ng-click="productLineViewCtrl.claimBookWithTokenConfirm();">
+        <i class="fa fa-download fa-lg"></i>
+        <span class="hidden-xs ml5">Use Token</span>
+    </button>
+
+    <!-- ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true --><div class="btn-group dropup hidden-xs ng-scope" role="group" ng-if="productLineViewCtrl.owned &amp;&amp; !productLineViewCtrl.lastViewed &amp;&amp; productLineViewCtrl.b2b !== true">
+
+        <!-- ngIf: productLineViewCtrl.type == 'books' -->
+        <!-- ngIf: productLineViewCtrl.type == 'books' -->
+
+        <!-- ngIf: productLineViewCtrl.type == 'videos' --><button type="button" class="btn btn-default ng-scope" ng-if="productLineViewCtrl.type == 'videos'">
+            <a href="/video_download/25599/" target="_self">
+                <i class="fa fa-download fa-lg"></i>
+                <span class="hidden-xs ml5">Download Video</span>
+            </a>
+        </button><!-- end ngIf: productLineViewCtrl.type == 'videos' -->
+    </div><!-- end ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true -->
+
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed --><button class="btn btn-default hidden-xs ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined &amp;&amp; !productLineViewCtrl.lastViewed">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+        <span class="hidden-xs ml5 ng-hide" ng-show="productLineViewCtrl.inCollection">Saved</span>
+        <span class="hidden-xs ml5" ng-show="productLineViewCtrl.inCollection === false">Save for Later</span>
+    </button><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/video/application_development/9781786468994" class="btn btn-info hidden-xs ng-scope">
+        <!-- ngIf: !productLineViewCtrl.lastReadUrl --><div ng-if="!productLineViewCtrl.lastReadUrl" class="ng-scope">
+            Start <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+        </div><!-- end ngIf: !productLineViewCtrl.lastReadUrl -->
+
+        <!-- ngIf: productLineViewCtrl.lastReadUrl -->
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined --><a class="btn btn-default ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+    </a><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/video/application_development/9781786468994" class="btn btn-info ng-scope">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+</product></li><!-- end ngRepeat: (key, value) in libraryController.myOwned.docs --><li ng-repeat="(key, value) in libraryController.myOwned.docs" class="list-group-item list-name ng-scope">
+                                    <product value="value" base-url="baseURL" <="" product=""><a ng-href="/mapt/book/web_development/9781786465818" href="/mapt/book/web_development/9781786465818">
+    <!-- ngIf: productLineViewCtrl.imagePath --><img ng-if="productLineViewCtrl.imagePath" ng-src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/9781786465818.png" class="img-product-list ng-scope" src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/9781786465818.png"><!-- end ngIf: productLineViewCtrl.imagePath -->
+</a>
+
+<h1 ng-bind-html="productLineViewCtrl.title" class="ng-binding">Flux Architecture</h1>
+
+<!-- ngIf: productLineViewCtrl.author --><p class="mb0 ng-binding ng-scope" ng-if="productLineViewCtrl.author">By Adam Boduch</p><!-- end ngIf: productLineViewCtrl.author -->
+
+<!-- ngIf: productLineViewCtrl.publicationDate --><small ng-if="productLineViewCtrl.publicationDate" class="title-duration mr10 ng-binding ng-scope">May 2016</small><!-- end ngIf: productLineViewCtrl.publicationDate -->
+
+<small class="title-duration hidden-xs ng-binding">
+    <!-- ngIf: productLineViewCtrl.length --><i ng-if="productLineViewCtrl.length" class="fa fa-clock-o mr5 ng-scope"></i><!-- end ngIf: productLineViewCtrl.length -->9 hours 28 minutes
+</small>
+
+<p class="product-desc hidden-xs"><small class="ng-binding">Learn to build powerful and scalable applications with Flux, the architecture that serves billions of Facebook users every day</small></p>
+<div class="btn-group pull-right hidden-xs mt5">
+    <!-- ngIf: productLineViewCtrl.owned === false && !productLineViewCtrl.lastViewed && productLineViewCtrl.showBuyButton && !productLineViewCtrl.tokens -->
+
+    <button type="button" class="btn btn-default ng-hide" data-toggle="modal" data-target="#claimModal" ng-show="productLineViewCtrl.owned === false &amp;&amp; productLineViewCtrl.tokens" ng-click="productLineViewCtrl.claimBookWithTokenConfirm();">
+        <i class="fa fa-download fa-lg"></i>
+        <span class="hidden-xs ml5">Use Token</span>
+    </button>
+
+    <!-- ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true --><div class="btn-group dropup hidden-xs ng-scope" role="group" ng-if="productLineViewCtrl.owned &amp;&amp; !productLineViewCtrl.lastViewed &amp;&amp; productLineViewCtrl.b2b !== true">
+
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><button type="button" class="btn btn-default dropdown-toggle ng-scope" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" ng-if="productLineViewCtrl.type == 'books'">
+            <i class="fa fa-download fa-lg"></i>
+            <span class="hidden-xs ml5"> Download eBook</span>
+            <span class="hidden-xs caret"></span>
+        </button><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+        <!-- ngIf: productLineViewCtrl.type == 'books' --><ul class="dropdown-menu ng-scope" ng-if="productLineViewCtrl.type == 'books'">
+            <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+            <li role="separator" class="divider"></li>
+            <!-- ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/25159/pdf" target="_self" class="ng-binding">Download PDF</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/25159/epub" target="_self" class="ng-binding">Download ePub</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads --><li ng-repeat="item in productLineViewCtrl.download.availableDownloads" class="ng-scope">
+                <a href="/ebook_download/25159/mobi" target="_self" class="ng-binding">Download Mobi</a>
+            </li><!-- end ngRepeat: item in productLineViewCtrl.download.availableDownloads -->
+        </ul><!-- end ngIf: productLineViewCtrl.type == 'books' -->
+
+        <!-- ngIf: productLineViewCtrl.type == 'videos' -->
+    </div><!-- end ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true -->
+
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed --><button class="btn btn-default hidden-xs ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined &amp;&amp; !productLineViewCtrl.lastViewed">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+        <span class="hidden-xs ml5 ng-hide" ng-show="productLineViewCtrl.inCollection">Saved</span>
+        <span class="hidden-xs ml5" ng-show="productLineViewCtrl.inCollection === false">Save for Later</span>
+    </button><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/web_development/9781786465818" class="btn btn-info hidden-xs ng-scope">
+        <!-- ngIf: !productLineViewCtrl.lastReadUrl --><div ng-if="!productLineViewCtrl.lastReadUrl" class="ng-scope">
+            Start <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+        </div><!-- end ngIf: !productLineViewCtrl.lastReadUrl -->
+
+        <!-- ngIf: productLineViewCtrl.lastReadUrl -->
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined --><a class="btn btn-default ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+    </a><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/book/web_development/9781786465818" class="btn btn-info ng-scope">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+</product></li><!-- end ngRepeat: (key, value) in libraryController.myOwned.docs --><li ng-repeat="(key, value) in libraryController.myOwned.docs" class="list-group-item list-name ng-scope">
+                                    <product value="value" base-url="baseURL" <="" product=""><a ng-href="/mapt/video/big_data_and_business_intelligence/9781783988969" href="/mapt/video/big_data_and_business_intelligence/9781783988969">
+    <!-- ngIf: productLineViewCtrl.imagePath --><img ng-if="productLineViewCtrl.imagePath" ng-src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/9781783988969.png" class="img-product-list ng-scope" src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_reader_book_cover/9781783988969.png"><!-- end ngIf: productLineViewCtrl.imagePath -->
+</a>
+
+<h1 ng-bind-html="productLineViewCtrl.title" class="ng-binding">Mastering Python [Video]</h1>
+
+<!-- ngIf: productLineViewCtrl.author --><p class="mb0 ng-binding ng-scope" ng-if="productLineViewCtrl.author">By Daniel Arbuckle</p><!-- end ngIf: productLineViewCtrl.author -->
+
+<!-- ngIf: productLineViewCtrl.publicationDate --><small ng-if="productLineViewCtrl.publicationDate" class="title-duration mr10 ng-binding ng-scope">Apr 2015</small><!-- end ngIf: productLineViewCtrl.publicationDate -->
+
+<small class="title-duration hidden-xs ng-binding">
+    <!-- ngIf: productLineViewCtrl.length --><i ng-if="productLineViewCtrl.length" class="fa fa-clock-o mr5 ng-scope"></i><!-- end ngIf: productLineViewCtrl.length -->2 Hours 35 minutes
+</small>
+
+<p class="product-desc hidden-xs"><small class="ng-binding">Get to grips with Python best practices and advanced tools to design, distribute, and test your programs</small></p>
+<div class="btn-group pull-right hidden-xs mt5">
+    <!-- ngIf: productLineViewCtrl.owned === false && !productLineViewCtrl.lastViewed && productLineViewCtrl.showBuyButton && !productLineViewCtrl.tokens -->
+
+    <button type="button" class="btn btn-default ng-hide" data-toggle="modal" data-target="#claimModal" ng-show="productLineViewCtrl.owned === false &amp;&amp; productLineViewCtrl.tokens" ng-click="productLineViewCtrl.claimBookWithTokenConfirm();">
+        <i class="fa fa-download fa-lg"></i>
+        <span class="hidden-xs ml5">Use Token</span>
+    </button>
+
+    <!-- ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true --><div class="btn-group dropup hidden-xs ng-scope" role="group" ng-if="productLineViewCtrl.owned &amp;&amp; !productLineViewCtrl.lastViewed &amp;&amp; productLineViewCtrl.b2b !== true">
+
+        <!-- ngIf: productLineViewCtrl.type == 'books' -->
+        <!-- ngIf: productLineViewCtrl.type == 'books' -->
+
+        <!-- ngIf: productLineViewCtrl.type == 'videos' --><button type="button" class="btn btn-default ng-scope" ng-if="productLineViewCtrl.type == 'videos'">
+            <a href="/video_download/21152/" target="_self">
+                <i class="fa fa-download fa-lg"></i>
+                <span class="hidden-xs ml5">Download Video</span>
+            </a>
+        </button><!-- end ngIf: productLineViewCtrl.type == 'videos' -->
+    </div><!-- end ngIf: productLineViewCtrl.owned && !productLineViewCtrl.lastViewed && productLineViewCtrl.b2b !== true -->
+
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed --><button class="btn btn-default hidden-xs ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined &amp;&amp; !productLineViewCtrl.lastViewed">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+        <span class="hidden-xs ml5 ng-hide" ng-show="productLineViewCtrl.inCollection">Saved</span>
+        <span class="hidden-xs ml5" ng-show="productLineViewCtrl.inCollection === false">Save for Later</span>
+    </button><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined && !productLineViewCtrl.lastViewed -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/video/big_data_and_business_intelligence/9781783988969" class="btn btn-info hidden-xs ng-scope">
+        <!-- ngIf: !productLineViewCtrl.lastReadUrl --><div ng-if="!productLineViewCtrl.lastReadUrl" class="ng-scope">
+            Start <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+        </div><!-- end ngIf: !productLineViewCtrl.lastReadUrl -->
+
+        <!-- ngIf: productLineViewCtrl.lastReadUrl -->
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="btn-group btn-group-justified visible-xs mt15">
+    <!-- ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined --><a class="btn btn-default ng-scope" ng-click="productLineViewCtrl.toggleCollection();" ng-if="!productLineViewCtrl.skill &amp;&amp; productLineViewCtrl.inCollection != undefined">
+        <i class="fa fa-folder fa-lg fa-folder-open-o" ng-class="{'fa-folder': productLineViewCtrl.inCollection, 'fa-folder-open-o': productLineViewCtrl.inCollection === false}">
+        </i>
+    </a><!-- end ngIf: !productLineViewCtrl.skill && productLineViewCtrl.inCollection != undefined -->
+
+    <!-- ngIf: productLineViewCtrl.available --><a ng-if="productLineViewCtrl.available" href="/mapt/video/big_data_and_business_intelligence/9781783988969" class="btn btn-info ng-scope">
+        <i class="fa fa-chevron-right ml5" aria-hidden="true"></i>
+    </a><!-- end ngIf: productLineViewCtrl.available -->
+</div>
+</product></li><!-- end ngRepeat: (key, value) in libraryController.myOwned.docs -->
+                            </ul>
+                            <div class="panel-footer text-right" ng-show="libraryController.myOwned.pagination > 1">
+                                <nav>
+                                    <ul class="pagination">
+                                        <li data-page="owned" ng-click="$event.preventDefault();libraryController.clickPagination($event, libraryController.myOwned.previous, 'owned');" class="disabled">
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <!-- ngRepeat: i in libraryController.getNumber(libraryController.myOwned.pagination) track by $index --><li ng-repeat="i in libraryController.getNumber(libraryController.myOwned.pagination) track by $index" ng-class="{active: libraryController.myOwned.offset == $index}" data-page="owned" ng-click="$event.preventDefault();libraryController.clickPagination($event, $index, 'owned');" class="ng-scope active">
+                                            <a href="#" class="ng-binding">1</a>
+                                        </li><!-- end ngRepeat: i in libraryController.getNumber(libraryController.myOwned.pagination) track by $index --><li ng-repeat="i in libraryController.getNumber(libraryController.myOwned.pagination) track by $index" ng-class="{active: libraryController.myOwned.offset == $index}" data-page="owned" ng-click="$event.preventDefault();libraryController.clickPagination($event, $index, 'owned');" class="ng-scope">
+                                            <a href="#" class="ng-binding">2</a>
+                                        </li><!-- end ngRepeat: i in libraryController.getNumber(libraryController.myOwned.pagination) track by $index -->
+                                        <li data-page="owned" ng-click="$event.preventDefault();libraryController.clickPagination($event, libraryController.myOwned.next, 'owned');" class="">
+                                            <a href="#" aria-label="Next">
+                                                <span aria-hidden="true">»</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div ng-show="!libraryController.purchasedCount() &amp;&amp; !showSpinner2" class="ng-hide">
+                            <h3 class="text-center">You don't currently own any courses</h3>
+                            <p class="text-center">Explore the library and purchases courses to keep them forever</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 	</div><!-- /#wrapper -->
     
 
