@@ -105,11 +105,9 @@ maptModule.directive('maptBook', function () {
                         </div> \
                         <div class="book-btn-holder"> \
                             <div class="book-btn-group"> \
-                                <span>Add to My Queue</span> \
                                 <a href="" class="btn btn-primary btn-book btn-book-1" title="Add to My Queue" onclick="$(this).find(\'i\').toggleClass(\'fa-plus fa-minus\');$(this).toggleClass(\'btn-primary btn-danger\')" ng-click="addAlert()"><i class="fa fa-plus"></i></a> \
                             </div> \
                             <div class="book-btn-group"> \
-                                <span>Launch Reader</span> \
                                 <a class="btn btn-primary btn-book btn-book-2" type="button" href="index.html" target="_blank" title="Read Now"><i class="fa fa-play"></i></a> \
                             </div> \
                         </div> \
