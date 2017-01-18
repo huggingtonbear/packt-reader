@@ -71,7 +71,7 @@
                         <div class="row">
                             <div class="page-title">
                                 <h3 class="ng-binding">Dashboard</h3>
-                                <h6>Hi Oli, get back to what you were last learning fast.</h6> </div>
+                                <h6>Hi Oli, get back to what you were learning fast.</h6> </div>
                             <hr> </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                         <div class="panel panel-default mb10">
                             <ul class="nav nav-pills nav-justified nav-tabs" role="tablist">
                                 <li role="presentation" class="active"><a href="#present" aria-controls="present" role="tab" data-toggle="tab" style="text-transform:uppercase;"><h6 class="mt5 mb5">Learning</h6></a></li>
-                                <li role="presentation"><a href="#future" aria-controls="future" role="tab" data-toggle="tab" style="text-transform:uppercase;"><h6 class="mt5 mb5">My Queue</h6></a></li>
+                                <li role="presentation"><a href="#future" aria-controls="future" role="tab" data-toggle="tab" style="text-transform:uppercase;"><h6 class="mt5 mb5">Saved</h6></a></li>
                                 <li role="presentation"><a href="#past" aria-controls="past" role="tab" data-toggle="tab" style="text-transform:uppercase;"><h6 class="mt5 mb5">My Progress</h6></a></li>
                                 <li role="presentation"><a href="#bookmarks" aria-controls="future" role="tab" data-toggle="tab" style="text-transform:uppercase;"><h6 class="mt5 mb5">Bookmarks</h6></a></li>
                             </ul>
@@ -113,11 +113,170 @@
                                                       </div>
                                                     </div>
                                             </div>
-                                            <div class="panel-body">
-                                                    
-                                                <mapt-skill-card ng-repeat="card in mydata.me.plan.cards  | filter:topicFilterer" data-card-title="{{card.title}}" data-description="{{card.desc}}" data-related-topic="{{card.topic}}" data-icon="{{card.icon}}" data-completed="{{card.completed}}" data-card-list-item="true">
-                                                </mapt-skill-card>
-                                            </div>
+                                            <ul class="list-group">
+                                          <li href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="card.html" class=""><img src="images/skillcards/python-data-science.png" class="img-card-list"></a>
+                                              <h1>Python Data Science 
+                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
+                                              </h1>
+                                              <small class="title-duration mr10">Related Topic: <a href="#">Python</a></small>
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                <a href="card.html" class="btn btn-info ">View Skill Card <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
+                                              <div class="btn-group btn-group-justified visible-xs mt15">
+                                                <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="card.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="card.html" class=""><img src="images/skillcards/python-high-performance-programming.png" class="img-card-list"></a>
+                                              <h1>Python High Performance Programming
+                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
+                                              </h1>
+                                              <small class="title-duration mr10">Related Topic: <a href="#">Python</a></small>
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale and perform consistently, no matter how much data you’re crunching or how many users you’re serving.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                <a href="card.html" class="btn btn-info ">View Skill Card <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
+                                              <div class="btn-group btn-group-justified visible-xs mt15">
+                                                <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="card.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="card.html" class=""><img src="images/skillcards/python-fundamentals.png" class="img-card-list"></a>
+                                              <h1>Python Fundamentals
+                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
+                                              </h1>
+                                              <small class="title-duration mr10">Related Topic: <a href="#">Python</a></small>
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                <a href="card.html" class="btn btn-info ">View Skill Card <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
+                                              <div class="btn-group btn-group-justified visible-xs mt15">
+                                                <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="card.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="card.html" class=""><img src="images/skillcards/git-fundamentals.png" class="img-card-list"></a>
+                                              <h1>Git Fundamentals
+                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
+                                              </h1>
+                                              <small class="title-duration mr10">Related Topic: <a href="#">Git</a></small>
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                <a href="card.html" class="btn btn-info ">View Skill Card <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
+                                              <div class="btn-group btn-group-justified visible-xs mt15">
+                                                <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="card.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="card.html" class=""><img src="images/skillcards/production-ready-django.png" class="img-card-list"></a>
+                                              <h1>Production Ready Django
+                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
+                                              </h1>
+                                              <small class="title-duration mr10">Related Topic: <a href="#">Django</a></small>
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                <a href="card.html" class="btn btn-info ">View Skill Card <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
+                                              <div class="btn-group btn-group-justified visible-xs mt15">
+                                                <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="card.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="card.html" class=""><img src="images/skillcards/ux-design-basics.png" class="img-card-list"></a>
+                                              <h1>UX Design Basics
+                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
+                                              </h1>
+                                              <small class="title-duration mr10">Related Topic: <a href="#">Web Design</a></small>
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                <a href="card.html" class="btn btn-info ">View Skill Card <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="clearfix"></div>
+                                              <div class="btn-group btn-group-justified visible-xs mt15">
+                                                <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="card.html" class="btn btn-info"><i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                        </ul>
 
                                         </div>
                                     </div>
@@ -140,7 +299,7 @@
                                         <div class="clearfix"></div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <h5>Queued titles</h5> </div>
+                                                <h5>Saved titles</h5> </div>
                                             <ul class="list-group">
                                                 <mapt-book-list-item data-book-title="Practical Data Science Cookbook" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%"> </mapt-book-list-item>
                                                 <mapt-book-list-item data-book-title="UX Design for Web Developers" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book2.jpg" data-progress="33%"> </mapt-book-list-item>
