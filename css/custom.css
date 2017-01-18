@@ -490,6 +490,17 @@ h1,
 .nav-pills > li > a {
     border-radius: 0;
 }
+.nav-tabs.nav-justified > li > a {
+    margin-bottom: 0px;
+}
+.nav-justified > li > a {
+    margin-bottom: 0px;
+}
+.nav-pills > li + li {
+    margin-left: 0px;
+}
+
+
 
 .panel .nav-pills li:first-child a,
 .panel .nav-pills li:first-child .active a {
