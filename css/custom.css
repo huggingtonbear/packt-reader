@@ -189,6 +189,12 @@ span.skill-item {
     outline: none;
 }
 
+.btn-embedded {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
 .book:hover img {
     opacity: 0.5;
 }
@@ -292,6 +298,11 @@ span.skill-item {
 
 .history-kpi {
     margin-left: 200px;
+}
+
+img.panel-bg {
+    width: 100%;
+    position: relative;
 }
 
 .panel h5 {
@@ -727,6 +738,7 @@ span.input-group-btn button.btn {
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
     border: 0;
     border-radius: 3px;
+    position: relative;
 }
 
 .panel-card {
