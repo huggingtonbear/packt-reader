@@ -87,11 +87,11 @@ maptModule.directive('maptBook', function () {
                     $scope.added = false;
                 }
                 if ($scope.added == true) {
-                    maptAlert($scope.bookTitle + ' has been removed from your <a href="dashboard.html#tab_future">queue</a>', 'danger');
+                    maptAlert($scope.bookTitle + ' has been removed from your <a href="dashboard.html#tab_future">saved</a> list', 'danger');
                     $scope.added = false;
                 }
                 else {
-                    maptAlert($scope.bookTitle + ' has been added to your <a href="dashboard.html#tab_future">queue</a>');
+                    maptAlert($scope.bookTitle + ' has been added to your <a href="dashboard.html#tab_future">saved</a> list');
                     $scope.added = true;
                 }
             }
@@ -105,7 +105,7 @@ maptModule.directive('maptBook', function () {
                         </div> \
                         <div class="book-btn-holder"> \
                             <div class="book-btn-group"> \
-                                <a href="" class="btn btn-primary btn-book btn-book-1" title="Add to My Queue" onclick="$(this).find(\'i\').toggleClass(\'fa-plus fa-minus\');$(this).toggleClass(\'btn-primary btn-danger\')" ng-click="addAlert()"><i class="fa fa-plus"></i></a> \
+                                <a href="" class="btn btn-primary btn-book btn-book-1" title="Add to Saved" onclick="$(this).find(\'i\').toggleClass(\'fa-plus fa-minus\');$(this).toggleClass(\'btn-primary btn-danger\')" ng-click="addAlert()"><i class="fa fa-plus"></i></a> \
                             </div> \
                             <div class="book-btn-group"> \
                                 <a class="btn btn-primary btn-book btn-book-2" type="button" href="index.html" target="_blank" title="Read Now"><i class="fa fa-play"></i></a> \
