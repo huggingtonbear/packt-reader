@@ -1913,7 +1913,8 @@ blockquote p {
         margin-right: 15px;
     }
     .img-card-list {
-        width: 45px;
+        width: 70px;
+        float: left;
         height: auto;
         border: none;
         border-radius: 0px;
