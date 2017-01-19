@@ -1913,9 +1913,10 @@ blockquote p {
         margin-right: 15px;
     }
     .img-card-list {
-        float: left;
-        height: 120px;
-        margin-right: 15px;
+        width: 45px;
+        height: auto;
+        border: none;
+        border-radius: 0px;
     }
     .list-name {
         padding: 15px;
