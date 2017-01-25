@@ -1970,6 +1970,55 @@ blockquote p {
     .see-more-link {
     font-size: 12px;
     }
+    
+    /* less padding in list */
+.orderedlist {
+    padding-right: 5px;
+    padding-left: 15px;
+}
+
+/* notes and tips in lists smaller border */
+ol > li > .note, ol > li > .tip {
+    margin-left: -15px !important;
+    margin-right: 0px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* images in lists smaller border */
+ol li > div.mediaobject {
+    margin-left:  -15px !important;
+    margin-right: 0px !important;
+}
+
+/* code in lists smaller border */
+ol > li > .informalexample {
+    margin-left: -15px;
+    margin-right: 0px;
+}
+
+/* list numbers smaller */
+.reader-container .orderedlist ol {
+    font-size: 1.5rem;
+}
+
+/* fixes border of list in tip, note */
+.tip div.itemizedlist, .note div.itemizedlist, li div.itemizedlist, .tip div.orderedlist, .note div.orderedlist, li div.orderedlist {
+    margin-left: -15px;
+    margin-right: -5px;
+}
+
+/* spacing in list inside tip, note */
+ul, ol, .tip ul, .note ul, li ul, .tip ol, .note ol, li ol {
+    padding-left: 15px;
+}
+
+/* list style smaller */
+.itemizedlist ul li:before {
+    font-size: 18px;
+    margin-right: 6px;
+    line-height: 26px;
+}
 }
 
 /* Small Devices, Phones */

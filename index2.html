@@ -1,0 +1,964 @@
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        @charset "UTF-8";
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+        
+        ng\:form {
+            display: block;
+        }
+    </style>
+    <base href="/mapt">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <!--320-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <link rel="canonical" href="https://www.staging.packtpub.com/mapt">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico?version=3.1">
+    <!-- Mobile Home Screen Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icons/apple-icon-180x180.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <!-- Polyfill JS files -->
+    <script type="text/javascript" async="" src="//gscst-84a.kxcdn.com/main/runtime/runtime.2.6.2.js"></script>
+    <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/r20170119101210/recaptcha__en.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.findIndex,Array.prototype.find&amp;flags=gated"></script>
+    <!-- VENDOR CSS FILES -->
+    <link href="css/bootstrap.min.css?version=3.1" rel="stylesheet">
+    <link href="css/bootstrap-xl.css?version=3.1" rel="stylesheet">
+    <link href="css/prism.css?version=3.1" rel="stylesheet">
+    <!-- NON VENDOR CSS FILES -->
+    <link href="css/real.css" rel="stylesheet">
+    <!-- VENDOR JS FILES -->
+    <script src="js/angular.min.js?version=3.1"></script>
+    <script src="js/jquery.js?version=3.1"></script>
+    <script src="js/bootstrap.js?version=3.1"></script>
+    <script src="js/jquery.bootstrap.wizard.js?version=3.1"></script>
+    <script src="js/jquery.validate.min.js?version=3.1"></script>
+    <script src="js/prism.js?version=3.1"></script>
+    <script src="js/fuse.min.js?version=3.1"></script>
+    <!-- Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&amp;render=explicit" async="" defer=""></script>
+    <!-- JW PLAYER -->
+    <script src="https://jwpsrv.com/library/wtlhcMn8EeK6QxIxOQulpA.js"></script>
+    <script>
+        jwplayer.key = "7X7gEquLPDCl3Fb0QHfeLw6uigKrZOv2vYmh0xeIwlM=";
+    </script>
+    <!-- NON VENDOR JS FILES -->
+    <script src="/sites/default/files/mapt/config/staging_3215959727db16d02b77fe5efdbe0fd0.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+    <script src="js/sidenav-accordion.js"></script>
+    <!-- PU Tracking JS File -->
+    <title>Photoblog Design in Detail</title>
+    <meta name="description" content="Access over 3000 eBooks and videos to advance your IT career and make you more employable. With over 50 new titles released every month on the latest technologies and trends, you'll have immediate access to cutting-edge content and resources.">
+    <meta name="twitter:title" content="Mapt - Developer Skills Delivered">
+    <meta name="twitter:description" content="Access over 3000 eBooks and videos to advance your IT career and make you more employable. With over 50 new titles released every month on the latest technologies and trends, you'll have immediate access to cutting-edge content and resources.">
+    <meta name="twitter:image" content="https://www.staging.packtpub.com/images/white-packt.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@packtpub">
+    <meta name="twitter:creator" content="@packtpub">
+    <script type="text/javascript">
+        var login_cookie = 'SESS_staging_new';
+    </script>
+</head>
+
+<body class="home-body" ng-class="{ login: currentPage === 'login', 'logged-out-home-page': currentPage === 'loggedOutHomePage'}">
+    <div id="wrapper" ng-class="{ login: currentPage === 'login', 'logged-out-home-page': currentPage === 'loggedOutHomePage'}">
+        <div class="modal fade" id="claimModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="myModalLabel" ng-show="!claimBookError">Just Checking...</h4>
+                        <h4 class="modal-title ng-hide" id="myModalLabel" ng-show="claimBookError">Sorry...</h4> </div>
+                    <div class="modal-body" ng-show="!claimBookError"> Are you sure you would like to use one of your tokens to purchase this title? </div>
+                    <div class="modal-body ng-binding ng-hide" ng-show="claimBookError"> </div>
+                    <div class="modal-footer" ng-show="!claimBookError">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary" ng-click="claimBookWithToken()">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-show="showSpinner" class="cssload-container spinner sidebar-page ng-hide">
+            <div class="page-load-gif"> <img ng-src="images/final-loader.gif" src="images/final-loader.gif"> </div>
+        </div>
+        <!-- ngView:  -->
+        <div style="height:100%;" ng-view="" autoscroll="true" class="ng-scope">
+            <!-- ngInclude:  -->
+            <div id="sidebar-wrapper" ng-include="" src="productController.sidebar" class="ng-scope">
+                <ul class="sidebar-nav ng-scope">
+                    <div class="list-group" id="sidebar-nav" role="tablist">
+                        <li>
+                            <a href="#" class="sidenav-menu-holder back-btn" ng-click="productController.sidebarBackButton($event);"> <span class="sidenav-menu">Back</span> <span class="pull-left mr5"><i class="fa fa-chevron-left"></i></span> </a>
+                        </li>
+                        <li>
+                            <a href="book/web-development/9781904811848/" class="sidenav-menu-holder"> <span class="sidenav-menu"><img class="cover-image" src="images/cover.png"></span> <span class="pull-left mr5"></span> </a>
+                        </li>
+                        <div id="search">
+                            <!-- ngIf: productController.productType !== 'video' -->
+                            <li class="search-form ng-scope" ng-if="productController.productType !== 'video'">
+                                <form class="col-sm-12 mb15 pl25 pr25 ng-pristine ng-valid" ng-submit="productController.sidebarSearchSubmit()">
+                                    <input id="product-search-input" type="text" class="form-control" placeholder=" Search this course..." ng-keyup="productController.sidebarSearchChange()"> </form>
+                            </li>
+                            <!-- end ngIf: productController.productType !== 'video' -->
+                        </div>
+                        <div class="search-results-show ng-hide" ng-show="productController.showSearchResults &amp;&amp; productController.searchResults">
+                            <li>References in this Title: <strong class="ml10 ng-binding"></strong></li>
+                            <!-- ngRepeat: (key, section) in productController.searchResults -->
+                        </div>
+                        <div ng-show="!productController.bookmarkActive &amp;&amp; !productController.showSearchResults">
+                            <li ng-show="productController.loggedIn">
+                                <a href="#bookmark" class="sidenav-menu-holder" ng-click="productController.toggleBookmark($event)">
+                                    <div class="section-name ng-binding"> <i class="fa fa-bookmark mr5"></i> Bookmarks (0) </div>
+                                </a>
+                            </li>
+                            <!-- ngRepeat: (key, chapter) in productController.tableOfContents track by $index -->
+                            <ng-repeat ng-repeat="(key, chapter) in productController.tableOfContents track by $index" class="ng-scope">
+                                <li ng-class="{active: productController.currentChapter === chapter.id}">
+                                    <a data-toggle="collapse" data-parent="#sidebar-nav" aria-expanded="false" class="sidenav-menu-holder collapsed" href="#collapse6" ng-click="$event.preventDefault();">
+                                        <div ng-show="chapter.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                        <!-- ngIf: productController.productType === 'video' -->
+                                        <!-- ngIf: productController.productType === 'book' && chapter.type === 'chapter' -->
+                                        <div class="section-name ng-binding ng-scope" ng-if="productController.productType === 'book' &amp;&amp; chapter.type === 'chapter'">6: Web Services</div>
+                                        <!-- end ngIf: productController.productType === 'book' && chapter.type === 'chapter' -->
+                                        <!-- ngIf: productController.productType === 'book' && chapter.type === 'appendix' -->
+                                    </a>
+                                </li>
+                                <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse5" aria-expanded="false">
+                                    <!-- ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/6" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Chapter 6: Web Services</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/6/ch06lvl1sec01/Traditional+Web+Development" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Traditional Web Development</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/6/ch06lvl1sec02/REST" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">REST</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/6/ch06lvl1sec03/Uniform+Resource+Identifier" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Uniform Resource Identifier</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/6/ch06lvl1sec04/HTTP+Methods" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">HTTP Methods</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/6/ch06lvl1sec05/Putting+it+Together" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Putting it Together</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/6/ch06lvl1sec06/REST+Interface+through+CherryPy" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">REST Interface through CherryPy</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/6/ch06lvl1sec07/Atom+Publishing+Protocol" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Atom Publishing Protocol</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/6/ch06lvl1sec08/Atom+XML-Document+Format" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Atom XML-Document Format</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/6/ch06lvl1sec09/APP+Implementation" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">APP Implementation</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/6/ch06lvl1sec10/Summary" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Summary</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                </div>
+                            </ng-repeat>
+                            <!-- end ngRepeat: (key, chapter) in productController.tableOfContents track by $index -->
+                            <ng-repeat ng-repeat="(key, chapter) in productController.tableOfContents track by $index" class="ng-scope">
+                                <li ng-class="{active: productController.currentChapter === chapter.id}" class="active">
+                                    <a data-toggle="collapse" data-parent="#sidebar-nav" aria-expanded="true" class="sidenav-menu-holder" href="#collapse7" ng-click="$event.preventDefault();">
+                                        <div ng-show="chapter.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                        <!-- ngIf: productController.productType === 'video' -->
+                                        <!-- ngIf: productController.productType === 'book' && chapter.type === 'chapter' -->
+                                        <div class="section-name ng-binding ng-scope" ng-if="productController.productType === 'book' &amp;&amp; chapter.type === 'chapter'">7: The Presentation Layer</div>
+                                        <!-- end ngIf: productController.productType === 'book' && chapter.type === 'chapter' -->
+                                        <!-- ngIf: productController.productType === 'book' && chapter.type === 'appendix' -->
+                                    </a>
+                                </li>
+                                <div id="collapse7" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapse6" aria-expanded="true">
+                                    <!-- ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Chapter 7: The Presentation Layer</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7/ch07lvl1sec01/HTML" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">HTML</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7/ch07lvl1sec02/XML" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">XML</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7/ch07lvl1sec03/XHTML" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">XHTML</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7/ch07lvl1sec04/CSS" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">CSS</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7/ch07lvl1sec05/DHTML" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">DHTML</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7/ch07lvl1sec06/Templating" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Templating</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7/ch07lvl1sec07/KidThe+Templating+Engine" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Kid—The Templating Engine﻿ </div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7/ch07lvl1sec08/Photoblog+Design+Preparation" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Photoblog Design Preparation</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope active" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7/ch07lvl1sec09/Photoblog+Design+in+Detail" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Photoblog Design in Detail</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7/ch07lvl1sec10/Mochikit" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Mo﻿chikit </div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7/ch07lvl1sec11/Developing+the+Photoblog+Design" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Developing the Photoblog Design</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/7/ch07lvl1sec12/Summary" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Summary</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                </div>
+                            </ng-repeat>
+                            <!-- end ngRepeat: (key, chapter) in productController.tableOfContents track by $index -->
+                            <ng-repeat ng-repeat="(key, chapter) in productController.tableOfContents track by $index" class="ng-scope">
+                                <li ng-class="{active: productController.currentChapter === chapter.id}">
+                                    <a data-toggle="collapse" data-parent="#sidebar-nav" aria-expanded="false" class="sidenav-menu-holder collapsed" href="#collapse8" ng-click="$event.preventDefault();">
+                                        <div ng-show="chapter.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                        <!-- ngIf: productController.productType === 'video' -->
+                                        <!-- ngIf: productController.productType === 'book' && chapter.type === 'chapter' -->
+                                        <div class="section-name ng-binding ng-scope" ng-if="productController.productType === 'book' &amp;&amp; chapter.type === 'chapter'">8: Ajax</div>
+                                        <!-- end ngIf: productController.productType === 'book' && chapter.type === 'chapter' -->
+                                        <!-- ngIf: productController.productType === 'book' && chapter.type === 'appendix' -->
+                                    </a>
+                                </li>
+                                <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse7" aria-expanded="false">
+                                    <!-- ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/8" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Chapter 8: Ajax</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/8/ch08lvl1sec01/Rise+of+the+Rich-Client+Applications" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Rise of the Rich-Client Applications</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/8/ch08lvl1sec02/Ajax" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Ajax</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/8/ch08lvl1sec03/JSON" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">JSON</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/8/ch08lvl1sec04/Applying+Ajax+to+our+Application" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Applying Ajax to our Application</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/8/ch08lvl1sec05/Summary" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">S﻿ummary </div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                </div>
+                            </ng-repeat>
+                            <!-- end ngRepeat: (key, chapter) in productController.tableOfContents track by $index -->
+                            <ng-repeat ng-repeat="(key, chapter) in productController.tableOfContents track by $index" class="ng-scope">
+                                <li ng-class="{active: productController.currentChapter === chapter.id}">
+                                    <a data-toggle="collapse" data-parent="#sidebar-nav" aria-expanded="false" class="sidenav-menu-holder collapsed" href="#collapse9" ng-click="$event.preventDefault();">
+                                        <div ng-show="chapter.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                        <!-- ngIf: productController.productType === 'video' -->
+                                        <!-- ngIf: productController.productType === 'book' && chapter.type === 'chapter' -->
+                                        <div class="section-name ng-binding ng-scope" ng-if="productController.productType === 'book' &amp;&amp; chapter.type === 'chapter'">9: Testing</div>
+                                        <!-- end ngIf: productController.productType === 'book' && chapter.type === 'chapter' -->
+                                        <!-- ngIf: productController.productType === 'book' && chapter.type === 'appendix' -->
+                                    </a>
+                                </li>
+                                <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse8" aria-expanded="false">
+                                    <!-- ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/9" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Chapter 9: Testing</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/9/ch09lvl1sec01/Why+Testing" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Why Testing</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/9/ch09lvl1sec02/Planning+a+Test" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Planning a Test</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/9/ch09lvl1sec03/Common+Testing+Approach" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Common Testing Approach</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/9/ch09lvl1sec04/Unit+Testing" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Unit Testing</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/9/ch09lvl1sec05/Unit+Testing+Web+Applications" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Unit Testing Web Applications</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/9/ch09lvl1sec06/Performance+and+Load+Testing" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Performance and Load Testing</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/9/ch09lvl1sec07/Functional+Testing" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Functional Testing</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                    <li class="sub-nav ng-scope" ng-repeat="(key2, section) in chapter.children track by $index" ng-class="{active: productController.currentSection === section.id}" ng-init="$last &amp;&amp; productController.onFinishSidebarLoad()">
+                                        <a href="book/web-development/9781904811848/9/ch09lvl1sec08/Summary" ng-click="productController.navigateToSection(
+                                $event,
+                                chapter.id,
+                                section.id,
+                                section.seoUrl
+                            )">
+                                            <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Summary</div>
+                                        </a>
+                                    </li>
+                                    <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
+                                </div>
+                            </ng-repeat>
+                            <!-- end ngRepeat: (key, chapter) in productController.tableOfContents track by $index -->
+                        </div>
+                        <div class="pt15 ng-hide" id="bookmark" ng-show="productController.bookmarkActive">
+                            <li>
+                                <a href="#" class="sidenav-menu-holder" ng-click="productController.toggleBookmark($event);">
+                                    <div class="section-name">Back to Contents<span class="pull-left mr5"><i class="fa fa-25 fa-chevron-left"></i></span></div>
+                                </a>
+                            </li>
+                            <!-- ngRepeat: (key, section) in productController.bookmarks -->
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div id="page-content-wrapper" class="book-page ng-scope">
+                <menu-toggle><a href="#" id="menu-toggle" class="toggle-nav"><i class="fa fa-bars fa-2x mr5"></i></a></menu-toggle>
+                <div class="col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
+                    <div class="btn-group pull-right mt15 mb30" role="group">
+                        <!-- ngIf: !productController.owned && productController.showBuyButton -->
+                        <button type="button" class="btn btn-default" id="bookmarkToggle" ng-show="!productController.firstPage &amp;&amp; productController.loggedIn &amp;&amp; productController.bookmarks" ng-click="productController.toggleSectionBookmark()"> <i class="fa fa-lg fa-bookmark-o" ng-class="{'fa-bookmark': productController.bookmarked === true, 'fa-bookmark-o': productController.bookmarked !== true}"></i> <span class="hidden-xs ml5"> Bookmark</span> </button>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#product-claim-modal" ng-show="!productController.owned &amp;&amp; productController.tokens"> <i class="fa fa-download fa-lg"></i> <span class="hidden-xs ml5"> Use Token</span> </button>
+                        <div class="button-wrapper ng-hide" ng-show="productController.loggedIn &amp;&amp; productController.firstPage">
+                            <button class="btn btn-default" ng-show="productController.inCollection === false" ng-click="productController.toggleCollection()"> <i class="fa fa-folder-open-o fa-lg"></i> <span class="hidden-xs ml5">Save for Later</span> </button>
+                            <!-- ngIf: productController.inCollection -->
+                        </div>
+                        <!-- ngIf: productController.loggedIn -->
+                        <button class="btn btn-default hidden-xs ng-scope" ng-if="productController.loggedIn" ng-class="{ 'disabled': !productController.codeDownloadAvailable }" ng-click="productController.downloadCodeFile()"> <i class="fa fa-file fa-lg"></i> <span class="hidden-xs ml5">Code Files</span> </button>
+                        <!-- end ngIf: productController.loggedIn -->
+                        <div class="btn-group ng-hide" ng-show="productController.showDownloads &amp;&amp; productController.owned">
+                            <!-- ngIf: productController.productType === 'video' -->
+                            <!-- ngIf: productController.productType === 'book' -->
+                            <div class="btn-group ng-scope" role="group" ng-if="productController.productType === 'book'">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-download fa-lg"></i> <span class="hidden-xs ml5">Download eBook</span> <span class="hidden-xs caret"></span> </button>
+                                <ul class="dropdown-menu">
+                                    <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <!-- ngRepeat: (key, downloadFormat) in productController.productDownloads -->
+                                    <li ng-repeat="(key, downloadFormat) in productController.productDownloads" class="ng-scope"> <a ng-href="https://www.staging.packtpub.com/ebook_download/2153/pdf" target="_self" class="ng-binding" href="https://www.staging.packtpub.com/ebook_download/2153/pdf">Download PDF</a> </li>
+                                    <!-- end ngRepeat: (key, downloadFormat) in productController.productDownloads -->
+                                    <li ng-repeat="(key, downloadFormat) in productController.productDownloads" class="ng-scope"> <a ng-href="https://www.staging.packtpub.com/ebook_download/2153/epub" target="_self" class="ng-binding" href="https://www.staging.packtpub.com/ebook_download/2153/epub">Download ePub</a> </li>
+                                    <!-- end ngRepeat: (key, downloadFormat) in productController.productDownloads -->
+                                    <li ng-repeat="(key, downloadFormat) in productController.productDownloads" class="ng-scope"> <a ng-href="https://www.staging.packtpub.com/ebook_download/2153/mobi" target="_self" class="ng-binding" href="https://www.staging.packtpub.com/ebook_download/2153/mobi">Download Mobi</a> </li>
+                                    <!-- end ngRepeat: (key, downloadFormat) in productController.productDownloads -->
+                                </ul>
+                            </div>
+                            <!-- end ngIf: productController.productType === 'book' -->
+                        </div>
+                        <!-- ngIf: !productController.firstPage && productController.loggedIn -->
+                        <div class="button-wrapper ng-scope" ng-if="!productController.firstPage &amp;&amp; productController.loggedIn">
+                            <button class="btn nightmode-toggle btn-default" onclick="$(body).toggleClass('nightmode');"> <i class="fa fa-moon-o fa-lg no-text-padding"></i> </button>
+                            <div class="btn-group" role="group" ng-show="productController.productType === 'book'">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-font fa-lg no-text-padding"></i> </button>
+                                <ul class="dropdown-menu">
+                                    <li class="disabled"><a class="disabled text-center"><b>Font size (rem)</b></a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <!-- ngRepeat: (key, fontSize) in productController.availableFontSizes -->
+                                    <li ng-repeat="(key, fontSize) in productController.availableFontSizes" class="ng-scope"> <a ng-click="productController.toggleFontSize(fontSize)" target="_self" class="ng-binding">1.5</a> </li>
+                                    <!-- end ngRepeat: (key, fontSize) in productController.availableFontSizes -->
+                                    <li ng-repeat="(key, fontSize) in productController.availableFontSizes" class="ng-scope"> <a ng-click="productController.toggleFontSize(fontSize)" target="_self" class="ng-binding">1.6</a> </li>
+                                    <!-- end ngRepeat: (key, fontSize) in productController.availableFontSizes -->
+                                    <li ng-repeat="(key, fontSize) in productController.availableFontSizes" class="ng-scope"> <a ng-click="productController.toggleFontSize(fontSize)" target="_self" class="ng-binding">1.7</a> </li>
+                                    <!-- end ngRepeat: (key, fontSize) in productController.availableFontSizes -->
+                                    <li ng-repeat="(key, fontSize) in productController.availableFontSizes" class="ng-scope"> <a ng-click="productController.toggleFontSize(fontSize)" target="_self" class="ng-binding">1.8</a> </li>
+                                    <!-- end ngRepeat: (key, fontSize) in productController.availableFontSizes -->
+                                    <li ng-repeat="(key, fontSize) in productController.availableFontSizes" class="ng-scope"> <a ng-click="productController.toggleFontSize(fontSize)" target="_self" class="ng-binding">1.9</a> </li>
+                                    <!-- end ngRepeat: (key, fontSize) in productController.availableFontSizes -->
+                                    <li ng-repeat="(key, fontSize) in productController.availableFontSizes" class="ng-scope"> <a ng-click="productController.toggleFontSize(fontSize)" target="_self" class="ng-binding">2.0</a> </li>
+                                    <!-- end ngRepeat: (key, fontSize) in productController.availableFontSizes -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end ngIf: !productController.firstPage && productController.loggedIn -->
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-share fa-lg no-text-padding"></i> </button>
+                            <ul class="dropdown-menu">
+                                <li class="disabled"><a href="#" class="disabled text-center"><b>Share</b></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" ng-click="productController.facebookShare();">Facebook</a></li>
+                                <li> <a target="_top" ng-href="mailto:?Subject=Packt Book: CherryPy Essentials: Rapid Python Web Application Development&amp;body=Packt Book link: https://www.staging.packtpub.com/mapt/book/web-development/9781904811848" ng-click="productController.emailShare();" href="mailto:?Subject=Packt Book: CherryPy Essentials: Rapid Python Web Application Development&amp;body=Packt Book link: https://www.staging.packtpub.com/mapt/book/web-development/9781904811848">Email</a> </li>
+                                <li><a href="#" ng-click="productController.twitterShare();">Twitter</a></li>
+                                <li><a href="#" ng-click="productController.redditShare();">Reddit</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="alert alert-warning mb25 reader-container col-sm-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8 ng-hide" role="alert" ng-show="productController.loggedIn === false">
+                    <div class="col-sm-7 mt5"> <i class="fa fa-exclamation-circle fa-lg mr5"></i> You're currently viewing a course from Mapt logged out </div>
+                    <div class="col-sm-5"> <span class="pull-right">
+                <a href="login" type="button" class="btn btn-default">Sign in</a>
+                <span class="mr10 ml10">or</span> <a href="register" type="button" class="btn btn-default">Create Account</a> </span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- ngIf: productController.productType === 'video' && !productController.firstPage -->
+                <!-- ngInclude: productController.contentView -->
+                <div id="book-wrapper" class="container-fluid ng-scope" ng-include="productController.contentView" onload="productController.onFinishLoadContent()">
+                    <div id="reader-content" class="col-sm-12 col-lg-offset-1 col-lg-10 col-xl-offset-2 col-xl-8 ng-scope reader-container font-1-6" ng-class="{'reader-container': productController.productType === 'book'}" on-finish-page-render="productController.applyFontSize()">
+                        <div class="row">
+                            <div style="position:relative;" class="book-content">
+                                <div ng-bind-html="productController.content" class="ng-binding">
+                                    <div class="section" lang="en" xml:lang="en">
+                                        <div class="titlepage">
+                                            <div>
+                                                <div>
+                                                    <h2 class="title"><a></a>Photoblog Design in Detail</h2></div>
+                                            </div>
+                                            <hr> </div>
+                                        <p>Now, we will have a look at the basic structure of our photoblog design.</p>
+                                        <div class="section" lang="en" xml:lang="en">
+                                            <div class="titlepage">
+                                                <div>
+                                                    <div>
+                                                        <h3 class="title"><a></a>Basic Structure</h3></div>
+                                                </div>
+                                            </div>
+                                            <p>The next step is to add the CSS stylesheet by modifying the<code class="literal"> common.kid</code> template:</p>
+                                            <div class="informalexample"><pre class="programlisting  language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name"><span class="token namespace">xmlns:</span>py</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://purl.org/kid/ns#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span> <span class="token attr-name"><span class="token namespace">py:</span>match</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item.tag <span class="token punctuation">=</span><span class="token punctuation">=</span> <span class="token punctuation">'</span>head<span class="token punctuation">'</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content-type<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/html;
+charset<span class="token punctuation">=</span>iso-8859-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>meta</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/style.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>link</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</pre></div>
+                                            <p>We now have the main page of our photoblog application. The following configurations will make us understand how we will handle the other pages of our application:</p>
+                                            <div class="itemizedlist">
+                                                <ul type="bullet">
+                                                    <li>
+                                                        <p>Unordered list with some nested stuff - images and code and double-nested unordered and ordered.</p>
+                                                        <div class="mediaobject"><img src="images/avatar4.jpg" class="img-responsive"></div>
+                                                        <div class="itemizedlist">
+                                                            <ul type="bullet">
+                                                                <li>
+                                                                    <p>Advantage: It is easy for the web designer who can now edit every page.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Drawback: It feels less dynamic from the end-user point of view. It feels as if the navigation is done<span class="emphasis"><em> per page</em></span>.</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <p>One or two templates and a bunch of JavaScript files: In this case, only one page would be sent to the browser but it will contain enough information for the browser to generate and insert blocks of content depending on the context and end-user interaction.
+                                                            <a class="indexterm"></a>
+                                                        </p>
+                                                        <div class="informalexample"><pre class="programlisting  language-markup"># chmod 600 ~/.ssh/authorized_keys
+</pre></div>
+                                                        <div class="orderedlist">
+                                                            <ol class="orderedlist arabic" type="1">
+                                                                <li>
+                                                                    <p style="font-size: 1.5rem;">This ol has a class of `orderedlist`.</p>
+                                                                    <div class="informalexample"><pre class="programlisting  language-markup"># chmod 600 ~/.ssh/authorized_keys
+</pre></div>
+                                                                </li>
+                                                                <li>
+                                                                    <p style="font-size: 1.5rem;">Once this is done, you can use <span class="strong"><strong>Save private key</strong></span> in PuTTY.</p>
+                                                                    <div class="mediaobject"><img src="images/avatar2.jpg" class="img-responsive"></div>
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <p>One or two templates and a bunch of JavaScript files: In this case, only one page would be sent to the browser but it will contain enough information for the browser to generate and insert blocks of content depending on the context and end-user interaction.
+                                                            <a class="indexterm"></a>
+                                                        </p>
+                                                        <div class="orderedlist">
+                                                            <ol type="1">
+                                                                <li>
+                                                                    <p style="font-size: 1.5rem;">This ol doesn't have a class of `orderedlist`.</p>
+                                                                    <div class="informalexample"><pre class="programlisting  language-markup"># chmod 600 ~/.ssh/authorized_keys
+</pre></div>
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p>For the purpose of this application, we will be using mainly the second solution. We will see the application in the upcoming sections.</p>
+                                            <div class="orderedlist">
+                                                <ol class="orderedlist arabic" type="1">
+                                                    <li>
+                                                        <p style="font-size: 1.5rem;">This ol has a class of `orderedlist`.</p>
+                                                        <div class="informalexample"><pre class="programlisting  language-markup"># chmod 600 ~/.ssh/authorized_keys
+</pre></div>
+                                                    </li>
+                                                    <li>
+                                                        <p style="font-size: 1.5rem;">Once this is done, you can use <span class="strong"><strong>Save private key</strong></span> in PuTTY.</p>
+                                                        <div class="mediaobject"><img src="images/avatar2.jpg" class="img-responsive"></div>
+                                                        <div class="itemizedlist">
+                                                            <ul type="bullet">
+                                                                <li>
+                                                                    <p>One<code class="literal"> Kid</code> template per page: In this configuration, each time a link is followed or a form is submitted to the application, a new page will be constructed on the server from its template and will be sent back to the browser.</p>
+                                                                    <div class="mediaobject"><img src="images/avatar4.jpg" class="img-responsive"></div>
+                                                                    <div class="itemizedlist">
+                                                                        <ul type="bullet">
+                                                                            <li>
+                                                                                <p>Advantage: It is easy for the web designer who can now edit every page.</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <p>Drawback: It feels less dynamic from the end-user point of view. It feels as if the navigation is done<span class="emphasis"><em> per page</em></span>.</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <p>Let's try double numbered:</p>
+                                                        <div class="orderedlist">
+                                                            <ol class="orderedlist arabic" type="1">
+                                                                <li>
+                                                                    <p style="font-size: 1.5rem;">This ol has a class of `orderedlist`.</p>
+                                                                    <div class="informalexample"><pre class="programlisting  language-markup"># chmod 600 ~/.ssh/authorized_keys
+</pre></div>
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                    </li>
+                                                </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div ng-show="!productController.entitled" class="ng-hide">
+                                        <div ng-show="productController.productType === 'book'" class="fade-out"></div> <img ng-src="images/locked-video_1024.jpg" class="mb15 ng-hide" style="max-width:100%" ng-show="productController.productType === 'video'" src="images/locked-video_1024.jpg"> </div>
+                                </div>
+                                <div id="video-content"></div>
+                                <div ng-show="!productController.entitled" class="ng-hide">
+                                    <!-- ngIf: productController.loggedIn === false -->
+                                    <!-- ngIf: productController.loggedIn -->
+                                    <div class="panel-body ng-scope" ng-if="productController.loggedIn">
+                                        <div class="col-sm-6 col-lg-8">
+                                            <h5>You've used up your FREE access to courses</h5>
+                                            <h6>
+                        <b>
+                            Subscribe today and access 3,500+ courses <span ng-show="productController.monthlyPrice" class="ng-binding">for just £154.80 a month</span>
+                        </b>
+                    </h6> </div>
+                                        <div class="col-sm-6 col-lg-4"> <a class="btn btn-info btn-lg btn-block mt20" target="_self" ng-href="account-subscription" href="account-subscription">Find out more</a> </div>
+                                    </div>
+                                    <!-- end ngIf: productController.loggedIn -->
+                                </div>
+                                <!-- ngIf: productController.productType === 'video' -->
+                            </div>
+                            <div class="row ns" ng-show="productController.nextSection">
+                                <hr> <span class="hidden-xs">
+            <h4 class="pull-left ng-binding">
+                <strong>Up Next: </strong>Mo﻿chikit
+
+            </h4>
+            <a ng-href="book/web-development/9781904811848/7/ch07lvl1sec10/Mochikit" class="btn btn-primary pull-right btn-lg" ng-click="productController.completeSection($event);" href="book/web-development/9781904811848/7/ch07lvl1sec10/Mochikit">
+                Next Section
+            </a>
+        </span> <span class="visible-xs">
+            <a ng-href="book/web-development/9781904811848/7/ch07lvl1sec10/Mochikit" class="btn btn-primary btn-block btn-lg" ng-click="productController.navigateToSection($event);" href="book/web-development/9781904811848/7/ch07lvl1sec10/Mochikit">
+                Next Section
+            </a>
+        </span> </div>
+                            <div class="row ns ng-hide" ng-show="productController.productType === 'video' &amp;&amp; !productController.nextSection">
+                                <hr> <span class="hidden-xs">
+            <a class="btn btn-primary pull-right btn-lg" ng-href="book/web-development/9781904811848/" ng-click="productController.completeLastSection($event)" href="book/web-development/9781904811848/">
+                Complete Section
+            </a>
+        </span> <span class="visible-xs">
+            <a class="btn btn-primary btn-block btn-lg" ng-href="book/web-development/9781904811848/" ng-click="productController.completeLastSection($event)" href="book/web-development/9781904811848/">
+                Complete Section
+            </a>
+        </span> </div>
+                            <div class="row ns">
+                                <hr> </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="product-claim-modal" class="modal fade ng-scope" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                                <h4 class="modal-title" ng-show="!productController.claimTokenError">Just Checking...</h4>
+                                <h4 class="modal-title ng-hide" ng-show="productController.claimTokenError">Sorry...</h4> </div>
+                            <div class="modal-body" ng-show="!productController.claimTokenError"> Are you sure you would like to use one of your tokens to purchase this title? </div>
+                            <div class="modal-body ng-binding ng-hide" ng-show="productController.claimTokenError"> </div>
+                            <div class="modal-footer" ng-show="!productController.claimTokenError">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                                <button type="button" class="btn btn-primary" ng-click="productController.claimWithToken()">Yes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <iframe name="_hjRemoteVarsFrame" title="Hotjar Remote Vars Frame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/rcj-b2c1bce0a548059f409c021a46ea2224.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
+        <div id="ads"></div>
+</body>
+
+</html>
