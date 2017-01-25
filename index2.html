@@ -409,7 +409,7 @@
                                 section.seoUrl
                             )">
                                             <div ng-show="section.completed" class="section-complete ng-hide"> <i class="fa fa-check fa-25"></i> </div>
-                                            <div class="section-name ng-binding" ng-bind-html="section.title">Photoblog Design in Detail</div>
+                                            <div class="section-name ng-binding" ng-bind-html="section.title">Epic Nested Lists</div>
                                         </a>
                                     </li>
                                     <!-- end ngRepeat: (key2, section) in chapter.children track by $index -->
@@ -767,7 +767,7 @@
                                         <div class="titlepage">
                                             <div>
                                                 <div>
-                                                    <h2 class="title"><a></a>Photoblog Design in Detail</h2></div>
+                                                    <h2 class="title"><a></a>Epic Nested Lists</h2></div>
                                             </div>
                                             <hr> </div>
                                         <p>Now, we will have a look at the basic structure of our photoblog design.</p>
@@ -807,7 +807,7 @@ charset<span class="token punctuation">=</span>iso-8859-1<span class="token punc
                                                         </div>
                                                     </li>
                                                     <li>
-                                                        <p>One or two templates and a bunch of JavaScript files: In this case, only one page would be sent to the browser but it will contain enough information for the browser to generate and insert blocks of content depending on the context and end-user interaction.
+                                                        <p>We're going to nest in here some code and a numbered (ordered) list.
                                                             <a class="indexterm"></a>
                                                         </p>
                                                         <div class="informalexample"><pre class="programlisting  language-markup"># chmod 600 ~/.ssh/authorized_keys
@@ -827,9 +827,7 @@ charset<span class="token punctuation">=</span>iso-8859-1<span class="token punc
                                                         </div>
                                                     </li>
                                                     <li>
-                                                        <p>One or two templates and a bunch of JavaScript files: In this case, only one page would be sent to the browser but it will contain enough information for the browser to generate and insert blocks of content depending on the context and end-user interaction.
-                                                            <a class="indexterm"></a>
-                                                        </p>
+                                                        <p>We're going to nest in here another ordered list with a different style that is out in the wild. </p>
                                                         <div class="orderedlist">
                                                             <ol type="1">
                                                                 <li>
@@ -838,6 +836,10 @@ charset<span class="token punctuation">=</span>iso-8859-1<span class="token punc
 </pre></div>
                                                                 </li>
                                                             </ol>
+                                                        </div>
+                                                        <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                                                            <h3 class="title"><a id="note07"></a>Note</h3>
+                                                            <p style="font-size: 1.5rem;">If you have a common user repository for both applications, such as LDAP, by enabling this option, users will have a seamless experience. Otherwise, they will be prompted to authorize access for the first time viewing of contents from the other application.</p>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -856,12 +858,12 @@ charset<span class="token punctuation">=</span>iso-8859-1<span class="token punc
                                                         <div class="itemizedlist">
                                                             <ul type="bullet">
                                                                 <li>
-                                                                    <p>One<code class="literal"> Kid</code> template per page: In this configuration, each time a link is followed or a form is submitted to the application, a new page will be constructed on the server from its template and will be sent back to the browser.</p>
+                                                                    <p>Let's nest "cool-guy" in the double nesting.</p>
                                                                     <div class="mediaobject"><img src="images/avatar4.jpg" class="img-responsive"></div>
                                                                     <div class="itemizedlist">
                                                                         <ul type="bullet">
                                                                             <li>
-                                                                                <p>Advantage: It is easy for the web designer who can now edit every page.</p>
+                                                                                <p>TRIPLE NESTING!!! I hope this doesn't exist.</p>
                                                                             </li>
                                                                             <li>
                                                                                 <p>Drawback: It feels less dynamic from the end-user point of view. It feels as if the navigation is done<span class="emphasis"><em> per page</em></span>.</p>
@@ -880,38 +882,96 @@ charset<span class="token punctuation">=</span>iso-8859-1<span class="token punc
                                                                     <p style="font-size: 1.5rem;">This ol has a class of `orderedlist`.</p>
                                                                     <div class="informalexample"><pre class="programlisting  language-markup"># chmod 600 ~/.ssh/authorized_keys
 </pre></div>
+                                                                    <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                                                                        <h3 class="title"><a id="note07"></a>Note</h3>
+                                                                        <p style="font-size: 1.5rem;">If you have a common user repository for both applications, such as LDAP, by enabling this option, users will have a seamless experience. Otherwise, they will be prompted to authorize access for the first time viewing of contents from the other application.</p>
+                                                                    </div>
                                                                 </li>
                                                             </ol>
                                                         </div>
                                                     </li>
                                                 </ol>
-                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                                            <h3 class="title"><a id="note07"></a>Note</h3>
+                                            <p style="font-size: 1.5rem;">If you have a common user repository for both applications, such as LDAP, by enabling this option, users will have a seamless experience. Otherwise, they will be prompted to authorize access for the first time viewing of contents from the other application.</p>
+                                            <div class="itemizedlist">
+                                                <ul type="bullet">
+                                                    <li>
+                                                        <p>Advantage: It is easy for the web designer who can now edit every page.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Drawback: It feels less dynamic from the end-user point of view. It feels as if the navigation is done<span class="emphasis"><em> per page</em></span>.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="orderedlist">
+                                                <ol class="orderedlist arabic" type="1">
+                                                    <li>
+                                                        <p style="font-size: 1.5rem;">This ol has a class of `orderedlist`.</p>
+                                                        <div class="informalexample"><pre class="programlisting  language-markup"># chmod 600 ~/.ssh/authorized_keys
+</pre></div>
+                                                        <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                                                            <h3 class="title"><a id="note07"></a>Note</h3>
+                                                            <p style="font-size: 1.5rem;">If you have a common user repository for both applications, such as LDAP, by enabling this option, users will have a seamless experience. Otherwise, they will be prompted to authorize access for the first time viewing of contents from the other application.</p>
+                                                        </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;">
+                                            <h3 class="title"><a id="note07"></a>Tip</h3>
+                                            <p style="font-size: 1.5rem;">If you have a common user repository for both applications, such as LDAP, by enabling this option, users will have a seamless experience. Otherwise, they will be prompted to authorize access for the first time viewing of contents from the other application.</p>
+                                            <div class="itemizedlist">
+                                                <ul type="bullet">
+                                                    <li>
+                                                        <p>Advantage: It is easy for the web designer who can now edit every page.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Drawback: It feels less dynamic from the end-user point of view. It feels as if the navigation is done<span class="emphasis"><em> per page</em></span>.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="orderedlist">
+                                                <ol class="orderedlist arabic" type="1">
+                                                    <li>
+                                                        <p style="font-size: 1.5rem;">This ol has a class of `orderedlist`.</p>
+                                                        <div class="informalexample"><pre class="programlisting  language-markup"># chmod 600 ~/.ssh/authorized_keys
+</pre></div>
+                                                        <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                                                            <h3 class="title"><a id="note07"></a>Note</h3>
+                                                            <p style="font-size: 1.5rem;">If you have a common user repository for both applications, such as LDAP, by enabling this option, users will have a seamless experience. Otherwise, they will be prompted to authorize access for the first time viewing of contents from the other application.</p>
+                                                        </div>
+                                                    </li>
+                                                </ol>
                                             </div>
                                         </div>
                                     </div>
-                                    <div ng-show="!productController.entitled" class="ng-hide">
-                                        <div ng-show="productController.productType === 'book'" class="fade-out"></div> <img ng-src="images/locked-video_1024.jpg" class="mb15 ng-hide" style="max-width:100%" ng-show="productController.productType === 'video'" src="images/locked-video_1024.jpg"> </div>
                                 </div>
-                                <div id="video-content"></div>
                                 <div ng-show="!productController.entitled" class="ng-hide">
-                                    <!-- ngIf: productController.loggedIn === false -->
-                                    <!-- ngIf: productController.loggedIn -->
-                                    <div class="panel-body ng-scope" ng-if="productController.loggedIn">
-                                        <div class="col-sm-6 col-lg-8">
-                                            <h5>You've used up your FREE access to courses</h5>
-                                            <h6>
+                                    <div ng-show="productController.productType === 'book'" class="fade-out"></div> <img ng-src="images/locked-video_1024.jpg" class="mb15 ng-hide" style="max-width:100%" ng-show="productController.productType === 'video'" src="images/locked-video_1024.jpg"> </div>
+                            </div>
+                            <div id="video-content"></div>
+                            <div ng-show="!productController.entitled" class="ng-hide">
+                                <!-- ngIf: productController.loggedIn === false -->
+                                <!-- ngIf: productController.loggedIn -->
+                                <div class="panel-body ng-scope" ng-if="productController.loggedIn">
+                                    <div class="col-sm-6 col-lg-8">
+                                        <h5>You've used up your FREE access to courses</h5>
+                                        <h6>
                         <b>
                             Subscribe today and access 3,500+ courses <span ng-show="productController.monthlyPrice" class="ng-binding">for just £154.80 a month</span>
                         </b>
                     </h6> </div>
-                                        <div class="col-sm-6 col-lg-4"> <a class="btn btn-info btn-lg btn-block mt20" target="_self" ng-href="account-subscription" href="account-subscription">Find out more</a> </div>
-                                    </div>
-                                    <!-- end ngIf: productController.loggedIn -->
+                                    <div class="col-sm-6 col-lg-4"> <a class="btn btn-info btn-lg btn-block mt20" target="_self" ng-href="account-subscription" href="account-subscription">Find out more</a> </div>
                                 </div>
-                                <!-- ngIf: productController.productType === 'video' -->
+                                <!-- end ngIf: productController.loggedIn -->
                             </div>
-                            <div class="row ns" ng-show="productController.nextSection">
-                                <hr> <span class="hidden-xs">
+                            <!-- ngIf: productController.productType === 'video' -->
+                        </div>
+                        <div class="row ns" ng-show="productController.nextSection">
+                            <hr> <span class="hidden-xs">
             <h4 class="pull-left ng-binding">
                 <strong>Up Next: </strong>Mo﻿chikit
 
@@ -924,8 +984,8 @@ charset<span class="token punctuation">=</span>iso-8859-1<span class="token punc
                 Next Section
             </a>
         </span> </div>
-                            <div class="row ns ng-hide" ng-show="productController.productType === 'video' &amp;&amp; !productController.nextSection">
-                                <hr> <span class="hidden-xs">
+                        <div class="row ns ng-hide" ng-show="productController.productType === 'video' &amp;&amp; !productController.nextSection">
+                            <hr> <span class="hidden-xs">
             <a class="btn btn-primary pull-right btn-lg" ng-href="book/web-development/9781904811848/" ng-click="productController.completeLastSection($event)" href="book/web-development/9781904811848/">
                 Complete Section
             </a>
@@ -934,31 +994,31 @@ charset<span class="token punctuation">=</span>iso-8859-1<span class="token punc
                 Complete Section
             </a>
         </span> </div>
-                            <div class="row ns">
-                                <hr> </div>
-                        </div>
+                        <div class="row ns">
+                            <hr> </div>
                     </div>
                 </div>
-                <div id="product-claim-modal" class="modal fade ng-scope" tabindex="-1" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
-                                <h4 class="modal-title" ng-show="!productController.claimTokenError">Just Checking...</h4>
-                                <h4 class="modal-title ng-hide" ng-show="productController.claimTokenError">Sorry...</h4> </div>
-                            <div class="modal-body" ng-show="!productController.claimTokenError"> Are you sure you would like to use one of your tokens to purchase this title? </div>
-                            <div class="modal-body ng-binding ng-hide" ng-show="productController.claimTokenError"> </div>
-                            <div class="modal-footer" ng-show="!productController.claimTokenError">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-                                <button type="button" class="btn btn-primary" ng-click="productController.claimWithToken()">Yes</button>
-                            </div>
+            </div>
+            <div id="product-claim-modal" class="modal fade ng-scope" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            <h4 class="modal-title" ng-show="!productController.claimTokenError">Just Checking...</h4>
+                            <h4 class="modal-title ng-hide" ng-show="productController.claimTokenError">Sorry...</h4> </div>
+                        <div class="modal-body" ng-show="!productController.claimTokenError"> Are you sure you would like to use one of your tokens to purchase this title? </div>
+                        <div class="modal-body ng-binding ng-hide" ng-show="productController.claimTokenError"> </div>
+                        <div class="modal-footer" ng-show="!productController.claimTokenError">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                            <button type="button" class="btn btn-primary" ng-click="productController.claimWithToken()">Yes</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <iframe name="_hjRemoteVarsFrame" title="Hotjar Remote Vars Frame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/rcj-b2c1bce0a548059f409c021a46ea2224.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
-        <div id="ads"></div>
+    </div>
+    <iframe name="_hjRemoteVarsFrame" title="Hotjar Remote Vars Frame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/rcj-b2c1bce0a548059f409c021a46ea2224.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
+    <div id="ads"></div>
 </body>
 
 </html>
