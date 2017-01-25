@@ -66,7 +66,7 @@
 }
 
 li.sub-nav {
-    border-bottom: none;
+    border: none;
 }
 
 .sub-nav a .sidenav-menu {
@@ -1842,6 +1842,26 @@ b.landing {
     font-size: 42px;
     margin-top: -2px;
     vertical-align: middle;
+}
+
+.tip > div.itemizedlist {
+    border-color: #305884;
+}
+
+.tip > div.itemizedlist, .tip > div.orderedlist, .tip > div.orderedlist > ol, .note > div.itemizedlist, .note > div.orderedlist, .note > div.orderedlist > ol {
+    background-color: inherit;
+    color: white;
+    border: none;
+}
+
+.nightmode .tip > div.itemizedlist, .nightmode .tip > div.orderedlist, .nightmode .tip > div.orderedlist > ol, .nightmode .note > div.itemizedlist, .nightmode .note > div.orderedlist, .nightmode .note > div.orderedlist > ol {
+    background-color: inherit;
+    color: white;
+    border: none;
+}
+
+.tip > div.itemizedlist > ul > li:before, .note > div.itemizedlist > ul > li:before {
+    color: white;
 }
 
 .reader-container .tip > p {
