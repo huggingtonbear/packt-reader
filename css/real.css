@@ -1794,7 +1794,7 @@ b.landing {
     border-radius: 4px;
 }
 
-.itemizedlist ul li {
+.itemizedlist > ul > li {
     list-style-type: none !important;
 }
 
@@ -1802,7 +1802,7 @@ b.landing {
     font-family: 'Roboto', Helvetica, sans-serif !important;
 }
 
-.itemizedlist ul li:before {
+.itemizedlist > ul > li:before {
     font-family: FontAwesome;
     content: "\f138";
     font-size: 28px;
@@ -1825,7 +1825,7 @@ b.landing {
     margin-left: 0 !important;
 }
 
-.reader-container .tip h3.title {
+.tip > h3.title {
     color: white;
     font-weight: 100;
     font-size: 28px;
@@ -1834,7 +1834,7 @@ b.landing {
     background: #456F9E;
 }
 
-.tip h3:before {
+.tip > h3:before {
     font-family: FontAwesome;
     content: "\f0eb";
     display: inline-block;
@@ -1844,7 +1844,7 @@ b.landing {
     vertical-align: middle;
 }
 
-.reader-container .tip p {
+.reader-container .tip > p {
     color: white;
     font-family: 'Roboto', Helvetica, sans-serif;
     font-weight: 300;
@@ -1879,7 +1879,7 @@ code.literal {
     margin-left: 0 !important;
 }
 
-.note h3.title {
+.note > h3.title {
     color: white;
     font-weight: 100;
     font-size: 28px;
@@ -1888,7 +1888,7 @@ code.literal {
     background: #459E6D;
 }
 
-.note h3:before {
+.note > h3:before {
     font-family: FontAwesome;
     content: "\f24a";
     display: inline-block;
@@ -1898,7 +1898,7 @@ code.literal {
     vertical-align: middle;
 }
 
-.reader-container .note p {
+.reader-container .note > p {
     color: white;
     font-family: 'Roboto', Helvetica, sans-serif;
     font-weight: 300;
@@ -2467,11 +2467,44 @@ h1 span.skill-item {
         padding: 15px;
     }
 
-    .orderedlist {
+    .note, .tip {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    div.orderedlist {
         padding-right: 5px;
         padding-left: 15px;
     }
-
+    
+    div.orderedlist > ol {
+        margin-left: -5px;
+        margin-right: 0px;
+        padding-left: 15px;
+    }
+    
+    div.orderedlist > ol > li > div {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+    
+    div.itemizedlist > ul {
+        margin-left: 10px;
+        margin-right: 0px;
+        padding-left: 0px;
+    }
+    
+    div.itemizedlist > ul > li > div {
+        margin-left: 0px !important;
+        margin-right: -15px !important;
+    }
+    
+    div.itemizedlist > ul > li:before {
+        font-size: 18px;
+        margin-right: 6px;
+        line-height: 26px;
+    }
+/*
     ol > li > .note, ol > li > .tip {
         margin-left: -15px;
         margin-right: 0px;
@@ -2507,6 +2540,7 @@ h1 span.skill-item {
         margin-right: 6px;
         line-height: 26px;
     }
+*/
 }
 
 @media(max-width: 992px) {
