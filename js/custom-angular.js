@@ -120,6 +120,47 @@ maptModule.directive('maptBook', function () {
             }
     };
 });
+maptModule.directive('maptBookAlt', function () {
+    return {
+        scope: {
+            bookTitle: '@bookTitle'
+            , coverImage: '@coverImage'
+            , progress: '@progress'
+            , bigger: '@bigger'
+        }
+        , restrict: 'E'
+        , replace: true
+        , controller: function ($scope) {
+            $scope.addAlert = function () {
+                if ($scope.added == undefined) {
+                    $scope.added = false;
+                }
+                if ($scope.added == true) {
+                    maptAlert($scope.bookTitle + ' has been removed from your <a href="dashboard.html#tab_future">saved</a> list', 'danger');
+                    $scope.added = false;
+                }
+                else {
+                    maptAlert($scope.bookTitle + ' has been added to your <a href="dashboard.html#tab_future">saved</a> list');
+                    $scope.added = true;
+                }
+            }
+        }
+        , template: '\
+                <div class="book-wrapper col-xs-6 col-sm-3 col-lg-2 "> \
+                    <div class="text-center book"> \
+                        <a href="book-cover.html"><img class="img-responsive title-shadow" ng-src="{{coverImage}}" title="{{bookTitle}}"></a> \
+                        <div ng-show="progress" class="progress mt10 mb15"> \
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}};"> <span class="sr-only">30% Complete</span> </div> \
+                        </div> \
+                    </div> \
+                </div>'
+            , link: function (scope, element, attributes) {
+                if (scope.bigger != undefined) {
+                    $(element).toggleClass('col-sm-3 col-sm-4 col-lg-2 col-lg-3');
+                }
+            }
+    };
+});
 maptModule.directive('maptBookListItem', function () {
     return {
         scope: {

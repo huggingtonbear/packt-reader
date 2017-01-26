@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
+    <link rel="apple-touch-icon" sizes="57x57" href="/packtlib-nv/images/apple-icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/packtlib-nv/images/apple-icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/packtlib-nv/images/apple-icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/packtlib-nv/images/apple-icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/packtlib-nv/images/apple-icons/apple-icon-180x180.png">
+    <title>Mapt - Discover new Skills</title>
+    <!-- Bootstrap Core CSS -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="mapt">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
+                    <li class="nav-logo "><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu"><img src="images/logo.png" height="30px" class=""></span></a> </li>
+                    <form class="col-sm-12 mb15 pl25 pr25">
+                        <input type="text" class="form-control" placeholder="&#xf002; Search for a topic..."> </form>
+                    <div class="clearfix"></div>
+                    <li class=""><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span></a> </li>
+                    <li class="active"><a data-toggle="collapse" href="" class="sidenav-menu-holder"><span class="sidenav-menu">DISCOVER</span><span class="pull-left mr5"></span></a> </li>
+                    <li class=""><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-left mr5"></span></a> </li>
+                    <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><span class="sidenav-menu">Account</span><span class="pull-left mr5"></span></a> </li>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <li class="sub-nav"><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">Account Details</span><span class="pull-left mr5"></span></a> </li>
+                        <li class="sub-nav"><a href="account-subscription.html" class="sidenav-menu-holder"><span class="sidenav-menu">Subscriptions</span><span class="pull-left mr5"></span></a> </li>
+                        <li class="sub-nav"><a href="account-licences.html" class="sidenav-menu-holder"><span class="sidenav-menu">Licenses </span></a> </li>
+                        <li class="sub-nav"><a href="dashboard-lo.html" class="sidenav-menu-holder"><span class="sidenav-menu">Logout</span><span class="pull-left mr5"></span></a> </li>
+                    </div>
+                    <li class=""> <a href="https://www.packtpub.com" class="sidenav-menu-holder"><span class="sidenav-menu logo-text">Powered by <img src="images/packt-orange.png" target="_blank" class="packt-logo"></span><span class="pull-left mr5"></span></a> </li>
+                </div>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Content Page -->
+        <div id="page-content-wrapper" class="" ng-controller="maptController"> <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
+            <div class="jumbotron heading mb0">
+                <div class="container-fluid">
+                    <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                        <div class="row">
+                            <div class="page-title">
+                                <h3 class="ng-binding">Discover</h3>
+                                <h6 class="mt5">Find new skills to learn, or search our full library of eBooks and videos</h6> </div>
+                            <hr> </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end jumbotron -->
+            <div id="" class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt15">
+                        <form class="mb25">
+                            <div class="input-group input-group-lg panel">
+                                <input type="text" class="form-control home-search " placeholder="What do you want to learn?"> <span class="input-group-btn">
+                                  <button class="btn btn-primary" type="button"><i class="fa fa-search mr5"></i> Search</button>
+                                </span> </div>
+                            <!-- /input-group -->
+                        </form>
+                    </div>
+                </div>
+                <!-- /row -->
+                <div class="row" id="discover-big-calls">
+                    <div class="col-sm-12 col-lg-offset-1 col-lg-5">
+                        <div class="panel panel-default">
+                            <div class="panel-body pt0 pr0 pl0 pb0">
+                                <a href="careers.html"><img src="images/career.jpg" class="img-responsive panel-bg"> <a class="btn btn-primary btn-embedded" type="button" href="careers.html">Explore Skill Plans <i class="fa fa-chevron-right ml5"></i></a> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-5">
+                        <div class="panel panel-default">
+                            <div class="panel-body pt0 pr0 pl0 pb0">
+                                <a href="skillcards.html"><img src="images/skill.jpg" class="img-responsive panel-bg"> <a href="skillcards.html" class="btn btn-primary btn-embedded" type="button">Explore Skill Cards <i class="fa fa-chevron-right ml5"></i></a></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+                <div class="row">
+                    <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5>Recommendations</h5></div>
+                            <div class="panel-body">
+                                <p>Here are our top recommendations especially for you:</p>
+                                <div class="row">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+                <div class="row">
+                    <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5>Most Popular <a href="#search-ordered-by-most-popular" class="see-more-link mt5">View All</a></h5></div>
+                            <div class="panel-body">
+                                <p>These are the books and videos being read most right now:</p>
+                                <div class="row">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+                <div class="row">
+                    <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5>Latest additions <a href="#search-ordered-by-most-recent" class="see-more-link mt5">View All</a></h5></div>
+                            <div class="panel-body">
+                                <p>Here are our newest books and videos for you to learn:</p>
+                                <div class="row">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+                <div class="row">
+                    <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5>Purchases <a href="purchases.html" class="see-more-link mt5">View All</a></h5></div>
+                            <div class="panel-body">
+                                <p>Here's a list of eBooks and videos you've recently purchased:</p>
+                                <div class="row">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- JAVASCRIPT BLOCKS -->
+    <!-- jQuery Script-->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- AngularJS -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/custom-angular.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+</body>
+
+</html>
