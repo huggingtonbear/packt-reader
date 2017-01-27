@@ -53,7 +53,7 @@
     <script src="js/angular-route.js?version=3.1"></script>
     <script src="js/angular-cookies.js?version=3.1"></script>
     <script src="js/angular-sanitize.js?version=3.1"></script>
-    <script src="js/jquery.min.js?version=3.1"></script>
+    <script src="js/jquery.js?version=3.1"></script>
     <script src="js/bootstrap.js?version=3.1"></script>
     <script src="js/jquery.bootstrap.wizard.js?version=3.1"></script>
     <script src="js/jquery.validate.min.js?version=3.1"></script>
@@ -1051,26 +1051,26 @@
                                         <div class="col-sm-12">
                                             <ul id="myTabs" class="nav nav-tabs nav-justified hidden-xs mt20" role="tablist">
                                                 <li class="active">
-                                                    <a href="#info" role="tab" id="info-tab" data-toggle="tab" aria-controls="info" ng-click="productController.showSummaryTab('info-tab-responsive', $event);" aria-expanded="true">
+                                                    <a href="#info" role="tab" id="info-tab" onclick="$('.tab-pane').removeClass('active');$('#info').addClass('active');$('#myTabs').find('li').removeClass('active');$(this).parent().addClass('active');" >
                                                         <h5>Info</h5> </a>
                                                 </li>
                                                 <li>
-                                                    <a href="#content" role="tab" id="content-tab" data-toggle="tab" aria-controls="content" ng-click="productController.showSummaryTab('content-tab-responsive', $event);" aria-expanded="false">
+                                                    <a href="#content" role="tab" id="content-tab" onclick="$('.tab-pane').removeClass('active');$('#content').addClass('active');$('#myTabs').find('li').removeClass('active');$(this).parent().addClass('active');" >
                                                         <h5>Contents</h5> </a>
                                                 </li>
                                                 <li>
-                                                    <a href="#author" role="tab" id="author-tab" data-toggle="tab" aria-controls="author" ng-click="productController.showSummaryTab('author-tab-responsive', $event);" aria-expanded="false">
+                                                    <a href="#author" role="tab" id="author-tab" onclick="$('.tab-pane').removeClass('active');$('#author').addClass('active');$('#myTabs').find('li').removeClass('active');$(this).parent().addClass('active');" >
                                                         <h5>Author</h5> </a>
                                                 </li>
                                             </ul>
                                             <ul id="myTabs" class="nav nav-pills text-center nav-stacked visible-xs mb60" role="tablist">
-                                                <li class="active"> <a href="#info" role="tab" id="info-tab-responsive" data-toggle="tab" aria-controls="info" ng-click="productController.showSummaryTab('info-tab', $event);" aria-expanded="true">
+                                                <li class="active"> <a href="#info" role="tab" id="info-tab-responsive" onclick="$('.tab-pane').removeClass('active');$('#info').addClass('active');$('#myTabs').find('li').removeClass('active');$(this).parent().addClass('active');" >
                                 Info
                             </a> </li>
-                                                <li> <a href="#content" role="tab" id="content-tab-responsive" data-toggle="tab" aria-controls="content" ng-click="productController.showSummaryTab('content-tab', $event);" aria-expanded="false">
+                                                <li> <a href="#content" role="tab" id="content-tab-responsive" onclick="$('.tab-pane').removeClass('active');$('#content').addClass('active');$('#myTabs').find('li').removeClass('active');$(this).parent().addClass('active');" >
                                 Contents
                             </a> </li>
-                                                <li> <a href="#author" role="tab" id="author-tab-responsive" data-toggle="tab" aria-controls="author" ng-click="$productController.showSummaryTab('author-tab', $event);" aria-expanded="false">
+                                                <li> <a href="#author" role="tab" id="author-tab-responsive" onclick="$('.tab-pane').removeClass('active');$('#author').addClass('active');$('#myTabs').find('li').removeClass('active');$(this).parent().addClass('active');" >
                                 Author
                             </a> </li>
                                             </ul>
