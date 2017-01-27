@@ -81,17 +81,13 @@
                                 <a href="#ProfileSetup-step" type="button" class="btn btn-primary btn-circle" id="ProfileSetup-step-2" disabled="disabled"> <span class="glyphicon glyphicon-lock"></span> </a>
                                 <p>Payment Details</p>
                             </div>
-                            <!--                       <div class="stepwizard-step">
-                          <a href="#Security-Setup-step" type="button"  class="btn btn-default btn-circle"  disabled="disabled" id="Security-Setup-step-3" >
-                              <span class="glyphicon glyphicon-ok"></span>
-                          </a>
-                          <p>Order Review</p>
-                      </div> --></div>
+                        </div>
                     </div>
                     <div>
                         <form role="form" class="">
                             <div class="text-center mt20 mb60">
-                                <h4>Zuora iFrame goes here</h4> </div>
+                                <div id="zuora_payment"></div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -108,6 +104,42 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Sidebar Toggle Script -->
     <script src="js/simple-sidebar.js"></script>
+    <!-- Zuora -->
+    <script type="text/javascript" src="https://apisandboxstatic.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js"></script>
+    <script>
+        var params = {
+            tenantId: "123"
+            , id: "ff80808145b3bf9d0145b3c6812b0008"
+            , token: "qJ52b1iCyPXyZTcuQbfZa2qmKhD4qBGz"
+            , signature: "MjJmYjBmNTY3ZWI3ZjcyZTRmMjZlZWVhMTJhZDhiYWI1ZjUyMGRkNQ=="
+            , style: "overlay"
+            , key: "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC59DglWlsd82ooSVYyXoniF5rln3edz+5tdPLVBXXPDVXDCI9w7sneaj+XQs5LFaHZby117XzE8CFmoskVd2tsGLvXr83gEQ7eCXUrY0NDBFlAs0t+ChkB18VXG2DBbeUCI2poZJpCbpQm4rSvqUeY+8H/+/Stf4hXFWVPEEWyjwIDQAB"
+            , submitEnabled: "true"
+            , locale: "en_EN"
+            , url: "https://www.zuora.com/apps/PublicHostedPageLite.do"
+            , paymentGateway: "DefaultGateway"
+        };
+        
+        function callback(response) {
+            var redirectUrl = "";
+            if (response.success) {
+                redirectUrl = "https://yourdomain.com/yourapp/callback.jsp?refid=" + response.refId + "&field_passthrough1=" + response.field_passthrough1;
+                window.location.replace(redirectUrl);
+            }
+            else {
+                if (response.responseFrom == "Response_From_Submit_Page") {
+                    // Handle the error response when the Payment Page submission failed.
+                    redirectUrl = "https://yourdomain.com/yourapp/callback.jsp?success=false&errorcode=" + response.errorCode + "&errorMessage=" + response.errorMessage;
+                }
+                else {
+                    // Handle the error response when the Payment Page request failed.
+                }
+            }
+            window.location.replace(redirectUrl);
+        }
+        var prepopulateFields = {};
+        Z.render(params, prepopulateFields, callback);
+    </script>
 </body>
 
 </html>
