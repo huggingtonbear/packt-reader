@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Mapt - Billing </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/payment.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="images/logo.png" style="height:25px;"></a>
+          </div>
+        </div>
+      </nav>
+      <div class="container mt40">
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h4>Mapt Pro <small class="pull-right mt5">Monthly</small></h4>
+              <hr class="mb0">
+              <img src="images/laptop-image.png" class="img-responsive">
+              <hr class="mt0">
+              <ul>
+                <li>4,000 eBooks and Videos</li>
+                <li>40 new eBooks and Videos a month</li>
+                <li>Over 20 Skill Plans to help you skill up</li>
+                <li>Responsive to help you learn on the move</li>
+                <li>No contract, cancel any time</li>
+              </ul>
+              <hr>
+              <div>
+              <h5>Total: <span class="pull-right">£24.99</span></h5>
+              <hr>
+              <div class="terms"><p>Mapt is required by law to collect sales tax on purchases in some states. The actual tax amount will be calculated based on the applicable state and local sales taxes when your order is processed.</p><p>Your selected subscription plan may automatically renew unless you cancel. For further details regarding automatic renewal and cancellation, please review our Terms of Use.</p>
+              </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="panel panel-default">
+            <div class="panel-body" >
+             <div class="stepwizard mt25">
+                  <div class="stepwizard-row setup-panel">
+                      <div class="stepwizard-step">
+                          <a href="#VerifyEmail-step" type="button" class="btn btn-primary btn-circle" disabled="disabled">
+                              <span class="glyphicon glyphicon-user"></span>
+                          </a>
+                          <p>User Details</p>
+                      </div>
+                      <div class="stepwizard-step">
+                          <a href="#ProfileSetup-step" type="button" class="btn btn-default btn-circle" id="ProfileSetup-step-2" disabled="disabled">
+                              <span class="glyphicon glyphicon-lock"></span>
+                          </a>
+                          <p>Payment Details</p>
+                      </div>
+<!--                       <div class="stepwizard-step">
+                          <a href="#Security-Setup-step" type="button"  class="btn btn-default btn-circle"  disabled="disabled" id="Security-Setup-step-3" >
+                              <span class="glyphicon glyphicon-ok"></span>
+                          </a>
+                          <p>Order Review</p>
+                      </div> -->
+                  </div>
+              </div>
+              <div>
+              <form role="form" class="">
+                <div>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="account">
+                      <div class="col-xs-12 text-center mb20"><h6>Already have a Packt account? <a href="#login" aria-controls="profile" role="tab" data-toggle="tab">Click here to sign in</a></h6></div>
+                      <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                          <label for="first_name">First name *</label>
+                          <input type="text" name="first_name" id="first_name" class="form-control" placeholder="" tabindex="1">
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                          <label for="last_name">Last name *</label>
+                          <input type="text" name="last_name" id="last_name" class="form-control" placeholder="" tabindex="2">
+                        </div>
+                      </div>
+                      <div class="form-group col-xs-12 col-sm-6 col-md-6">
+                        <label for="email">Email address *</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="" tabindex="4">
+                      </div>
+                      <div class="form-group col-xs-12 col-sm-6 col-md-6">
+                        <label for="company">Company</label>
+                        <input type="name" name="company" id="company" class="form-control" placeholder="" tabindex="4">
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                          <label for="password">Choose a password *</label>
+                          <input type="password" name="password" id="password" class="form-control" placeholder="" tabindex="5">
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                          <label for="password_confirmation">Repeat password *</label>
+                          <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" placeholder="" tabindex="6">
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-6">
+                        <p><small>* Required</small></p>
+                      </div>
+                    
+                      <div class="col-xs-12 col-md-6 mb20"><div class="terms"><p>By creating an account, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.</p></div><a href="payment-2.html" class="btn btn-primary btn-block btn-lg">Create account</a>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="login"> 
+                      <div class="col-xs-12 text-center mb20"><h6>Not got a Packt account? <a href="#account" aria-controls="account" role="tab" data-toggle="tab">Click here to create an account</a></h6></div>
+                      <div class="form-group col-xs-12">
+                        <label for="email2">Enter your email address</label>
+                        <input type="email" name="email" id="email2" class="form-control" placeholder="" tabindex="4">
+                      </div>
+                      <div class="col-xs-12">
+                        <div class="form-group">
+                          <label for="password2">Enter your password</label>
+                          <input type="password" name="password" id="password2" class="form-control" placeholder="" tabindex="5">
+                        </div>
+                      </div>
+                    
+                      <div class="col-xs-12 col-md-6 col-md-offset-6 mb20"><p>Forgotten your password? <a href="#">Click here to reset it</a></p><a href="payment-2.html" class="btn btn-primary btn-block btn-lg">Sign in</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                </form>
+
+             
+            </div>
+          </div>
+        </div>
+    </div><!-- /container -->
+  
+
+  
+    
+
+  <!-- JAVASCRIPT BLOCKS -->
+
+  <!-- jQuery Script-->
+  <script src="js/jquery.js"></script>
+  <!-- Syntax Highlighting Script -->
+  <script src="js/prism.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Sidebar Toggle Script -->
+  <script src="js/simple-sidebar.js"></script>
+
+</body>
+
+</html>
