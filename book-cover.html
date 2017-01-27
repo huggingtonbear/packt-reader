@@ -47,6 +47,7 @@
     <link href="css/bootstrap-xl.css?version=3.1" rel="stylesheet">
     <link href="css/prism.css?version=3.1" rel="stylesheet">
     <!-- NON VENDOR CSS FILES -->
+    <link href="css/custom.css" rel="stylesheet">
     <link href="css/real.css" rel="stylesheet">
     <!-- VENDOR JS FILES -->
     <script src="js/angular.min.js?version=3.1"></script>
@@ -1038,581 +1039,581 @@
                             <div class="col-sm-12">
                                 <h5 class="mt10 ng-binding">By Samarth Shah</h5>
                                 <div>
-                                    <p class="mb20"><b class="ng-binding">Unlock your creative programming potential by creating web technologies, image processing, electronics- and robotics-based projects using the Raspberry Pi</b></p> <a href="book/All Books/9781783982820/1/ch01lvl1sec11/Remotely+accessing+Raspberry+Pi" class="btn btn-info btn-lg pull-right hidden-xs ng-binding" ng-class="{'disabled' : content_not_available}" ng-click="saveReadContinue(bookData.continueUrl);">
-                    Start Learning <!-- ngIf: !bookData.bookUnavailable --><i class="fa fa-chevron-right ml5 ng-scope" ng-if="!bookData.bookUnavailable" aria-hidden="true"></i><!-- end ngIf: !bookData.bookUnavailable -->
-                </a> <a href="book/All Books/9781783982820/1/ch01lvl1sec11/Remotely+accessing+Raspberry+Pi" class="btn btn-info btn-lg btn-block mt20 mb20 visible-xs ng-binding" ng-click="saveReadContinue(bookData.continueUrl);">
-                    Start Learning <!-- ngIf: !bookData.bookUnavailable --><i class="fa fa-chevron-right ml5 ng-scope" ng-if="!bookData.bookUnavailable" aria-hidden="true"></i><!-- end ngIf: !bookData.bookUnavailable -->
-                </a> <a href="book/All Books/9781783982820/1/ch01lvl1sec11/Remotely+accessing+Raspberry+Pi" class="btn btn-primary btn-lg pull-right hidden-xs ng-binding" ng-class="{'disabled' : content_not_available}" ng-click="saveReadContinue(bookData.continueUrl);">
-                    Add to Saved <!-- ngIf: !bookData.bookUnavailable --><i class="fa fa-plus ml5 ng-scope" ng-if="!bookData.bookUnavailable" aria-hidden="true"></i><!-- end ngIf: !bookData.bookUnavailable -->
-                </a> <a href="book/All Books/9781783982820/1/ch01lvl1sec11/Remotely+accessing+Raspberry+Pi" class="btn btn-primary btn-lg btn-block mt20 mb20 visible-xs ng-binding" ng-click="saveReadContinue(bookData.continueUrl);">
-                    Add to Saved <!-- ngIf: !bookData.bookUnavailable --><i class="fa fa-plus ml5 ng-scope" ng-if="!bookData.bookUnavailable" aria-hidden="true"></i><!-- end ngIf: !bookData.bookUnavailable -->
+                                    <p class="mb20"><b class="ng-binding">Unlock your creative programming potential by creating web technologies, image processing, electronics- and robotics-based projects using the Raspberry Pi</b></p> <a href="index.html" class="btn btn-info btn-lg pull-right hidden-xs ng-binding">
+                    Start Learning <!-- ngIf: !bookData.bookUnavailable --><i class="fa fa-chevron-right ml5 ng-scope" ></i>
+                </a> <a href="index.html" class="btn btn-info btn-lg btn-block mt20 mb20 visible-xs ng-binding">
+                    Start Learning <!-- ngIf: !bookData.bookUnavailable --><i class="fa fa-chevron-right ml5 ng-scope" ></i>
                 </a>
+                                    <a href="#" role="save" class="btn btn-primary btn-lg pull-right hidden-xs ng-binding" onclick="addRemove()"> <i class="fa fa-plus mr5 ng-scope"></i> Add to Saved </a>
+                                    <a href="#" role="save" class="btn btn-primary btn-lg btn-block mt20 mb20 visible-xs ng-binding" onclick="addRemove()"> <i class="fa fa-plus mr5 ng-scope"></i> Add to Saved </a>
                                     <div class="clearfix">
-                                        <div class="col-sm-12">
-                                            <ul id="myTabs" class="nav nav-tabs nav-justified hidden-xs mt20" role="tablist">
-                                                <li class="active">
-                                                    <a href="#info" role="tab" id="info-tab" onclick="$('.tab-pane').removeClass('active');$('#info').addClass('active');$('.nav-tabs,.nav-pills').find('li').removeClass('active');$(this).parent().addClass('active');" >
-                                                        <h5>Info</h5> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#content" role="tab" id="content-tab" onclick="$('.tab-pane').removeClass('active');$('#content').addClass('active');$('.nav-tabs,.nav-pills').find('li').removeClass('active');$(this).parent().addClass('active');" >
-                                                        <h5>Contents</h5> </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#author" role="tab" id="author-tab" onclick="$('.tab-pane').removeClass('active');$('#author').addClass('active');$('.nav-tabs,.nav-pills').find('li').removeClass('active');$(this).parent().addClass('active');" >
-                                                        <h5>Author</h5> </a>
-                                                </li>
-                                            </ul>
-                                            <ul id="myTabs" class="nav nav-pills text-center nav-stacked visible-xs mb60" role="tablist">
-                                                <li class="active"> <a href="#info" role="tab" id="info-tab-responsive" onclick="$('.tab-pane').removeClass('active');$('#info').addClass('active');$('.nav-tabs,.nav-pills').find('li').removeClass('active');$(this).parent().addClass('active');" >
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <ul id="myTabs" class="nav nav-tabs nav-justified hidden-xs mt20" role="tablist">
+                                                    <li class="active">
+                                                        <a href="#info" role="tab" id="info-tab" onclick="$('.tab-pane').removeClass('active');$('#info').addClass('active');$('.nav-tabs,.nav-pills').find('li').removeClass('active');$(this).parent().addClass('active');">
+                                                            <h5>Info</h5> </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#content" role="tab" id="content-tab" onclick="$('.tab-pane').removeClass('active');$('#content').addClass('active');$('.nav-tabs,.nav-pills').find('li').removeClass('active');$(this).parent().addClass('active');">
+                                                            <h5>Contents</h5> </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#author" role="tab" id="author-tab" onclick="$('.tab-pane').removeClass('active');$('#author').addClass('active');$('.nav-tabs,.nav-pills').find('li').removeClass('active');$(this).parent().addClass('active');">
+                                                            <h5>Author</h5> </a>
+                                                    </li>
+                                                </ul>
+                                                <ul id="myTabs" class="nav nav-pills text-center nav-stacked visible-xs mb60" role="tablist">
+                                                    <li class="active"> <a href="#info" role="tab" id="info-tab-responsive" onclick="$('.tab-pane').removeClass('active');$('#info').addClass('active');$('.nav-tabs,.nav-pills').find('li').removeClass('active');$(this).parent().addClass('active');">
                                 Info
                             </a> </li>
-                                                <li> <a href="#content" role="tab" id="content-tab-responsive" onclick="$('.tab-pane').removeClass('active');$('#content').addClass('active');$('.nav-tabs,.nav-pills').find('li').removeClass('active');$(this).parent().addClass('active');" >
+                                                    <li> <a href="#content" role="tab" id="content-tab-responsive" onclick="$('.tab-pane').removeClass('active');$('#content').addClass('active');$('.nav-tabs,.nav-pills').find('li').removeClass('active');$(this).parent().addClass('active');">
                                 Contents
                             </a> </li>
-                                                <li> <a href="#author" role="tab" id="author-tab-responsive" onclick="$('.tab-pane').removeClass('active');$('#author').addClass('active');$('.nav-tabs,.nav-pills').find('li').removeClass('active');$(this).parent().addClass('active');" >
+                                                    <li> <a href="#author" role="tab" id="author-tab-responsive" onclick="$('.tab-pane').removeClass('active');$('#author').addClass('active');$('.nav-tabs,.nav-pills').find('li').removeClass('active');$(this).parent().addClass('active');">
                                 Author
                             </a> </li>
-                                            </ul>
-                                            <div id="myTabContent" class="tab-content pt30">
-                                                <div role="tabpanel" class="tab-pane active fade in" id="info" aria-labelledby="info-tab">
-                                                    <div class="visible-xs">
-                                                        <h5 class="mobile-title">Features</h5> </div>
-                                                    <div class="hidden-xs">
-                                                        <h5>Features</h5> </div>
-                                                    <hr>
-                                                    <div ng-bind-html="bookData.about" class="ng-binding">
+                                                </ul>
+                                                <div id="myTabContent" class="tab-content pt30">
+                                                    <div role="tabpanel" class="tab-pane active fade in" id="info" aria-labelledby="info-tab">
+                                                        <div class="visible-xs">
+                                                            <h5 class="mobile-title">Features</h5> </div>
+                                                        <div class="hidden-xs">
+                                                            <h5>Features</h5> </div>
+                                                        <hr>
+                                                        <div ng-bind-html="bookData.about" class="ng-binding">
+                                                            <ul>
+                                                                <li>Learn how to create games, web, and desktop applications using the best features of the Raspberry Pi</li>
+                                                                <li>Discover the powerful development tools that allow you to cross-compile your software and build your own Linux distribution for maximum performance</li>
+                                                                <li>Step-by-step tutorials show you how to quickly develop real-world applications using the Raspberry Pi</li>
+                                                            </ul>
+                                                        </div>
+                                                        <br>
+                                                        <div class="visible-xs">
+                                                            <h5 class="mobile-title">Learning</h5> </div>
+                                                        <div class="hidden-xs">
+                                                            <h5>Learning</h5> </div>
+                                                        <hr>
+                                                        <div ng-bind-html="bookData.learn" class="ng-binding">
+                                                            <ul>
+                                                                <li>Get to grips with the basics of Linux administration, along with the inner workings of Linux distributions</li>
+                                                                <li>Develop a web interface that can be used to upload selected files and create playlists</li>
+                                                                <li>Discover how to connect your Raspberry Pi to the real world using analog inputs</li>
+                                                                <li>Build your own remote-controlled robot</li>
+                                                                <li>Get to know about different image processing operations</li>
+                                                                <li>Explore troubleshooting tips and tricks</li>
+                                                                <li>Create your own Twitter-enabled Raspberry Pi camera</li>
+                                                            </ul>
+                                                        </div>
+                                                        <br>
+                                                        <div class="visible-xs">
+                                                            <h5 class="mobile-title">About</h5> </div>
+                                                        <div class="hidden-xs">
+                                                            <h5>About</h5> </div>
+                                                        <hr>
+                                                        <div ng-bind-html="bookData.detail" class="ng-binding">
+                                                            <p>Raspberry Pi is one of the most popular development boards and a staple tool among developers because of its low cost and flexibility.</p>
+                                                            <p>Learning Raspberry Pi is a practical tutorial, providing you with the skills required to design and build your own projects. By working through the examples and projects in the book, you will build up your knowledge of software and hardware development and be able to create projects of your own.</p>
+                                                            <p>This book contains a set of tutorials and examples for commonly used technologies, accompanied by practical projects that bring the topics together. Each individual project that you become involved with allows you to develop an important set of skills, building up your confidence to tackle more advanced applications of your own.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div role="tabpanel" class="tab-pane fade in" id="content" aria-labelledby="content-tab">
+                                                        <div class="visible-xs">
+                                                            <h5 class="mobile-title">Contents</h5>
+                                                            <hr> </div>
                                                         <ul>
-                                                            <li>Learn how to create games, web, and desktop applications using the best features of the Raspberry Pi</li>
-                                                            <li>Discover the powerful development tools that allow you to cross-compile your software and build your own Linux distribution for maximum performance</li>
-                                                            <li>Step-by-step tutorials show you how to quickly develop real-world applications using the Raspberry Pi</li>
+                                                            <!-- ngRepeat: (key,item) in formattedNavigation track by $index -->
+                                                            <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
+                                                                <li data-chapter="1" class="" data-key="1" on-finish-render="ngRepeatFinished">
+                                                                    <a href="book/hardware_and_creative/9781783982820/1" data-key="1" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/1">
+                                                                        <!-- ngIf: item.completed == '1' -->
+                                                                        <div class="section-name ng-binding" ng-bind-html="item.text"> 1: Getting Started with Raspberry Pi</div>
+                                                                    </a>
+                                                                    <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
+                                                                        <ul>
+                                                                            <!-- ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="3" data-chapter="1">
+                                                                                <a href="book/hardware_and_creative/9781783982820/1/ch01lvl1sec08/Getting+to+know+your+Raspberry+Pi" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/1/ch01lvl1sec08/Getting+to+know+your+Raspberry+Pi" class="completed-section">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div ng-if="child.completed == '1'" class="section-complete ng-scope"> <i class="fa fa-check fa-25"></i> </div>
+                                                                                    <!-- end ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Getting to know your Raspberry Pi</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="4" data-chapter="1">
+                                                                                <a href="book/hardware_and_creative/9781783982820/1/ch01lvl1sec09/Installation+methods" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/1/ch01lvl1sec09/Installation+methods" class="completed-section">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div ng-if="child.completed == '1'" class="section-complete ng-scope"> <i class="fa fa-check fa-25"></i> </div>
+                                                                                    <!-- end ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Installation methods</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="5" data-chapter="1">
+                                                                                <a href="book/hardware_and_creative/9781783982820/1/ch01lvl1sec10/User+management" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/1/ch01lvl1sec10/User+management" class="completed-section">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div ng-if="child.completed == '1'" class="section-complete ng-scope"> <i class="fa fa-check fa-25"></i> </div>
+                                                                                    <!-- end ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">User management</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="6" data-chapter="1">
+                                                                                <a href="book/hardware_and_creative/9781783982820/1/ch01lvl1sec11/Remotely+accessing+Raspberry+Pi" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/1/ch01lvl1sec11/Remotely+accessing+Raspberry+Pi">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Remotely accessing Raspberry Pi</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="7" data-chapter="1">
+                                                                                <a href="book/hardware_and_creative/9781783982820/1/ch01lvl1sec12/Installing+a+web+server" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/1/ch01lvl1sec12/Installing+a+web+server">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Installing a web server</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="8" data-chapter="1">
+                                                                                <a href="book/hardware_and_creative/9781783982820/1/ch01lvl1sec13/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/1/ch01lvl1sec13/Summary">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </div>
+                                                            <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
+                                                            <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
+                                                                <li data-chapter="2" class="" data-key="9" on-finish-render="ngRepeatFinished">
+                                                                    <a href="book/hardware_and_creative/9781783982820/2" data-key="9" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/2">
+                                                                        <!-- ngIf: item.completed == '1' -->
+                                                                        <div class="section-name ng-binding" ng-bind-html="item.text"> 2: Developing Web Applications</div>
+                                                                    </a>
+                                                                    <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
+                                                                        <ul>
+                                                                            <!-- ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="11" data-chapter="2">
+                                                                                <a href="book/hardware_and_creative/9781783982820/2/ch02lvl1sec14/Getting+started+with+HTML%2C+JavaScript%2C+and+jQuery" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/2/ch02lvl1sec14/Getting+started+with+HTML%2C+JavaScript%2C+and+jQuery">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Getting started with HTML, JavaScript, and jQuery</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="12" data-chapter="2">
+                                                                                <a href="book/hardware_and_creative/9781783982820/2/ch02lvl1sec15/An+introduction+to+Python" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/2/ch02lvl1sec15/An+introduction+to+Python">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">An introduction to Python</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="13" data-chapter="2">
+                                                                                <a href="book/hardware_and_creative/9781783982820/2/ch02lvl1sec16/Creating+an+Internet+radio+station" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/2/ch02lvl1sec16/Creating+an+Internet+radio+station">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Creating an Internet radio station</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="14" data-chapter="2">
+                                                                                <a href="book/hardware_and_creative/9781783982820/2/ch02lvl1sec17/Deploying+Flask+applications" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/2/ch02lvl1sec17/Deploying+Flask+applications">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Deploying Flask applications</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="15" data-chapter="2">
+                                                                                <a href="book/hardware_and_creative/9781783982820/2/ch02lvl1sec18/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/2/ch02lvl1sec18/Summary">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </div>
+                                                            <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
+                                                            <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
+                                                                <li data-chapter="3" class="" data-key="16" on-finish-render="ngRepeatFinished">
+                                                                    <a href="book/hardware_and_creative/9781783982820/3" data-key="16" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/3">
+                                                                        <!-- ngIf: item.completed == '1' -->
+                                                                        <div class="section-name ng-binding" ng-bind-html="item.text"> 3: Introduction to Electronics</div>
+                                                                    </a>
+                                                                    <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
+                                                                        <ul>
+                                                                            <!-- ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="18" data-chapter="3">
+                                                                                <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec19/Understanding+the+physics+behind+electronics" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec19/Understanding+the+physics+behind+electronics">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Understanding the physics behind electronics</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="19" data-chapter="3">
+                                                                                <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec20/Basic+laws+of+electronics" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec20/Basic+laws+of+electronics">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Basic laws of electronics</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="20" data-chapter="3">
+                                                                                <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec21/Electronics+components" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec21/Electronics+components">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Electronics components</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="21" data-chapter="3">
+                                                                                <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec22/Developing+a+digital+clock" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec22/Developing+a+digital+clock">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Developing a digital clock</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="22" data-chapter="3">
+                                                                                <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec23/Developing+an+e-mail+notifier" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec23/Developing+an+e-mail+notifier">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Developing an e-mail notifier</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="23" data-chapter="3">
+                                                                                <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec24/Developing+an+alarm+clock" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec24/Developing+an+alarm+clock">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Developing an alarm clock</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="24" data-chapter="3">
+                                                                                <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec25/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec25/Summary">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </div>
+                                                            <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
+                                                            <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
+                                                                <li data-chapter="4" class="" data-key="25" on-finish-render="ngRepeatFinished">
+                                                                    <a href="book/hardware_and_creative/9781783982820/4" data-key="25" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/4">
+                                                                        <!-- ngIf: item.completed == '1' -->
+                                                                        <div class="section-name ng-binding" ng-bind-html="item.text"> 4: Getting into Robotics</div>
+                                                                    </a>
+                                                                    <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
+                                                                        <ul>
+                                                                            <!-- ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="27" data-chapter="4">
+                                                                                <a href="book/hardware_and_creative/9781783982820/4/ch04lvl1sec26/Introduction+to+robotics" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/4/ch04lvl1sec26/Introduction+to+robotics">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Introduction to robotics</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="28" data-chapter="4">
+                                                                                <a href="book/hardware_and_creative/9781783982820/4/ch04lvl1sec27/More+electronic+components" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/4/ch04lvl1sec27/More+electronic+components">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">More electronic components</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="29" data-chapter="4">
+                                                                                <a href="book/hardware_and_creative/9781783982820/4/ch04lvl1sec28/Developing+a+remote-controlled+robot+with+live+feed+and+live+distance+to+the+nearest+wall" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/4/ch04lvl1sec28/Developing+a+remote-controlled+robot+with+live+feed+and+live+distance+to+the+nearest+wall">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Developing a remote-controlled robot with live feed and live distance to the nearest wall</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="30" data-chapter="4">
+                                                                                <a href="book/hardware_and_creative/9781783982820/4/ch04lvl1sec29/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/4/ch04lvl1sec29/Summary">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </div>
+                                                            <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
+                                                            <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
+                                                                <li data-chapter="5" class="" data-key="31" on-finish-render="ngRepeatFinished">
+                                                                    <a href="book/hardware_and_creative/9781783982820/5" data-key="31" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/5">
+                                                                        <!-- ngIf: item.completed == '1' -->
+                                                                        <div class="section-name ng-binding" ng-bind-html="item.text"> 5: Introduction to Image Processing</div>
+                                                                    </a>
+                                                                    <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
+                                                                        <ul>
+                                                                            <!-- ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="33" data-chapter="5">
+                                                                                <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec30/What+is+image+processing%3F" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec30/What+is+image+processing%3F">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">What is image processing?</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="34" data-chapter="5">
+                                                                                <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec31/The+Raspberry+Pi+camera+module" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec31/The+Raspberry+Pi+camera+module">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">The Raspberry Pi camera module</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="35" data-chapter="5">
+                                                                                <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec32/The+image+processing+library" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec32/The+image+processing+library">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">The image processing library</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="36" data-chapter="5">
+                                                                                <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec33/A+quick+start+to+image+processing" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec33/A+quick+start+to+image+processing">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">A quick start to image processing</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="37" data-chapter="5">
+                                                                                <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec34/Creating+time-lapse+videos+with+the+Raspberry+Pi+camera" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec34/Creating+time-lapse+videos+with+the+Raspberry+Pi+camera">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Creating time-lapse videos with the Raspberry Pi camera</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="38" data-chapter="5">
+                                                                                <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec35/Developing+a+Twitter-controlled+Raspberry+Pi+camera" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec35/Developing+a+Twitter-controlled+Raspberry+Pi+camera">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Developing a Twitter-controlled Raspberry Pi camera</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="39" data-chapter="5">
+                                                                                <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec36/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec36/Summary">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </div>
+                                                            <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
+                                                            <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
+                                                                <li data-chapter="6" class="" data-key="40" on-finish-render="ngRepeatFinished">
+                                                                    <a href="book/hardware_and_creative/9781783982820/6" data-key="40" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/6">
+                                                                        <!-- ngIf: item.completed == '1' -->
+                                                                        <div class="section-name ng-binding" ng-bind-html="item.text"> 6: Image Processing Algorithms</div>
+                                                                    </a>
+                                                                    <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
+                                                                        <ul>
+                                                                            <!-- ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="42" data-chapter="6">
+                                                                                <a href="book/hardware_and_creative/9781783982820/6/ch06lvl1sec37/Important+image+processing+operations" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/6/ch06lvl1sec37/Important+image+processing+operations">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Important image processing operations</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="43" data-chapter="6">
+                                                                                <a href="book/hardware_and_creative/9781783982820/6/ch06lvl1sec38/Core+algorithms" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/6/ch06lvl1sec38/Core+algorithms">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Core algorithms</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="44" data-chapter="6">
+                                                                                <a href="book/hardware_and_creative/9781783982820/6/ch06lvl1sec39/Machine+learning" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/6/ch06lvl1sec39/Machine+learning">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Machine learning</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="45" data-chapter="6">
+                                                                                <a href="book/hardware_and_creative/9781783982820/6/ch06lvl1sec40/Projects" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/6/ch06lvl1sec40/Projects">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Projects</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="46" data-chapter="6">
+                                                                                <a href="book/hardware_and_creative/9781783982820/6/ch06lvl1sec41/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/6/ch06lvl1sec41/Summary">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </div>
+                                                            <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
+                                                            <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
+                                                                <li data-chapter="7" class="" data-key="47" on-finish-render="ngRepeatFinished">
+                                                                    <a href="book/hardware_and_creative/9781783982820/7" data-key="47" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/7">
+                                                                        <!-- ngIf: item.completed == '1' -->
+                                                                        <div class="section-name ng-binding" ng-bind-html="item.text"> 7: Troubleshooting, Tips/Tricks, and Resources for Advanced Users</div>
+                                                                    </a>
+                                                                    <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
+                                                                        <ul>
+                                                                            <!-- ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="49" data-chapter="7">
+                                                                                <a href="book/hardware_and_creative/9781783982820/7/ch07lvl1sec42/Troubleshooting" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/7/ch07lvl1sec42/Troubleshooting">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Troubleshooting</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="50" data-chapter="7">
+                                                                                <a href="book/hardware_and_creative/9781783982820/7/ch07lvl1sec43/Tips+and+tricks" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/7/ch07lvl1sec43/Tips+and+tricks">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Tips and tricks</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="51" data-chapter="7">
+                                                                                <a href="book/hardware_and_creative/9781783982820/7/ch07lvl1sec44/Resources+for+advanced+users" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/7/ch07lvl1sec44/Resources+for+advanced+users">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Resources for advanced users</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="52" data-chapter="7">
+                                                                                <a href="book/hardware_and_creative/9781783982820/7/ch07lvl1sec45/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/7/ch07lvl1sec45/Summary">
+                                                                                    <!-- ngIf: child.completed == '1' -->
+                                                                                    <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <!-- end ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </div>
+                                                            <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
+                                                            <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
+                                                                <li data-chapter="backindex" class="" data-key="53" on-finish-render="ngRepeatFinished">
+                                                                    <a href="book/hardware_and_creative/9781783982820/backindex" data-key="53" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/backindex">
+                                                                        <!-- ngIf: item.completed == '1' -->
+                                                                        <div class="section-name ng-binding" ng-bind-html="item.text">Appendix A: Index</div>
+                                                                    </a>
+                                                                    <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
+                                                                        <ul>
+                                                                            <!-- ngRepeat: (key2,child) in item.children track by $index -->
+                                                                            <!-- ngIf: key2 !== 0 -->
+                                                                            <!-- end ngRepeat: (key2,child) in item.children track by $index -->
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </div>
+                                                            <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
                                                         </ul>
                                                     </div>
-                                                    <br>
-                                                    <div class="visible-xs">
-                                                        <h5 class="mobile-title">Learning</h5> </div>
-                                                    <div class="hidden-xs">
-                                                        <h5>Learning</h5> </div>
-                                                    <hr>
-                                                    <div ng-bind-html="bookData.learn" class="ng-binding">
-                                                        <ul>
-                                                            <li>Get to grips with the basics of Linux administration, along with the inner workings of Linux distributions</li>
-                                                            <li>Develop a web interface that can be used to upload selected files and create playlists</li>
-                                                            <li>Discover how to connect your Raspberry Pi to the real world using analog inputs</li>
-                                                            <li>Build your own remote-controlled robot</li>
-                                                            <li>Get to know about different image processing operations</li>
-                                                            <li>Explore troubleshooting tips and tricks</li>
-                                                            <li>Create your own Twitter-enabled Raspberry Pi camera</li>
-                                                        </ul>
+                                                    <div role="tabpanel" class="tab-pane fade" id="author" aria-labelledby="author-tab">
+                                                        <div class="visible-xs">
+                                                            <h4 class="mobile-title">About the Author</h4>
+                                                            <hr> </div>
+                                                        <!-- ngRepeat: (key, author) in bookData.authorList -->
+                                                        <ng-repeat ng-repeat="(key, author) in bookData.authorList" class="ng-scope">
+                                                            <p><strong class="ng-binding">Samarth Shah</strong></p>
+                                                            <div ng-bind-html="author.description" class="ng-binding">
+                                                                <p>Samarth Shah is a software engineer by profession and maker by heart. He leads maker activities at Pune Makers and heads Infosys Robotics Club. He loves building creative/innovative prototypes using the latest hardware/sensors (Raspberry Pi, Arduino, Kinect, Leap Motion, and many more) and software. He has given talks at various national and international conferences. He has authored a book on Raspberry Pi entitled Learning Raspberry Pi, Packt Publishing. During the day, he works on various data visualization techniques and UI frameworks. At night, he does blogging, reading, writing, and many more things. You can read more about him at <a href="http://samarthshah.com">http://samarthshah.com</a>.</p>
+                                                            </div>
+                                                        </ng-repeat>
+                                                        <!-- end ngRepeat: (key, author) in bookData.authorList -->
                                                     </div>
-                                                    <br>
-                                                    <div class="visible-xs">
-                                                        <h5 class="mobile-title">About</h5> </div>
-                                                    <div class="hidden-xs">
-                                                        <h5>About</h5> </div>
-                                                    <hr>
-                                                    <div ng-bind-html="bookData.detail" class="ng-binding">
-                                                        <p>Raspberry Pi is one of the most popular development boards and a staple tool among developers because of its low cost and flexibility.</p>
-                                                        <p>Learning Raspberry Pi is a practical tutorial, providing you with the skills required to design and build your own projects. By working through the examples and projects in the book, you will build up your knowledge of software and hardware development and be able to create projects of your own.</p>
-                                                        <p>This book contains a set of tutorials and examples for commonly used technologies, accompanied by practical projects that bring the topics together. Each individual project that you become involved with allows you to develop an important set of skills, building up your confidence to tackle more advanced applications of your own.</p>
-                                                    </div>
-                                                </div>
-                                                <div role="tabpanel" class="tab-pane fade in" id="content" aria-labelledby="content-tab">
-                                                    <div class="visible-xs">
-                                                        <h5 class="mobile-title">Contents</h5>
-                                                        <hr> </div>
-                                                    <ul>
-                                                        <!-- ngRepeat: (key,item) in formattedNavigation track by $index -->
-                                                        <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
-                                                            <li data-chapter="1" class="" data-key="1" on-finish-render="ngRepeatFinished">
-                                                                <a href="book/hardware_and_creative/9781783982820/1" data-key="1" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/1">
-                                                                    <!-- ngIf: item.completed == '1' -->
-                                                                    <div class="section-name ng-binding" ng-bind-html="item.text"> 1: Getting Started with Raspberry Pi</div>
-                                                                </a>
-                                                                <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
-                                                                    <ul>
-                                                                        <!-- ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="3" data-chapter="1">
-                                                                            <a href="book/hardware_and_creative/9781783982820/1/ch01lvl1sec08/Getting+to+know+your+Raspberry+Pi" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/1/ch01lvl1sec08/Getting+to+know+your+Raspberry+Pi" class="completed-section">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div ng-if="child.completed == '1'" class="section-complete ng-scope"> <i class="fa fa-check fa-25"></i> </div>
-                                                                                <!-- end ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Getting to know your Raspberry Pi</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="4" data-chapter="1">
-                                                                            <a href="book/hardware_and_creative/9781783982820/1/ch01lvl1sec09/Installation+methods" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/1/ch01lvl1sec09/Installation+methods" class="completed-section">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div ng-if="child.completed == '1'" class="section-complete ng-scope"> <i class="fa fa-check fa-25"></i> </div>
-                                                                                <!-- end ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Installation methods</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="5" data-chapter="1">
-                                                                            <a href="book/hardware_and_creative/9781783982820/1/ch01lvl1sec10/User+management" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/1/ch01lvl1sec10/User+management" class="completed-section">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div ng-if="child.completed == '1'" class="section-complete ng-scope"> <i class="fa fa-check fa-25"></i> </div>
-                                                                                <!-- end ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">User management</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="6" data-chapter="1">
-                                                                            <a href="book/hardware_and_creative/9781783982820/1/ch01lvl1sec11/Remotely+accessing+Raspberry+Pi" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/1/ch01lvl1sec11/Remotely+accessing+Raspberry+Pi">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Remotely accessing Raspberry Pi</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="7" data-chapter="1">
-                                                                            <a href="book/hardware_and_creative/9781783982820/1/ch01lvl1sec12/Installing+a+web+server" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/1/ch01lvl1sec12/Installing+a+web+server">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Installing a web server</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="8" data-chapter="1">
-                                                                            <a href="book/hardware_and_creative/9781783982820/1/ch01lvl1sec13/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/1/ch01lvl1sec13/Summary">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                        </div>
-                                                        <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
-                                                        <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
-                                                            <li data-chapter="2" class="" data-key="9" on-finish-render="ngRepeatFinished">
-                                                                <a href="book/hardware_and_creative/9781783982820/2" data-key="9" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/2">
-                                                                    <!-- ngIf: item.completed == '1' -->
-                                                                    <div class="section-name ng-binding" ng-bind-html="item.text"> 2: Developing Web Applications</div>
-                                                                </a>
-                                                                <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
-                                                                    <ul>
-                                                                        <!-- ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="11" data-chapter="2">
-                                                                            <a href="book/hardware_and_creative/9781783982820/2/ch02lvl1sec14/Getting+started+with+HTML%2C+JavaScript%2C+and+jQuery" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/2/ch02lvl1sec14/Getting+started+with+HTML%2C+JavaScript%2C+and+jQuery">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Getting started with HTML, JavaScript, and jQuery</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="12" data-chapter="2">
-                                                                            <a href="book/hardware_and_creative/9781783982820/2/ch02lvl1sec15/An+introduction+to+Python" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/2/ch02lvl1sec15/An+introduction+to+Python">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">An introduction to Python</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="13" data-chapter="2">
-                                                                            <a href="book/hardware_and_creative/9781783982820/2/ch02lvl1sec16/Creating+an+Internet+radio+station" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/2/ch02lvl1sec16/Creating+an+Internet+radio+station">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Creating an Internet radio station</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="14" data-chapter="2">
-                                                                            <a href="book/hardware_and_creative/9781783982820/2/ch02lvl1sec17/Deploying+Flask+applications" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/2/ch02lvl1sec17/Deploying+Flask+applications">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Deploying Flask applications</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="15" data-chapter="2">
-                                                                            <a href="book/hardware_and_creative/9781783982820/2/ch02lvl1sec18/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/2/ch02lvl1sec18/Summary">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                        </div>
-                                                        <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
-                                                        <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
-                                                            <li data-chapter="3" class="" data-key="16" on-finish-render="ngRepeatFinished">
-                                                                <a href="book/hardware_and_creative/9781783982820/3" data-key="16" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/3">
-                                                                    <!-- ngIf: item.completed == '1' -->
-                                                                    <div class="section-name ng-binding" ng-bind-html="item.text"> 3: Introduction to Electronics</div>
-                                                                </a>
-                                                                <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
-                                                                    <ul>
-                                                                        <!-- ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="18" data-chapter="3">
-                                                                            <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec19/Understanding+the+physics+behind+electronics" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec19/Understanding+the+physics+behind+electronics">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Understanding the physics behind electronics</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="19" data-chapter="3">
-                                                                            <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec20/Basic+laws+of+electronics" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec20/Basic+laws+of+electronics">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Basic laws of electronics</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="20" data-chapter="3">
-                                                                            <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec21/Electronics+components" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec21/Electronics+components">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Electronics components</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="21" data-chapter="3">
-                                                                            <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec22/Developing+a+digital+clock" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec22/Developing+a+digital+clock">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Developing a digital clock</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="22" data-chapter="3">
-                                                                            <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec23/Developing+an+e-mail+notifier" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec23/Developing+an+e-mail+notifier">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Developing an e-mail notifier</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="23" data-chapter="3">
-                                                                            <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec24/Developing+an+alarm+clock" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec24/Developing+an+alarm+clock">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Developing an alarm clock</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="24" data-chapter="3">
-                                                                            <a href="book/hardware_and_creative/9781783982820/3/ch03lvl1sec25/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/3/ch03lvl1sec25/Summary">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                        </div>
-                                                        <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
-                                                        <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
-                                                            <li data-chapter="4" class="" data-key="25" on-finish-render="ngRepeatFinished">
-                                                                <a href="book/hardware_and_creative/9781783982820/4" data-key="25" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/4">
-                                                                    <!-- ngIf: item.completed == '1' -->
-                                                                    <div class="section-name ng-binding" ng-bind-html="item.text"> 4: Getting into Robotics</div>
-                                                                </a>
-                                                                <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
-                                                                    <ul>
-                                                                        <!-- ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="27" data-chapter="4">
-                                                                            <a href="book/hardware_and_creative/9781783982820/4/ch04lvl1sec26/Introduction+to+robotics" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/4/ch04lvl1sec26/Introduction+to+robotics">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Introduction to robotics</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="28" data-chapter="4">
-                                                                            <a href="book/hardware_and_creative/9781783982820/4/ch04lvl1sec27/More+electronic+components" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/4/ch04lvl1sec27/More+electronic+components">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">More electronic components</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="29" data-chapter="4">
-                                                                            <a href="book/hardware_and_creative/9781783982820/4/ch04lvl1sec28/Developing+a+remote-controlled+robot+with+live+feed+and+live+distance+to+the+nearest+wall" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/4/ch04lvl1sec28/Developing+a+remote-controlled+robot+with+live+feed+and+live+distance+to+the+nearest+wall">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Developing a remote-controlled robot with live feed and live distance to the nearest wall</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="30" data-chapter="4">
-                                                                            <a href="book/hardware_and_creative/9781783982820/4/ch04lvl1sec29/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/4/ch04lvl1sec29/Summary">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                        </div>
-                                                        <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
-                                                        <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
-                                                            <li data-chapter="5" class="" data-key="31" on-finish-render="ngRepeatFinished">
-                                                                <a href="book/hardware_and_creative/9781783982820/5" data-key="31" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/5">
-                                                                    <!-- ngIf: item.completed == '1' -->
-                                                                    <div class="section-name ng-binding" ng-bind-html="item.text"> 5: Introduction to Image Processing</div>
-                                                                </a>
-                                                                <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
-                                                                    <ul>
-                                                                        <!-- ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="33" data-chapter="5">
-                                                                            <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec30/What+is+image+processing%3F" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec30/What+is+image+processing%3F">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">What is image processing?</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="34" data-chapter="5">
-                                                                            <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec31/The+Raspberry+Pi+camera+module" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec31/The+Raspberry+Pi+camera+module">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">The Raspberry Pi camera module</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="35" data-chapter="5">
-                                                                            <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec32/The+image+processing+library" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec32/The+image+processing+library">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">The image processing library</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="36" data-chapter="5">
-                                                                            <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec33/A+quick+start+to+image+processing" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec33/A+quick+start+to+image+processing">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">A quick start to image processing</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="37" data-chapter="5">
-                                                                            <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec34/Creating+time-lapse+videos+with+the+Raspberry+Pi+camera" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec34/Creating+time-lapse+videos+with+the+Raspberry+Pi+camera">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Creating time-lapse videos with the Raspberry Pi camera</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="38" data-chapter="5">
-                                                                            <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec35/Developing+a+Twitter-controlled+Raspberry+Pi+camera" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec35/Developing+a+Twitter-controlled+Raspberry+Pi+camera">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Developing a Twitter-controlled Raspberry Pi camera</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="39" data-chapter="5">
-                                                                            <a href="book/hardware_and_creative/9781783982820/5/ch05lvl1sec36/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/5/ch05lvl1sec36/Summary">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                        </div>
-                                                        <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
-                                                        <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
-                                                            <li data-chapter="6" class="" data-key="40" on-finish-render="ngRepeatFinished">
-                                                                <a href="book/hardware_and_creative/9781783982820/6" data-key="40" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/6">
-                                                                    <!-- ngIf: item.completed == '1' -->
-                                                                    <div class="section-name ng-binding" ng-bind-html="item.text"> 6: Image Processing Algorithms</div>
-                                                                </a>
-                                                                <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
-                                                                    <ul>
-                                                                        <!-- ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="42" data-chapter="6">
-                                                                            <a href="book/hardware_and_creative/9781783982820/6/ch06lvl1sec37/Important+image+processing+operations" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/6/ch06lvl1sec37/Important+image+processing+operations">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Important image processing operations</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="43" data-chapter="6">
-                                                                            <a href="book/hardware_and_creative/9781783982820/6/ch06lvl1sec38/Core+algorithms" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/6/ch06lvl1sec38/Core+algorithms">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Core algorithms</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="44" data-chapter="6">
-                                                                            <a href="book/hardware_and_creative/9781783982820/6/ch06lvl1sec39/Machine+learning" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/6/ch06lvl1sec39/Machine+learning">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Machine learning</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="45" data-chapter="6">
-                                                                            <a href="book/hardware_and_creative/9781783982820/6/ch06lvl1sec40/Projects" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/6/ch06lvl1sec40/Projects">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Projects</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="46" data-chapter="6">
-                                                                            <a href="book/hardware_and_creative/9781783982820/6/ch06lvl1sec41/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/6/ch06lvl1sec41/Summary">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                        </div>
-                                                        <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
-                                                        <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
-                                                            <li data-chapter="7" class="" data-key="47" on-finish-render="ngRepeatFinished">
-                                                                <a href="book/hardware_and_creative/9781783982820/7" data-key="47" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/7">
-                                                                    <!-- ngIf: item.completed == '1' -->
-                                                                    <div class="section-name ng-binding" ng-bind-html="item.text"> 7: Troubleshooting, Tips/Tricks, and Resources for Advanced Users</div>
-                                                                </a>
-                                                                <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
-                                                                    <ul>
-                                                                        <!-- ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="49" data-chapter="7">
-                                                                            <a href="book/hardware_and_creative/9781783982820/7/ch07lvl1sec42/Troubleshooting" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/7/ch07lvl1sec42/Troubleshooting">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Troubleshooting</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="50" data-chapter="7">
-                                                                            <a href="book/hardware_and_creative/9781783982820/7/ch07lvl1sec43/Tips+and+tricks" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/7/ch07lvl1sec43/Tips+and+tricks">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Tips and tricks</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="51" data-chapter="7">
-                                                                            <a href="book/hardware_and_creative/9781783982820/7/ch07lvl1sec44/Resources+for+advanced+users" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/7/ch07lvl1sec44/Resources+for+advanced+users">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Resources for advanced users</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <li ng-repeat="(key2,child) in item.children track by $index" ng-if="key2 !== 0" class="chapter-section ng-scope" data-key="52" data-chapter="7">
-                                                                            <a href="book/hardware_and_creative/9781783982820/7/ch07lvl1sec45/Summary" ng-click="$event.preventDefault();changeBookPage($event);" ng-class="{'completed-section': child.completed == '1'}" url="book/hardware_and_creative/9781783982820/7/ch07lvl1sec45/Summary">
-                                                                                <!-- ngIf: child.completed == '1' -->
-                                                                                <div class="section-name ng-binding" ng-bind-html="child.text">Summary</div>
-                                                                            </a>
-                                                                        </li>
-                                                                        <!-- end ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                        </div>
-                                                        <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
-                                                        <div ng-repeat="(key,item) in formattedNavigation track by $index" class="ng-scope">
-                                                            <li data-chapter="backindex" class="" data-key="53" on-finish-render="ngRepeatFinished">
-                                                                <a href="book/hardware_and_creative/9781783982820/backindex" data-key="53" ng-click="$event.preventDefault(); changeBookPage($event);" url="book/hardware_and_creative/9781783982820/backindex">
-                                                                    <!-- ngIf: item.completed == '1' -->
-                                                                    <div class="section-name ng-binding" ng-bind-html="item.text">Appendix A: Index</div>
-                                                                </a>
-                                                                <div class="panel-collapse" role="tabpanel" ng-class="{'in': currentChapter == item.chapterId }">
-                                                                    <ul>
-                                                                        <!-- ngRepeat: (key2,child) in item.children track by $index -->
-                                                                        <!-- ngIf: key2 !== 0 -->
-                                                                        <!-- end ngRepeat: (key2,child) in item.children track by $index -->
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                        </div>
-                                                        <!-- end ngRepeat: (key,item) in formattedNavigation track by $index -->
-                                                    </ul>
-                                                </div>
-                                                <div role="tabpanel" class="tab-pane fade" id="author" aria-labelledby="author-tab">
-                                                    <div class="visible-xs">
-                                                        <h4 class="mobile-title">About the Author</h4>
-                                                        <hr> </div>
-                                                    <!-- ngRepeat: (key, author) in bookData.authorList -->
-                                                    <ng-repeat ng-repeat="(key, author) in bookData.authorList" class="ng-scope">
-                                                        <p><strong class="ng-binding">Samarth Shah</strong></p>
-                                                        <div ng-bind-html="author.description" class="ng-binding">
-                                                            <p>Samarth Shah is a software engineer by profession and maker by heart. He leads maker activities at Pune Makers and heads Infosys Robotics Club. He loves building creative/innovative prototypes using the latest hardware/sensors (Raspberry Pi, Arduino, Kinect, Leap Motion, and many more) and software. He has given talks at various national and international conferences. He has authored a book on Raspberry Pi entitled Learning Raspberry Pi, Packt Publishing. During the day, he works on various data visualization techniques and UI frameworks. At night, he does blogging, reading, writing, and many more things. You can read more about him at <a href="http://samarthshah.com">http://samarthshah.com</a>.</p>
-                                                        </div>
-                                                    </ng-repeat>
-                                                    <!-- end ngRepeat: (key, author) in bookData.authorList -->
                                                 </div>
                                             </div>
                                         </div>
@@ -1627,6 +1628,41 @@
             </div>
         </div>
     </div>
+    <script>
+        maptAlert = function (message, type) {
+            if (type === undefined) type = 'warning';
+            var id = 'abc' + parseInt(Math.random() * 100000);
+            var alertbox = $('#alertbox');
+            if (alertbox.length == 0) {
+                $('#wrapper').append('<div id="alertbox"></div>');
+            }
+            $('#alertbox').append('<div id="' + id + '" class="alert alert-' + type + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><span>' + message + '</span></div>');
+            setTimeout(function () {
+                $('#' + id).fadeOut(500, function () {
+                    $(this).css({
+                        "visibility": "hidden"
+                        , display: 'block'
+                    }).slideUp(500, function () {
+                        $(this).remove();
+                    });
+                })
+            }, 5000);
+        };
+        var added = false;
+        addRemove = function () {
+            if (added) {
+                maptAlert("Learning Rapsberry Pi has been removed from your <a href='dashboard.html#tab_future'>saved</a> list", "danger");
+                added = false;
+                $('a[role=save]').html('<i class="fa fa-plus mr5"></i> Add to Saved');
+            }
+            else {
+                maptAlert("Learning Rapsberry Pi has been added to your <a href='dashboard.html#tab_future'>saved</a> list");
+                added = true;
+                $('a[role=save]').html('<i class="fa fa-times mr5"></i> Remove from Saved');
+            }
+            $('a[role=save]').toggleClass('btn-danger btn-primary');
+        };
+    </script>
 </body>
 
 </html>
