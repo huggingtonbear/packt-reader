@@ -16,8 +16,12 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
     line-height: 1.1;
 }
 
+.card-container {
+    display: inline-block;
+}
+
 .card-container.card {
-    max-width: 350px;
+    min-width: 250px;
     padding: 40px 40px;
 }
 .card-container-lg.card {
@@ -115,4 +119,10 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
 }
 .forgot-password {
     font-size: 12px;
+}
+
+.btn-social {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
