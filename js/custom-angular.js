@@ -71,7 +71,7 @@ maptModule.controller('maptController', function ($scope, $http) {
         }
     });
 });
-maptModule.directive('maptBook', function () {
+maptModule.directive('maptBookAlt', function () {
     return {
         scope: {
             bookTitle: '@bookTitle'
@@ -120,7 +120,7 @@ maptModule.directive('maptBook', function () {
             }
     };
 });
-maptModule.directive('maptBookAlt', function () {
+maptModule.directive('maptBook', function () {
     return {
         scope: {
             bookTitle: '@bookTitle'
