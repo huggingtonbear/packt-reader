@@ -573,20 +573,18 @@ Elapsed time: <span class="token tag"><span class="token tag"><span class="token
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
-                                        <h5>People who viewed this title also viewed:</h5>
-                                    </div>
-                                    <div class="clearfix">
-                                    </div>
-                                    <div class="col-lg-1 col-xl-2">
-                                    </div>
-                                    <div class="col-xs-12 col-lg-10 col-xl-8">
-                                        <div class="row">
-                                            <mapt-book ng-repeat="recent in recents | limitTo:5" data-book-title="{{recent.title}}" data-cover-image="{{recent.cover}}" data-progress="{{recent.progress}}"></mapt-book>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h5>Related titles</h5> 
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <mapt-book ng-repeat="recent in recents | limitTo:5" data-book-title="{{recent.title}}" data-cover-image="{{recent.cover}}" data-progress="{{recent.progress}}"></mapt-book>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-1">
-                                    </div>
-                                </div>
+                                                                   </div>
                             </div>
                     <div class="text-center col-sm-12 mb20">
                                                         
