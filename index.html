@@ -577,9 +577,13 @@ Elapsed time: <span class="token tag"><span class="token tag"><span class="token
                                     </div>
                                     <div class="clearfix">
                                     </div>
-                                    <div class="col-lg-1">
+                                    <div class="col-lg-1 col-xl-2">
                                     </div>
-                                    <mapt-book ng-repeat="recent in recents | limitTo:5" data-book-title="{{recent.title}}" data-cover-image="{{recent.cover}}" data-progress="{{recent.progress}}"></mapt-book>
+                                    <div class="col-xs-12 col-lg-10 col-xl-8">
+                                        <div class="row">
+                                            <mapt-book ng-repeat="recent in recents | limitTo:5" data-book-title="{{recent.title}}" data-cover-image="{{recent.cover}}" data-progress="{{recent.progress}}"></mapt-book>
+                                        </div>
+                                    </div>
                                     <div class="col-lg-1">
                                     </div>
                                 </div>
