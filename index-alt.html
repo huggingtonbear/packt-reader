@@ -38,7 +38,7 @@
 
 </head>
 
-<body class="language-markup" ng-app="mapt" ng-controller="maptController" >
+<body class="language-markup">
 
   
 
@@ -173,7 +173,7 @@
         <div id="page-content-wrapper" class="book-page ng-scope">
             <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
                 
-                <div id="book-wrapper" onload="finishLoad()" src="views.book" class="ng-scope container-fluid">
+                <div id="book-wrapper" onload="finishLoad()" ng-include="" src="views.book" class="ng-scope container-fluid">
                     <div class="col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
                         <div class="btn-group pull-right mt15 mb30" role="group">
                                 <button class="btn btn-default">
@@ -240,7 +240,7 @@
                                    
                     
                             
-                        <div style="position:relative;" class="book-content" id="content">
+                        <div style="position:relative;" class="book-content" id="content" ng-non-bindable="">
                                 <div class="packtlib-version v2">
                                   <div class="titlepage"><div><div></div></div></div><h2 class="title">Chapter 1. Getting Started</h2>
 <p>
@@ -554,12 +554,27 @@ Elapsed time: <span class="token tag"><span class="token tag"><span class="token
                                 
                                         <span class="hidden-xs"><h4 class="pull-left"><strong>Up Next: </strong>Routing in Django</h4><a href="#" class="btn btn-primary pull-right btn-lg">Next Section</a></span>
                                         <span class="visible-xs"><a href="for-loop.html" class="btn btn-primary btn-block btn-lg">Next Section</a></span>
-                                        <div class="clearfix"></div>
-                                        <hr>
-
                                 </div>
-
-                                
+                                <div class="row"> 
+                                    <hr>
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <p class="mb5 mt0"><i class="fa fa-book fa-lg mr5"></i> Looking for more? Check out these sections from other related titles</p>
+                                        </div>
+                                        <div class="list-group">
+                                            <a href="index2.html" class="list-group-item">
+                                                <i class="fa fa-chevron-right pull-right fa-lg mt5 ml5"></i><img src="images/book2.jpg" class="pull-left mr10" style="width:20px;"> Getting Started with Angular 2 <small class="ml15"> Learning Angular2 <em class="ml15"><i class="fa fa-clock-o"></i> 5 mins</em></small> 
+                                            </a>
+                                            <a href="index2.html" class="list-group-item">
+                                                <i class="fa fa-chevron-right pull-right fa-lg mt5 ml5"></i><img src="images/book8.jpg" class="pull-left mr10" style="width:20px;">Installing AngularJS on windows <small class="ml15"> Getting Started with AngularJS <em class="ml15"><i class="fa fa-clock-o"></i> 2 mins</em></small> 
+                                            </a>
+                                            <a href="index2.html" class="list-group-item">
+                                                <i class="fa fa-chevron-right pull-right fa-lg mt5 ml5"></i><img src="images/book5.jpg" class="pull-left mr10" style="width:20px;">
+                                                Getting Started with Angular JS <small class="ml15"> Building Web Applications with AngularJS <em class="ml15"><i class="fa fa-clock-o"></i> 6 mins</em></small> 
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                                     <!-- <div id="disqus_thread"></div>
                                     <script>
                                     (function() { // DON'T EDIT BELOW THIS LINE
@@ -570,18 +585,6 @@ Elapsed time: <span class="token tag"><span class="token tag"><span class="token
                                     })();
                                     </script>
                                     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 col-xl-offset-2 col-xl-8 col-lg-offset-1 col-lg-10">
-                                        <h5>People who viewed this title also viewed:</h5>
-                                    </div>
-                                    <div class="clearfix">
-                                    </div>
-                                    <div class="col-lg-1">
-                                    </div>
-                                    <mapt-book ng-repeat="recent in recents | limitTo:5" data-book-title="{{recent.title}}" data-cover-image="{{recent.cover}}" data-progress="{{recent.progress}}"></mapt-book>
-                                    <div class="col-lg-1">
-                                    </div>
                                 </div>
                             </div>
                     <div class="text-center col-sm-12 mb20">
@@ -600,9 +603,6 @@ Elapsed time: <span class="token tag"><span class="token tag"><span class="token
     <!-- jQuery Script-->
     <script src="js/jquery.js"></script>
     <!-- Syntax Highlighting Script -->
-        <!-- AngularJS -->
-    <script src="js/angular.min.js"></script>
-    <script src="js/custom-angular.js"></script>
     <script src="js/prism.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
