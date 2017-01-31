@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
+    <link rel="apple-touch-icon" sizes="57x57" href="/packtlib-nv/images/apple-icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/packtlib-nv/images/apple-icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/packtlib-nv/images/apple-icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/packtlib-nv/images/apple-icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/packtlib-nv/images/apple-icons/apple-icon-180x180.png">
+    <title>Mapt - Developer Skills Delivered</title>
+    <!-- Bootstrap Core CSS -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/bootstrap-xl.css" rel="stylesheet">
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="mapt">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <div class="list-group" id="sidebar-nav" role="tablist" aria-multiselectable="true">
+                    <li class="nav-logo "><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu"><img src="images/logo.png" height="30px" class=""></span></a> </li>
+                    <form class="col-sm-12 mb15 pl25 pr25">
+                        <input type="text" class="form-control" placeholder="&#xf002; Search for a topic..."> </form>
+                    <div class="clearfix"></div>
+                    <li class="active"><a href="dashboard.html" class="sidenav-menu-holder"><span class="sidenav-menu">Dashboard</span></a> </li>
+                    <li class=""><a href="discover.html" class="sidenav-menu-holder"><span class="sidenav-menu">Discover</span><span class="pull-left mr5"></span></a> </li>
+                    <li class=""><a href="help.html" class="sidenav-menu-holder"><span class="sidenav-menu">Help</span><span class="pull-left mr5"></span></a> </li>
+                    <li class=""><a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="sidenav-menu-holder"><span class="sidenav-menu">Account</span><span class="pull-left mr5"></span></a> </li>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <li class="sub-nav"><a href="account-details.html" class="sidenav-menu-holder"><span class="sidenav-menu">Account Details</span><span class="pull-left mr5"></span></a> </li>
+                        <li class="sub-nav"><a href="account-subscription.html" class="sidenav-menu-holder"><span class="sidenav-menu">Subscriptions</span><span class="pull-left mr5"></span></a> </li>
+                        <li class="sub-nav"><a href="account-licences.html" class="sidenav-menu-holder"><span class="sidenav-menu">Licenses </span></a> </li>
+                        <li class="sub-nav"><a href="dashboard-lo.html" class="sidenav-menu-holder"><span class="sidenav-menu">Logout</span><span class="pull-left mr5"></span></a> </li>
+                    </div>
+                    <li class=""> <a href="https://www.packtpub.com" class="sidenav-menu-holder"><span class="sidenav-menu logo-text">Powered by <img src="images/packt-orange.png" target="_blank" class="packt-logo"></span><span class="pull-left mr5"></span></a></li>
+                </div>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Content Page -->
+        <div ng-controller="maptController" id="page-content-wrapper" class=""> <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-2x mr5"></i></a>
+            <div class="jumbotron heading mb0">
+                <div class="container-fluid">
+                    <div class="col-xs-12 col-lg-offset-1 col-lg-10">
+                        <div class="row">
+                            <div class="page-title">
+                                <h3 class="ng-binding">Dashboard</h3>
+                                <h6>Hi Oli, get back to what you were learning fast.</h6> </div>
+                                <div class="alert alert-success alert-dismissible" role="alert">
+                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                  <strong>Success!</strong> You are now subscribed to <b>Mapt Pro - Monthly</b>. Start discovering the skills you need to stay relevant. 
+                                </div>
+                            <hr> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="col-xs-12 col-lg-offset-1 col-lg-10">
+                    <div class="row">
+                        <!-- Nav tabs -->
+                        <div class="panel panel-default mb10">
+                            <ul class="nav nav-pills nav-justified nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#present" aria-controls="present" role="tab" data-toggle="tab" style="text-transform:uppercase;"><h6 class="mt5 mb5">Learning</h6></a></li>
+                                <li role="presentation"><a href="#future" aria-controls="future" role="tab" data-toggle="tab" style="text-transform:uppercase;"><h6 class="mt5 mb5">Saved</h6></a></li>
+                                <li role="presentation"><a href="#past" aria-controls="past" role="tab" data-toggle="tab" style="text-transform:uppercase;"><h6 class="mt5 mb5">Progress</h6></a></li>
+                                <li role="presentation"><a href="#bookmarks" aria-controls="future" role="tab" data-toggle="tab" style="text-transform:uppercase;"><h6 class="mt5 mb5">Bookmarks</h6></a></li>
+                            </ul>
+                        </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="present">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="panel panel-default mt15">
+                                            <div class="panel-heading">
+                                                <h5>Reading History <a href="history.html" class="see-more-link mt5"><p> View All</p></a></h5> </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <mapt-book ng-repeat="recent in recents" data-book-title="{{recent.title}}" data-cover-image="{{recent.cover}}" data-progress="{{recent.progress}}"></mapt-book>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h5> Skill Plan: Python Developer<a href="plan.html" class="see-more-link mt5"><p> View Plan</p></a></h5>
+                                                <div class="progress mt20 mb10">
+                                                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 33%;">
+                                                        <span class="sr-only">30% Complete</span>
+                                                      </div>
+                                                    </div>
+                                            </div>
+                                            <ul class="list-group">
+                                          <li href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="card.html" class=""><img src="images/skillcards/python-data-science.png" class="img-card-list"></a>
+                                              <h1>Python Data Science 
+                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
+                                              </h1>
+                                              <small class="title-duration mr10">Related Topic: <a href="#">Python</a></small>
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                <a href="card.html" class="btn btn-info ">View  <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="btn-group pull-right visible-xs mt15">
+                                                <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="card.html" class="btn btn-info">View <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="card.html" class=""><img src="images/skillcards/python-high-performance-programming.png" class="img-card-list"></a>
+                                              <h1>Python High Performance Programming
+                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
+                                              </h1>
+                                              <small class="title-duration mr10">Related Topic: <a href="#">Python</a></small>
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Performance bottlenecks can break otherwise great applications and it’s important that you know how to avoid them. High performance techniques can help your applications scale and perform consistently, no matter how much data you’re crunching or how many users you’re serving.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                <a href="card.html" class="btn btn-info ">View  <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="btn-group pull-right visible-xs mt15">
+                                                <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="card.html" class="btn btn-info">View <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="card.html" class=""><img src="images/skillcards/python-fundamentals.png" class="img-card-list"></a>
+                                              <h1>Python Fundamentals
+                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
+                                              </h1>
+                                              <small class="title-duration mr10">Related Topic: <a href="#">Python</a></small>
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                <a href="card.html" class="btn btn-info ">View  <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <div class="btn-group pull-right visible-xs mt15">
+                                                <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="card.html" class="btn btn-info">View <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="card.html" class=""><img src="images/skillcards/git-fundamentals.png" class="img-card-list"></a>
+                                              <h1>Git Fundamentals
+                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
+                                              </h1>
+                                              <small class="title-duration mr10">Related Topic: <a href="#">Git</a></small>
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                <a href="card.html" class="btn btn-info ">View  <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <div class="btn-group pull-right visible-xs mt15">
+                                                <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="card.html" class="btn btn-info">View <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="card.html" class=""><img src="images/skillcards/production-ready-django.png" class="img-card-list"></a>
+                                              <h1>Production Ready Django
+                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
+                                              </h1>
+                                              <small class="title-duration mr10">Related Topic: <a href="#">Django</a></small>
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                <a href="card.html" class="btn btn-info ">View  <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <!-- Mobile Buttons START -->
+                                              <div class="btn-group pull-right visible-xs mt15">
+                                                <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="card.html" class="btn btn-info">View <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                          <li href="index.html" class="list-group-item list-name ng-scope">
+                                              <a href="card.html" class=""><img src="images/skillcards/ux-design-basics.png" class="img-card-list"></a>
+                                              <h1>UX Design Basics
+                                                <span class="skill-item skill-card hidden-xs">Skill Card</span>
+                                              </h1>
+                                              <small class="title-duration mr10">Related Topic: <a href="#">Web Design</a></small>
+                                              <!-- <small class="title-duration mr10">Jan 2016</small>
+                                              <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small> -->
+                                              <p class="product-desc hidden-xs mt10"><small>Python is one of the easiest languages to get started with. It has a human readable syntax, and a fully-featured (“batteries included”) standard library to help you get things done right away. It is your portal into a new world of productive development.</small></p>
+                                              <!-- Desktop Buttons START -->
+                                              <div class="btn-group pull-right mt5 hidden-xs">
+                                               <!--  <a href="index.html" class="btn btn-default "><i class="fa fa-shopping-bag fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Claim with Token</span></a> -->
+                                                <a href="index.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                  <span class="hidden-xs ml5">Mark as Complete</span></a>
+                                                <a href="card.html" class="btn btn-info ">View  <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Desktop Buttons END -->
+                                              <div class="btn-group pull-right visible-xs mt15">
+                                                <a href="card.html" class="btn btn-default "><i class="fa fa-plus fa-lg"></i>
+                                                   </a>
+                                                <a href="card.html" class="btn btn-info">View <i class="fa fa-chevron-right ml5" ></i></a>
+                                              </div>
+                                              <!-- Mobile Buttons END -->
+                                          </li>
+                                        </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="future">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="row">
+                                            <div class="col-sm-offset-8 col-sm-4">
+                                                <select class="form-control mb15 mt5">
+                                                    <option>Sort by Most Recent</option>
+                                                    <option>Sort by Most Popular</option>
+                                                    <option>Sort by Oldest</option>
+                                                    <option>Sort A-Z</option>
+                                                    <option>Sort Z-A</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h5>Saved titles</h5> </div>
+                                            <ul class="list-group">
+                                                <mapt-book-list-item data-book-title="Practical Data Science Cookbook" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book1.jpg" data-progress="33%"> </mapt-book-list-item>
+                                                <mapt-book-list-item data-book-title="UX Design for Web Developers" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book2.jpg" data-progress="33%"> </mapt-book-list-item>
+                                                <mapt-book-list-item data-book-title="Practical Machine Learning" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book3.jpg" data-progress="33%"> </mapt-book-list-item>
+                                                <mapt-book-list-item data-book-title="Python Data Science Fundamentals" data-product-description="Modernize existing Python code and plan code migrations to Python using this definitive guide" data-release-date="March 2016" data-duration="14 hours 02 minutes" data-authors="Sunila Gollapudi" data-cover-image="images/book4.jpg" data-progress="33%"> </mapt-book-list-item>
+                                            </ul>
+                                            <div class="panel-footer text-right">
+                                                <nav>
+                                                    <ul class="pagination">
+                                                        <li id="paginationNumber" class="disabled">
+                                                            <a href="#" aria-label="Previous"> <span aria-hidden="true">«</span> </a>
+                                                        </li>
+                                                        <li id="paginationNumber" class="active"> <a href="#">1</a> </li>
+                                                        <li id="paginationNumber" class="disabled">
+                                                            <a href="#" aria-label="Next"> <span aria-hidden="true">»</span> </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="bookmarks">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="row">
+                                            <div class="col-sm-offset-8 col-sm-4">
+                                                <select class="form-control mb15 mt5">
+                                                    <option>Sort by Most Recent</option>
+                                                    <option>Sort by Most Popular</option>
+                                                    <option>Sort by Oldest</option>
+                                                    <option>Sort A-Z</option>
+                                                    <option>Sort Z-A</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h5>Bookmarks</h5> 
+                                            </div>
+                                            <ul class="list-group">
+                                              <li class="list-group-item">
+                                                  <div class="hidden-xs"><mapt-book data-book-title="Practical Data Science Cookbook" data-cover-image="images/book1.jpg" data-progress="33%"> </mapt-book></div>
+                                                  <div class="col-xs-12 col-sm-10">
+                                                     <ul class="list-group">
+                                                       <li class="list-group-item concat">
+                                                       Understanding the structure of the library
+                                                        <div class="pull-right ml5">
+                                                          <a href="#" class=""><i class="fa fa-play-circle fa-2x"></i></a>
+                                                          <a href="#" class=""><i class="fa fa-times-circle fa-2x"></i></a>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                       </li>
+                                                       <li class="list-group-item concat">
+                                                       Raising exceptions
+                                                        <div class="pull-right ml5">
+                                                          <a href="#" class=""><i class="fa fa-play-circle fa-2x"></i></a>
+                                                          <a href="#" class=""><i class="fa fa-times-circle fa-2x"></i></a>
+                                                        </div>
+                                                       </li>
+                                                       <li class="list-group-item concat">
+                                                       The user's model
+                                                        <div class="pull-right ml5">
+                                                          <a href="#" class=""><i class="fa fa-play-circle fa-2x"></i></a>
+                                                          <a href="#" class=""><i class="fa fa-times-circle fa-2x"></i></a>
+                                                        </div>
+                                                       </li>
+                                                     </ul>
+                                                  </div>
+                                                <div class="clearfix"></div>
+                                              </li>
+                                              <li class="list-group-item">
+                                                  <div class="hidden-xs"><mapt-book data-book-title="UX Design for Web Developers" data-cover-image="images/book2.jpg" data-progress="13%"> </mapt-book></div>
+                                                  <div class="col-xs-12 col-sm-10">
+                                                     <ul class="list-group">
+                                                       <li class="list-group-item concat">
+                                                       Design Basics: An Introduction
+                                                        <div class="pull-right ml5">
+                                                          <a href="#" class=""><i class="fa fa-play-circle fa-2x"></i></a>
+                                                          <a href="#" class=""><i class="fa fa-times-circle fa-2x"></i></a>
+                                                        </div>
+                                                       </li>
+                                                     </ul>
+                                                  </div>
+                                                <div class="clearfix"></div>
+                                              </li>
+                                            </ul>
+                                            <div class="panel-footer text-right">
+                                                <nav>
+                                                    <ul class="pagination">
+                                                        <li id="paginationNumber" class="disabled">
+                                                            <a href="#" aria-label="Previous"> <span aria-hidden="true">«</span> </a>
+                                                        </li>
+                                                        <li id="paginationNumber" class="active"> <a href="#">1</a> </li>
+                                                        <li id="paginationNumber" class="disabled">
+                                                            <a href="#" aria-label="Next"> <span aria-hidden="true">»</span> </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="past">
+                                
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-default mt10">
+                                          <div class="panel-heading">
+                                          <p class="mb0"><i class="fa fa-ticket mr5"></i> You have 2 Course tokens remaining</p>
+                                          </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h5>Get rewarded for learning!</h5>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="col-sm-12 col-lg-6">
+                                                    <p class="mt20"> Mapt is committed to helping you hone and develop your skills. Every month, if you spend at least 8 hours learning and complete 50 sections we'll add an additional Course token to your account that you can use on any video or eBook and keep it forever.</p>
+                                                </div>
+
+                                                <div class="col-sm-12 col-lg-6">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-body">
+                                                            <h4 class="lg-title"><strong class="ng-binding">5</strong> Section(s) Completed<small class="pull-right ng-binding">25</small></h4>
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 20%"> <span class="sr-only ng-binding">20% Complete (success)</span> </div>
+                                                            </div>
+                                                            <h4 class="lg-title"><strong class="ng-binding">2</strong>hr(s) <strong class="ng-binding">2 </strong>min(s) spent learning<small class="pull-right ng-binding">4hrs</small></h4>
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 51%"> <span class="sr-only ng-binding">51% Complete (success)</span> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#book-wrapper -->
+    </div>
+    <!-- /#page-content-wrapper -->
+    <!-- /#wrapper -->
+    <!-- JAVASCRIPT BLOCKS -->
+    <!-- jQuery Script-->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <!-- Sidebar Toggle Script -->
+    <script src="js/simple-sidebar.js"></script>
+    <!-- Custom Angular Stuff -->
+    <!-- AngularJS -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/custom-angular.js"></script>
+    <script src="js/sidenav-accordion.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slick-next').click(function () {
+                var current = $('.skill-card-nav .selected');
+                var next = current.next();
+                if (next.length == 0) {
+                    next = $('.skill-card-nav .items').children().first();
+                }
+                current.toggleClass('selected');
+                next.toggleClass('selected');
+            });
+            $('.slick-prev').click(function () {
+                var current = $('.skill-card-nav .selected');
+                var next = current.prev();
+                if (next.length == 0) {
+                    next = $('.skill-card-nav .items').children().last();
+                }
+                current.toggleClass('selected');
+                next.toggleClass('selected');
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        // Javascript to enable link to tab
+        var hash = document.location.hash;
+        var prefix = "tab_";
+        if (hash) {
+            $('.nav-tabs a[href="' + hash.replace(prefix, "") + '"]').tab('show');
+        }
+        // Change hash for page-reload
+        $('.nav-tabs a').on('shown', function (e) {
+            window.location.hash = e.target.hash.replace("#", "#" + prefix);
+        });
+    </script>
+</body>
+
+</html>
