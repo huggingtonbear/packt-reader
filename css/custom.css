@@ -2041,6 +2041,7 @@ ul, ol, .tip ul, .note ul, li ul, .tip ol, .note ol, li ol {
     .book-wrapper.col-sm-4 {
         padding-bottom: 40%;
     }
+    
 }
 
 
@@ -2057,5 +2058,8 @@ ul, ol, .tip ul, .note ul, li ul, .tip ol, .note ol, li ol {
     }
     .book-wrapper.col-lg-3 {
         padding-bottom: 30%;
+    }
+    .book-wrapper.col-lg-15 {
+        padding-bottom: 24%;
     }
 }
