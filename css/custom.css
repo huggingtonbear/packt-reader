@@ -338,6 +338,16 @@ img.panel-bg {
 .early-access {
     background-color: #f59322;
 }
+.early-access p {
+    color: white;
+}
+.early-access-h5 {
+    color: white;
+    margin-bottom: 0px;
+} 
+.sidenav-menu-holder.early-access:hover {
+    background: #ef8009;
+}
 
 .ea-list-group-item {
     background: #f9ead9;
@@ -633,43 +643,6 @@ a.learning-skill:before {
 a.learning-skill .img-thumbnail {
     background: #ec9720;
 }
-
-a.early-access:before {
-    content: "EARLY ACCESS";
-    font-family: fontawesome, "Montserrat", Helvetica, Arial, sans-serif;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 12px;
-    display: block;
-    padding-top: 100px;
-    padding-left: 15px;
-    width: 138px;
-    color: white;
-    font-size: 14px;
-    height: 170px;
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    z-index: 1000;
-}
-
-a.early-access:after {
-    content: "\f017 ";
-    font-family: fontawesome;
-    padding: 12px;
-    display: block;
-    padding-top: 25px;
-    padding-right: 10px;
-    width: 138px;
-    color: white;
-    font-size: 48px;
-    height: 170px;
-    position: absolute;
-    top: 25px;
-    left: 58px;
-    z-index: 1000;
-}
-
-.early-access .img-product-list {}
 
 .usage-desc {
     font-size: 16px;
