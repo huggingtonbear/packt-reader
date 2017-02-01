@@ -339,6 +339,10 @@ img.panel-bg {
     background-color: #f59322;
 }
 
+.ea-list-group-item {
+    background: #f9ead9;
+}
+
 .skill-plan {
     background-color: #333;
     margin-top: -5px;
