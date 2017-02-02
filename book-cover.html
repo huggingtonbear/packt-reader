@@ -984,37 +984,25 @@
                         <!-- ngIf: !bookData.owned && productController.showBuyButton && !tokens_available -->
                         <button type="button" class="btn btn-default ng-hide" data-toggle="modal" data-target="#claimModal" ng-show="!bookData.owned &amp;&amp; tokens_available" ng-click="productController.claimBookWithTokenConfirm();"> <i class="fa fa-download fa-lg"></i> <span class="hidden-xs ml5"> Use Token</span> </button>
                         <!-- ngIf: firstPage && !inCollection && loggedIn -->
+                        <button class="btn btn-default ng-scope" role="save" onclick="addRemove()" ng-click="toggleInCollection();" ng-if="firstPage &amp;&amp; !inCollection &amp;&amp; loggedIn"> <i class="fa fa-plus fa-lg"></i> <span class="hidden-xs ml5">Add to Saved</span> </button>
+                        <!-- end ngIf: firstPage && !inCollection && loggedIn -->
+                        <!-- ngIf: firstPage && inCollection && loggedIn -->
                         <!-- ngIf: loggedIn -->
                         <button class="btn btn-default hidden-xs ng-scope" ng-click="downloadCodeFile();" ng-if="loggedIn" ng-class="{'disabled': !codeDownloadShow}"> <i class="fa fa-file fa-lg"></i> <span class="hidden-xs ml5">Code Files</span> </button>
                         <!-- end ngIf: loggedIn -->
                         <!-- ngIf: currentPage == 'video' && bookData.owned && productController.b2b !== true -->
                         <!-- ngIf: currentPage == 'book' && bookData.owned && productController.b2b !== true -->
-                        <div ng-if="currentPage == 'book' &amp;&amp; bookData.owned &amp;&amp; productController.b2b !== true" class="btn-group ng-scope" role="group">
-                            <button ng-show="showDownloads" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-download fa-lg"></i> <span class="hidden-xs ml5">Download eBook</span> <span class="hidden-xs caret"></span> </button>
-                            <ul class="dropdown-menu">
-                                <li class="disabled"><a class="disabled text-center"><b>Download eBook</b></a></li>
-                                <li role="separator" class="divider"></li>
-                                <!-- ngRepeat: (key, item) in download_data -->
-                                <li ng-repeat="(key, item) in download_data" class="ng-scope"> <a href="/ebook_download/17436/pdf" target="_self" class="ng-binding">Download PDF</a> </li>
-                                <!-- end ngRepeat: (key, item) in download_data -->
-                                <li ng-repeat="(key, item) in download_data" class="ng-scope"> <a href="/ebook_download/17436/epub" target="_self" class="ng-binding">Download ePub</a> </li>
-                                <!-- end ngRepeat: (key, item) in download_data -->
-                                <li ng-repeat="(key, item) in download_data" class="ng-scope"> <a href="/ebook_download/17436/mobi" target="_self" class="ng-binding">Download Mobi</a> </li>
-                                <!-- end ngRepeat: (key, item) in download_data -->
-                            </ul>
-                        </div>
-                        <!-- end ngIf: currentPage == 'book' && bookData.owned && productController.b2b !== true -->
                         <!-- ngIf: !firstPage && loggedIn -->
                         <!-- ngIf: !firstPage && loggedIn -->
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-share fa-lg no-text-padding"></i> </button>
-                            <ul class="dropdown-menu" style="left: initial; right: 0;">
-                                <li class="disabled"><a href="javascript:;" class="disabled text-center"><b>Share</b></a></li>
+                            <ul class="dropdown-menu">
+                                <li class="disabled"><a href="#" class="disabled text-center"><b>Share</b></a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="javascript:;" ng-click="facebookShare();">Facebook</a></li>
-                                <li><a href="mailto:?Subject=Packt Book: Learning Raspberry Pi&amp;body=Packt Book link: https://www.packtpub.com/mapt/book/hardware_and_creative/9781783982820" target="_top" ng-click="emailShare();">Email</a></li>
-                                <li><a href="javascript:;" ng-click="twitterShare();">Twitter</a></li>
-                                <li><a href="javascript:;" ng-click="redditShare();">Reddit</a></li>
+                                <li><a href="#" ng-click="facebookShare();">Facebook</a></li>
+                                <li><a href="mailto:?Subject=Packt Book: Artificial Intelligence with Python&amp;body=Packt Book link: https://www.packtpub.com/mapt/book/big_data_and_business_intelligence/9781786464392" target="_top" ng-click="emailShare();">Email</a></li>
+                                <li><a href="#" ng-click="twitterShare();">Twitter</a></li>
+                                <li><a href="#" ng-click="redditShare();">Reddit</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1043,7 +1031,7 @@
                 </a> <a href="index.html" class="btn btn-info btn-lg btn-block mt20 mb20 visible-xs ng-binding">
                     Start Learning <!-- ngIf: !bookData.bookUnavailable --><i class="fa fa-chevron-right ml5 ng-scope" ></i>
                 </a>
-                                    <a href="javascript:;" role="save" class="btn btn-primary btn-lg pull-right hidden-xs ng-binding" onclick="addRemove()"> <i class="fa fa-folder-open mr5 ng-scope"></i> Add to Saved </a>
+                                    <a href="javascript:;" role="save" class="btn btn-primary btn-lg pull-right hidden-xs ng-binding" onclick="addRemove()"> <i class="fa fa-plus mr5 ng-scope"></i> Add to Saved </a>
                                     <a href="javascript:;" role="save" class="btn btn-primary btn-lg btn-block mt20 mb20 visible-xs ng-binding" onclick="addRemove()"> <i class="fa fa-folder-open mr5 ng-scope"></i> Add to Saved </a>
                                     <div class="clearfix">
                                         <div class="row">
@@ -1649,11 +1637,15 @@
                 maptAlert("Learning Rapsberry Pi has been removed from your <a href='dashboard.html#tab_future'>saved</a> list", "danger");
                 added = false;
                 $('a[role=save]').html('<i class="fa fa-plus mr5"></i> Add to Saved');
+                $('button[role=save]').html('<i class="fa fa-plus mr5"></i> Add to Saved');
+                
             }
             else {
                 maptAlert("Learning Rapsberry Pi has been added to your <a href='dashboard.html#tab_future'>saved</a> list");
                 added = true;
                 $('a[role=save]').html('<i class="fa fa-times mr5"></i> Remove from Saved');
+                $('button[role=save]').html('<i class="fa fa-times mr5"></i> Remove from Saved');
+                
             }
             $('a[role=save]').toggleClass('btn-danger btn-primary');
         };
