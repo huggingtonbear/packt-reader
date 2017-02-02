@@ -392,7 +392,7 @@ a.skill-panel h1 {
     font-size: 80px;
 }
 a.skill-panel h4, a.skill-panel p {
-    color: white;
+    color: white !important;
 }
 
 .skill-section {
