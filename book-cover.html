@@ -984,7 +984,7 @@
                         <!-- ngIf: !bookData.owned && productController.showBuyButton && !tokens_available -->
                         <button type="button" class="btn btn-default ng-hide" data-toggle="modal" data-target="#claimModal" ng-show="!bookData.owned &amp;&amp; tokens_available" ng-click="productController.claimBookWithTokenConfirm();"> <i class="fa fa-download fa-lg"></i> <span class="hidden-xs ml5"> Use Token</span> </button>
                         <!-- ngIf: firstPage && !inCollection && loggedIn -->
-                        <button class="btn btn-default ng-scope" role="save" onclick="addRemove()" ng-click="toggleInCollection();" ng-if="firstPage &amp;&amp; !inCollection &amp;&amp; loggedIn"> <i class="fa fa-plus fa-lg"></i> <span class="hidden-xs ml5">Add to Saved</span> </button>
+                        <button class="btn btn-default ng-scope" role="save" onclick="addRemove()" ng-click="toggleInCollection();" ng-if="firstPage &amp;&amp; !inCollection &amp;&amp; loggedIn"> <i class="fa fa-folder fa-lg"></i> <span class="hidden-xs ml5">Save for Later</span> </button>
                         <!-- end ngIf: firstPage && !inCollection && loggedIn -->
                         <!-- ngIf: firstPage && inCollection && loggedIn -->
                         <!-- ngIf: loggedIn -->
@@ -1031,8 +1031,7 @@
                 </a> <a href="index.html" class="btn btn-info btn-lg btn-block mt20 mb20 visible-xs ng-binding">
                     Start Learning <!-- ngIf: !bookData.bookUnavailable --><i class="fa fa-chevron-right ml5 ng-scope" ></i>
                 </a>
-                                    <a href="javascript:;" role="save" class="btn btn-primary btn-lg pull-right hidden-xs ng-binding" onclick="addRemove()"> <i class="fa fa-plus mr5 ng-scope"></i> Add to Saved </a>
-                                    <a href="javascript:;" role="save" class="btn btn-primary btn-lg btn-block mt20 mb20 visible-xs ng-binding" onclick="addRemove()"> <i class="fa fa-folder-open mr5 ng-scope"></i> Add to Saved </a>
+                                    <a href="javascript:;" role="save" class="btn btn-default btn-lg pull-right hidden-xs ng-binding" onclick="addRemove()"> <i class="fa fa-folder-o mr5 ng-scope"></i> Save for Later </a>
                                     <div class="clearfix">
                                         <div class="row">
                                             <div class="col-sm-12">
@@ -1643,11 +1642,11 @@
             else {
                 maptAlert("Learning Rapsberry Pi has been added to your <a href='dashboard.html#tab_future'>saved</a> list");
                 added = true;
-                $('a[role=save]').html('<i class="fa fa-times mr5"></i> Remove from Saved');
-                $('button[role=save]').html('<i class="fa fa-times mr5"></i> Remove from Saved');
+                $('a[role=save]').html('<i class="fa fa-folder mr5"></i> Saved');
+                $('button[role=save]').html('<i class="fa fa-folder mr5"></i> Saved');
                 
             }
-            $('a[role=save]').toggleClass('btn-danger btn-primary');
+            $('a[role=save]').toggleClass('btn-default btn-default');
         };
     </script>
 </body>
