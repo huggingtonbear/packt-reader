@@ -38,7 +38,12 @@ li.sub-nav {
 a.modal-close:hover {
     color: white;
 }
-
+.popover-tip {
+    color:#bbbbbb;
+}
+.popover-tip:hover {
+    color:#aaaaaa;
+}
 select,
 select.form-control {
     background-color: #ffffff;
