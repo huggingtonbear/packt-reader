@@ -39,10 +39,10 @@ a.modal-close:hover {
     color: white;
 }
 .popover-tip {
-    color:#bbbbbb;
+    color:#cccccc;
 }
 .popover-tip:hover {
-    color:#aaaaaa;
+    color:#bbbbbb;
 }
 select,
 select.form-control {
