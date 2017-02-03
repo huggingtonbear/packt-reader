@@ -40,6 +40,7 @@ a.modal-close:hover {
 }
 .popover-tip {
     color:#cccccc;
+    margin-left: 5px;
 }
 .popover-tip:hover {
     color:#bbbbbb;
