@@ -48,65 +48,28 @@
 
 <body class="language-markup">
 <!-- Modal -->
-<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4>We're sorry to see you leave</h4>
+        <h4>Are you sure?</h4>
       </div>
       <div class="modal-body">
-              <p>Please let us know more about why you want to cancel?</p>
-              <form class="">
-                <div class="form-group">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                        Can't justify the cost
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                        Not enough time to use it
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                        Didn't have the Courses I needed
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
-                        Course quality did not meet expectations
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
-                        Didn't like the user experience
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
-                        Other
-                      </label>
-                    </div>
-                    <textarea class="form-control" rows="3" placeholder="Any additional comments"></textarea>
-
-                </div>
-            </form>
+          <p>If you pause your subscription now you will lose access to Mapt - Pro from February 29th, 2017. This means you will no longer be able to access the following features:</p>
+          <ul>
+              <li>4,000 eBooks and Videos</li>
+              <li>40 new eBooks and Videos a month</li>
+              <li>Over 20 Skill Plans to help you skill up</li>
+          </ul>
 
       </div>
       <div class="modal-footer">
-        <a href="#" data-toggle="modal" data-target="#cancelModal" type="submit" class="btn btn-danger">Confirm Cancellation</a>
+        <a href="account-subscription-monthly-paused.html"type="submit" class="btn btn-default">Confirm</a>
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
   
 
@@ -141,35 +104,55 @@
                 <div class="row">
                             <div class="col-sm-12 col-lg-offset-1 col-lg-10 mt10">
                                <div class="page-title"> 
-                      <h3>Billing Details</h3>
-                      <h6 class="mt5"><a href="account-subscription.html"><i class="fa fa-chevron-left mr5"></i>  Back to My Account</a></h6>
+                      <h3>My Account</h3>
+                      <h6 class="mt5">Manage your plan, billing details and account information </h6>
                     </div>
                     <hr>
-                    <div class="panel panel-default mb5">
+                    <div class="alert alert-success alert-dismisable">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <p><b><i class="fa fa-check mr5"></i> Subscription Activated</b> You have successfully activated your subscription, get back to learning now. </p>
+                    </div>
+                    <div class="panel panel-default">
                       <div class="panel-heading">
-                        <h5>Renewal</h5>
+                        <h5>Account + Billing</h5>
                       </div>
                       <div class="panel-body">
-                        <p><b>Mapt Basic - Annual</b> for £199.99</p>
-                        <p>You will be billed on May 12th, 2017*</p>
+                        <p><b>test@testuser.com</b><a href="account-details.html" class="pull-right"><small>Update email and password</small></a></p>
+                        <p>Password: ****** <a href="email-preferences.html" class="pull-right"><small>Manage email preferences</small></a></p>
+                        <p><i class="fa fa-cc-paypal fa-lg mr5"></i> **** **** **** 4592 <a href="card-details.html" class="pull-right"><small>Update card details</small></a></p>
+                        <p><a href="billing-details.html" class="pull-right"><small>View billing details</small></a></p>
+                      </div>
+                    </div>    
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h5>Plan Details</h5>
+                      </div>
+                      <div class="panel-body">
+                        <div class="col-sm-6">
+                          <h5 class="mt30">Mapt Pro - Monthly</h5>
+                          <hr>
+                          <ul>
+                              <li>4,000 eBooks and Videos</li>
+                              <li>40 new eBooks and Videos a month</li>
+                              <li>Over 20 Skill Plans to help you skill up</li>
+                              <li>Responsive to help you learn on the move</li>
+                              <li>No contract, cancel any time</li>
+                          </ul>
+                          <p><small>Your plan is due for renewal on <b>March 1st, 2017</b></small></p>
+                          <a href="payment-2.html" class="btn btn-primary mr15">Upgrade to Annual</a> 
+                          <a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-default">Pause Subscription</a> 
+                        </div>
+                        <div class="col-sm-6">
+                          <img src="images/laptop-image.png" class="img-responsive">
+                        </div>
+                        
+
+                        
                       </div>
                       <div class="panel-footer">
-                      <a href="account-subscription-no-renew.html" data-toggle="modal" data-target="#myModal" class="btn btn-default">Disable auto-renewal</a> 
+                      
                       </div>
-                    </div> 
-                    <p class="mt5"><small>* Plan charges may take a few days after the billing date to appear on your account.</p>
-                    <table class="table table-hover">
-                      <thead> <tr> <th>Date</th> <th>Plan</th> <th>Period</th> <th>Payment method</th><th>Subtotal</th><th>Total</th> </tr> </thead>
-                      <tbody>
-                        <tr> <th scope="row"><a href="#">11/05/2016</a></th> <td>Mapt Basic - Annual</td><td>11/05/2016 - 11/05/2017</td> <td><i class="fa fa-cc-visa fa-lg mr5"></i> **** **** **** 4592 </td> <td>£166.66 (+£33.33 tax)</td><td>£199.99</td></tr>
-                        <tr> <th scope="row"><a href="#">05/11/2015</a></th> <td>Mapt Pro - Monthly</td><td>05/11/2015 - 04/12/2015</td> <td><i class="fa fa-cc-amex fa-lg mr5"></i> **** **** **** 7831 </td> <td>£20.83 (+£4.16 tax)</td><td>£24.99</td></tr>
-                        <tr> <th scope="row"><a href="#">05/10/2015</a></th> <td>Mapt Pro - Monthly</td><td>05/10/2015 - 04/11/2015</td> <td><i class="fa fa-cc-amex fa-lg mr5"></i> **** **** **** 7831 </td> <td>£20.83 (+£4.16 tax)</td><td>£24.99</td></tr>
-                        <tr> <th scope="row"><a href="#">25/07/2014</a></th> <td>Mapt Basic - Monthly</td><td>25/07/2014 - 24/08/2014</td> <td><i class="fa fa-cc-paypal fa-lg mr5"></i>  **** **** **** 1902 </td> <td>£10.82 (+£2.17 tax)</td><td>£12.99</td></tr>
-                        <tr> <th scope="row"><a href="#">25/06/2014</a></th> <td>Mapt Basic - Monthly</td><td>25/06/2014 - 24/07/2014</td> <td><i class="fa fa-cc-paypal fa-lg mr5"></i>  **** **** **** 1902 </td> <td>£10.82 (+£2.17 tax)</td><td>£12.99</td></tr>
-                        <tr> <th scope="row"><a href="#">25/05/2014</a></th> <td>Mapt Basic - Monthly</td><td>25/05/2014 - 24/06/2014</td> <td><i class="fa fa-cc-paypal fa-lg mr5"></i> **** **** **** 1902 </td> <td>£10.82 (+£2.17 tax)</td><td>£12.99</td></tr>
-                        
-                      </tbody> 
-                    </table>
+                    </div>
                   </div>                        
 
                 </div><!-- row -->
