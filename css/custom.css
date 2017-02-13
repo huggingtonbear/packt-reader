@@ -230,7 +230,7 @@ span.skill-item {
     animation: fadein 0.5s;
 }
 
-@keyframes fadein {
+@keyframes fadein { 
     from {
         opacity: 0;
     }
@@ -983,10 +983,6 @@ span.input-group-btn button.btn {
     .jumbotron.heading h3 {
         margin-top: 40px;
     }
-}
-
-.jumbotron.heading hr {
-    margin-bottom: 0px;
 }
 
 .jumbotron.landingheading {
