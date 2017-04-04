@@ -43,40 +43,25 @@
 
 <body class="language-markup">
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header python">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <img class="tech-icon img-thumbnail" src="images/tech/python.png"> 
-                                    <h1 class="card-heading">Python Fundamentals </h1>
-      </div>
-      <div class="modal-body python">
-        <div class="panel-body">
-            <div class="col-sm-12">
-              <p>Python is one of the easiest languages to get started with. It has a human readable syntax, and fully featured (“batteries included”) standard library to help you get things done right away. It is your portal in to a new world of productive development.</p>
-              <hr>
-            </div>
+<!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header early-access pb25">
+                <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times-circle fa-lg"></i></a>
+                    <h5 class="early-access-h5">Early Access</h5>
+                </div>
+                  <div class="modal-body">
+                  <p>Early Access puts eBooks and videos into your hands whilst they’re still being written, so you don’t have to wait to take advantage of new tech and new ideas. 
+                  <p>Released on a raw and rapid basis, Early Access books and videos are released chapter-by-chapter so you get new content as it’s created.</p>
 
-            <div class="col-sm-12 left-skillcard mb20">
-                  <ul class="learning-points">
-                    <li>Install and set up Python on Mac, Windows or Linux</li>
-                    <li>Write elegant, reusable, and efficient Python code to use in your future projects</li>
-                    <li>Use Git to manage your Python code</li>
-                    <li>Write Python scripts to automate daily tasks, and other software</li>
-                    <li>Use unit tests to write better code, faster</li>
-                  </ul>
-              <a href="dashboard2.html" class="btn btn-success ml55 mb20">I know all of this <i class="glyphicon glyphicon-ok ml10"></i></a>
+                        
+                  </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+              </div>
             </div>
-          </div>
-      </div>
-      <div class="modal-footer python">
-        <a href="dashboard.html" class="btn btn-primary">Add to In Progress<i class="fa fa-refresh ml10"></i></a>
-      </div>
-    </div>
-  </div>
-</div>
-  
 
     <div id="wrapper">
 
@@ -225,8 +210,8 @@
 
                                       <ul class="list-group">
                                           <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ea-list-group-item">
-                                              <a href="index.html"><img src="images/book1.jpg" class="img-product-list"></a>
-                                              <h1>Practical Data Science Cookbook <span class="skill-item early-access hidden-xs">Early Access</span></h1>
+                                              <a href="index-ea.html"><img src="images/book1.jpg" class="img-product-list"></a>
+                                              <h1>Practical Data Science Cookbook <a href="#" data-toggle="modal" data-target="#myModal" class=""><span class="skill-item early-access hidden-xs">Early Access <i class="fa fa-info-circle ml5 fa-lg"></i> </span></a></h1>
                                               <p class="mb0">By Sunila Gollapudi </p>
                                               <small class="title-duration mr10">Jan 2016</small>
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
@@ -254,7 +239,7 @@
                                                 </div>
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-folder fa-lg"></i>
                                                   <span class="hidden-xs ml5">Saved</span></a>
-                                                <a href="index.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                                <a href="index-ea.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->
@@ -270,8 +255,8 @@
                                           </li>
                                           
                                           <li ng-repeat="(key, fivePopular) in fivePopular" href="index.html" class="list-group-item list-name ea-list-group-item">
-                                              <a href="index.html"><img src="images/book4.jpg" class="img-product-list"></a>
-                                              <h1>Python Data Science Essentials <span class="skill-item early-access hidden-xs">Early Access</span></h1>
+                                              <a href="index-ea.html"><img src="images/book4.jpg" class="img-product-list"></a>
+                                              <h1>Python Data Science Essentials <a href="#" data-toggle="modal" data-target="#myModal" class=""><span class="skill-item early-access hidden-xs">Early Access <i class="fa fa-info-circle ml5 fa-lg"></i> </span></a></h1>
                                               <p class="mb0">By Sunila Gollapudi</p>
                                               <small class="title-duration mr10">April 2016</small>
                                               <small class="title-duration hidden-xs"><i class="fa fa-clock-o mr5"></i>14 hours 02 minutes</small>
@@ -299,7 +284,7 @@
                                                 </div>
                                                 <a href="index.html" class="btn btn-default "><i class="fa fa-folder-o fa-lg"></i>
                                                   <span class="hidden-xs ml5">Save for later</span></a>
-                                                <a href="index.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
+                                                <a href="index-ea.html" class="btn btn-info ">Resume <i class="fa fa-chevron-right ml5" aria-hidden="true"></i></a>
                                               </div>
                                               <!-- Desktop Buttons END -->
                                               <!-- Mobile Buttons START -->

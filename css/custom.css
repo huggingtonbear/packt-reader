@@ -96,8 +96,11 @@ span.skill-item {
     border-radius: 15px;
     color: white;
     font-size: x-small;
-    padding: 5px 10px;
+    padding: 7px 15px;
     margin-left: 5px;
+}
+a span.skill-item.early-access {
+    font-size: 12px;
 }
 
 .icon-stand-out {
@@ -363,10 +366,6 @@ img.panel-bg {
 } 
 .sidenav-menu-holder.early-access:hover {
     background: #ef8009;
-}
-
-.ea-list-group-item {
-    background: #f9ead9;
 }
 
 .skill-plan {
