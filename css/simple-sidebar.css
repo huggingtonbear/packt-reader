@@ -331,8 +331,8 @@ a#bookmark-tab, a#contents-tab {
     }
 
     .sidebar-nav {
-/*        width: 300px;
-*/    }  
+        width: 300px;
+    }  
     #wrapper.toggled #page-content-wrapper {
         position: absolute;
         margin-left: 0px;
